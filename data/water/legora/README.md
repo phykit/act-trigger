@@ -13,10 +13,10 @@ Legora is the agent coder under `prereg/water_prereg.md`. It sees the case list,
 7. Check it: `python scripts/water_check_sheet.py data/water/moon37_coding_sheet_legora.csv`. Fix or re-run any rows it flags.
 8. Commit the sheet before anything joins it to returns. The commit time is the record that the coding was blind.
 
-## Your own coding (the second coder)
+## Other coders
 
-Fill in `data/water/moon37_coding_sheet_operator.csv` by the same rubric, without looking at Legora's sheet, and commit it separately. Mark `price_known` as 1 for any event whose share reaction you have seen or recall, including NantKwest, Coinbase and Tyson, which were quoted in our conversation.
+Under `prereg/water_v2_prereg.md` the second and third coders are independent Claude agents (`moon37_coding_sheet_claude_a.csv`, `_b.csv`); the operator does not code.
 
-## After both sheets are committed
+## After the sheets are committed
 
-The Water analysis joins both sheets to the Moon returns, reports the high-minus-low drift, the manipulation check (do high-stakes events react more on the day) and the agreement between you and Legora.
+The Water analysis joins both sheets to the Moon returns, reports the high-minus-low drift, the manipulation check (do high-stakes events react more on the day) and the agreement between Legora and Claude, and between the two Claude runs.
