@@ -21,6 +21,7 @@ jobs:
     env:
       COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
       SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+      GOVINFO_API_KEY: ${{ secrets.GOVINFO_API_KEY }}
       BUNDLE_MINUTES: "80"
       CL_ATTEMPTS: "3"
     steps:

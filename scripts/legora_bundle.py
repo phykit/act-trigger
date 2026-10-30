@@ -43,6 +43,15 @@ def text_pdf(title: str, body: str, dst: Path) -> bool:
 
 
 def opinion_pdf(e, work: Path) -> tuple[Path | None, str]:
+    # Water v3 amendment 1: the official PDF first; CourtListener only where neither official source has it.
+    import scotus_opinions as so  # noqa: PLC0415
+    dst = work / f"{e['event_id']}_opinion.pdf"
+    pdf, src = so.official_pdf(e["docket"], e["case_name"], e["date"])
+    if pdf:
+        dst.write_bytes(pdf)
+        return dst, src
+    if os.environ.get("CL_FALLBACK", "1") != "1":
+        return None, f"missing ({src})"
     hdr = {"Authorization": f"Token {ac.CL_TOKEN}"} if ac.CL_TOKEN else {}
     base = "https://www.courtlistener.com/api/rest/v4/search/?type=o&court=scotus"
     res = ac.cl_get(f"{base}&q=docketNumber%3A%22{requests.utils.quote(e['docket'])}%22", hdr).json().get("results", [])

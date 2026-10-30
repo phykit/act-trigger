@@ -94,6 +94,17 @@ def cl_get(url: str, hdr: dict, attempts: int | None = None) -> requests.Respons
 def opinion_text(docket: str, case_name: str, date: str = "") -> tuple[str, str]:
     if DRY:
         return f"SYNTHETIC OPINION for {case_name}. The judgment of $50,000,000 is affirmed.", "dry"
+    # Water v3 amendment 1: the official text first (supremecourt.gov slip opinion, then GovInfo United States
+    # Reports); CourtListener only where neither has the opinion.
+    import scotus_opinions as so  # noqa: PLC0415
+    pdf, src = so.official_pdf(docket, case_name, date)
+    if pdf:
+        text, _ = so.pdf_text(pdf)
+        if len(text) > 2000:
+            return text, src
+        src += " (PDF had no extractable text)"
+    if os.environ.get("CL_FALLBACK", "1") != "1":
+        return "", f"official sources failed ({src}); CourtListener fallback disabled"
     hdr = {"Authorization": f"Token {CL_TOKEN}"} if CL_TOKEN else {}
     base = "https://www.courtlistener.com/api/rest/v4/search/?type=o&court=scotus"
     queries = [f"{base}&q=docketNumber%3A%22{requests.utils.quote(docket)}%22"]
@@ -109,7 +120,7 @@ def opinion_text(docket: str, case_name: str, date: str = "") -> tuple[str, str]
             break
         time.sleep(0.5)
     if not res:
-        return "", f"no CourtListener cluster for docket {docket}"
+        return "", f"official sources failed ({src}); no CourtListener cluster for docket {docket}"
     cid = res[0].get("cluster_id")
     texts = []
     for op in res[0].get("opinions", [])[:6]:
@@ -120,7 +131,7 @@ def opinion_text(docket: str, case_name: str, date: str = "") -> tuple[str, str]
         t = o.get("plain_text") or strip_html(o.get("html_with_citations") or o.get("html") or o.get("xml_harvard") or "")
         texts.append(f"[{op.get('type', 'opinion')}]\n{t}")
         time.sleep(1.0)
-    return "\n\n".join(texts), f"CourtListener cluster {cid}"
+    return "\n\n".join(texts), f"CourtListener cluster {cid} (official sources failed: {src})"
 
 
 def filings_before(cik: str, date: str, form: str) -> dict | None:

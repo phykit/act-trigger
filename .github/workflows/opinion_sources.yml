@@ -1,0 +1,42 @@
+# Water v3 amendment 1: check that every event on a coding list has an official opinion PDF, before coding.
+# Writes source, page and character counts only (no opinion text). Uses no CourtListener requests.
+name: opinion-sources
+
+on:
+  workflow_dispatch:
+    inputs:
+      list:
+        description: Price-free coding list
+        default: data/water/legora/input_moon37.csv
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GOVINFO_API_KEY: ${{ secrets.GOVINFO_API_KEY }}
+      LIST: ${{ github.event.inputs.list || 'data/water/legora/input_moon37.csv' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q pandas requests pypdf
+      - name: Blindness guard
+        run: rm -rf results data/appeals/*.events.csv
+      - name: Resolve official opinions
+        run: |
+          mkdir -p data/water/opinion_sources
+          python scripts/scotus_opinions.py "$LIST" "data/water/opinion_sources/$(basename "$LIST" .csv)_sources.csv" 2>&1 | tee "data/water/opinion_sources/$(basename "$LIST" .csv)_sources.log"
+      - name: Commit
+        if: always()
+        run: |
+          git checkout -- results data/appeals 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/water/opinion_sources
+          git commit -m "Official opinion sources for $(basename "$LIST") [skip ci]" || exit 0
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
