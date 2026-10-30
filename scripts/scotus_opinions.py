@@ -85,7 +85,7 @@ def term_of(date: str) -> int:
 
 def _slip_rows(term: int) -> list[dict]:
     CACHE.mkdir(parents=True, exist_ok=True)
-    f = CACHE / f"slip_{term % 100:02d}.json"
+    f = CACHE / f"slip2_{term % 100:02d}.json"
     if f.exists():
         return json.loads(f.read_text())
     r = _get(f"{SC}/opinions/slipopinion/{term % 100:02d}", UA)
@@ -94,7 +94,7 @@ def _slip_rows(term: int) -> list[dict]:
         # Markup-independent: each opinion link is paired with the text between it and the previous opinion link,
         # which holds this row's number, date and docket (and the previous row's trailing cells, so the last date
         # and the last docket in the segment are taken).
-        pat = re.compile(r'(?i)href=["\']([^"\']*/opinions/\d{2}pdf/[^"\']+\.pdf)')
+        pat = re.compile(r'(?i)href=["\']([^"\']*/opinions/(?:\d{2}pdf|preliminaryprint)/[^"\'#]+\.pdf(?:#page=\d+)?)')
         prev, seen = 0, set()
         for m in pat.finditer(r.text):
             seg = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", r.text[prev:m.start()])))
@@ -132,10 +132,41 @@ def slip_pdf(docket: str, date: str) -> tuple[bytes | None, str]:
     if not cands:
         return None, f"docket {docket} not on slip-opinion page OT{term} ({len(rows)} opinion links parsed)"
     best = [r for r in cands if r["date"] == date] or cands
-    r = _get(best[0]["href"], UA)
+    # Prefer the slip opinion itself over a preliminary-print page range when the row carries both.
+    best = sorted(best, key=lambda r: "preliminaryprint" in r["href"])
+    href = best[0]["href"]
+    if "preliminaryprint" in href:
+        return _prelim_range(href, rows)
+    r = _get(href, UA)
     if r is None or r.content[:4] != b"%PDF":
-        return None, f"slip opinion PDF not retrieved ({best[0]['href']})"
-    return r.content, f"supremecourt.gov slip opinion {best[0]['href'].replace(SC, '')}"
+        return None, f"slip opinion PDF not retrieved ({href})"
+    return r.content, f"supremecourt.gov slip opinion {href.replace(SC, '')}"
+
+
+def _prelim_range(href: str, rows: list[dict]) -> tuple[bytes | None, str]:
+    """Cut one case out of a preliminary-print volume part: from its #page anchor to the page before the next case's
+    anchor in the same file (at most 120 pages)."""
+    from pypdf import PdfReader, PdfWriter  # noqa: PLC0415
+    base, _, pg = href.partition("#page=")
+    start = int(pg or 1)
+    starts = sorted({int(r["href"].partition("#page=")[2]) for r in rows
+                     if r["href"].startswith(base + "#page=") and r["href"].partition("#page=")[2].isdigit()})
+    later = [p for p in starts if p > start]
+    CACHE.mkdir(parents=True, exist_ok=True)
+    f = CACHE / ("pp_" + base.rsplit("/", 1)[-1])
+    if not f.exists():
+        r = _get(base, UA)
+        if r is None or r.content[:4] != b"%PDF":
+            return None, f"preliminary print not retrieved ({base})"
+        f.write_bytes(r.content)
+    rd = PdfReader(str(f))
+    end = min((later[0] - 1) if later else start + 119, start + 119, len(rd.pages))
+    w = PdfWriter()
+    for i in range(start - 1, end):
+        w.add_page(rd.pages[i])
+    buf = io.BytesIO()
+    w.write(buf)
+    return buf.getvalue(), f"supremecourt.gov preliminary print {base.replace(SC, '')} pages {start} to {end}"
 
 
 # ----------------------------------------------------------------------------- 2. United States Reports
