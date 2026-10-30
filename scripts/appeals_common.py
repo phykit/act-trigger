@@ -303,33 +303,46 @@ def _courtlistener_cafc() -> pd.DataFrame:
     tok = os.environ.get("COURTLISTENER_TOKEN")
     if tok:
         hdr["Authorization"] = "Token " + tok
-    url = ("https://www.courtlistener.com/api/rest/v4/search/?type=o&court=cafc"
-           f"&filed_after={CAFC_FROM.isoformat()}&filed_before={CAFC_TO.isoformat()}&order_by=dateFiled%20asc")
+    # The search API stops paginating after about 1,000 results, so fetch in quarterly windows.
+    windows = []
+    q = pd.Timestamp(CAFC_FROM)
+    while q.date() <= CAFC_TO:
+        e = min((q + pd.offsets.QuarterEnd(0)).date(), CAFC_TO)
+        windows.append((q.date(), e))
+        q = pd.Timestamp(e) + pd.Timedelta(days=1)
     rows, pages = [], 0
-    while url and pages < 2000:
-        r = None
-        for attempt in range(4):
-            r = requests.get(url, headers=hdr, timeout=90)
-            if r.status_code == 200:
-                break
-            if r.status_code in (429, 500, 502, 503, 504):
-                time.sleep(10 * (attempt + 1))
-                continue
-            raise RuntimeError(f"CourtListener status {r.status_code}: {r.text[:120]}")
-        j = r.json()
-        if pages == 0:
-            first = (j.get("results") or [{}])[0]
-            log(f"CourtListener first result keys: {sorted(first.keys())[:30]}; count {j.get('count')}")
-        for it in j.get("results", []):
-            ops = it.get("opinions") or [{}]
-            status = str(it.get("status") or (ops[0].get("status") if isinstance(ops[0], dict) else "") or "")
-            rows.append(dict(date=str(it.get("dateFiled"))[:10], docket=str(it.get("docketNumber", "")),
-                             case_name=str(it.get("caseName", "")), status=status))
-        url = j.get("next")
-        pages += 1
-        if pages % 50 == 0:
-            log(f"CourtListener: {pages} pages, {len(rows)} rows")
-        time.sleep(0.4)
+    for w_from, w_to in windows:
+      url = ("https://www.courtlistener.com/api/rest/v4/search/?type=o&court=cafc"
+             f"&filed_after={w_from.isoformat()}&filed_before={w_to.isoformat()}&order_by=dateFiled%20asc")
+      wpages = 0
+      while url and wpages < 60:
+          r = None
+          for attempt in range(4):
+              r = requests.get(url, headers=hdr, timeout=90)
+              if r.status_code == 200:
+                  break
+              if r.status_code in (429, 500, 502, 503, 504):
+                  time.sleep(10 * (attempt + 1))
+                  continue
+              raise RuntimeError(f"CourtListener status {r.status_code}: {r.text[:120]}")
+          j = r.json()
+          if pages == 0:
+              first = (j.get("results") or [{}])[0]
+              log(f"CourtListener first result keys: {sorted(first.keys())[:30]}; count {j.get('count')}")
+          for it in j.get("results", []):
+              ops = it.get("opinions") or [{}]
+              status = str(it.get("status") or (ops[0].get("status") if isinstance(ops[0], dict) else "") or "")
+              rows.append(dict(date=str(it.get("dateFiled"))[:10], docket=str(it.get("docketNumber", "")),
+                               case_name=str(it.get("caseName", "")), status=status))
+          url = j.get("next")
+          pages += 1
+          wpages += 1
+          if pages % 50 == 0:
+              log(f"CourtListener: {pages} pages, {len(rows)} rows")
+          time.sleep(0.4)
+      if wpages >= 60:
+          log(f"CourtListener window {w_from} to {w_to} hit the page cap; window may be truncated")
+    log(f"CourtListener: {len(windows)} quarterly windows, {pages} pages, {len(rows)} rows")
     if not rows:
         raise RuntimeError("CourtListener returned no rows")
     df = pd.DataFrame(rows)
