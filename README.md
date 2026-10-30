@@ -29,6 +29,30 @@ python scripts/outcomes.py
 
 GPR vintage used for the first run: 2026-10-19. Later vintages may revise recent days.
 
+## Court-ruling tests: Projects Apple and Orange
+
+Two sibling pre-registrations on the same five Supreme Court cases with a listed party (Myriad 2013, Halliburton 2014, American Express 2018, Oracle 2021, Amgen 2023). Both run on free daily data in GitHub Actions (`.github/workflows/rulings.yml`), which commits each run's result file and the fetched inputs under `results/` and `data/rulings/`.
+
+| Item | State |
+|---|---|
+| Apple: opinion-day versus non-opinion-day abnormal variance in the argument-to-decision window (timing hazard) | Frozen 29 October 2026: `prereg/apple_prereg.md`, SHA-256 `068f59f04174f8018788084fb457ed9fa94d79da68ce902b34288af141dff17d` |
+| Orange: decision-day abnormal return and drift over the following five days (Katz versus Davis) | Frozen 29 October 2026: `prereg/orange_prereg.md`, SHA-256 `c12e7b2990f4e211c8afafed5bf40f840b1675c15f4fb5f971781a7da7caa2cd` |
+| First run | Pending: the first `rulings` workflow run writes `results/apple_result_<date>.md` and `results/orange_result_<date>.md` |
+| Evidentiary standing | Non-evidentiary. Five cases chosen for salience; daily closes; one parameter set; no costs |
+| Operator inputs | Not set: minimum effect worth pursuing, minimum event count for a live decision, ratified pre-mortem |
+| Trading | None |
+
+Prior art for both: Katz, Bommarito, Soellinger and Chen (2017), Law on the Market? (37% of 211 SCOTUS cases react, mean 4.4% over two sessions, accruing over hours and days); Davis, Govindaraj and Suslava (2024), Global Finance Journal (500 cases, no leakage, no drift); Davis, Govindaraj, Liu and Suslava (2026), Journal of Futures Markets (option implied volatility at the cert grant anticipates the decision). The full prior-art review is the operator's document of 29 October 2026.
+
+Reproduce locally:
+
+```
+pip install pandas numpy scipy requests lxml yfinance
+python scripts/apple.py
+python scripts/orange.py
+RULINGS_SELFTEST=1 RULINGS_SCRATCH=/tmp/selftest python scripts/apple.py   # synthetic data, writes nothing under results/
+```
+
 ## Rules for this repository
 
 - The specification file is never edited. Any change is a new, separately hashed specification with its own result file.

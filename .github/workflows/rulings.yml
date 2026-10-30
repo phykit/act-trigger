@@ -1,0 +1,39 @@
+name: rulings
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/apple.py"
+      - "scripts/orange.py"
+      - "scripts/rulings_common.py"
+      - "prereg/apple_prereg.md"
+      - "prereg/orange_prereg.md"
+      - "data/ruling_cases.csv"
+      - ".github/workflows/rulings.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install --quiet pandas numpy scipy requests lxml "yfinance>=0.2.60"
+      - name: Project Apple
+        run: python scripts/apple.py
+      - name: Project Orange
+        run: python scripts/orange.py
+      - name: Commit results and fetched inputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/ data/rulings/
+          git commit -m "Apple and Orange run $(date -u +%F) [skip ci]" || echo "nothing to commit"
+          git push

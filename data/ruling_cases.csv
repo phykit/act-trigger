@@ -1,0 +1,6 @@
+case_id,term,docket,case_name,ticker,side,argued,decided,market_proxy,dates_provenance,note
+MYGN_12-398,12,12-398,Association for Molecular Pathology v. Myriad Genetics,MYGN,respondent,2013-04-15,2013-06-13,SPY,recollection_pending_oyez_check,"Small cap; Katz et al (2017) cite it as initially mispriced on decision day"
+HAL_13-317,13,13-317,Halliburton Co. v. Erica P. John Fund,HAL,petitioner,2014-03-05,2014-06-23,SPY,recollection_pending_oyez_check,"Securities class action certification (Halliburton II)"
+AXP_16-1454,17,16-1454,Ohio v. American Express,AXP,respondent,2018-02-26,2018-06-25,SPY,recollection_pending_oyez_check,"Antitrust; anti-steering rules"
+ORCL_18-956,20,18-956,Google LLC v. Oracle America,ORCL,respondent,2020-10-07,2021-04-05,SPY,recollection_pending_oyez_check,"Oracle chosen over Google because the claimed damages are a larger share of Oracle's capitalisation; GOOGL reported as a secondary leg"
+AMGN_21-757,22,21-757,Amgen Inc. v. Sanofi,AMGN,petitioner,2023-03-27,2023-05-18,SPY,recollection_pending_oyez_check,"Patent enablement; Sanofi is foreign-listed and not used"
