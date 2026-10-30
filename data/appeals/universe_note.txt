@@ -1,0 +1,1 @@
+SCOTUS 1342 rulings (SCDB 2026_01); Federal Circuit 0 precedential opinions (unavailable: _courtlistener_cafc: CourtListener status 401: {"detail":"Authentication credentials were not provided."} | _cafc_table: HTTPSConnectionPool(host='cafc.uscourts.gov', port=443): Max retries exceeded with url: /home/case-information/opinions-orders/ (Caused by SSLError(SSLCertVerif)
