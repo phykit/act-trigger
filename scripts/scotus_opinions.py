@@ -14,6 +14,7 @@ characters. No opinion text is written by the diagnostic. The cache directory is
 from __future__ import annotations
 
 import datetime as dt
+import html
 import io
 import json
 import os
@@ -90,14 +91,29 @@ def _slip_rows(term: int) -> list[dict]:
     r = _get(f"{SC}/opinions/slipopinion/{term % 100:02d}", UA)
     rows = []
     if r is not None and "/slipopinion/" in r.url:
-        for tr in re.findall(r"(?is)<tr[^>]*>(.*?)</tr>", r.text):
-            for href in re.findall(r'(?i)href=["\']([^"\']*/opinions/\d{2}pdf/[^"\']+\.pdf)', tr):
-                m = re.search(r"(\d{1,2})/(\d{1,2})/(\d{2,4})", re.sub(r"<[^>]+>", " ", tr))
-                date = ""
-                if m:
-                    y = int(m.group(3))
-                    date = dt.date(y + 2000 if y < 100 else y, int(m.group(1)), int(m.group(2))).isoformat()
-                rows.append(dict(href=href if href.startswith("http") else SC + "/" + href.lstrip("./").lstrip("/"), date=date))
+        # Markup-independent: each opinion link is paired with the text between it and the previous opinion link,
+        # which holds this row's number, date and docket (and the previous row's trailing cells, so the last date
+        # and the last docket in the segment are taken).
+        pat = re.compile(r'(?i)href=["\']([^"\']*/opinions/\d{2}pdf/[^"\']+\.pdf)')
+        prev, seen = 0, set()
+        for m in pat.finditer(r.text):
+            seg = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", r.text[prev:m.start()])))
+            prev = m.end()
+            href = m.group(1)
+            href = href if href.startswith("http") else SC + "/" + href.lstrip("./").lstrip("/")
+            if href in seen:
+                continue
+            seen.add(href)
+            dates = re.findall(r"(\d{1,2})/(\d{1,2})/(\d{2,4})", seg)
+            date = ""
+            if dates:
+                mo, d, y = (int(x) for x in dates[-1])
+                try:
+                    date = dt.date(y + 2000 if y < 100 else y, mo, d).isoformat()
+                except ValueError:
+                    date = ""
+            dockets = re.findall(r"(?<![\w-])(\d{2}[-A]\d{1,5}|\d{2,3}[Oo]rig|\d{2}O\d{1,4})(?![\w-])", seg)
+            rows.append(dict(href=href, date=date, docket=dockets[-1] if dockets else "", text=seg[-300:]))
     f.write_text(json.dumps(rows))
     return rows
 
@@ -106,10 +122,15 @@ def slip_pdf(docket: str, date: str) -> tuple[bytes | None, str]:
     term = term_of(date)
     if term < 2017:
         return None, "no slip opinion page before OT2017"
+    # File names are docket-based up to OT2021 (17-290_6j37.pdf) and citation-based after (598us1r1_3e04.pdf);
+    # the docket number is matched in the file name or in the table row's own docket cell.
     pat = re.compile(rf"/{re.escape(docket)}_[A-Za-z0-9]+\.pdf$", re.I)
-    cands = [r for r in _slip_rows(term) if pat.search(r["href"])]
+    cell = re.compile(rf"(?<![\w-]){re.escape(docket)}(?![\w-])")
+    rows = _slip_rows(term)
+    cands = [r for r in rows if pat.search(r["href"]) or r.get("docket") == docket]
+    cands = cands or [r for r in rows if cell.search(r.get("text", "")[-120:])]
     if not cands:
-        return None, f"docket {docket} not on slip-opinion page OT{term}"
+        return None, f"docket {docket} not on slip-opinion page OT{term} ({len(rows)} opinion links parsed)"
     best = [r for r in cands if r["date"] == date] or cands
     r = _get(best[0]["href"], UA)
     if r is None or r.content[:4] != b"%PDF":
