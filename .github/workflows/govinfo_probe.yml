@@ -20,7 +20,7 @@ jobs:
           python-version: "3.11"
       - run: pip install -q requests
       - name: Probe
-        run: python scripts/govinfo_probe3.py
+        run: python scripts/govinfo_probe4.py
       - name: Commit the probe report
         if: always()
         run: |
