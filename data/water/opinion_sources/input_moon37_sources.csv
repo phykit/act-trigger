@@ -19,13 +19,13 @@ W17,2015-01-14,13-975,GovInfo USREPORTS-574-293 (574 U.S. 293 (2014)),25,53863,1
 W18,2016-03-07,14-1382,GovInfo USREPORTS-577-378 (577 U.S. 378 (2015)),7,13516,1
 W19,2017-05-01,15-423,GovInfo USREPORTS-581-170 (581 U.S. 170 (2017)),19,40578,1
 W20,2017-05-15,16-348,GovInfo USREPORTS-581-224 (581 U.S. 224 (2017)),22,48195,1
-W21,2018-06-22,16-1011,docket 16-1011 not on slip-opinion page OT2017 (0 opinion links parsed); no United States Reports granule matching caption and date (1 caption candidates),0,0,0
-W22,2019-05-20,17-290,supremecourt.gov slip opinion /opinions/18pdf/17-290_i425.pdf,32,64577,1
-W23,2019-01-22,17-1229,supremecourt.gov slip opinion /opinions/18pdf/17-1229_2co3.pdf,34,68594,0
-W24,2019-05-28,17-1471,supremecourt.gov slip opinion /opinions/18pdf/17-1471_e2p3.pdf,39,77685,1
-W25,2019-03-04,17-1625,supremecourt.gov slip opinion /opinions/18pdf/17-1625_lkhn.pdf,14,28231,1
-W26,2019-12-11,18-801,supremecourt.gov slip opinion /opinions/19pdf/18-801_o758.pdf,12,24948,1
-W27,2020-06-30,19-46,docket 19-46 not on slip-opinion page OT2019 (24 opinion links parsed); no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W21,2018-06-22,16-1011,preliminary print not retrieved (https://www.supremecourt.gov/opinions/preliminaryprint/585US1PP_final.pdf); no United States Reports granule matching caption and date (1 caption candidates),0,0,0
+W22,2019-05-20,17-290,docket 17-290 not on slip-opinion page OT2018 (1 opinion links parsed); no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W23,2019-01-22,17-1229,docket 17-1229 not on slip-opinion page OT2018 (1 opinion links parsed); no United States Reports granule matching caption and date (1 caption candidates),0,0,0
+W24,2019-05-28,17-1471,docket 17-1471 not on slip-opinion page OT2018 (1 opinion links parsed); no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W25,2019-03-04,17-1625,docket 17-1625 not on slip-opinion page OT2018 (1 opinion links parsed); no United States Reports granule matching caption and date (1 caption candidates),0,0,0
+W26,2019-12-11,18-801,supremecourt.gov preliminary print /opinions/preliminaryprint/589US1PP_Web.pdf pages 64 to 75,12,24895,1
+W27,2020-06-30,19-46,supremecourt.gov preliminary print /opinions/preliminaryprint/591US2PP_web.pdf pages 108 to 136,29,60725,1
 W28,2021-04-05,18-956,supremecourt.gov slip opinion /opinions/20pdf/593us1r26_f29g.pdf,61,128361,1
 W29,2021-04-01,19-511,supremecourt.gov slip opinion /opinions/20pdf/592us2r23_1bn2.pdf,20,41695,1
 W30,2022-04-28,20-807,supremecourt.gov slip opinion /opinions/21pdf/596us1r28_6j36.pdf,3,2768,1
