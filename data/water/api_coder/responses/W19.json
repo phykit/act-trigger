@@ -1,0 +1,35 @@
+{
+ "event_id": "W19",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "8fd909e5b512f22bb5380dc44c2fa35966f17ecc8c13b4be9964791de957acb0",
+ "usage": {
+  "input_tokens": 57237,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 251,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "answer": {
+  "A_money_score": 0,
+  "A_figure_usd": 10000000,
+  "A_mcap_usd": 6200000000,
+  "B_core_business": 0,
+  "C_disclosed": 1,
+  "C_filing_accession": "0001047469-16-016935",
+  "D_figure_stated": 1,
+  "price_known": 0,
+  "reason": "The ruling is a jurisdictional (FSIA expropriation-exception) decision in H&P's suit over the 2010 Venezuelan rig seizure; the only figure is the opinion's unpaid-debt figure of over $10 million (about 0.16% of the $6.2B non-affiliate market value), the claim concerns a discontinued, non-core Venezuelan business, and the 10-K Legal Proceedings names the case but gives no damages amount.",
+  "A_money_score_model": 0
+ },
+ "notes": []
+}

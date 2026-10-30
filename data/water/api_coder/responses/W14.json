@@ -1,0 +1,35 @@
+{
+ "event_id": "W14",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "c20be26f5f0f2f0e96d45d1abff1e439f92a103f0640963ab24a97edb0ef0d1d",
+ "usage": {
+  "input_tokens": 56579,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 207,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "answer": {
+  "A_money_score": 0,
+  "A_figure_usd": 183333,
+  "A_mcap_usd": 17000000000,
+  "B_core_business": 0,
+  "C_disclosed": 0,
+  "C_filing_accession": null,
+  "D_figure_stated": 1,
+  "price_known": 0,
+  "reason": "The ruling affirmed a single employee's FELA verdict ($275,000 reduced by one-third, about $183,333), which is far below 1% of the roughly $17 billion non-affiliate market value; the case is not named in the 10-K or 10-Q, which mention FELA claims only generically, and the causation instruction is not a core product or pricing practice.",
+  "A_money_score_model": 0
+ },
+ "notes": []
+}

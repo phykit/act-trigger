@@ -1,0 +1,13 @@
+{
+ "event_id": "W34",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "ea957c099a15200668fe884699f64f2c476c5169ea3b66133c6430939ea7e085",
+ "usage": {},
+ "answer": {
+  "reason": "not coded: opinion unavailable (opinion fetch failed: 429 Client Error: Too Many Requests for url: https://www.courtlistener.com/api)"
+ },
+ "notes": [
+  "opinion unavailable; model not called"
+ ]
+}

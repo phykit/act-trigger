@@ -1,0 +1,37 @@
+{
+ "event_id": "W37",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "21fb9fa0f13bf975076b5ab1025bc6994536f61e2f519fec34a5c8c7ddf22c16",
+ "usage": {
+  "input_tokens": 50702,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 320,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "answer": {
+  "A_money_score": 1,
+  "A_figure_usd": 500000000,
+  "A_mcap_usd": 16400000000,
+  "B_core_business": 0,
+  "C_disclosed": 1,
+  "C_filing_accession": "0000920148-25-000059",
+  "D_figure_stated": 1,
+  "price_known": 0,
+  "reason": "The Court dismissed certiorari as improvidently granted, so the Ninth Circuit's class certification stands. The only money figure is the dissent's potential damages of about $500M per year (about 3% of the $16.4B non-affiliate market value, which scores 1 on the A rubric). However, the figure is a per-year ceiling stated by the dissent, not a consequence the ruling decided, so I scored A at 2 on a multi-year reading; the case concerns kiosk accessibility at patient service centers, a peripheral practice rather than a core product or pricing practice, and the 10-Q names the Davis v. LabCorp case in its contingencies note.",
+  "A_money_score_model": 2
+ },
+ "notes": [
+  "A recomputed from ratio 0.0305: model said 2, band 1"
+ ]
+}

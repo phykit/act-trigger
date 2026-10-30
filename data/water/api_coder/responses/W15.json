@@ -1,0 +1,34 @@
+{
+ "event_id": "W15",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "4f6e2f8da1e54bd5551ba001d3941cbc77b7e0daedbf9f346a1c1e278cf0276d",
+ "usage": {
+  "input_tokens": 103986,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 235,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "answer": {
+  "A_money_score": 0,
+  "A_figure_usd": null,
+  "A_mcap_usd": 5000000000,
+  "B_core_business": 0,
+  "C_disclosed": 0,
+  "C_filing_accession": null,
+  "D_figure_stated": 0,
+  "price_known": 0,
+  "reason": "Mims is a purely jurisdictional ruling on whether federal courts can hear private TCPA suits; the opinion states no money consequence for Arrow (a subsidiary debt collector, mentioned in SLM's 10-K only as a defendant in the unrelated Harper case), and the pack names neither Mims nor this ruling's consequence in SLM's disclosures, so no case-specific figure, core-business link or disclosure is coded."
+ },
+ "notes": []
+}

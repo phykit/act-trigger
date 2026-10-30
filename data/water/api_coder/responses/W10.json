@@ -1,0 +1,35 @@
+{
+ "event_id": "W10",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "f287aa4ef996d8c1e0de4502a675e3cc2c5f9f7008e8356cd1b0b369aa5bf366",
+ "usage": {
+  "input_tokens": 62306,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 220,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "answer": {
+  "A_money_score": 2,
+  "A_figure_usd": 338200000,
+  "A_mcap_usd": 1592960320,
+  "B_core_business": 1,
+  "C_disclosed": 1,
+  "C_filing_accession": "0000950148-09-000027",
+  "D_figure_stated": 1,
+  "price_known": 0,
+  "reason": "The ruling decides whether the Kensington tailings permit stands, and the 10-K discloses $338.2 million of Kensington long-term asset carrying value at risk, about 21% of the $1.59 billion non-affiliate market value. Kensington is a core development project, and the 10-K names the case in Legal Proceedings and risk factors.",
+  "A_money_score_model": 2
+ },
+ "notes": []
+}

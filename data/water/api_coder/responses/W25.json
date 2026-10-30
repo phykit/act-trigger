@@ -1,0 +1,37 @@
+{
+ "event_id": "W25",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "b60d90e3aaac58272a9a88a45c151b2f0975cfdb69fd7e1c94828eb65db60c9d",
+ "usage": {
+  "input_tokens": 70613,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 224,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "answer": {
+  "A_money_score": 0,
+  "A_figure_usd": 12800000,
+  "A_mcap_usd": 142975778000,
+  "B_core_business": 0,
+  "C_disclosed": 0,
+  "C_filing_accession": null,
+  "D_figure_stated": 1,
+  "price_known": 0,
+  "reason": "The ruling reversed a $12.8 million award of non-taxable litigation expenses against Rimini, which is under 0.01% of the $143.0 billion non-affiliate market value (score 0). It governs cost-shifting in copyright suits, not any Oracle product, licence or pricing practice. The pack extracts do not name or clearly describe this case, and the opinion states the $12.8 million figure.",
+  "A_money_score_model": 1
+ },
+ "notes": [
+  "A recomputed from ratio 0.0001: model said 1, band 0"
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "event_id": "W04",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "1219479daae9100d06f419c1836162eb8c4a5948acd143c46d60337cceb45c95",
+ "usage": {
+  "input_tokens": 61734,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 249,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "answer": {
+  "A_money_score": 0,
+  "A_figure_usd": 79500000,
+  "A_mcap_usd": 134000000000,
+  "B_core_business": 0,
+  "C_disclosed": 1,
+  "C_filing_accession": "0001193125-06-229897",
+  "D_figure_stated": 1,
+  "price_known": 0,
+  "reason": "The $79.5 million punitive award is about 0.06% of the $134 billion non-affiliate market value; Williams is named in the 10-K and 10-Q contingencies notes (so C=1), and it is a single-plaintiff punitive damages case, though the due process rule it announced has wider reach and the opinion states the $79.5 million figure (D=1), so B is coded 0 as the ruling does not directly govern a core product, licence or pricing practice.",
+  "A_money_score_model": 0
+ },
+ "notes": []
+}
