@@ -76,6 +76,16 @@ jobs:
         run: |
           set -o pipefail
           python scripts/fire.py 2>&1 | tee data/appeals/logs/fire.log
+      - name: Project Strife
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python scripts/strife.py 2>&1 | tee data/appeals/logs/strife.log
+      - name: Project Death
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python scripts/death.py 2>&1 | tee data/appeals/logs/death.log
       - name: Commit results and fetched inputs
         if: always()
         run: |
