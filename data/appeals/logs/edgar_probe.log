@@ -10,3 +10,9 @@
 403  ua=[none]  https://www.sec.gov/files/company_tickers.json
 200  ua=[none]  https://data.sec.gov/submissions/CIK0000320193.json
 200  ua=[none]  https://efts.sec.gov/LATEST/search-index?q=%22Apple%22&forms=10-K
+200  ua=[Simon Kittson skittson@gmail.com]  https://www.sec.gov/files/company_tickers.json
+200  ua=[Simon Kittson skittson@gmail.com]  https://data.sec.gov/submissions/CIK0000320193.json
+200  ua=[Simon Kittson skittson@gmail.com]  https://efts.sec.gov/LATEST/search-index?q=%22Apple%22&forms=10-K
+403  ua=[none]  https://www.sec.gov/files/company_tickers.json
+200  ua=[none]  https://data.sec.gov/submissions/CIK0000320193.json
+200  ua=[none]  https://efts.sec.gov/LATEST/search-index?q=%22Apple%22&forms=10-K
