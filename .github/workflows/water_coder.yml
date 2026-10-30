@@ -1,0 +1,63 @@
+# Project Water coder 3 (prereg/water_v3_prereg.md): the API coder, run blind to prices.
+# Reads only the price-free coding list; commits the sheet, responses and document packs before any join to returns.
+name: water-coder
+
+on:
+  workflow_dispatch:
+    inputs:
+      list:
+        description: Price-free coding list
+        default: data/water/legora/input_moon37.csv
+      out:
+        description: Output sheet
+        default: data/water/moon37_coding_sheet_api.csv
+  push:
+    branches: [main]
+    paths: [".github/workflows/water_coder.yml"]
+
+concurrency:
+  group: water-coder
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
+      SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+      LIST: ${{ github.event.inputs.list || 'data/water/legora/input_moon37.csv' }}
+      OUT: ${{ github.event.inputs.out || 'data/water/moon37_coding_sheet_api.csv' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q pandas requests
+      - name: Secret check (lengths only)
+        run: |
+          echo "ANTHROPIC_API_KEY length: ${#ANTHROPIC_API_KEY}"
+          echo "COURTLISTENER_TOKEN length: ${#COURTLISTENER_TOKEN}"
+          test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY missing"; exit 1; }
+      - name: Blindness guard
+        run: |
+          # The coder must not be able to read results; remove them from the runner's checkout.
+          rm -rf results data/appeals/*.events.csv
+          git status --short | head -5
+      - name: Code
+        run: python scripts/ai_coder.py "$LIST" "$OUT" 2>&1 | tee data/water/api_coder_run.log
+      - name: Check sheet
+        run: python scripts/water_check_sheet.py "$OUT" | tee -a data/water/api_coder_run.log
+        continue-on-error: true
+      - name: Commit (sheet only; restores the removed results first)
+        run: |
+          git checkout -- results data/appeals 2>/dev/null || true
+          git config user.name "water-coder-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "$OUT" data/water/api_coder data/water/api_coder_run.log
+          git commit -m "Water coder 3 (API) sheet: $(basename "$OUT")" || exit 0
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
