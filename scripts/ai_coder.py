@@ -76,6 +76,21 @@ def sec_get(url: str) -> requests.Response:
 
 # ----------------------------------------------------------------------------- sources
 
+def cl_get(url: str, hdr: dict) -> requests.Response:
+    """CourtListener GET that waits out rate limits (429) rather than giving up."""
+    for attempt in range(8):
+        r = requests.get(url, headers=hdr, timeout=90)
+        if r.status_code == 429 or r.status_code >= 500:
+            wait = int(r.headers.get("Retry-After", 0) or 0) or 30 * (attempt + 1)
+            log(f"CourtListener {r.status_code}; waiting {wait}s")
+            time.sleep(min(wait, 300))
+            continue
+        r.raise_for_status()
+        return r
+    r.raise_for_status()
+    return r
+
+
 def opinion_text(docket: str, case_name: str, date: str = "") -> tuple[str, str]:
     if DRY:
         return f"SYNTHETIC OPINION for {case_name}. The judgment of $50,000,000 is affirmed.", "dry"
@@ -89,9 +104,7 @@ def opinion_text(docket: str, case_name: str, date: str = "") -> tuple[str, str]
                        f"&filed_after={int(y)}-{m}-01&filed_before={date}")
     res = []
     for url in queries:
-        r = requests.get(url, headers=hdr, timeout=90)
-        r.raise_for_status()
-        res = r.json().get("results", [])
+        res = cl_get(url, hdr).json().get("results", [])
         if res:
             break
         time.sleep(0.5)
@@ -103,10 +116,10 @@ def opinion_text(docket: str, case_name: str, date: str = "") -> tuple[str, str]
         oid = op.get("id")
         if not oid:
             continue
-        o = requests.get(f"https://www.courtlistener.com/api/rest/v4/opinions/{oid}/", headers=hdr, timeout=90).json()
+        o = cl_get(f"https://www.courtlistener.com/api/rest/v4/opinions/{oid}/", hdr).json()
         t = o.get("plain_text") or strip_html(o.get("html_with_citations") or o.get("html") or o.get("xml_harvard") or "")
         texts.append(f"[{op.get('type', 'opinion')}]\n{t}")
-        time.sleep(0.3)
+        time.sleep(1.0)
     return "\n\n".join(texts), f"CourtListener cluster {cid}"
 
 
@@ -187,7 +200,7 @@ def call_model(pack: str) -> tuple[dict, dict]:
         ans = dict(A_money_score=1, A_figure_usd=50000000, A_mcap_usd=1000000000, B_core_business=1, C_disclosed=1,
                    C_filing_accession="0000000000-00-000000", D_figure_stated=1, price_known=0, reason="dry run")
         return ans, dict(input_tokens=0, output_tokens=0)
-    body = dict(model=MODEL, max_tokens=1200, system=SYSTEM, messages=[{"role": "user", "content": pack}])
+    body = dict(model=MODEL, max_tokens=4000, system=SYSTEM, messages=[{"role": "user", "content": pack}])
     for attempt in range(5):
         r = requests.post("https://api.anthropic.com/v1/messages", json=body, timeout=300,
                           headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
@@ -201,8 +214,18 @@ def call_model(pack: str) -> tuple[dict, dict]:
     txt = "".join(c.get("text", "") for c in j.get("content", []) if c.get("type") == "text")
     m = re.search(r"\{.*\}", txt, flags=re.S)
     if not m:
-        raise RuntimeError(f"no JSON in model reply: {txt[:200]}")
+        raise RuntimeError(f"no JSON in model reply (stop_reason {j.get('stop_reason')}): {txt[:200]}")
     return json.loads(m.group(0)), j.get("usage", {})
+
+
+def call_model_retry(pack: str) -> tuple[dict, dict]:
+    try:
+        return call_model(pack)
+    except (ValueError, RuntimeError) as exc:
+        if "status" in str(exc) and "Anthropic" in str(exc):
+            raise
+        log(f"unparseable reply, retrying once: {str(exc)[:120]}")
+        return call_model(pack)
 
 
 def num(x) -> str:
@@ -222,7 +245,7 @@ def main(inp: str, out: str) -> None:
     if any(c.lower() in ("car", "ar0", "z0", "car_post", "signed_post") for c in lst.columns):
         raise SystemExit("coding list carries price columns; refusing to code")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    rows, usage_tot, mismatches = [], dict(input_tokens=0, output_tokens=0), 0
+    rows, usage_tot, mismatches, no_opinion = [], dict(input_tokens=0, output_tokens=0), 0, 0
     for _, e in lst.iterrows():
         eid = e["event_id"]
         notes = []
@@ -250,11 +273,18 @@ def main(inp: str, out: str) -> None:
         (OUT_DIR / "packs").mkdir(exist_ok=True)
         with gzip.open(OUT_DIR / "packs" / f"{eid}.txt.gz", "wt") as fh:
             fh.write(pack_txt)
-        try:
-            ans, usage = call_model(pack_txt)
-        except Exception as exc:  # noqa: BLE001
-            ans, usage = dict(reason=f"model call failed: {str(exc)[:150]}"), {}
-            notes.append("model failed")
+        if not op:
+            ans, usage = dict(reason=f"not coded: opinion unavailable ({op_src[:100]})"), {}
+            notes.append("opinion unavailable; model not called")
+            no_opinion += 1
+            if no_opinion >= 3 and no_opinion == len(rows) + 1:
+                raise SystemExit(f"opinion unavailable for the first {no_opinion} events ({op_src}); aborting before spending on the rest")
+        else:
+            try:
+                ans, usage = call_model_retry(pack_txt)
+            except Exception as exc:  # noqa: BLE001
+                ans, usage = dict(reason=f"model call failed: {str(exc)[:150]}"), {}
+                notes.append("model failed")
         for k in usage_tot:
             usage_tot[k] += int(usage.get(k, 0) or 0)
         # The rubric defines A by the ratio; where the model gives both figures, the score is the ratio's band.
@@ -279,7 +309,7 @@ def main(inp: str, out: str) -> None:
         log(f"{eid}: A={ans.get('A_money_score')} B={ans.get('B_core_business')} C={ans.get('C_disclosed')} tokens={usage}")
     pd.DataFrame(rows).to_csv(out, index=False)
     meta = dict(model=MODEL, prompt_sha256=PROMPT_SHA, events=len(rows), usage=usage_tot, input=inp, output=out,
-                a_score_recomputed_from_ratio=mismatches,
+                a_score_recomputed_from_ratio=mismatches, opinion_unavailable=no_opinion,
                 failed_events=[r["event_id"] for r in rows if r["A_money_score"] in ("", "None")],
                 run_utc=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
     (OUT_DIR / "run_meta.json").write_text(json.dumps(meta, indent=1))
