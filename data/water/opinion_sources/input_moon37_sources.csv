@@ -1,0 +1,38 @@
+event_id,date,docket,source,pages,chars,caption_in_text
+W01,2005-11-08,03-1238,GovInfo USREPORTS-546-21 (546 U.S. 21 (2006)),22,47574,1
+W02,2006-02-28,04-805,GovInfo USREPORTS-547-1 (547 U.S. 1 (2006)),8,17100,1
+W03,2007-01-10,05-746,GovInfo USREPORTS-549-158 (549 U.S. 158 (2007)),25,56535,1
+W04,2007-02-20,05-1256,GovInfo USREPORTS-549-346 (549 U.S. 346 (2007)),19,42250,1
+W05,2007-12-04,06-1287,GovInfo USREPORTS-552-9 (552 U.S. 9 (2008)),14,31847,1
+W06,2008-05-27,06-1431,GovInfo USREPORTS-553-442 (553 U.S. 442 (2008)),32,71013,1
+W07,2008-06-26,06-1457,GovInfo USREPORTS-554-527 (554 U.S. 527 (2008)),43,97764,1
+W08,2009-03-31,07-1216,GovInfo USREPORTS-556-178 (556 U.S. 178 (2009)),2,2727,1
+W09,2009-06-15,08-310,GovInfo USREPORTS-557-1 (557 U.S. 1 (2009)),28,96800,0
+W10,2009-06-22,07-984,GovInfo USREPORTS-557-261 (557 U.S. 261 (2009)),44,150455,0
+W11,2009-12-08,08-604,GovInfo USREPORTS-558-67 (558 U.S. 67 (2010)),20,45266,1
+W12,2010-06-21,09-497,GovInfo USREPORTS-561-63 (561 U.S. 63 (2010)),26,56375,1
+W13,2011-02-22,09-520,GovInfo USREPORTS-562-277 (562 U.S. 277 (2011)),30,66995,1
+W14,2011-06-23,10-235,GovInfo USREPORTS-564-685 (564 U.S. 685 (2011)),36,78775,1
+W15,2012-01-18,10-1195,GovInfo USREPORTS-565-368 (565 U.S. 368 (2012)),20,43688,1
+W16,2015-06-01,14-86,GovInfo USREPORTS-575-768 (575 U.S. 768 (2014)),22,46686,1
+W17,2015-01-14,13-975,GovInfo USREPORTS-574-293 (574 U.S. 293 (2014)),25,53863,1
+W18,2016-03-07,14-1382,GovInfo USREPORTS-577-378 (577 U.S. 378 (2015)),7,13516,1
+W19,2017-05-01,15-423,GovInfo USREPORTS-581-170 (581 U.S. 170 (2017)),19,40578,1
+W20,2017-05-15,16-348,GovInfo USREPORTS-581-224 (581 U.S. 224 (2017)),22,48195,1
+W21,2018-06-22,16-1011,docket 16-1011 not on slip-opinion page OT2017; no United States Reports granule matching caption and date (1 caption candidates),0,0,0
+W22,2019-05-20,17-290,docket 17-290 not on slip-opinion page OT2018; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W23,2019-01-22,17-1229,docket 17-1229 not on slip-opinion page OT2018; no United States Reports granule matching caption and date (1 caption candidates),0,0,0
+W24,2019-05-28,17-1471,docket 17-1471 not on slip-opinion page OT2018; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W25,2019-03-04,17-1625,docket 17-1625 not on slip-opinion page OT2018; no United States Reports granule matching caption and date (1 caption candidates),0,0,0
+W26,2019-12-11,18-801,docket 18-801 not on slip-opinion page OT2019; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W27,2020-06-30,19-46,docket 19-46 not on slip-opinion page OT2019; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W28,2021-04-05,18-956,docket 18-956 not on slip-opinion page OT2020; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W29,2021-04-01,19-511,docket 19-511 not on slip-opinion page OT2020; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W30,2022-04-28,20-807,docket 20-807 not on slip-opinion page OT2021; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W31,2023-06-27,21-1168,docket 21-1168 not on slip-opinion page OT2022; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W32,2023-06-16,21-1052,docket 21-1052 not on slip-opinion page OT2022; no United States Reports granule matching caption and date (7 caption candidates),0,0,0
+W33,2023-06-23,22-105,docket 22-105 not on slip-opinion page OT2022; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W34,2024-11-22,23-980,docket 23-980 not on slip-opinion page OT2024; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W35,2025-02-26,23-971,docket 23-971 not on slip-opinion page OT2024; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W36,2025-06-20,24-7,docket 24-7 not on slip-opinion page OT2024; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
+W37,2025-06-05,24-304,docket 24-304 not on slip-opinion page OT2024; no United States Reports granule matching caption and date (0 caption candidates),0,0,0
