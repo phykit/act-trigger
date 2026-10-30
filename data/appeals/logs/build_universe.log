@@ -1,9 +1,10 @@
 SCDB release 2026_01 loaded: 9409 rows
-CourtListener first result keys: ['absolute_url', 'attorney', 'caseName', 'caseNameFull', 'citation', 'citeCount', 'cluster_id', 'court', 'court_citation_string', 'court_id', 'court_jurisdiction', 'dateArgued', 'dateFiled', 'dateReargued', 'dateReargumentDenied', 'docketNumber', 'docket_id', 'judge', 'lexisCite', 'meta', 'neutralCite', 'non_participating_judge_ids', 'opinions', 'panel_ids', 'panel_names', 'posture', 'procedural_history', 'scdb_id', 'sibling_ids', 'source']; count 5029
-CourtListener: 50 pages, 980 rows
-CourtListener status values: {'Published': 980}
-Federal Circuit: 980 precedential opinions from CourtListener v4
-universe: 2322 rulings; SCOTUS 1342 rulings (SCDB 2026_01); Federal Circuit 980 precedential opinions (CourtListener v4)
+CourtListener first result keys: []; count None
+CourtListener: 50 pages, 453 rows
+CourtListener: 54 quarterly windows, 76 pages, 453 rows
+CourtListener status values: {'Published': 453}
+Federal Circuit: 453 precedential opinions from CourtListener v4
+universe: 1795 rulings; SCOTUS 1342 rulings (SCDB 2026_01); Federal Circuit 453 precedential opinions (CourtListener v4)
 party map: 0 rulings processed
 party map: 100 rulings processed
 party map: 200 rulings processed
@@ -22,10 +23,4 @@ party map: 1400 rulings processed
 party map: 1500 rulings processed
 party map: 1600 rulings processed
 party map: 1700 rulings processed
-party map: 1800 rulings processed
-party map: 1900 rulings processed
-party map: 2000 rulings processed
-party map: 2100 rulings processed
-party map: 2200 rulings processed
-party map: 2300 rulings processed
-party map: 4539 sides; {'not a company': 2546, 'unresolved (none)': 1579, 'listed': 175, 'ex21 parent': 85, 'unresolved (parent not listed)': 79, 'unresolved (ambiguous)': 71, 'unresolved (error)': 4}
+party map: 3542 sides; {'not a company': 2024, 'unresolved (none)': 1190, 'listed': 150, 'ex21 parent': 70, 'unresolved (parent not listed)': 65, 'unresolved (ambiguous)': 37, 'unresolved (error)': 6}
