@@ -41,13 +41,24 @@ def _log(m: str) -> None:
     print(m, file=sys.stderr, flush=True)
 
 
+_LAST: dict[str, float] = {}
+STATUS: dict[str, str] = {}
+
+
 def _get(url: str, headers: dict, params: dict | None = None, attempts: int = 4) -> requests.Response | None:
+    host = url.split("/")[2]
     for a in range(attempts):
+        gap = (2.0 if "supremecourt" in host else 0.3) - (time.time() - _LAST.get(host, 0))
+        if gap > 0:
+            time.sleep(gap)
+        _LAST[host] = time.time()
         try:
-            r = requests.get(url, headers=headers, params=params, timeout=120)
-        except requests.RequestException:
+            r = requests.get(url, headers=headers, params=params, timeout=300)
+        except requests.RequestException as exc:
+            STATUS[url] = type(exc).__name__
             time.sleep(10 * (a + 1))
             continue
+        STATUS[url] = str(r.status_code)
         if r.status_code == 200:
             return r
         if r.status_code in (429, 500, 502, 503, 504):
@@ -88,7 +99,17 @@ def _slip_rows(term: int) -> list[dict]:
     f = CACHE / f"slip2_{term % 100:02d}.json"
     if f.exists():
         return json.loads(f.read_text())
-    r = _get(f"{SC}/opinions/slipopinion/{term % 100:02d}", UA)
+    rows: list[dict] = []
+    for attempt in range(3):
+        rows = _parse_slip(_get(f"{SC}/opinions/slipopinion/{term % 100:02d}", UA))
+        if len(rows) >= 5:
+            f.write_text(json.dumps(rows))
+            return rows
+        time.sleep(30 * (attempt + 1))
+    return rows
+
+
+def _parse_slip(r: requests.Response | None) -> list[dict]:
     rows = []
     if r is not None and "/slipopinion/" in r.url:
         # Markup-independent: each opinion link is paired with the text between it and the previous opinion link,
@@ -114,7 +135,6 @@ def _slip_rows(term: int) -> list[dict]:
                     date = ""
             dockets = re.findall(r"(?<![\w-])(\d{2}[-A]\d{1,5}|\d{2,3}[Oo]rig|\d{2}O\d{1,4})(?![\w-])", seg)
             rows.append(dict(href=href, date=date, docket=dockets[-1] if dockets else "", text=seg[-300:]))
-    f.write_text(json.dumps(rows))
     return rows
 
 
@@ -139,7 +159,7 @@ def slip_pdf(docket: str, date: str) -> tuple[bytes | None, str]:
         return _prelim_range(href, rows)
     r = _get(href, UA)
     if r is None or r.content[:4] != b"%PDF":
-        return None, f"slip opinion PDF not retrieved ({href})"
+        return None, f"slip opinion PDF not retrieved ({href}; {STATUS.get(href, '?')})"
     return r.content, f"supremecourt.gov slip opinion {href.replace(SC, '')}"
 
 
@@ -157,7 +177,7 @@ def _prelim_range(href: str, rows: list[dict]) -> tuple[bytes | None, str]:
     if not f.exists():
         r = _get(base, UA)
         if r is None or r.content[:4] != b"%PDF":
-            return None, f"preliminary print not retrieved ({base})"
+            return None, f"preliminary print not retrieved ({base}; {STATUS.get(base, '?')})"
         f.write_bytes(r.content)
     rd = PdfReader(str(f))
     end = min((later[0] - 1) if later else start + 119, start + 119, len(rd.pages))
@@ -199,15 +219,17 @@ def usreports_pdf(case_name: str, date: str) -> tuple[bytes | None, str]:
         s = sum(len(a & b) for a, b in zip(sides, gs))
         if s and all(a & b for a, b in zip(sides, gs) if a and b):
             scored.append((s, g))
+    seen_dates = []
     for _, g in sorted(scored, key=lambda x: -x[0])[:8]:
         summ = _gi(f"/packages/USREPORTS-{g['vol']}/granules/{g['granule']}/summary")
         if not summ or (summ.get("decisionDate") or {}).get("date") != date:
+            seen_dates.append(f"{g['granule']} {(summ or {}).get('decisionDate')}")
             continue
         link = (summ.get("download") or {}).get("pdfLink")
         r = _get(link, {"X-Api-Key": GOVINFO_KEY, **UA}) if link else None
         if r is not None and r.content[:4] == b"%PDF":
             return r.content, f"GovInfo {g['granule']} ({summ.get('fullCitation') or summ.get('usCitation')})"
-    return None, f"no United States Reports granule matching caption and date ({len(scored)} caption candidates)"
+    return None, f"no United States Reports granule matching caption and date ({len(scored)} caption candidates: {'; '.join(seen_dates)[:200]})"
 
 
 # ----------------------------------------------------------------------------- combined
