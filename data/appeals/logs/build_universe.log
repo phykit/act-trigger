@@ -1,26 +1,26 @@
 SCDB release 2026_01 loaded: 9409 rows
-CourtListener first result keys: []; count None
-CourtListener: 50 pages, 453 rows
-CourtListener: 54 quarterly windows, 76 pages, 453 rows
-CourtListener status values: {'Published': 453}
-Federal Circuit: 453 precedential opinions from CourtListener v4
-universe: 1795 rulings; SCOTUS 1342 rulings (SCDB 2026_01); Federal Circuit 453 precedential opinions (CourtListener v4)
-party map: 0 rulings processed
-party map: 100 rulings processed
-party map: 200 rulings processed
-party map: 300 rulings processed
-party map: 400 rulings processed
-party map: 500 rulings processed
-party map: 600 rulings processed
-party map: 700 rulings processed
-party map: 800 rulings processed
-party map: 900 rulings processed
-party map: 1000 rulings processed
-party map: 1100 rulings processed
-party map: 1200 rulings processed
-party map: 1300 rulings processed
-party map: 1400 rulings processed
-party map: 1500 rulings processed
-party map: 1600 rulings processed
-party map: 1700 rulings processed
-party map: 3542 sides; {'not a company': 2024, 'unresolved (none)': 1190, 'listed': 150, 'ex21 parent': 70, 'unresolved (parent not listed)': 65, 'unresolved (ambiguous)': 37, 'unresolved (error)': 6}
+CourtListener 429 on window 2012-01-01; waiting 600s
+CourtListener 429 on window 2012-01-01; waiting 600s
+CourtListener 429 on window 2012-01-01; waiting 600s
+CourtListener 429 on window 2012-01-01; waiting 600s
+CourtListener 429 on window 2012-01-01; waiting 600s
+CourtListener 429 on window 2012-01-01; waiting 600s
+CourtListener 429 on window 2012-01-01; waiting 600s
+CourtListener 429 on window 2012-01-01; waiting 600s
+CourtListener 429 on window 2012-01-01; waiting 600s
+CourtListener 429 on window 2012-01-01; waiting 600s
+Traceback (most recent call last):
+  File "/home/runner/work/act-trigger/act-trigger/scripts/build_universe.py", line 24, in <module>
+    main()
+  File "/home/runner/work/act-trigger/act-trigger/scripts/build_universe.py", line 16, in main
+    uni, note = build_universe()
+                ^^^^^^^^^^^^^^^^
+  File "/home/runner/work/act-trigger/act-trigger/scripts/appeals_common.py", line 469, in build_universe
+    cafc, src = cafc_rulings()
+                ^^^^^^^^^^^^^^
+  File "/home/runner/work/act-trigger/act-trigger/scripts/appeals_common.py", line 429, in cafc_rulings
+    df = fn()
+         ^^^^
+  File "/home/runner/work/act-trigger/act-trigger/scripts/appeals_common.py", line 343, in _courtlistener_cafc
+    raise CourtListenerThrottled(f"CourtListener still throttled on window {w_from} to {w_to} after retries; "
+appeals_common.CourtListenerThrottled: CourtListener still throttled on window 2012-01-01 to 2012-03-31 after retries; 0 windows reused, completed windows are cached for the next run
