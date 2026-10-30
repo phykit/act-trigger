@@ -1,5 +1,5 @@
 name: appeals
-# Run 7: Federal Circuit fetched in quarterly windows (run 6 stopped at the search API cap of about 1,000 results, 2012 to Sept 2013 only)
+# Run 8: as run 7 (quarterly Federal Circuit windows); the results commit now rebases onto main before pushing
 
 on:
   workflow_dispatch:
@@ -18,6 +18,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
 
 env:
   SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
@@ -79,4 +83,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add results/ data/appeals/
           git commit -m "Earth, Moon and Fire run $(date -u +%F) [skip ci]" || echo "nothing to commit"
-          git push
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
