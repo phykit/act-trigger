@@ -1,0 +1,36 @@
+# Federal Circuit index from GovInfo (metadata only; no prices, no opinion text). Resumable; commits as it goes.
+name: govinfo-cafc
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: govinfo-cafc
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      GOVINFO_API_KEY: ${{ secrets.GOVINFO_API_KEY }}
+      GOVINFO_MINUTES: "270"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q pandas requests tabulate
+      - name: Index
+        run: python scripts/govinfo_cafc.py 2>&1 | tee data/appeals/logs/govinfo_cafc.log
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/appeals/govinfo_cafc_index.csv data/appeals/govinfo_cafc_coverage.md data/appeals/logs/govinfo_cafc.log 2>/dev/null || true
+          git commit -m "GovInfo Federal Circuit index $(date -u +%FT%H:%MZ) [skip ci]" || exit 0
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
