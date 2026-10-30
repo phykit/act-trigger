@@ -3,11 +3,35 @@
  "model": "claude-sonnet-5-5",
  "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
  "pack_sha256": "903a32314b0204569f86e0a701771ecab41d6d30e2436e5c8d6a4b4532247ed3",
- "usage": {},
+ "usage": {
+  "input_tokens": 26441,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 525,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
  "answer": {
-  "reason": "model call failed: Extra data: line 3 column 1 (char 562)"
+  "A_money_score": 0,
+  "A_figure_usd": 93400000,
+  "A_mcap_usd": 91070000000,
+  "B_core_business": 0,
+  "C_disclosed": 0,
+  "C_filing_accession": null,
+  "D_figure_stated": 1,
+  "price_known": 0,
+  "reason": "The opinion reinstates a $93.4M lost-profits award (plus $12.5M royalties, about $105.9M in total), which is roughly 0.1% of the $91.07B non-affiliate market value and so scores 0 on A; the ruling concerns a patent damages remedy on a seismic acquisition system that Schlumberger was exiting, and neither the 10-K nor the 10-Q names the case (Note 16 says only that a material loss is remote).",
+  "A_money_score_model": 1
  },
  "notes": [
-  "model failed"
+  "A recomputed from ratio 0.0010: model said 1, band 0"
  ]
 }

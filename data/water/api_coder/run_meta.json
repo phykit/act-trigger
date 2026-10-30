@@ -10,9 +10,20 @@
  "output": "data/water/moon37_coding_sheet_api.csv",
  "a_score_recomputed_from_ratio": 2,
  "opinion_unavailable": 1,
- "failed_events": [
-  "W21",
-  "W34"
- ],
- "run_utc": "2026-10-30T22:49:09Z"
+ "failed_events": [],
+ "run_utc": "2026-10-30T22:49:09Z",
+ "reruns": [
+  {
+   "events": [
+    "W21",
+    "W34"
+   ],
+   "usage": {
+    "input_tokens": 58584,
+    "output_tokens": 741
+   },
+   "run_utc": "2026-10-30T22:52:13Z",
+   "still_failed": []
+  }
+ ]
 }

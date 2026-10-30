@@ -2,12 +2,33 @@
  "event_id": "W34",
  "model": "claude-sonnet-5-5",
  "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
- "pack_sha256": "ea957c099a15200668fe884699f64f2c476c5169ea3b66133c6430939ea7e085",
- "usage": {},
- "answer": {
-  "reason": "not coded: opinion unavailable (opinion fetch failed: 429 Client Error: Too Many Requests for url: https://www.courtlistener.com/api)"
+ "pack_sha256": "9e1216bd3fcfcc382aa309e5f169fa5fa2aa9f294fd3b0a59d71bcd27dd0ed52",
+ "usage": {
+  "input_tokens": 32143,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 216,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
  },
- "notes": [
-  "opinion unavailable; model not called"
- ]
+ "answer": {
+  "A_money_score": 0,
+  "A_figure_usd": null,
+  "A_mcap_usd": 284459116,
+  "B_core_business": 0,
+  "C_disclosed": 0,
+  "C_filing_accession": null,
+  "D_figure_stated": 0,
+  "price_known": 0,
+  "reason": "The Court dismissed certiorari as improvidently granted with no money figure; Amalgamated Bank is only a nominal respondent (a shareholder-plaintiff in the Facebook securities suit), the case does not govern its banking business, and neither the 10-K nor the 10-Q names it."
+ },
+ "notes": []
 }

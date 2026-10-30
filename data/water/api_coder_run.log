@@ -52,3 +52,7 @@ wrote data/water/moon37_coding_sheet_api.csv; usage {'input_tokens': 1841491, 'o
  - W34: C_disclosed must be 0 or 1
  - W34: D_figure_stated must be 0 or 1
  - W34: price_known must be 0 or 1
+W21: A=0 B=0 C=0 tokens={'input_tokens': 26441, 'cache_creation_input_tokens': 0, 'cache_read_input_tokens': 0, 'cache_creation': {'ephemeral_5m_input_tokens': 0, 'ephemeral_1h_input_tokens': 0}, 'output_tokens': 525, 'output_tokens_details': {'thinking_tokens': 0}, 'service_tier': 'standard', 'inference_geo': 'global', 'speed': 'standard'}
+W34: A=0 B=0 C=0 tokens={'input_tokens': 32143, 'cache_creation_input_tokens': 0, 'cache_read_input_tokens': 0, 'cache_creation': {'ephemeral_5m_input_tokens': 0, 'ephemeral_1h_input_tokens': 0}, 'output_tokens': 216, 'output_tokens_details': {'thinking_tokens': 0}, 'service_tier': 'standard', 'inference_geo': 'global', 'speed': 'standard'}
+re-coded ['W21', 'W34']; merged into data/water/moon37_coding_sheet_api.csv; usage {'input_tokens': 58584, 'output_tokens': 741}
+OK: 37 rows; high-stakes (score >= 2): 4; price_known: 0
