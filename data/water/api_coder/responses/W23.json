@@ -1,0 +1,35 @@
+{
+ "event_id": "W23",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "4322741699501e2947960df217faf794a0e4479cf03da183a3814e285bb07409",
+ "usage": {
+  "input_tokens": 33084,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 792,
+  "output_tokens_details": {
+   "thinking_tokens": 551
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "answer": {
+  "A_money_score": 1,
+  "A_figure_usd": 459000000,
+  "A_mcap_usd": 35800000000,
+  "B_core_business": 0,
+  "C_disclosed": 1,
+  "C_filing_accession": "0001193125-18-315734",
+  "D_figure_stated": 1,
+  "price_known": 0,
+  "reason": "The opinion text is missing, so this rests on the 10-Q, which names the Helsinn case and cites $459M in annual US Aloxi sales as the exposure (about 1.3% of the $35.8B non-affiliate market value); the dispute concerns one generic product (palonosetron IV), not a core franchise or principal practice.",
+  "A_money_score_model": 1
+ },
+ "notes": []
+}

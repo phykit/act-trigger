@@ -1,0 +1,13 @@
+{
+ "event_id": "W22",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "053e862996611a9094f62e112b12a0bbdc0c5aeeea600c28d4fa6ffd5d0f685b",
+ "usage": {},
+ "answer": {
+  "reason": "model call failed: Unterminated string starting at: line 1 column 191 (char 190)"
+ },
+ "notes": [
+  "model failed"
+ ]
+}

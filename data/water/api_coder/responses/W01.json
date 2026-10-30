@@ -1,0 +1,35 @@
+{
+ "event_id": "W01",
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "pack_sha256": "a67599c16254002e58e41d7ba2ea7dfde049caa5f21cb173955365dd5450b61e",
+ "usage": {
+  "input_tokens": 17103,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 235,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global",
+  "speed": "standard"
+ },
+ "answer": {
+  "A_money_score": 0,
+  "A_figure_usd": 5000000,
+  "A_mcap_usd": 4396597967,
+  "B_core_business": 1,
+  "C_disclosed": 1,
+  "C_filing_accession": "0000100493-04-000084",
+  "D_figure_stated": 1,
+  "price_known": 0,
+  "reason": "Alvarez is named in the 10-K and 10-Q contingencies note with a $3.1M judgment and about $5M additional exposure (about 0.1% of the $4.4B non-affiliate market value), and it governs compensability of donning/doffing time in meat and poultry plant operations, with many other FLSA suits stayed pending the ruling; the opinion text was unavailable, so the pack alone was used.",
+  "A_money_score_model": 0
+ },
+ "notes": []
+}

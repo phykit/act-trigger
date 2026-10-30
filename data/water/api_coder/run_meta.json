@@ -1,0 +1,16 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_sha256": "c9a7fbf135e25a1efb67617d0c8c1de2a1cd7a58e22aca10935e48342aa0b77d",
+ "events": 37,
+ "usage": {
+  "input_tokens": 1305547,
+  "output_tokens": 14479
+ },
+ "input": "data/water/legora/input_moon37.csv",
+ "output": "data/water/moon37_coding_sheet_api.csv",
+ "a_score_recomputed_from_ratio": 0,
+ "failed_events": [
+  "W22"
+ ],
+ "run_utc": "2026-10-30T16:36:03Z"
+}
