@@ -55,6 +55,28 @@ python scripts/orange.py --spec orange_v2  # orange for the pilot spec
 RULINGS_SELFTEST=1 RULINGS_SCRATCH=/tmp/selftest python scripts/apple.py   # synthetic data, writes nothing under results/
 ```
 
+## Appellate-ruling tests: Projects Earth, Moon and Fire
+
+Three pre-registrations on a mechanical universe: every argued Supreme Court case of October Terms 2005 to 2024 (SCDB) and every precedential Federal Circuit opinion from 2012 where the runner can reach a source, with parties matched to tickers by exact name against EDGAR's company list, subsidiaries resolved to parents through Exhibit 21 full-text search, earnings dates from 8-K item 2.02, and industry peers by four-digit SIC. The `appeals` workflow (`.github/workflows/appeals.yml`) builds the universe and runs all three, committing results and the fetched inputs under `results/` and `data/appeals/` (raw EDGAR submissions and peer prices are not committed). Setting the repository secret `SEC_CONTACT` to a name and email identifies the runner to EDGAR as its fair-access policy asks; without it the scripts send the repository URL.
+
+| Item | State |
+|---|---|
+| Earth: post-ruling drift in the litigant, against the same company's other large moves | Frozen 30 October 2026: `prereg/earth_prereg.md`, SHA-256 `464c4ccfc0a89a22df4f58a38c4da514a50db910649e99714c61d27b71e3a5cf`. First run pending: `results/earth_result_<date>.md` |
+| Moon: propagation of a Supreme Court ruling to the listed parent of a subsidiary party | Frozen 30 October 2026: `prereg/moon_prereg.md`, SHA-256 `8f7171a0a5af054b8890339049913f12f4a4b00c8efc5f29bf8c9f2757d2f6e1`. First run pending: `results/moon_result_<date>.md` |
+| Fire: spillover to the litigant's SIC peers, signed by the litigant's own reaction | Frozen 30 October 2026: `prereg/fire_prereg.md`, SHA-256 `f1ebe116062b8f01c9bd192842803cd3eea523a7bb9af97643a392cc59e28a13`. First run pending: `results/fire_result_<date>.md` |
+| Evidentiary standing | Non-evidentiary. Daily closes; mechanical matching; one parameter set; no costs |
+| Operator inputs | Not set: minimum effect worth pursuing, minimum event count for a live decision, ratified pre-mortem |
+| Trading | None |
+
+Reproduce locally:
+
+```
+pip install pandas numpy scipy requests lxml yfinance
+python scripts/build_universe.py
+python scripts/earth.py && python scripts/moon.py && python scripts/fire.py
+RULINGS_SELFTEST=1 RULINGS_SCRATCH=/tmp/selftest python scripts/earth.py   # synthetic data, writes nothing under results/
+```
+
 ## Rules for this repository
 
 - The specification file is never edited. Any change is a new, separately hashed specification with its own result file.

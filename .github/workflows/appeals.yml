@@ -1,0 +1,53 @@
+name: appeals
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/appeals_common.py"
+      - "scripts/build_universe.py"
+      - "scripts/earth.py"
+      - "scripts/moon.py"
+      - "scripts/fire.py"
+      - "prereg/earth_prereg.md"
+      - "prereg/moon_prereg.md"
+      - "prereg/fire_prereg.md"
+      - ".github/workflows/appeals.yml"
+
+permissions:
+  contents: write
+
+env:
+  SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install --quiet pandas numpy scipy requests lxml "yfinance>=0.2.60"
+      - name: Build universe and party map
+        run: python scripts/build_universe.py
+      - name: Project Earth
+        continue-on-error: true
+        run: python scripts/earth.py
+      - name: Project Moon
+        continue-on-error: true
+        run: python scripts/moon.py
+      - name: Project Fire
+        continue-on-error: true
+        run: python scripts/fire.py
+      - name: Commit results and fetched inputs
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/ data/appeals/
+          git commit -m "Earth, Moon and Fire run $(date -u +%F) [skip ci]" || echo "nothing to commit"
+          git push
