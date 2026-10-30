@@ -26,7 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from rulings_common import ROOT, SELFTEST, log, result_path, scdb_table, spec_hash  # noqa: E402,F401
 
 ADATA = ROOT / "data" / "appeals"
-SEC_UA = os.environ.get("SEC_CONTACT") or "phykit act-trigger research skittson@gmail.com (https://github.com/phykit/act-trigger)"
+SEC_UA = os.environ.get("SEC_CONTACT") or "Simon Kittson skittson@gmail.com"  # SEC fair-access format: name and email
 UA_PLAIN = {"User-Agent": "act-trigger research scripts (https://github.com/phykit/act-trigger)"}
 TERMS = list(range(5, 25))                 # OT2005 to OT2024
 CAFC_FROM, CAFC_TO = dt.date(2012, 1, 1), dt.date(2025, 6, 30)

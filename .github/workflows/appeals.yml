@@ -33,6 +33,17 @@ jobs:
           python-version: "3.12"
       - name: Install
         run: pip install --quiet pandas numpy scipy requests lxml "yfinance>=0.2.60"
+      - name: Probe EDGAR access (diagnostic only)
+        continue-on-error: true
+        run: |
+          mkdir -p data/appeals/logs
+          for ua in "Simon Kittson skittson@gmail.com" "${SEC_CONTACT:-none}"; do
+            for url in https://www.sec.gov/files/company_tickers.json https://data.sec.gov/submissions/CIK0000320193.json "https://efts.sec.gov/LATEST/search-index?q=%22Apple%22&forms=10-K"; do
+              code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 -H "User-Agent: $ua" -H "Accept-Encoding: gzip, deflate" "$url")
+              echo "$code  ua=[$ua]  $url" | tee -a data/appeals/logs/edgar_probe.log
+              sleep 1
+            done
+          done
       - name: Build universe and party map
         run: |
           mkdir -p data/appeals/logs
