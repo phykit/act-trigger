@@ -13,8 +13,9 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from rulings_common import (SELFTEST, check_dates, fetch_close, fmt_pct, load_cases, log,  # noqa: E402
-                            market_model, opinion_days, result_path, scdb_opinion_days, spec_hash)
+from rulings_common import (ROOT, SELFTEST, check_dates, check_dates_scdb, fetch_close, fmt_pct,  # noqa: E402
+                            load_cases, log, market_close, market_model, market_source, opinion_days,
+                            result_path, scdb_opinion_days, spec_hash)
 
 PERMS = 10_000
 SEED = 20261029
@@ -46,27 +47,28 @@ def permutation_p(groups: list[tuple[np.ndarray, np.ndarray]], observed: float) 
     rng = np.random.default_rng(SEED)
     tot_op = sum(int(m.sum()) for _, m in groups)
     tot_non = sum(int((~m).sum()) for _, m in groups)
-    totals = [float(z2.sum()) for z2, _ in groups]
-    ks = [int(m.sum()) for _, m in groups]
-    count = 0
-    for _ in range(PERMS):
-        s_op = 0.0
-        for (z2, _), k in zip(groups, ks):
-            if k:
-                s_op += z2[rng.permutation(len(z2))[:k]].sum()
-        s_non = sum(totals) - s_op
-        r = (s_op / tot_op) / (s_non / tot_non)
-        if r >= observed:
-            count += 1
-    return count / PERMS
+    grand = sum(float(z2.sum()) for z2, _ in groups)
+    s_op = np.zeros(PERMS)
+    for z2, m in groups:
+        k = int(m.sum())
+        if k == 0:
+            continue
+        order = np.argsort(rng.random((PERMS, len(z2))), axis=1)[:, :k]
+        s_op += z2[order].sum(axis=1)
+    s_non = grand - s_op
+    r = (s_op / tot_op) / (s_non / tot_non)
+    return float(np.mean(r >= observed))
 
 
 def main() -> None:
     spec = sys.argv[sys.argv.index("--spec") + 1] if "--spec" in sys.argv else "apple"
-    if spec not in ("apple", "apple_v2"):
-        raise SystemExit("--spec must be apple or apple_v2")
-    use_scdb = spec == "apple_v2"
-    cases = load_cases()
+    if spec not in ("apple", "apple_v2", "apple_v3"):
+        raise SystemExit("--spec must be apple, apple_v2 or apple_v3")
+    use_scdb = spec in ("apple_v2", "apple_v3")
+    wide = spec == "apple_v3"
+    register = ROOT / "data" / ("ruling_cases_wide.csv" if wide else "ruling_cases.csv")
+    cases = load_cases(register)
+    min_cases, min_op = (40, 200) if wide else (MIN_CASES, MIN_OPINION_DAYS)
     h = spec_hash(spec)
     rows, groups, placebo_groups, notes = [], [], [], []
     scdb_ver = "n/a"
@@ -82,16 +84,23 @@ def main() -> None:
         except Exception as exc:  # noqa: BLE001
             notes.append(f"{c['case_id']}: opinion-day source for OT{term:02d} unavailable ({exc}); case excluded")
             continue
-        chk = check_dates(c, listing, listing_name)
+        chk = check_dates_scdb(c) if wide else check_dates(c, listing, listing_name)
         if not chk["include"]:
-            notes.append(f"{c['case_id']}: decision date check {chk['decided_status']}; case excluded")
+            notes.append(f"{c['case_id']}: {chk['decided_status']}; case excluded")
             continue
         argued, decided = chk["argued"], chk["decided"]
         start = argued - dt.timedelta(days=800)
         end = decided + dt.timedelta(days=15)
-        stock, src_s = fetch_close(c["ticker"], start, end)
-        mkt, src_m = fetch_close(c["market_proxy"], start, end)
-        ar, mm = market_model(stock, mkt, argued)
+        try:
+            stock, src_s = fetch_close(c["ticker"], start, end)
+            if wide:
+                mkt, src_m = market_close(c["market_proxy"]), market_source(c["market_proxy"])
+            else:
+                mkt, src_m = fetch_close(c["market_proxy"], start, end)
+            ar, mm = market_model(stock, mkt, argued)
+        except Exception as exc:  # noqa: BLE001
+            notes.append(f"{c['case_id']}: price data or market model failed ({str(exc)[:120]}); case excluded")
+            continue
         op_set = set(op_days)
         if use_scdb:
             try:
@@ -142,7 +151,7 @@ def main() -> None:
     big_op = float(np.mean(np.concatenate([np.abs(np.sqrt(z2[m])) > 1 for z2, m in groups]))) if groups else float("nan")
     big_non = float(np.mean(np.concatenate([np.abs(np.sqrt(z2[~m])) > 1 for z2, m in groups]))) if groups else float("nan")
 
-    if n_cases < MIN_CASES or tot_op < MIN_OPINION_DAYS:
+    if n_cases < min_cases or tot_op < min_op:
         outcome = "UNSCORABLE"
     elif np.isfinite(R) and R > 1 and p < P_THRESH and (not np.isfinite(Rp) or R > Rp):
         outcome = "SUPPORT"
@@ -153,13 +162,13 @@ def main() -> None:
 
     today = dt.date.today().isoformat()
     L = []
-    L.append(f"# Result: Project Apple{' v2' if use_scdb else ''} (timing hazard in the argument-to-decision window)\n")
+    L.append(f"# Result: Project Apple{' v3 (wide sample)' if wide else (' v2' if use_scdb else '')} (timing hazard in the argument-to-decision window)\n")
     L.append(f"Run {today} against {spec}_prereg.md, SHA-256 {h} (hashed before the run). "
-             "Non-evidentiary: five cases, daily data, one parameter set, no costs.\n")
+             "Non-evidentiary: daily data, one parameter set, no costs.\n")
     if SELFTEST:
         L.append("**SELF-TEST RUN ON SYNTHETIC DATA. Not a result.**\n")
     L.append("## Population\n")
-    L.append(f"- {n_cases} cases entered the live arm ({len(cases)} registered); {tot_op} pooled non-decision opinion days "
+    L.append(f"- {n_cases} cases entered the live arm ({len(cases)} registered, register {register.name}); {tot_op} pooled non-decision opinion days "
              f"against {tot_non} non-opinion days inside the argument-to-decision windows.")
     L.append(f"- Placebo arm: {len(placebo_groups)} cases, windows shifted back {PLACEBO_SHIFT} days.\n")
     L.append("## Outcomes\n")
@@ -173,11 +182,11 @@ def main() -> None:
     L.append(f"- R above 1: {'met' if np.isfinite(R) and R > 1 else 'not met'} (R = {R:.3f}).")
     L.append(f"- Permutation p below {P_THRESH}: {'met' if np.isfinite(p) and p < P_THRESH else 'not met'} (p = {p:.3f}).")
     L.append(f"- R above the placebo R: {'met' if np.isfinite(Rp) and R > Rp else ('not met' if np.isfinite(Rp) else 'n/a, no placebo')} (placebo R = {Rp:.3f}).")
-    L.append(f"- At least {MIN_CASES} cases and {MIN_OPINION_DAYS} pooled opinion days: "
-             f"{'met' if n_cases >= MIN_CASES and tot_op >= MIN_OPINION_DAYS else 'not met'} ({n_cases} cases, {tot_op} opinion days).\n")
+    L.append(f"- At least {min_cases} cases and {min_op} pooled opinion days: "
+             f"{'met' if n_cases >= min_cases and tot_op >= min_op else 'not met'} ({n_cases} cases, {tot_op} opinion days).\n")
     L.append(f"Registered outcome: {outcome}.\n")
     L.append("## What this does not license\n")
-    L.append("- Five cases and daily closes. The test bounds the answer; it does not establish it.")
+    L.append("- Daily closes; the test bounds the answer, it does not establish it.")
     L.append("- Opinion days are the realised release dates, not the calendar as known at the start of each window." + (f" Source: SCDB release {scdb_ver}, all decision types." if use_scdb else " Source: supremecourt.gov slip-opinion listing, which is retired progressively once bound volumes publish."))
     L.append("- The placebo controls weekday composition and the ticker's own variance, not other calendar events in the live window (June FOMC, index rebalances).")
     L.append("- Standardisation by the pre-argument residual sigma weights cases unequally where volatility regimes changed between estimation and window.\n")

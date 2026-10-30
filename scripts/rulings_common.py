@@ -36,9 +36,15 @@ def spec_hash(name: str) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
-def load_cases() -> pd.DataFrame:
-    df = pd.read_csv(CASES, parse_dates=["argued", "decided"])
+def load_cases(path: Path | str | None = None) -> pd.DataFrame:
+    path = Path(path) if path else CASES
+    df = pd.read_csv(path)
+    for col in ("argued", "decided"):
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col])
     df["term"] = df["term"].astype(int)
+    if "market_proxy" not in df.columns:
+        df["market_proxy"] = "SPY"
     return df
 
 
@@ -53,7 +59,14 @@ def _rdata_path(name: str) -> Path:
 def _yf_close(ticker: str, start: str, end: str) -> pd.Series:
     import yfinance as yf
 
-    df = yf.download(ticker, start=start, end=end, auto_adjust=True, progress=False, threads=False)
+    import time
+
+    df = None
+    for attempt in range(3):
+        df = yf.download(ticker, start=start, end=end, auto_adjust=True, progress=False, threads=False)
+        if df is not None and len(df) > 0:
+            break
+        time.sleep(2 + 3 * attempt)
     if df is None or len(df) == 0:
         raise RuntimeError("yfinance returned no rows")
     if isinstance(df.columns, pd.MultiIndex):
@@ -194,8 +207,17 @@ def scdb_table() -> tuple[pd.DataFrame, str]:
         return _scdb_cache["df"], _scdb_cache["ver"]
     if SELFTEST:
         reg = load_cases()
-        df = pd.DataFrame({"term": 2000 + reg["term"], "dateDecision": reg["decided"],
+        df = pd.DataFrame({"term": 2000 + reg["term"], "dateDecision": reg["decided"], "dateArgument": reg["argued"],
                            "docket": reg["docket"], "caseName": reg["case_name"], "decisionType": 1})
+        wide = load_cases(ROOT / "data" / "ruling_cases_wide.csv")
+        wide = wide[~wide["docket"].isin(reg["docket"])]
+        rng = np.random.default_rng(7)
+        wdf = pd.DataFrame({
+            "term": 2000 + wide["term"],
+            "dateDecision": [pd.Timestamp(2001 + t, 6, 1) + pd.Timedelta(days=int(rng.integers(0, 28))) for t in wide["term"]],
+            "dateArgument": [pd.Timestamp(2001 + t, 1, 10) + pd.Timedelta(days=int(rng.integers(0, 90))) for t in wide["term"]],
+            "docket": wide["docket"], "caseName": wide["case_name"], "decisionType": 1})
+        df = pd.concat([df, wdf], ignore_index=True)
         extra = []
         for t in sorted(set(reg["term"])):
             start = dt.date(2000 + t, 10, 1)
@@ -295,6 +317,60 @@ def market_model(stock: pd.Series, mkt: pd.Series, argued: dt.date) -> tuple[pd.
     out["z"] = out["ar"] / sigma
     return out, dict(alpha=float(beta[0]), beta=float(beta[1]), sigma=sigma, n_est=int(len(est)),
                      est_start=est.index[0].date(), est_end=est.index[-1].date())
+
+
+_mkt_cache: dict = {}
+
+
+def market_close(proxy: str = "SPY") -> pd.Series:
+    """The market proxy over 2010 to today, fetched once per run and sliced by callers."""
+    if proxy not in _mkt_cache:
+        s, src = fetch_close(proxy, dt.date(2010, 1, 1), dt.date.today())
+        _mkt_cache[proxy] = (s, src)
+    return _mkt_cache[proxy][0]
+
+
+def market_source(proxy: str = "SPY") -> str:
+    market_close(proxy)
+    return _mkt_cache[proxy][1]
+
+
+def scdb_case_dates(term: int, docket: str) -> dict | None:
+    """Argument (last) and decision dates for a docket from SCDB, or None if absent."""
+    full, ver = scdb_table()
+    sub = full[(full["term"] == 2000 + term) & (full["docket"].astype(str).str.strip() == docket)]
+    if len(sub) == 0:
+        return None
+    row = sub.iloc[0]
+    argued = pd.to_datetime(row.get("dateArgument"), errors="coerce")
+    rearg = pd.to_datetime(row.get("dateRearg"), errors="coerce") if "dateRearg" in sub.columns else pd.NaT
+    last_arg = max([d for d in (argued, rearg) if pd.notna(d)], default=pd.NaT)
+    if pd.isna(last_arg):
+        return dict(argued=None, decided=row["dateDecision"].date(), decision_type=row.get("decisionType"),
+                    case_name=row.get("caseName"), scdb=ver)
+    return dict(argued=last_arg.date(), decided=row["dateDecision"].date(), decision_type=row.get("decisionType"),
+                case_name=row.get("caseName"), scdb=ver, reargued=pd.notna(rearg))
+
+
+def check_dates_scdb(case: pd.Series) -> dict:
+    """Date checks for the wide register: SCDB supplies the dates; Oyez is a reported cross-check."""
+    sd = scdb_case_dates(int(case["term"]), str(case["docket"]).strip())
+    if sd is None:
+        return dict(include=False, argued=None, decided=None, argued_status="absent from SCDB",
+                    decided_status="absent from SCDB")
+    if sd["argued"] is None:
+        return dict(include=False, argued=None, decided=sd["decided"], argued_status="no argument date in SCDB",
+                    decided_status=f"SCDB {sd['scdb']}")
+    oy = oyez_dates(int(case["term"]), case["docket"])
+    if oy is None:
+        a_st, d_st = "SCDB (Oyez unreachable)", "SCDB (Oyez unreachable)"
+    else:
+        a_st = "SCDB, Oyez agrees" if oy.get("argued") == sd["argued"] else f"SCDB; Oyez says {oy.get('argued')}"
+        d_st = "SCDB, Oyez agrees" if oy.get("decided") == sd["decided"] else f"SCDB; Oyez says {oy.get('decided')}"
+    if sd.get("reargued"):
+        a_st += " (reargued; last argument used)"
+    return dict(include=True, argued=sd["argued"], decided=sd["decided"], argued_status=a_st, decided_status=d_st,
+                decision_type=sd.get("decision_type"), scdb_name=sd.get("case_name"))
 
 
 # ----------------------------------------------------------------------------- results

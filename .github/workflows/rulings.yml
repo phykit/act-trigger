@@ -10,8 +10,11 @@ on:
       - "scripts/rulings_common.py"
       - "prereg/apple_prereg.md"
       - "prereg/apple_v2_prereg.md"
+      - "prereg/apple_v3_prereg.md"
+      - "prereg/orange_v2_prereg.md"
       - "prereg/orange_prereg.md"
       - "data/ruling_cases.csv"
+      - "data/ruling_cases_wide.csv"
       - ".github/workflows/rulings.yml"
 
 permissions:
@@ -28,9 +31,9 @@ jobs:
       - name: Install
         run: pip install --quiet pandas numpy scipy requests lxml "yfinance>=0.2.60"
       - name: Project Apple
-        run: python scripts/apple.py --spec apple_v2
+        run: python scripts/apple.py --spec apple_v3
       - name: Project Orange
-        run: python scripts/orange.py
+        run: python scripts/orange.py --spec orange_v2
       - name: Commit results and fetched inputs
         run: |
           git config user.name "github-actions[bot]"

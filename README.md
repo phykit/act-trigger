@@ -31,12 +31,14 @@ GPR vintage used for the first run: 2026-10-19. Later vintages may revise recent
 
 ## Court-ruling tests: Projects Apple and Orange
 
-Two sibling pre-registrations on the same five Supreme Court cases with a listed party (Myriad 2013, Halliburton 2014, American Express 2018, Oracle 2021, Amgen 2023). Both run on free daily data in GitHub Actions (`.github/workflows/rulings.yml`), which commits each run's result file and the fetched inputs under `results/` and `data/rulings/`.
+Two sibling pre-registrations, first on five Supreme Court cases with a listed party chosen for salience (Myriad 2013, Halliburton 2014, American Express 2018, Oracle 2021, Amgen 2023), then on a mechanical register of 82 listed-party cases over October Terms 2012 to 2024. Both run on free daily data in GitHub Actions (`.github/workflows/rulings.yml`), which commits each run's result file and the fetched inputs under `results/` and `data/rulings/`.
 
 | Item | State |
 |---|---|
 | Apple v1: opinion-day versus non-opinion-day abnormal variance in the argument-to-decision window (timing hazard), opinion days from the supremecourt.gov slip listing | Frozen 29 October 2026: `prereg/apple_prereg.md`, SHA-256 `068f59f04174f8018788084fb457ed9fa94d79da68ce902b34288af141dff17d`. Run 30 October 2026: `results/apple_result_2026-10-30.md`, registered outcome UNSCORABLE (slip listings retired for OT2012 and OT2013, truncated for OT2017; three cases against a four-case floor; on those three R = 0.72, p = 0.40) |
 | Apple v2: as v1 with opinion days from the Supreme Court Database for all terms | Frozen 30 October 2026: `prereg/apple_v2_prereg.md`, SHA-256 `b84afa4aeeaddb8ca72c470d7656845f58c6550600ac0ffda76a56078c39682a`. Run 30 October 2026: `results/apple_v2_result_2026-10-30.md`, registered outcome KILL (five cases, 59 pooled non-decision opinion days; R = 0.64, permutation p = 0.69; placebo R = 0.73; four of five cases below one) |
+| Apple v3: as v2 on a mechanical register of 82 listed-party cases, OT2012 to OT2024, dates from SCDB | Frozen 30 October 2026: `prereg/apple_v3_prereg.md`, SHA-256 `dc8719db5ce99d8a7ee885e273ed0b20de02df0d023c9cef714f4329af451bec`; register `data/ruling_cases_wide.csv`. First run pending: `results/apple_v3_result_<date>.md` |
+| Orange v2: as Orange on the same wide register | Frozen 30 October 2026: `prereg/orange_v2_prereg.md`, SHA-256 `cc890423fd859552bc3246f71adb5e95dc7a2075f13d88534dccf0a65d2073bf`. First run pending: `results/orange_v2_result_<date>.md` |
 | Orange: decision-day abnormal return and drift over the following five days (Katz versus Davis) | Frozen 29 October 2026: `prereg/orange_prereg.md`, SHA-256 `c12e7b2990f4e211c8afafed5bf40f840b1675c15f4fb5f971781a7da7caa2cd`. Run 30 October 2026: `results/orange_result_2026-10-30.md` (re-run `_2.md` identical on cached inputs), registered outcome UNSCORABLE (two of five cases reacted on decision day; both continued; the rule needs three) |
 | Evidentiary standing | Non-evidentiary. Five cases chosen for salience; daily closes; one parameter set; no costs |
 | Operator inputs | Not set: minimum effect worth pursuing, minimum event count for a live decision, ratified pre-mortem |
@@ -48,8 +50,8 @@ Reproduce locally:
 
 ```
 pip install pandas numpy scipy requests lxml yfinance
-python scripts/apple.py --spec apple_v2   # or --spec apple for v1
-python scripts/orange.py
+python scripts/apple.py --spec apple_v3    # apple_v2 or apple for the pilot specs
+python scripts/orange.py --spec orange_v2  # orange for the pilot spec
 RULINGS_SELFTEST=1 RULINGS_SCRATCH=/tmp/selftest python scripts/apple.py   # synthetic data, writes nothing under results/
 ```
 

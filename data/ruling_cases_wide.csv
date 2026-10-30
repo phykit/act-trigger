@@ -1,0 +1,83 @@
+case_id,term,docket,case_name,ticker,side,basis,market_proxy,note
+CMCSA_11-864,12,11-864,Comcast Corp. v. Behrend,CMCSA,petitioner,listed entity,SPY,
+AMGN_11-1085,12,11-1085,Amgen Inc. v. Connecticut Retirement Plans and Trust Funds,AMGN,petitioner,listed entity,SPY,
+MYGN_12-398,12,12-398,Association for Molecular Pathology v. Myriad Genetics,MYGN,respondent,listed entity,SPY,pilot case
+AXP_12-133,12,12-133,American Express Co. v. Italian Colors Restaurant,AXP,petitioner,listed entity,SPY,
+NKE_11-982,12,11-982,Already LLC v. Nike Inc.,NKE,respondent,listed entity,SPY,
+WLY_11-697,12,11-697,Kirtsaeng v. John Wiley & Sons Inc.,WLY,respondent,listed entity,SPY,
+PPL_12-43,12,12-43,PPL Corp. v. Commissioner of Internal Revenue,PPL,petitioner,listed entity,SPY,
+HAL_13-317,13,13-317,Halliburton Co. v. Erica P. John Fund Inc.,HAL,petitioner,listed entity,SPY,pilot case
+MDT_12-1128,13,12-1128,Medtronic Inc. v. Mirowski Family Ventures LLC,MDT,petitioner,listed entity,SPY,
+AKAM_12-786,13,12-786,Limelight Networks Inc. v. Akamai Technologies Inc.,AKAM,respondent,listed entity,SPY,petitioner Limelight delisted
+KO_12-761,13,12-761,POM Wonderful LLC v. Coca-Cola Co.,KO,respondent,listed entity,SPY,
+FITB_12-751,13,12-751,Fifth Third Bancorp v. Dudenhoeffer,FITB,petitioner,listed entity,SPY,
+CTS_13-339,13,13-339,CTS Corp. v. Waldburger,CTS,petitioner,listed entity,SPY,
+HIG_12-729,13,12-729,Heimeshoff v. Hartford Life & Accident Insurance Co.,HIG,respondent,subsidiary sharing leading name,SPY,parent The Hartford Financial Services Group
+TEVA_13-854,14,13-854,Teva Pharmaceuticals USA Inc. v. Sandoz Inc.,TEVA,petitioner,NYSE-listed ADR of parent,SPY,
+UPS_12-1226,14,12-1226,Young v. United Parcel Service Inc.,UPS,respondent,listed entity,SPY,
+BAC_13-1174,14,13-1174,Gelboim v. Bank of America Corp.,BAC,respondent,listed entity,SPY,
+BAC_13-1421,14,13-1421,Bank of America N.A. v. Caulkett,BAC,petitioner,subsidiary sharing leading name,SPY,
+CSCO_13-896,14,13-896,Commil USA LLC v. Cisco Systems Inc.,CSCO,respondent,listed entity,SPY,
+EIX_13-550,14,13-550,Tibble v. Edison International,EIX,respondent,listed entity,SPY,
+OKE_13-271,14,13-271,Oneok Inc. v. Learjet Inc.,OKE,petitioner,listed entity,SPY,
+ANF_14-86,14,14-86,EEOC v. Abercrombie & Fitch Stores Inc.,ANF,respondent,subsidiary sharing leading name,SPY,
+CSX_13-553,14,13-553,Alabama Department of Revenue v. CSX Transportation Inc.,CSX,respondent,subsidiary sharing leading name,SPY,
+TMUS_13-975,14,13-975,T-Mobile South LLC v. City of Roswell,TMUS,petitioner,subsidiary sharing leading name,SPY,
+TSN_14-1146,15,14-1146,Tyson Foods Inc. v. Bouaphakeo,TSN,petitioner,listed entity,SPY,
+CAG_14-1382,15,14-1382,Americold Realty Trust v. ConAgra Foods Inc.,CAG,respondent,listed entity,SPY,Americold not listed until 2018
+SYK_14-1520,15,14-1520,Stryker Corp. v. Zimmer Inc.,SYK,petitioner,listed entity,SPY,consolidated with Halo v. Pulse; may be absent from SCDB under its own docket
+WLY_15-375,15,15-375,Kirtsaeng v. John Wiley & Sons Inc. (II),WLY,respondent,listed entity,SPY,
+UHS_15-7,15,15-7,Universal Health Services Inc. v. United States ex rel. Escobar,UHS,petitioner,listed entity,SPY,
+DG_13-1496,15,13-1496,Dollar General Corp. v. Mississippi Band of Choctaw Indians,DG,petitioner,listed entity,SPY,affirmed by an equally divided Court
+AAPL_15-777,16,15-777,Samsung Electronics Co. v. Apple Inc.,AAPL,respondent,listed entity,SPY,petitioner not NYSE or Nasdaq listed
+BAC_15-1111,16,15-1111,Bank of America Corp. v. City of Miami,BAC,petitioner,listed entity,SPY,
+WFC_15-1112,16,15-1112,Wells Fargo & Co. v. City of Miami,WFC,petitioner,listed entity,SPY,consolidated; may be absent from SCDB under its own docket
+MSFT_15-457,16,15-457,Microsoft Corp. v. Baker,MSFT,petitioner,listed entity,SPY,
+GT_15-1406,16,15-1406,Goodyear Tire & Rubber Co. v. Haeger,GT,petitioner,listed entity,SPY,
+AMGN_15-1039,16,15-1039,Sandoz Inc. v. Amgen Inc.,AMGN,respondent,listed entity,SPY,
+BMY_16-466,16,16-466,Bristol-Myers Squibb Co. v. Superior Court of California,BMY,petitioner,listed entity,SPY,
+HP_15-423,16,15-423,Bolivarian Republic of Venezuela v. Helmerich & Payne International Drilling Co.,HP,respondent,subsidiary sharing leading name,SPY,
+KHC_16-341,16,16-341,TC Heartland LLC v. Kraft Foods Group Brands LLC,KHC,respondent,subsidiary sharing leading name,SPY,parent Kraft Heinz
+AXP_16-1454,17,16-1454,Ohio v. American Express Co.,AXP,respondent,listed entity,SPY,pilot case
+DLR_16-1276,17,16-1276,Digital Realty Trust Inc. v. Somers,DLR,petitioner,listed entity,SPY,
+FCN_16-784,17,16-784,Merit Management Group LP v. FTI Consulting Inc.,FCN,respondent,listed entity,SPY,FTI is a nominal trustee; included by rule
+W_17-494,17,17-494,South Dakota v. Wayfair Inc.,W,respondent,listed entity,SPY,
+OIS_16-712,17,16-712,Oil States Energy Services LLC v. Greene's Energy Group LLC,OIS,petitioner,subsidiary sharing leading name,SPY,
+MUR_16-307,17,16-307,NLRB v. Murphy Oil USA Inc.,MUR,respondent,subsidiary sharing leading name,SPY,consolidated with Epic Systems; may be absent from SCDB under its own docket
+USB_15-1509,17,15-1509,U.S. Bank N.A. v. Village at Lakeridge LLC,USB,petitioner,subsidiary sharing leading name,SPY,parent U.S. Bancorp
+WY_17-71,18,17-71,Weyerhaeuser Co. v. United States Fish and Wildlife Service,WY,petitioner,listed entity,SPY,
+HSIC_17-1272,18,17-1272,Henry Schein Inc. v. Archer & White Sales Inc.,HSIC,petitioner,listed entity,SPY,
+AAPL_17-204,18,17-204,Apple Inc. v. Pepper,AAPL,petitioner,listed entity,SPY,
+TEVA_17-1229,18,17-1229,Helsinn Healthcare S.A. v. Teva Pharmaceuticals USA Inc.,TEVA,respondent,NYSE-listed ADR of parent,SPY,
+RMNI_17-1625,18,17-1625,Rimini Street Inc. v. Oracle USA Inc.,RMNI,petitioner,listed entity,SPY,
+MRK_17-290,18,17-290,Merck Sharp & Dohme Corp. v. Albrecht,MRK,petitioner,subsidiary sharing leading name,SPY,
+HD_17-1471,18,17-1471,Home Depot U.S.A. Inc. v. Jackson,HD,petitioner,subsidiary sharing leading name,SPY,
+CMCSA_18-1171,19,18-1171,Comcast Corp. v. National Association of African American-Owned Media,CMCSA,petitioner,listed entity,SPY,
+FOSL_18-1233,19,18-1233,Romag Fasteners Inc. v. Fossil Inc.,FOSL,respondent,listed entity,SPY,
+INTC_18-1116,19,18-1116,Intel Corp. Investment Policy Committee v. Sulyma,INTC,petitioner,committee sharing leading name,SPY,
+BKNG_19-46,19,19-46,United States Patent and Trademark Office v. Booking.com B.V.,BKNG,respondent,subsidiary sharing leading name,SPY,parent Booking Holdings
+USB_17-1712,19,17-1712,Thole v. U.S. Bank N.A.,USB,respondent,subsidiary sharing leading name,SPY,
+GOOGL_18-956,20,18-956,Google LLC v. Oracle America Inc.,GOOGL,petitioner,named exception (Alphabet holds Google),SPY,pilot case used ORCL; the register rule gives the petitioner
+F_19-368,20,19-368,Ford Motor Co. v. Montana Eighth Judicial District Court,F,petitioner,listed entity,SPY,
+META_19-511,20,19-511,Facebook Inc. v. Duguid,META,petitioner,listed entity (renamed Meta Platforms),SPY,
+GS_20-222,20,20-222,Goldman Sachs Group Inc. v. Arkansas Teacher Retirement System,GS,petitioner,listed entity,SPY,
+TRU_20-297,20,20-297,TransUnion LLC v. Ramirez,TRU,petitioner,subsidiary sharing leading name,SPY,
+HOLX_20-440,20,20-440,Minerva Surgical Inc. v. Hologic Inc.,HOLX,respondent,listed entity,SPY,
+BP_19-1189,20,19-1189,BP p.l.c. v. Mayor and City Council of Baltimore,BP,petitioner,NYSE-listed ADR of parent,SPY,
+DVA_20-1641,21,20-1641,Marietta Memorial Hospital Employee Health Benefit Plan v. DaVita Inc.,DVA,respondent,listed entity,SPY,
+LUV_21-309,21,21-309,Southwest Airlines Co. v. Saxon,LUV,petitioner,listed entity,SPY,
+UNP_20-807,21,20-807,LeDure v. Union Pacific Railroad Co.,UNP,respondent,subsidiary sharing leading name,SPY,affirmed by an equally divided Court
+HLX_21-984,22,21-984,Helix Energy Solutions Group Inc. v. Hewitt,HLX,petitioner,listed entity,SPY,
+AXON_21-86,22,21-86,Axon Enterprise Inc. v. Federal Trade Commission,AXON,petitioner,listed entity,SPY,
+NSC_21-1168,22,21-1168,Mallory v. Norfolk Southern Railway Co.,NSC,respondent,subsidiary sharing leading name,SPY,
+GOOGL_21-1333,22,21-1333,Gonzalez v. Google LLC,GOOGL,respondent,named exception (Alphabet holds Google),SPY,
+AMGN_21-757,22,21-757,Amgen Inc. v. Sanofi,AMGN,petitioner,listed entity,SPY,pilot case
+COIN_22-105,22,22-105,Coinbase Inc. v. Bielski,COIN,petitioner,listed entity,SPY,
+UBS_22-660,23,22-660,Murray v. UBS Securities LLC,UBS,respondent,subsidiary sharing leading name,SPY,parent UBS Group AG; NYSE-listed shares
+COIN_23-3,23,23-3,Coinbase Inc. v. Suski,COIN,petitioner,listed entity,SPY,
+WMG_22-1078,23,22-1078,Warner Chappell Music Inc. v. Nealy,WMG,petitioner,subsidiary sharing leading name,SPY,parent Warner Music Group
+SBUX_23-367,23,23-367,Starbucks Corp. v. McKinney,SBUX,petitioner,listed entity,SPY,
+BAC_22-529,23,22-529,Cantero v. Bank of America N.A.,BAC,respondent,subsidiary sharing leading name,SPY,
+HAL_23-971,24,23-971,Waetzig v. Halliburton Energy Services Inc.,HAL,respondent,subsidiary sharing leading name,SPY,
+MCK_23-1226,24,23-1226,McLaughlin Chiropractic v. McKesson Corp.,MCK,respondent,listed entity,SPY,
+SWBI_23-1141,24,23-1141,Smith & Wesson Brands Inc. v. Estados Unidos Mexicanos,SWBI,petitioner,listed entity,SPY,

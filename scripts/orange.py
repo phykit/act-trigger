@@ -14,8 +14,9 @@ import pandas as pd
 from scipy.stats import norm
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from rulings_common import (SELFTEST, check_dates, fetch_close, fmt_pct, load_cases, log,  # noqa: E402
-                            market_model, opinion_days, result_path, spec_hash)
+from rulings_common import (ROOT, SELFTEST, check_dates, check_dates_scdb, fetch_close, fmt_pct,  # noqa: E402
+                            load_cases, log, market_close, market_model, market_source, opinion_days,
+                            result_path, spec_hash)
 
 P_THRESH = 0.10
 REACT_Z = 2.0
@@ -43,28 +44,46 @@ def event_stats(ar: pd.DataFrame, sigma: float, decided: dt.date) -> dict | None
 
 
 def main() -> None:
-    cases = load_cases()
-    h = spec_hash("orange")
+    spec = sys.argv[sys.argv.index("--spec") + 1] if "--spec" in sys.argv else "orange"
+    if spec not in ("orange", "orange_v2"):
+        raise SystemExit("--spec must be orange or orange_v2")
+    wide = spec == "orange_v2"
+    register = ROOT / "data" / ("ruling_cases_wide.csv" if wide else "ruling_cases.csv")
+    cases = load_cases(register)
+    min_react = 15 if wide else MIN_REACTING
+    h = spec_hash(spec)
     rows, secondary, notes = [], [], []
     for _, c in cases.iterrows():
         term = int(c["term"])
-        try:
-            _, slip = opinion_days(term)
-        except Exception as exc:  # noqa: BLE001
-            slip = pd.DataFrame(columns=["date", "docket", "name"])
-            notes.append(f"{c['case_id']}: slip listing for OT{term:02d} unavailable ({exc}); decision date checked against Oyez only")
-        chk = check_dates(c, slip)
+        if wide:
+            chk = check_dates_scdb(c)
+        else:
+            try:
+                _, slip = opinion_days(term)
+            except Exception as exc:  # noqa: BLE001
+                slip = pd.DataFrame(columns=["date", "docket", "name"])
+                notes.append(f"{c['case_id']}: slip listing for OT{term:02d} unavailable ({exc}); decision date checked against Oyez only")
+            chk = check_dates(c, slip)
         if not chk["include"]:
-            notes.append(f"{c['case_id']}: decision date check {chk['decided_status']}; case excluded")
+            notes.append(f"{c['case_id']}: {chk['decided_status']}; case excluded")
             continue
         argued, decided = chk["argued"], chk["decided"]
         start = argued - dt.timedelta(days=800)
         end = decided + dt.timedelta(days=15)
-        legs = [(c["ticker"], True)] + [(SECONDARY[c["case_id"]], False)] if c["case_id"] in SECONDARY else [(c["ticker"], True)]
+        legs = [(c["ticker"], True)]
+        if not wide and c["case_id"] in SECONDARY:
+            legs.append((SECONDARY[c["case_id"]], False))
         for ticker, primary in legs:
-            stock, src_s = fetch_close(ticker, start, end)
-            mkt, src_m = fetch_close(c["market_proxy"], start, end)
-            ar, mm = market_model(stock, mkt, argued)
+            try:
+                stock, src_s = fetch_close(ticker, start, end)
+                if wide:
+                    mkt, src_m = market_close(c["market_proxy"]), market_source(c["market_proxy"])
+                else:
+                    mkt, src_m = fetch_close(c["market_proxy"], start, end)
+                ar, mm = market_model(stock, mkt, argued)
+            except Exception as exc:  # noqa: BLE001
+                notes.append(f"{c['case_id']} {ticker}: price data or market model failed ({str(exc)[:120]}); leg skipped")
+                continue
             ev = event_stats(ar, mm["sigma"], decided)
             if ev is None:
                 notes.append(f"{c['case_id']} {ticker}: no trading-day return on {decided} or too few days after it; leg skipped")
@@ -83,7 +102,7 @@ def main() -> None:
     p = float(1 - norm.cdf(Z)) if react else float("nan")
     cont = sum(1 for r in react if r["signed15"] > 0)
 
-    if n_react < MIN_REACTING:
+    if n_react < min_react:
         outcome = "UNSCORABLE"
     elif mean_signed15 > 0 and p < P_THRESH:
         outcome = "SUPPORT"
@@ -94,13 +113,13 @@ def main() -> None:
 
     today = dt.date.today().isoformat()
     L = []
-    L.append("# Result: Project Orange (decision-day reaction and post-decision drift)\n")
-    L.append(f"Run {today} against orange_prereg.md, SHA-256 {h} (hashed before the run). "
-             "Non-evidentiary: five cases chosen for salience, daily data, one parameter set, no costs.\n")
+    L.append(f"# Result: Project Orange{' v2 (wide sample)' if wide else ''} (decision-day reaction and post-decision drift)\n")
+    L.append(f"Run {today} against {spec}_prereg.md, SHA-256 {h} (hashed before the run). "
+             "Non-evidentiary: daily data, one parameter set, no costs.\n")
     if SELFTEST:
         L.append("**SELF-TEST RUN ON SYNTHETIC DATA. Not a result.**\n")
     L.append("## Population\n")
-    L.append(f"- {len(rows)} primary legs entered ({len(cases)} registered); {n_react} reacted (abs(z_0) at or above {REACT_Z:.0f}).\n")
+    L.append(f"- {len(rows)} primary legs entered ({len(cases)} registered, register {register.name}); {n_react} reacted (abs(z_0) at or above {REACT_Z:.0f}), a reaction rate of {100 * n_react / max(len(rows), 1):.0f}% against the 37% Katz et al report on screened candidates.\n")
     L.append("## Outcomes (reacting cases)\n")
     L.append("| Statistic | Value |")
     L.append("|---|---|")
@@ -112,12 +131,12 @@ def main() -> None:
     L.append("## Decision rule as registered\n")
     L.append(f"- Mean signed CAR(+1,+5) above zero: {'met' if np.isfinite(mean_signed15) and mean_signed15 > 0 else 'not met'} ({fmt_pct(mean_signed15)}).")
     L.append(f"- Stouffer p below {P_THRESH}: {'met' if np.isfinite(p) and p < P_THRESH else 'not met'} (p = {p:.3f}).")
-    L.append(f"- At least {MIN_REACTING} reacting cases: {'met' if n_react >= MIN_REACTING else 'not met'} ({n_react}).\n")
+    L.append(f"- At least {min_react} reacting cases: {'met' if n_react >= min_react else 'not met'} ({n_react}).\n")
     L.append(f"Registered outcome: {outcome}.\n")
     L.append("## What this does not license\n")
-    L.append("- Cases chosen for salience: the day-0 reactions are large by construction and say nothing about the population rate Katz et al report (37% of candidates).")
+    L.append("- The reaction rate depends on the register rule and the abs(z) threshold; it is not Katz et al's screened population." if wide else "- Cases chosen for salience: the day-0 reactions are large by construction and say nothing about the population rate Katz et al report (37% of candidates).")
     L.append("- Daily frequency: CAR(+1,+1) mixes the overnight gap with the next session.")
-    L.append("- No costs, no hedging of the day-0 position, five observations.\n")
+    L.append("- No costs, no hedging of the day-0 position.\n")
     L.append("## Cases\n")
     L.append("| Case | Ticker | Decided | AR(0) | z(0) | Reacted | CAR(-5,-1) | CAR(+1,+1) | CAR(+1,+5) | Signed CAR(+1,+5) | z drift | Sigma (daily) | Beta | Date checks | Price source |")
     L.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
@@ -130,7 +149,7 @@ def main() -> None:
     L.append("")
     L.append("## Run notes\n")
     L.extend([f"- {n}" for n in notes] or ["- None."])
-    out = result_path("orange")
+    out = result_path(spec)
     out.write_text("\n".join(L) + "\n")
     log(f"wrote {out}; outcome {outcome}; mean signed CAR(+1,+5) {fmt_pct(mean_signed15)} p={p:.3f}")
 
