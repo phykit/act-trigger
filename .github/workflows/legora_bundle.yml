@@ -1,44 +1,72 @@
-# Builds the Legora document bundle (Water coder 1): opinions and pre-ruling 10-K and 10-Q filings, price-free.
-# Uploaded as a workflow artifact (30 days), downloadable from the run page. Nothing under results/ is read.
+# Builds the Legora document bundle (Water coder 1): one PDF per event (cover, opinion, pre-ruling 10-K and 10-Q).
+# Resumable: finished PDFs persist in the Actions cache between runs, each run stops at an 80-minute budget, and
+# the artifact (partial or complete) is always uploaded. The manifest is committed so progress is visible.
+# Nothing under results/ is read.
 name: legora-bundle
 
 on:
   workflow_dispatch:
 
 concurrency:
-  group: courtlistener-heavy
+  group: legora-bundle
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   bundle:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 110
     env:
       COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
       SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+      BUNDLE_MINUTES: "80"
+      CL_ATTEMPTS: "3"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - run: pip install -q pandas requests pypdf
+      - name: Restore finished PDFs from earlier runs
+        uses: actions/cache/restore@v4
+        with:
+          path: bundle
+          key: legora-bundle-${{ github.run_id }}
+          restore-keys: legora-bundle-
       - name: Blindness guard
         run: rm -rf results data/appeals/*.events.csv
       - name: Build bundle
         run: python scripts/legora_bundle.py data/water/legora/input_moon37.csv bundle/moon37_documents
+      - name: Save finished PDFs for the next run
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: bundle
+          key: legora-bundle-${{ github.run_id }}
       - name: Package
+        if: always()
         run: |
-          rm -rf bundle/_work
-          cp data/water/legora/input_moon37.csv data/water/legora/legora_instructions.md bundle/
-          cd bundle && zip -qr ../legora_moon37_bundle.zip . && cd ..
+          mkdir -p pkg
+          cp -r bundle/moon37_documents pkg/ 2>/dev/null || true
+          cp bundle/bundle_manifest.csv data/water/legora/input_moon37.csv data/water/legora/legora_instructions.md pkg/ 2>/dev/null || true
+          cd pkg && zip -qr ../legora_moon37_bundle.zip . && cd ..
           ls -la legora_moon37_bundle.zip
-          cat bundle/bundle_manifest.csv
       - name: Upload bundle as a workflow artifact (download from the run page while signed in)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: legora_moon37_bundle
           path: legora_moon37_bundle.zip
           retention-days: 30
+      - name: Commit the manifest (progress only; no documents)
+        if: always()
+        run: |
+          git checkout -- results data/appeals 2>/dev/null || true
+          cp bundle/bundle_manifest.csv data/water/legora/bundle_manifest.csv 2>/dev/null || exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/water/legora/bundle_manifest.csv
+          git commit -m "Legora bundle progress $(date -u +%FT%H:%MZ) [skip ci]" || exit 0
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
