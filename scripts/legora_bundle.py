@@ -10,6 +10,7 @@ Usage: python scripts/legora_bundle.py data/water/legora/input_moon37.csv bundle
 from __future__ import annotations
 
 import html
+import os
 import subprocess
 import sys
 import time
@@ -73,15 +74,26 @@ def filing_pdf(e, form: str, work: Path) -> tuple[Path | None, str]:
 
 
 def main(inp: str, out_dir: str) -> None:
+    """Resumable: events whose PDF already exists (restored from the Actions cache) are skipped; the loop stops
+    at the time budget so the partial bundle and its manifest are still uploaded."""
     if not CHROME:
         raise SystemExit("no headless Chrome on the runner")
+    budget = time.time() + 60 * float(os.environ.get("BUNDLE_MINUTES", "80"))
     out = Path(out_dir)
     work = out.parent / "_work"
     out.mkdir(parents=True, exist_ok=True)
     work.mkdir(exist_ok=True)
-    manifest = []
+    mpath = out.parent / "bundle_manifest.csv"
+    manifest = pd.read_csv(mpath, dtype=str).to_dict("records") if mpath.exists() else []
+    done = {m["event_id"] for m in manifest if (out / f"{m['event_id']}.pdf").exists()}
+    manifest = [m for m in manifest if m["event_id"] in done]
     for _, e in pd.read_csv(inp, dtype=str).iterrows():
         eid = e["event_id"]
+        if eid in done:
+            continue
+        if time.time() > budget:
+            ac.log(f"time budget reached before {eid}; the next run resumes from here")
+            break
         parts, row = [], dict(event_id=eid)
         for key, fn in (("opinion", lambda: opinion_pdf(e, work)),
                         ("10-K", lambda: filing_pdf(e, "10-K", work)),
@@ -104,8 +116,10 @@ def main(inp: str, out_dir: str) -> None:
         w.write(str(out / f"{eid}.pdf"))
         manifest.append(row)
         ac.log(str(row))
+        pd.DataFrame(manifest).to_csv(mpath, index=False)
         time.sleep(1)
-    pd.DataFrame(manifest).to_csv(out.parent / "bundle_manifest.csv", index=False)
+    pd.DataFrame(manifest).to_csv(mpath, index=False)
+    ac.log(f"bundle holds {len(manifest)} of 37 events")
 
 
 if __name__ == "__main__":

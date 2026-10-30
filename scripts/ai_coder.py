@@ -76,9 +76,9 @@ def sec_get(url: str) -> requests.Response:
 
 # ----------------------------------------------------------------------------- sources
 
-def cl_get(url: str, hdr: dict) -> requests.Response:
+def cl_get(url: str, hdr: dict, attempts: int | None = None) -> requests.Response:
     """CourtListener GET that waits out rate limits (429) rather than giving up."""
-    for attempt in range(8):
+    for attempt in range(attempts or int(os.environ.get("CL_ATTEMPTS", "8"))):
         r = requests.get(url, headers=hdr, timeout=90)
         if r.status_code == 429 or r.status_code >= 500:
             wait = int(r.headers.get("Retry-After", 0) or 0) or 30 * (attempt + 1)
