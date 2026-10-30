@@ -11,6 +11,9 @@ on:
       out:
         description: Output sheet
         default: data/water/moon37_coding_sheet_api.csv
+      only:
+        description: Re-code only these failed events (comma-separated); blank codes the whole list
+        default: ""
   push:
     branches: [main]
     paths: [".github/workflows/water_coder.yml"]
@@ -34,6 +37,7 @@ jobs:
       CL_ATTEMPTS: "3"
       LIST: ${{ github.event.inputs.list || 'data/water/legora/input_moon37.csv' }}
       OUT: ${{ github.event.inputs.out || 'data/water/moon37_coding_sheet_api.csv' }}
+      ONLY: ${{ github.event.inputs.only || '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -52,7 +56,7 @@ jobs:
           git status --short | head -5
       - name: Code
         timeout-minutes: 200
-        run: python scripts/ai_coder.py "$LIST" "$OUT" 2>&1 | tee data/water/api_coder_run.log
+        run: python scripts/ai_coder.py "$LIST" "$OUT" 2>&1 | tee -a data/water/api_coder_run.log
       - name: Check sheet
         run: python scripts/water_check_sheet.py "$OUT" | tee -a data/water/api_coder_run.log
         continue-on-error: true

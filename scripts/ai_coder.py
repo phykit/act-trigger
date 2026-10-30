@@ -223,10 +223,12 @@ def call_model(pack: str) -> tuple[dict, dict]:
         raise RuntimeError(f"Anthropic API status {r.status_code}: {r.text[:300]}")
     j = r.json()
     txt = "".join(c.get("text", "") for c in j.get("content", []) if c.get("type") == "text")
-    m = re.search(r"\{.*\}", txt, flags=re.S)
-    if not m:
+    # The first complete JSON object in the reply (a greedy match failed on replies with trailing text).
+    start = txt.find("{")
+    if start < 0:
         raise RuntimeError(f"no JSON in model reply (stop_reason {j.get('stop_reason')}): {txt[:200]}")
-    return json.loads(m.group(0)), j.get("usage", {})
+    obj, _ = json.JSONDecoder().raw_decode(txt[start:])
+    return obj, j.get("usage", {})
 
 
 def call_model_retry(pack: str) -> tuple[dict, dict]:
@@ -253,6 +255,20 @@ def main(inp: str, out: str) -> None:
     if not DRY and not API_KEY:
         raise SystemExit("ANTHROPIC_API_KEY is not set")
     lst = pd.read_csv(inp, dtype=str)
+    only = [x for x in os.environ.get("ONLY", "").split(",") if x]
+    prior = None
+    if only:
+        # Re-code only events that failed (no answer) in the committed sheet; every other row is kept as committed.
+        prior = pd.read_csv(out, dtype=str).fillna("")
+        failed = set(prior.loc[prior["A_money_score"].isin(["", "None"]), "event_id"])
+        if not set(only) <= failed:
+            raise SystemExit(f"ONLY may name failed events only; failed are {sorted(failed)}")
+        lst = lst[lst["event_id"].isin(only)]
+        for e in only:  # the failed attempt is kept, not overwritten
+            for sub, ext in (("responses", ".json"), ("packs", ".txt.gz")):
+                f = OUT_DIR / sub / f"{e}{ext}"
+                if f.exists():
+                    f.rename(f.with_name(f"{e}_attempt1{ext}"))
     if any(c.lower() in ("car", "ar0", "z0", "car_post", "signed_post") for c in lst.columns):
         raise SystemExit("coding list carries price columns; refusing to code")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -318,6 +334,18 @@ def main(inp: str, out: str) -> None:
                          C_filing_accession=str(ans.get("C_filing_accession") or ""), D_figure_stated=str(ans.get("D_figure_stated", "")),
                          price_known=str(ans.get("price_known", "")), reason=str(ans.get("reason", "")).replace("\n", " ")))
         log(f"{eid}: A={ans.get('A_money_score')} B={ans.get('B_core_business')} C={ans.get('C_disclosed')} tokens={usage}")
+    if prior is not None:
+        new_rows = pd.DataFrame(rows).set_index("event_id")
+        merged = prior.set_index("event_id")
+        merged.update(new_rows.astype(str))
+        merged.reset_index().to_csv(out, index=False)
+        old_meta = json.loads((OUT_DIR / "run_meta.json").read_text())
+        old_meta.setdefault("reruns", []).append(dict(events=only, usage=usage_tot, run_utc=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                                                      still_failed=[r["event_id"] for r in rows if r["A_money_score"] in ("", "None")]))
+        old_meta["failed_events"] = [e for e in old_meta.get("failed_events", []) if e not in only] + old_meta["reruns"][-1]["still_failed"]
+        (OUT_DIR / "run_meta.json").write_text(json.dumps(old_meta, indent=1))
+        log(f"re-coded {only}; merged into {out}; usage {usage_tot}")
+        return
     pd.DataFrame(rows).to_csv(out, index=False)
     meta = dict(model=MODEL, prompt_sha256=PROMPT_SHA, events=len(rows), usage=usage_tot, input=inp, output=out,
                 a_score_recomputed_from_ratio=mismatches, opinion_unavailable=no_opinion,
