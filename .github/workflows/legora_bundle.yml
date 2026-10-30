@@ -1,0 +1,44 @@
+# Builds the Legora document bundle (Water coder 1): opinions and pre-ruling 10-K and 10-Q filings, price-free.
+# Uploaded as a workflow artifact (30 days), downloadable from the run page. Nothing under results/ is read.
+name: legora-bundle
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: courtlistener-heavy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
+      SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q pandas requests pypdf
+      - name: Blindness guard
+        run: rm -rf results data/appeals/*.events.csv
+      - name: Build bundle
+        run: python scripts/legora_bundle.py data/water/legora/input_moon37.csv bundle/moon37_documents
+      - name: Package
+        run: |
+          rm -rf bundle/_work
+          cp data/water/legora/input_moon37.csv data/water/legora/legora_instructions.md bundle/
+          cd bundle && zip -qr ../legora_moon37_bundle.zip . && cd ..
+          ls -la legora_moon37_bundle.zip
+          cat bundle/bundle_manifest.csv
+      - name: Upload bundle as a workflow artifact (download from the run page while signed in)
+        uses: actions/upload-artifact@v4
+        with:
+          name: legora_moon37_bundle
+          path: legora_moon37_bundle.zip
+          retention-days: 30

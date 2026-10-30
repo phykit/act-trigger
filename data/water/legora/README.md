@@ -1,5 +1,7 @@
 # Running Project Water's blind coding through Legora
 
+**Current instructions: `legora_instructions.md`** (one combined PDF per event from the `legora-bundle` workflow artifact; Tabular Review with ten columns). The steps below are the original link-based version, kept for the record.
+
 Legora is the agent coder under `prereg/water_prereg.md`. It sees the case list, the rubric and the legal materials, and nothing about prices.
 
 ## Steps
