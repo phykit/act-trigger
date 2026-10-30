@@ -1,25 +1,16 @@
 universe: 1342 rulings; SCOTUS 1342 rulings (SCDB 2026_01); Federal Circuit 0 precedential opinions (unavailable: _courtlistener_cafc: CourtListener status 401: {"detail":"Authentication credentials were not provided."} | _cafc_table: HTTPSConnectionPool(host='cafc.uscourts.gov', port=443): Max retries exceeded with url: /home/case-information/opinions-orders/ (Caused by SSLError(SSLCertVerif)
-Traceback (most recent call last):
-  File "/home/runner/work/act-trigger/act-trigger/scripts/appeals_common.py", line 98, in edgar_tickers
-    r = sec_get("https://www.sec.gov/files/company_tickers.json")
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/act-trigger/act-trigger/scripts/appeals_common.py", line 68, in sec_get
-    r.raise_for_status()
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
-    raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://www.sec.gov/files/company_tickers.json
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/runner/work/act-trigger/act-trigger/scripts/build_universe.py", line 24, in <module>
-    main()
-  File "/home/runner/work/act-trigger/act-trigger/scripts/build_universe.py", line 18, in main
-    pm = build_party_map(uni)
-         ^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/act-trigger/act-trigger/scripts/appeals_common.py", line 433, in build_party_map
-    tick = edgar_tickers()
-           ^^^^^^^^^^^^^^^
-  File "/home/runner/work/act-trigger/act-trigger/scripts/appeals_common.py", line 101, in edgar_tickers
-    raise RuntimeError(f"EDGAR company list unavailable ({str(exc)[:160]}); user agent was {SEC_UA!r}") from exc
-RuntimeError: EDGAR company list unavailable (403 Client Error: Forbidden for url: https://www.sec.gov/files/company_tickers.json); user agent was 'phykit act-trigger research skittson@gmail.com (https://github.com/phykit/act-trigger)'
+party map: 0 rulings processed
+party map: 100 rulings processed
+party map: 200 rulings processed
+party map: 300 rulings processed
+party map: 400 rulings processed
+party map: 500 rulings processed
+party map: 600 rulings processed
+party map: 700 rulings processed
+party map: 800 rulings processed
+party map: 900 rulings processed
+party map: 1000 rulings processed
+party map: 1100 rulings processed
+party map: 1200 rulings processed
+party map: 1300 rulings processed
+party map: 2682 sides; {'not a company': 1590, 'unresolved (none)': 949, 'listed': 62, 'ex21 parent': 38, 'unresolved (parent not listed)': 20, 'unresolved (ambiguous)': 18, 'unresolved (error)': 5}
