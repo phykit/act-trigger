@@ -26,7 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from rulings_common import ROOT, SELFTEST, log, result_path, scdb_table, spec_hash  # noqa: E402,F401
 
 ADATA = ROOT / "data" / "appeals"
-SEC_UA = os.environ.get("SEC_CONTACT") or "phykit act-trigger research (https://github.com/phykit/act-trigger)"
+SEC_UA = os.environ.get("SEC_CONTACT") or "phykit act-trigger research skittson@gmail.com (https://github.com/phykit/act-trigger)"
 UA_PLAIN = {"User-Agent": "act-trigger research scripts (https://github.com/phykit/act-trigger)"}
 TERMS = list(range(5, 25))                 # OT2005 to OT2024
 CAFC_FROM, CAFC_TO = dt.date(2012, 1, 1), dt.date(2025, 6, 30)
@@ -94,8 +94,11 @@ def edgar_tickers() -> pd.DataFrame:
         df["norm"] = df["title"].map(normalise)
         df.to_csv(cache, index=False)
         return df
-    r = sec_get("https://www.sec.gov/files/company_tickers.json")
-    j = r.json()
+    try:
+        r = sec_get("https://www.sec.gov/files/company_tickers.json")
+        j = r.json()
+    except Exception as exc:  # noqa: BLE001
+        raise RuntimeError(f"EDGAR company list unavailable ({str(exc)[:160]}); user agent was {SEC_UA!r}") from exc
     rows = [dict(cik=f"{int(v['cik_str']):010d}", ticker=str(v["ticker"]), title=str(v["title"])) for v in j.values()]
     df = pd.DataFrame(rows)
     df["norm"] = df["title"].map(normalise)
@@ -297,7 +300,10 @@ def _courtlistener_cafc() -> pd.DataFrame:
                      f"&filed_after={CAFC_FROM.isoformat()}&filed_before={CAFC_TO.isoformat()}&order_by=dateFiled%20asc")
     pages = 0
     while url and pages < 400:
-        r = requests.get(url, headers=UA_PLAIN, timeout=60)
+        hdr = dict(UA_PLAIN)
+        if os.environ.get("COURTLISTENER_TOKEN"):
+            hdr["Authorization"] = "Token " + os.environ["COURTLISTENER_TOKEN"]
+        r = requests.get(url, headers=hdr, timeout=60)
         if r.status_code != 200:
             raise RuntimeError(f"CourtListener status {r.status_code}: {r.text[:120]}")
         j = r.json()

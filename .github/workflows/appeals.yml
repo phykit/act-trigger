@@ -20,6 +20,7 @@ permissions:
 
 env:
   SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+  COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
 
 jobs:
   run:
@@ -33,16 +34,25 @@ jobs:
       - name: Install
         run: pip install --quiet pandas numpy scipy requests lxml "yfinance>=0.2.60"
       - name: Build universe and party map
-        run: python scripts/build_universe.py
+        run: |
+          mkdir -p data/appeals/logs
+          set -o pipefail
+          python scripts/build_universe.py 2>&1 | tee data/appeals/logs/build_universe.log
       - name: Project Earth
         continue-on-error: true
-        run: python scripts/earth.py
+        run: |
+          set -o pipefail
+          python scripts/earth.py 2>&1 | tee data/appeals/logs/earth.log
       - name: Project Moon
         continue-on-error: true
-        run: python scripts/moon.py
+        run: |
+          set -o pipefail
+          python scripts/moon.py 2>&1 | tee data/appeals/logs/moon.log
       - name: Project Fire
         continue-on-error: true
-        run: python scripts/fire.py
+        run: |
+          set -o pipefail
+          python scripts/fire.py 2>&1 | tee data/appeals/logs/fire.log
       - name: Commit results and fetched inputs
         if: always()
         run: |
