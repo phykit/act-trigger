@@ -1,0 +1,4 @@
+event_id,opinion,10-K,10-Q
+W01,failed: 429 Client Error: Too Many Requests for url: https://www.courtlistener.com/api/r,"10-K filed 2004-12-15, accession 0000100493-04-000084","10-Q filed 2005-08-11, accession 0000100493-05-000036"
+W02,failed: 429 Client Error: Too Many Requests for url: https://www.courtlistener.com/api/r,"10-K filed 2005-03-03, accession 0000950134-05-004137","10-Q filed 2005-11-03, accession 0000950134-05-020352"
+W03,failed: 429 Client Error: Too Many Requests for url: https://www.courtlistener.com/api/r,"10-K filed 2006-02-23, accession 0000702165-06-000097","10-Q filed 2006-10-31, accession 0000702165-06-000246"
