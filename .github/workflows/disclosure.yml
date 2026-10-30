@@ -1,0 +1,50 @@
+# Projects Wood and Storm: EDGAR full-text search (no key; SEC_CONTACT is the declared user agent).
+# Run after an appeals run has committed a complete universe (data/appeals/universe.csv). Raw search responses are
+# cached on the runner only; results and event files are committed.
+name: disclosure
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: disclosure
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q pandas numpy scipy requests lxml yfinance
+      - name: Require a complete universe
+        run: |
+          test -f data/appeals/universe.csv || { echo "no universe.csv; run the appeals workflow first"; exit 1; }
+          cat data/appeals/universe_note.txt
+      - name: Project Wood
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          mkdir -p data/appeals/logs
+          python scripts/wood.py 2>&1 | tee data/appeals/logs/wood.log
+      - name: Project Storm
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python scripts/storm.py 2>&1 | tee data/appeals/logs/storm.log
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/ data/appeals/logs/ data/appeals/prices_storm.csv.gz 2>/dev/null || true
+          git commit -m "Wood and Storm run $(date -u +%F) [skip ci]" || echo "nothing to commit"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
