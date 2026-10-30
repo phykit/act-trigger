@@ -67,6 +67,13 @@ def _yf_close(ticker: str, start: str, end: str) -> pd.Series:
         if df is not None and len(df) > 0:
             break
         time.sleep(2 + 3 * attempt)
+        try:  # second route through the per-ticker history endpoint
+            h = yf.Ticker(ticker).history(start=start, end=end, auto_adjust=True)
+            if h is not None and len(h) > 0:
+                df = h
+                break
+        except Exception:  # noqa: BLE001
+            pass
     if df is None or len(df) == 0:
         raise RuntimeError("yfinance returned no rows")
     if isinstance(df.columns, pd.MultiIndex):
