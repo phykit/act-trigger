@@ -1,5 +1,5 @@
 name: appeals
-# Run 5: Federal Circuit added via COURTLISTENER_TOKEN; SCOTUS-only universe and party map from run 4 retained under *_run4_scotus_only.*
+# Run 6: COURTLISTENER_TOKEN now an Actions secret (run 5 read it from the Agents section, so it arrived empty)
 
 on:
   workflow_dispatch:
@@ -34,6 +34,13 @@ jobs:
           python-version: "3.12"
       - name: Install
         run: pip install --quiet pandas numpy scipy requests lxml "yfinance>=0.2.60"
+      - name: Check CourtListener token (diagnostic only; never prints the value)
+        continue-on-error: true
+        run: |
+          mkdir -p data/appeals/logs
+          if [ -n "$COURTLISTENER_TOKEN" ]; then echo "COURTLISTENER_TOKEN present, length ${#COURTLISTENER_TOKEN}"; else echo "COURTLISTENER_TOKEN missing"; fi | tee data/appeals/logs/courtlistener_probe.log
+          code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 -H "Authorization: Token $COURTLISTENER_TOKEN" "https://www.courtlistener.com/api/rest/v4/search/?type=o&court=cafc&filed_after=2024-01-01")
+          echo "CourtListener search HTTP $code" | tee -a data/appeals/logs/courtlistener_probe.log
       - name: Probe EDGAR access (diagnostic only)
         continue-on-error: true
         run: |
