@@ -1,0 +1,42 @@
+# Project Air (prereg/air_prereg.md): daily capture of new rulings and their prices, after the US close.
+# One-minute bars can only be fetched within seven days, so this must run every trading day.
+name: air
+
+on:
+  schedule:
+    - cron: "37 22 * * 1-5"
+  workflow_dispatch:
+
+concurrency:
+  group: air
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
+      SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q pandas numpy requests lxml yfinance
+      - name: Capture
+        run: |
+          set -o pipefail
+          mkdir -p data/air/logs
+          python scripts/air_capture.py 2>&1 | tee "data/air/logs/capture_$(date -u +%F).log"
+      - name: Commit captures
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/air data/appeals/ex21_lookups.json data/appeals/edgar_company_tickers.csv 2>/dev/null || true
+          git commit -m "Air capture $(date -u +%F) [skip ci]" || echo "nothing to commit"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
