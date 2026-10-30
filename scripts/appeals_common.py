@@ -72,6 +72,8 @@ def sec_get(url: str, timeout: int = 60, tries: int = 3) -> requests.Response:
 def normalise(name: str) -> str:
     s = str(name).upper()
     s = s.split(";")[0]
+    s = re.sub(r"\bET\s*AL\b\.?", " ", s)                                            # "et al." (spec item 3)
+    s = re.sub(r",?\s*\b(PETITIONERS?|RESPONDENTS?|APPELLANTS?|APPELLEES?)\b\.?", " ", s)  # SCDB role labels
     s = re.sub(r"/[^/]*/", " ", s)       # EDGAR state suffixes such as /DE/ or /NEW/
     s = re.sub(r"\bN\.?A\.?(?=\s|$|,)", " ", s)   # national association suffix
     s = re.sub(r"\(.*?\)", " ", s)
