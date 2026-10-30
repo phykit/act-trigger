@@ -1,4 +1,5 @@
 name: appeals
+# Run 5: Federal Circuit added via COURTLISTENER_TOKEN; SCOTUS-only universe and party map from run 4 retained under *_run4_scotus_only.*
 
 on:
   workflow_dispatch:

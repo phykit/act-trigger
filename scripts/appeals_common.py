@@ -298,26 +298,46 @@ def scdb_rulings() -> pd.DataFrame:
 
 
 def _courtlistener_cafc() -> pd.DataFrame:
-    rows, url = [], ("https://www.courtlistener.com/api/rest/v4/search/?type=o&court=cafc&stat_Published=on"
-                     f"&filed_after={CAFC_FROM.isoformat()}&filed_before={CAFC_TO.isoformat()}&order_by=dateFiled%20asc")
-    pages = 0
-    while url and pages < 400:
-        hdr = dict(UA_PLAIN)
-        if os.environ.get("COURTLISTENER_TOKEN"):
-            hdr["Authorization"] = "Token " + os.environ["COURTLISTENER_TOKEN"]
-        r = requests.get(url, headers=hdr, timeout=60)
-        if r.status_code != 200:
+    """Federal Circuit opinions from the CourtListener v4 search API; precedential ones kept client-side."""
+    hdr = dict(UA_PLAIN)
+    tok = os.environ.get("COURTLISTENER_TOKEN")
+    if tok:
+        hdr["Authorization"] = "Token " + tok
+    url = ("https://www.courtlistener.com/api/rest/v4/search/?type=o&court=cafc"
+           f"&filed_after={CAFC_FROM.isoformat()}&filed_before={CAFC_TO.isoformat()}&order_by=dateFiled%20asc")
+    rows, pages = [], 0
+    while url and pages < 2000:
+        r = None
+        for attempt in range(4):
+            r = requests.get(url, headers=hdr, timeout=90)
+            if r.status_code == 200:
+                break
+            if r.status_code in (429, 500, 502, 503, 504):
+                time.sleep(10 * (attempt + 1))
+                continue
             raise RuntimeError(f"CourtListener status {r.status_code}: {r.text[:120]}")
         j = r.json()
+        if pages == 0:
+            first = (j.get("results") or [{}])[0]
+            log(f"CourtListener first result keys: {sorted(first.keys())[:30]}; count {j.get('count')}")
         for it in j.get("results", []):
+            ops = it.get("opinions") or [{}]
+            status = str(it.get("status") or (ops[0].get("status") if isinstance(ops[0], dict) else "") or "")
             rows.append(dict(date=str(it.get("dateFiled"))[:10], docket=str(it.get("docketNumber", "")),
-                             case_name=str(it.get("caseName", "")), status=str(it.get("status", "Published"))))
+                             case_name=str(it.get("caseName", "")), status=status))
         url = j.get("next")
         pages += 1
-        time.sleep(0.5)
+        if pages % 50 == 0:
+            log(f"CourtListener: {pages} pages, {len(rows)} rows")
+        time.sleep(0.4)
     if not rows:
         raise RuntimeError("CourtListener returned no rows")
     df = pd.DataFrame(rows)
+    log(f"CourtListener status values: {df['status'].value_counts().to_dict()}")
+    keep = df["status"].str.lower().isin(["published", "precedential"])
+    df = df[keep].copy()
+    if df.empty:
+        raise RuntimeError("CourtListener returned rows but none marked published or precedential")
     df["source"] = "CourtListener v4"
     return df
 
