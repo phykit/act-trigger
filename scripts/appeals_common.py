@@ -297,6 +297,10 @@ def scdb_rulings() -> pd.DataFrame:
     return out.reset_index(drop=True)
 
 
+class CourtListenerThrottled(RuntimeError):
+    """Raised when CourtListener keeps refusing; the build must stop rather than run on a truncated universe."""
+
+
 def _courtlistener_cafc() -> pd.DataFrame:
     """Federal Circuit opinions from the CourtListener v4 search API; precedential ones kept client-side."""
     hdr = dict(UA_PLAIN)
@@ -310,38 +314,54 @@ def _courtlistener_cafc() -> pd.DataFrame:
         e = min((q + pd.offsets.QuarterEnd(0)).date(), CAFC_TO)
         windows.append((q.date(), e))
         q = pd.Timestamp(e) + pd.Timedelta(days=1)
-    rows, pages = [], 0
+    # Each completed window is cached under data/appeals/cafc_windows/ so a throttled run resumes, never truncates.
+    wdir = adata("cafc_windows")
+    wdir.mkdir(parents=True, exist_ok=True)
+    rows, pages, reused = [], 0, 0
     for w_from, w_to in windows:
-      url = ("https://www.courtlistener.com/api/rest/v4/search/?type=o&court=cafc"
-             f"&filed_after={w_from.isoformat()}&filed_before={w_to.isoformat()}&order_by=dateFiled%20asc")
-      wpages = 0
-      while url and wpages < 60:
-          r = None
-          for attempt in range(4):
-              r = requests.get(url, headers=hdr, timeout=90)
-              if r.status_code == 200:
-                  break
-              if r.status_code in (429, 500, 502, 503, 504):
-                  time.sleep(10 * (attempt + 1))
-                  continue
-              raise RuntimeError(f"CourtListener status {r.status_code}: {r.text[:120]}")
-          j = r.json()
-          if pages == 0:
-              first = (j.get("results") or [{}])[0]
-              log(f"CourtListener first result keys: {sorted(first.keys())[:30]}; count {j.get('count')}")
-          for it in j.get("results", []):
-              ops = it.get("opinions") or [{}]
-              status = str(it.get("status") or (ops[0].get("status") if isinstance(ops[0], dict) else "") or "")
-              rows.append(dict(date=str(it.get("dateFiled"))[:10], docket=str(it.get("docketNumber", "")),
-                               case_name=str(it.get("caseName", "")), status=status))
-          url = j.get("next")
-          pages += 1
-          wpages += 1
-          if pages % 50 == 0:
-              log(f"CourtListener: {pages} pages, {len(rows)} rows")
-          time.sleep(0.4)
-      if wpages >= 60:
-          log(f"CourtListener window {w_from} to {w_to} hit the page cap; window may be truncated")
+        wfile = wdir / f"{w_from.isoformat()}_{w_to.isoformat()}.csv"
+        if wfile.exists():
+            rows.extend(pd.read_csv(wfile, dtype=str).fillna("").to_dict("records"))
+            reused += 1
+            continue
+        url = ("https://www.courtlistener.com/api/rest/v4/search/?type=o&court=cafc"
+               f"&filed_after={w_from.isoformat()}&filed_before={w_to.isoformat()}&order_by=dateFiled%20asc")
+        wrows, wpages = [], 0
+        while url and wpages < 60:
+            r = None
+            for attempt in range(10):
+                r = requests.get(url, headers=hdr, timeout=90)
+                if r.status_code == 200:
+                    break
+                if r.status_code in (429, 500, 502, 503, 504):
+                    wait = int(r.headers.get("Retry-After", 0) or 0) or 30 * (attempt + 1)
+                    log(f"CourtListener {r.status_code} on window {w_from}; waiting {min(wait, 600)}s")
+                    time.sleep(min(wait, 600))
+                    continue
+                raise RuntimeError(f"CourtListener status {r.status_code}: {r.text[:120]}")
+            if r is None or r.status_code != 200:
+                raise CourtListenerThrottled(f"CourtListener still throttled on window {w_from} to {w_to} after retries; "
+                                             f"{reused} windows reused, completed windows are cached for the next run")
+            j = r.json()
+            if pages == 0:
+                first = (j.get("results") or [{}])[0]
+                log(f"CourtListener first result keys: {sorted(first.keys())[:30]}; count {j.get('count')}")
+            for it in j.get("results", []):
+                ops = it.get("opinions") or [{}]
+                status = str(it.get("status") or (ops[0].get("status") if isinstance(ops[0], dict) else "") or "")
+                wrows.append(dict(date=str(it.get("dateFiled"))[:10], docket=str(it.get("docketNumber", "")),
+                                  case_name=str(it.get("caseName", "")), status=status))
+            url = j.get("next")
+            pages += 1
+            wpages += 1
+            if pages % 50 == 0:
+                log(f"CourtListener: {pages} pages, {len(rows) + len(wrows)} rows")
+            time.sleep(1.0)
+        if wpages >= 60:
+            log(f"CourtListener window {w_from} to {w_to} hit the page cap; window may be truncated")
+        pd.DataFrame(wrows, columns=["date", "docket", "case_name", "status"]).to_csv(wfile, index=False)
+        rows.extend(wrows)
+    log(f"CourtListener: {reused} windows reused from cache")
     log(f"CourtListener: {len(windows)} quarterly windows, {pages} pages, {len(rows)} rows")
     if not rows:
         raise RuntimeError("CourtListener returned no rows")
@@ -412,6 +432,8 @@ def cafc_rulings() -> tuple[pd.DataFrame, str]:
             df.to_csv(cache, index=False)
             log(f"Federal Circuit: {len(df)} precedential opinions from {df['source'].iloc[0]}")
             return df, df["source"].iloc[0]
+        except CourtListenerThrottled:
+            raise
         except Exception as exc:  # noqa: BLE001
             errors.append(f"{fn.__name__}: {str(exc)[:160]}")
     log("Federal Circuit unavailable: " + " | ".join(errors))

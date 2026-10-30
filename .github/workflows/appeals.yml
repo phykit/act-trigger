@@ -1,5 +1,5 @@
 name: appeals
-# Run 8: as run 7 (quarterly Federal Circuit windows); the results commit now rebases onto main before pushing
+# Run 9: Federal Circuit windows cached and resumable; a throttled CourtListener stops the build instead of truncating it
 
 on:
   workflow_dispatch:
