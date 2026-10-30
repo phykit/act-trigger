@@ -94,7 +94,9 @@ def main(inp: str, out_dir: str) -> None:
     work.mkdir(exist_ok=True)
     mpath = out.parent / "bundle_manifest.csv"
     manifest = pd.read_csv(mpath, dtype=str).to_dict("records") if mpath.exists() else []
-    done = {m["event_id"] for m in manifest if (out / f"{m['event_id']}.pdf").exists()}
+    # An event built without its opinion (CourtListener 429s before amendment 1) is rebuilt, not resumed.
+    have_op = lambda m: not str(m.get("opinion", "")).startswith(("failed", "missing", "nan"))  # noqa: E731
+    done = {m["event_id"] for m in manifest if (out / f"{m['event_id']}.pdf").exists() and have_op(m)}
     manifest = [m for m in manifest if m["event_id"] in done]
     for _, e in pd.read_csv(inp, dtype=str).iterrows():
         eid = e["event_id"]
