@@ -9,6 +9,7 @@ on:
       - "scripts/orange.py"
       - "scripts/rulings_common.py"
       - "prereg/apple_prereg.md"
+      - "prereg/apple_v2_prereg.md"
       - "prereg/orange_prereg.md"
       - "data/ruling_cases.csv"
       - ".github/workflows/rulings.yml"
@@ -27,7 +28,7 @@ jobs:
       - name: Install
         run: pip install --quiet pandas numpy scipy requests lxml "yfinance>=0.2.60"
       - name: Project Apple
-        run: python scripts/apple.py
+        run: python scripts/apple.py --spec apple_v2
       - name: Project Orange
         run: python scripts/orange.py
       - name: Commit results and fetched inputs

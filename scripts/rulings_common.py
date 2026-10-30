@@ -184,30 +184,94 @@ def opinion_days(term: int) -> tuple[list[dt.date], pd.DataFrame]:
     return days, df
 
 
-def check_dates(case: pd.Series, slip: pd.DataFrame) -> dict:
+_SCDB_VERSIONS = ("2026_01", "2025_01", "2024_01", "2023_01")
+_scdb_cache: dict = {}
+
+
+def scdb_table() -> tuple[pd.DataFrame, str]:
+    """The SCDB case-centred citation table (latest release reachable), with the release label."""
+    if "df" in _scdb_cache:
+        return _scdb_cache["df"], _scdb_cache["ver"]
+    if SELFTEST:
+        reg = load_cases()
+        df = pd.DataFrame({"term": 2000 + reg["term"], "dateDecision": reg["decided"],
+                           "docket": reg["docket"], "caseName": reg["case_name"], "decisionType": 1})
+        extra = []
+        for t in sorted(set(reg["term"])):
+            start = dt.date(2000 + t, 10, 1)
+            for i, d in enumerate(pd.bdate_range(start, start + dt.timedelta(days=270))[::7]):
+                extra.append(dict(term=2000 + t, dateDecision=d, docket=f"{t}-{i}", caseName="synthetic", decisionType=1))
+        df = pd.concat([df, pd.DataFrame(extra)], ignore_index=True)
+        _scdb_cache.update(df=df, ver="synthetic")
+        return df, "synthetic"
+    import zipfile
+    errors = []
+    for ver in _SCDB_VERSIONS:
+        for scheme in ("https", "http"):
+            url = f"{scheme}://scdb.wustl.edu/_brickFiles/{ver}/SCDB_{ver}_caseCentered_Citation.csv.zip"
+            try:
+                r = requests.get(url, headers=UA, timeout=120)
+                if r.status_code != 200 or len(r.content) < 100000:
+                    raise RuntimeError(f"status {r.status_code}, {len(r.content)} bytes")
+                with zipfile.ZipFile(io.BytesIO(r.content)) as z:
+                    name = [n for n in z.namelist() if n.lower().endswith(".csv")][0]
+                    df = pd.read_csv(z.open(name), encoding="latin-1", low_memory=False)
+                df["dateDecision"] = pd.to_datetime(df["dateDecision"], format="mixed", errors="coerce")
+                df = df.dropna(subset=["dateDecision"])
+                _scdb_cache.update(df=df, ver=ver)
+                log(f"SCDB release {ver} loaded: {len(df)} rows")
+                return df, ver
+            except Exception as exc:  # noqa: BLE001
+                errors.append(f"{url}: {exc}")
+    raise RuntimeError("no SCDB release reachable: " + " | ".join(errors))
+
+
+def scdb_opinion_days(term: int) -> tuple[list[dt.date], pd.DataFrame, str]:
+    """Decision dates recorded in SCDB for October Term `term` (two-digit), all decision types."""
+    cache = _rdata_path(f"opinion_days_OT{term:02d}_scdb.csv")
+    if cache.exists() and not SELFTEST:
+        first = cache.read_text().splitlines()[0]
+        ver = first.split("release=")[-1] if first.startswith("#") else "unknown"
+        df = pd.read_csv(cache, parse_dates=["date"], comment="#")
+    else:
+        full, ver = scdb_table()
+        sub = full[full["term"] == 2000 + term]
+        if len(sub) < 20:
+            raise RuntimeError(f"SCDB {ver} holds only {len(sub)} decisions for OT{term:02d}; refusing to proceed")
+        df = pd.DataFrame({"date": sub["dateDecision"], "docket": sub["docket"].astype(str),
+                           "name": sub["caseName"], "decision_type": sub["decisionType"]}).sort_values("date")
+        if not SELFTEST:
+            with open(cache, "w") as fh:
+                fh.write(f"#scdb release={ver}\n")
+                df.to_csv(fh, index=False)
+    days = sorted({d.date() for d in pd.to_datetime(df["date"])})
+    return days, df, ver
+
+
+def check_dates(case: pd.Series, listing: pd.DataFrame, listing_name: str = "slip listing") -> dict:
     """Apply the registered date checks. Returns status fields and the dates to use."""
     argued = case["argued"].date()
     decided = case["decided"].date()
     oy = oyez_dates(int(case["term"]), case["docket"])
-    slip_dates = set()
-    if slip is not None and len(slip):
-        m = slip[slip["docket"].astype(str).str.contains(case["docket"], regex=False)]
-        slip_dates = {d.date() for d in pd.to_datetime(m["date"])}
-    decided_ok = (decided in slip_dates) or (oy is not None and oy.get("decided") == decided)
+    listed = set()
+    if listing is not None and len(listing):
+        m = listing[listing["docket"].astype(str).str.contains(case["docket"], regex=False)]
+        listed = {d.date() for d in pd.to_datetime(m["date"])}
+    decided_ok = (decided in listed) or (oy is not None and oy.get("decided") == decided)
     if oy is None:
         argued_status = "recollection (Oyez unreachable)"
     elif oy.get("argued") == argued:
         argued_status = "verified (Oyez)"
     else:
         argued_status = f"MISMATCH (Oyez {oy.get('argued')})"
-    if decided in slip_dates and oy is not None and oy.get("decided") == decided:
-        decided_status = "verified (Oyez and slip listing)"
-    elif decided in slip_dates:
-        decided_status = "verified (slip listing)"
+    if decided in listed and oy is not None and oy.get("decided") == decided:
+        decided_status = f"verified (Oyez and {listing_name})"
+    elif decided in listed:
+        decided_status = f"verified ({listing_name})"
     elif oy is not None and oy.get("decided") == decided:
         decided_status = "verified (Oyez)"
     else:
-        decided_status = f"FAILED (Oyez {None if oy is None else oy.get('decided')}; slip {sorted(slip_dates)})"
+        decided_status = f"FAILED (Oyez {None if oy is None else oy.get('decided')}; {listing_name} {sorted(listed)})"
     return dict(argued=argued, decided=decided, argued_status=argued_status,
                 decided_status=decided_status, include=bool(decided_ok))
 
