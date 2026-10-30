@@ -110,31 +110,37 @@ def _slip_rows(term: int) -> list[dict]:
 
 
 def _parse_slip(r: requests.Response | None) -> list[dict]:
+    """One row per opinion link on a term's opinions page. The link may be the slip opinion, or, once the Court has
+    replaced it, a preliminary-print or bound-volume PDF with a #page anchor. Markup-independent: the text between
+    the previous link and this one holds this row's date and docket (the last of each is taken); the text after the
+    link holds the citation (for example "587 U.S. 299")."""
     rows = []
-    if r is not None and "/slipopinion/" in r.url:
-        # Markup-independent: each opinion link is paired with the text between it and the previous opinion link,
-        # which holds this row's number, date and docket (and the previous row's trailing cells, so the last date
-        # and the last docket in the segment are taken).
-        pat = re.compile(r'(?i)href=["\']([^"\']*/opinions/(?:\d{2}pdf|preliminaryprint)/[^"\'#]+\.pdf(?:#page=\d+)?)')
-        prev, seen = 0, set()
-        for m in pat.finditer(r.text):
-            seg = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", r.text[prev:m.start()])))
-            prev = m.end()
-            href = m.group(1)
-            href = href if href.startswith("http") else SC + "/" + href.lstrip("./").lstrip("/")
-            if href in seen:
-                continue
-            seen.add(href)
-            dates = re.findall(r"(\d{1,2})/(\d{1,2})/(\d{2,4})", seg)
-            date = ""
-            if dates:
-                mo, d, y = (int(x) for x in dates[-1])
-                try:
-                    date = dt.date(y + 2000 if y < 100 else y, mo, d).isoformat()
-                except ValueError:
-                    date = ""
-            dockets = re.findall(r"(?<![\w-])(\d{2}[-A]\d{1,5}|\d{2,3}[Oo]rig|\d{2}O\d{1,4})(?![\w-])", seg)
-            rows.append(dict(href=href, date=date, docket=dockets[-1] if dockets else "", text=seg[-300:]))
+    if r is None or "/slipopinion/" not in r.url:
+        return rows
+    pat = re.compile(r'(?i)href=["\']([^"\']*/opinions/(?:\d{2}pdf|preliminaryprint|boundvolumes)/[^"\'#]+\.pdf(?:#page=\d+)?)')
+    ms = list(pat.finditer(r.text))
+    plain = lambda a, b: re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", r.text[a:b])))  # noqa: E731
+    seen = set()
+    for i, m in enumerate(ms):
+        seg = plain(ms[i - 1].end() if i else 0, m.start())
+        post = plain(m.end(), ms[i + 1].start() if i + 1 < len(ms) else min(len(r.text), m.end() + 3000))
+        href = m.group(1)
+        href = href if href.startswith("http") else SC + "/" + href.lstrip("./").lstrip("/")
+        if href in seen:
+            continue
+        seen.add(href)
+        dates = re.findall(r"(\d{1,2})/(\d{1,2})/(\d{2,4})", seg)
+        date = ""
+        if dates:
+            mo, d, y = (int(x) for x in dates[-1])
+            try:
+                date = dt.date(y + 2000 if y < 100 else y, mo, d).isoformat()
+            except ValueError:
+                date = ""
+        dockets = re.findall(r"(?<![\w-])(\d{2}[-A]\d{1,5}|\d{2,3}[Oo]rig|\d{2}O\d{1,4})(?![\w-])", seg)
+        cit = re.search(r"\b(\d{3})\s*U\.\s*S\.\s*(\d{1,4})\b", post)
+        rows.append(dict(href=href, date=date, docket=dockets[-1] if dockets else "", text=seg[-300:],
+                         citation=f"{cit.group(1)} U.S. {cit.group(2)}" if cit else ""))
     return rows
 
 
@@ -150,22 +156,32 @@ def slip_pdf(docket: str, date: str) -> tuple[bytes | None, str]:
     cands = [r for r in rows if pat.search(r["href"]) or r.get("docket") == docket]
     cands = cands or [r for r in rows if cell.search(r.get("text", "")[-120:])]
     if not cands:
-        return None, f"docket {docket} not on slip-opinion page OT{term} ({len(rows)} opinion links parsed)"
+        return None, f"docket {docket} not on the Court's opinions page OT{term} ({len(rows)} opinion links parsed)"
     best = [r for r in cands if r["date"] == date] or cands
-    # Prefer the slip opinion itself over a preliminary-print page range when the row carries both.
-    best = sorted(best, key=lambda r: "preliminaryprint" in r["href"])
-    href = best[0]["href"]
-    if "preliminaryprint" in href:
-        return _prelim_range(href, rows)
-    r = _get(href, UA)
-    if r is None or r.content[:4] != b"%PDF":
-        return None, f"slip opinion PDF not retrieved ({href}; {STATUS.get(href, '?')})"
-    return r.content, f"supremecourt.gov slip opinion {href.replace(SC, '')}"
+    best = sorted(best, key=lambda r: "#page=" in r["href"])  # the slip opinion itself first, where still posted
+    row = best[0]
+    href = row["href"]
+    if "#page=" in href:
+        pdf, src = _anchored_range(href, rows)
+    else:
+        r = _get(href, UA)
+        pdf, src = (r.content, f"supremecourt.gov slip opinion {href.replace(SC, '')}") if r is not None and r.content[:4] == b"%PDF" \
+            else (None, f"slip opinion PDF not retrieved ({href}; {STATUS.get(href, '?')})")
+    if pdf is None and row.get("citation"):
+        # The Court's own table gives the citation; the United States Reports granule of that citation is the same case.
+        vol, _, page = row["citation"].partition(" U.S. ")
+        summ = _gi(f"/packages/USREPORTS-{vol}/granules/USREPORTS-{vol}-{page}/summary")
+        link = (summ or {}).get("download", {}).get("pdfLink")
+        r = _get(link, {"X-Api-Key": GOVINFO_KEY, **UA}) if link else None
+        if r is not None and r.content[:4] == b"%PDF":
+            return r.content, f"GovInfo USREPORTS-{vol}-{page} ({row['citation']}, by the citation in the Court's table for docket {docket})"
+        src += f"; GovInfo USREPORTS-{vol}-{page} not available"
+    return pdf, src
 
 
-def _prelim_range(href: str, rows: list[dict]) -> tuple[bytes | None, str]:
-    """Cut one case out of a preliminary-print volume part: from its #page anchor to the page before the next case's
-    anchor in the same file (at most 120 pages)."""
+def _anchored_range(href: str, rows: list[dict]) -> tuple[bytes | None, str]:
+    """Cut one case out of a preliminary-print part or bound volume: from its #page anchor to the page before the
+    next case's anchor in the same file (at most 120 pages)."""
     from pypdf import PdfReader, PdfWriter  # noqa: PLC0415
     base, _, pg = href.partition("#page=")
     start = int(pg or 1)
@@ -177,7 +193,7 @@ def _prelim_range(href: str, rows: list[dict]) -> tuple[bytes | None, str]:
     if not f.exists():
         r = _get(base, UA)
         if r is None or r.content[:4] != b"%PDF":
-            return None, f"preliminary print not retrieved ({base}; {STATUS.get(base, '?')})"
+            return None, f"{base.replace(SC, '')} not retrieved ({STATUS.get(base, '?')})"
         f.write_bytes(r.content)
     rd = PdfReader(str(f))
     end = min((later[0] - 1) if later else start + 119, start + 119, len(rd.pages))
@@ -186,7 +202,8 @@ def _prelim_range(href: str, rows: list[dict]) -> tuple[bytes | None, str]:
         w.add_page(rd.pages[i])
     buf = io.BytesIO()
     w.write(buf)
-    return buf.getvalue(), f"supremecourt.gov preliminary print {base.replace(SC, '')} pages {start} to {end}"
+    kind = "bound volume" if "/boundvolumes/" in base else "preliminary print"
+    return buf.getvalue(), f"supremecourt.gov {kind} {base.replace(SC, '')} pages {start} to {end}"
 
 
 # ----------------------------------------------------------------------------- 2. United States Reports
