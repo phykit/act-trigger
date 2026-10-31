@@ -4,6 +4,9 @@ name: cl-check
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -11,9 +14,19 @@ jobs:
     env:
       CL: ${{ secrets.COURTLISTENER_TOKEN }}
     steps:
+      - uses: actions/checkout@v4
       - name: One request
         run: |
+          exec > >(tee data/appeals/cl_check.txt) 2>&1
+          date -u +%FT%H:%MZ
           code=$(curl -s -o body.txt -D h.txt -w '%{http_code}' -H "Authorization: Token $CL" "https://www.courtlistener.com/api/rest/v4/courts/?id=cafc")
           echo "HTTP $code"
           grep -i -E '^(x-ratelimit|retry-after)' h.txt || true
           head -c 300 body.txt; echo
+      - name: Commit the result
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/appeals/cl_check.txt && git commit -m "CourtListener token check [skip ci]" || exit 0
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
