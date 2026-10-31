@@ -22,6 +22,7 @@ jobs:
       - name: Fetch parties
         run: |
           mkdir -p data/appeals/logs
+          set -o pipefail
           python scripts/govinfo_cafc_parties.py 2>&1 | tee data/appeals/logs/govinfo_parties.log
       - name: Commit
         if: always()

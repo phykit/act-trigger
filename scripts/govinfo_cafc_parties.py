@@ -58,6 +58,8 @@ def main() -> None:
         if not parties:
             rows.append(dict(package_id=pid, order="", role="", full_name="(no parties)", first_name="", last_name="", origin=origin))
         for i, p in enumerate(parties):
+            if not isinstance(p, dict):
+                p = {"fullName": str(p), "role": "(unstructured)"}
             rows.append(dict(package_id=pid, order=i, role=p.get("role", ""), full_name=p.get("fullName", ""),
                              first_name=p.get("firstName", ""), last_name=p.get("lastName", ""), origin=origin))
         if k % 250 == 249:
