@@ -43,5 +43,5 @@ jobs:
       - name: Commit results
         if: always()
         run: |
-          git add results/ data/appeals/logs/ data/appeals/prices_storm.csv.gz 2>/dev/null || true
+          git add results/ data/appeals/logs/ 2>/dev/null || true
           bash scripts/ci/commit_push.sh "Wood and Storm run $(date -u +%F) [skip ci]"

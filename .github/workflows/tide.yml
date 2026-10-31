@@ -53,8 +53,5 @@ jobs:
       - name: Commit outputs
         if: always()
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add results/ data/tide/ data/appeals/ohlc_*.csv.gz 2>/dev/null || true
-          git commit -m "Tide ${{ inputs.mode }} $(date -u +%F) [skip ci]" || echo "nothing to commit"
-          ok=0; for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin main && git push && { ok=1; break; }; sleep 10; done; [ "$ok" = 1 ] || { echo "push failed after retries"; exit 1; }
+          bash scripts/ci/commit_push.sh "Tide ${{ inputs.mode }} $(date -u +%F) [skip ci]"

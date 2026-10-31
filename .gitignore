@@ -2,5 +2,6 @@
 __pycache__/
 data/appeals/raw/
 data/appeals/prices_peers.csv.gz
+data/appeals/prices_storm.csv.gz
 data/appeals/fts/
 .opinion_cache/
