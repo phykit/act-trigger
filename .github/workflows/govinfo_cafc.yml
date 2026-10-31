@@ -33,4 +33,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/appeals/govinfo_cafc_index.csv data/appeals/govinfo_cafc_coverage.md data/appeals/logs/govinfo_cafc.log 2>/dev/null || true
           git commit -m "GovInfo Federal Circuit index $(date -u +%FT%H:%MZ) [skip ci]" || exit 0
-          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
+          ok=0; for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin main && git push && { ok=1; break; }; sleep 10; done; [ "$ok" = 1 ] || { echo "push failed after retries"; exit 1; }
