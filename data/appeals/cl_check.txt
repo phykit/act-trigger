@@ -1,4 +1,3 @@
-2026-10-31T06:12Z
-HTTP 429
-retry-after: 28323
-{"detail":"Request was throttled. Rate limit exceeded: 125/day. Expected available in 28323 seconds."}
+2026-10-31T14:24Z
+HTTP 200
+{"count":1,"next":null,"previous":null,"results":[{"resource_uri":"https://www.courtlistener.com/api/rest/v4/courts/cafc/","id":"cafc","pacer_court_id":13,"pacer_has_rss_feed":true,"pacer_rss_entry_types":"orders,opinions,judgments","date_last_pacer_contact":null,"fjc_court_id":"","date_modified":"2
