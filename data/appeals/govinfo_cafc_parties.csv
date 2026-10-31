@@ -1,0 +1,1325 @@
+package_id,order,role,full_name,first_name,last_name,origin
+USCOURTS-ca13-08-01462,0,Not party,"Chrysler Financial, LLC",,"Chrysler Financial, LLC",Appellate
+USCOURTS-ca13-08-01462,1,Cross-Appellant,Chrysler Group LLC,,Chrysler Group LLC,Appellate
+USCOURTS-ca13-08-01462,2,Not party,"Chrysler Holding, LLC",,"Chrysler Holding, LLC",Appellate
+USCOURTS-ca13-08-01462,3,Cross-Appellant,Chrysler LLC,,Chrysler LLC,Appellate
+USCOURTS-ca13-08-01462,4,Not party,"DaimlerChrysler Company, LLC",,"DaimlerChrysler Company, LLC",Appellate
+USCOURTS-ca13-08-01462,5,Not party,DaimlerChrysler Corporation,,DaimlerChrysler Corporation,Appellate
+USCOURTS-ca13-08-01462,6,Cross-Appellant,Hyundai Motor America,,Hyundai Motor America,Appellate
+USCOURTS-ca13-08-01462,7,Cross-Appellant,"Mercedes-Benz USA, Inc.",,"Mercedes-Benz USA, Inc.",Appellate
+USCOURTS-ca13-08-01462,8,Not party,"Michelin North America, Inc.",,"Michelin North America, Inc.",Appellate
+USCOURTS-ca13-08-01462,9,Appellant,"Orion IP, LLC",,"Orion IP, LLC",Appellate
+USCOURTS-ca13-08-01462,10,Not party,Polo Ralph Lauren Corp.,,Polo Ralph Lauren Corp.,Appellate
+USCOURTS-ca13-08-01462,11,Not party,"Reebok International, Ltd.",,"Reebok International, Ltd.",Appellate
+USCOURTS-ca13-08-01462,12,Appellant,Erich Spangenberg,Erich,Spangenberg,Appellate
+USCOURTS-ca13-08-01462,13,Appellant,"Taurus IP, LLC",,"Taurus IP, LLC",Appellate
+USCOURTS-ca13-08-03216,0,Petitioner,Richard Erickson,Richard,Erickson,Appellate
+USCOURTS-ca13-08-03216,1,Respondent,United States Postal Service,,United States Postal Service,Appellate
+USCOURTS-ca13-09-01372,0,Appellant,"Akamai Technologies, Inc.",,"Akamai Technologies, Inc.",Appellate
+USCOURTS-ca13-09-01372,1,Cross-Appellant,"Limelight Networks, Inc.",,"Limelight Networks, Inc.",Appellate
+USCOURTS-ca13-09-01372,2,Appellant,Massachusetts Institute of Technology,,Massachusetts Institute of Technology,Appellate
+USCOURTS-ca13-09-01380,0,Appellant,"Akamai Technologies, Inc.",,"Akamai Technologies, Inc.",Appellate
+USCOURTS-ca13-09-01380,1,Cross-Appellant,"Limelight Networks, Inc.",,"Limelight Networks, Inc.",Appellate
+USCOURTS-ca13-09-01380,2,Appellant,Massachusetts Institute of Technology,,Massachusetts Institute of Technology,Appellate
+USCOURTS-ca13-09-01416,0,Appellant,"Akamai Technologies, Inc.",,"Akamai Technologies, Inc.",Appellate
+USCOURTS-ca13-09-01416,1,Cross-Appellant,"Limelight Networks, Inc.",,"Limelight Networks, Inc.",Appellate
+USCOURTS-ca13-09-01416,2,Appellant,Massachusetts Institute of Technology,,Massachusetts Institute of Technology,Appellate
+USCOURTS-ca13-09-01417,0,Appellant,"Akamai Technologies, Inc.",,"Akamai Technologies, Inc.",Appellate
+USCOURTS-ca13-09-01417,1,Cross-Appellant,"Limelight Networks, Inc.",,"Limelight Networks, Inc.",Appellate
+USCOURTS-ca13-09-01417,2,Appellant,Massachusetts Institute of Technology,,Massachusetts Institute of Technology,Appellate
+USCOURTS-ca13-09-05121,0,Cross-Appellant,Arkansas Game & Fish Commission,,Arkansas Game & Fish Commission,Appellate
+USCOURTS-ca13-09-05121,1,Appellant,United States,,United States,Appellate
+USCOURTS-ca13-10-01051,0,Appellant,Iris Corporation,,Iris Corporation,Appellate
+USCOURTS-ca13-10-01051,1,Not party,Japan Airlines Corporation,,Japan Airlines Corporation,Appellate
+USCOURTS-ca13-10-01051,2,Appellee,"Japan Airlines International Company, Ltd.",,"Japan Airlines International Company, Ltd.",Appellate
+USCOURTS-ca13-10-01291,0,Appellee,Epic Systems Corporation,,Epic Systems Corporation,Appellate
+USCOURTS-ca13-10-01291,1,Appellant,McKesson Technologies Inc.,,McKesson Technologies Inc.,Appellate
+USCOURTS-ca13-10-01406,0,Appellee,American College of Medical Genetics,,American College of Medical Genetics,Appellate
+USCOURTS-ca13-10-01406,1,Appellee,American Society for Clinical Pathology,,American Society for Clinical Pathology,Appellate
+USCOURTS-ca13-10-01406,2,Appellee,Association for Molecular Pathology,,Association for Molecular Pathology,Appellate
+USCOURTS-ca13-10-01406,3,Appellant,Lorris Betz,Lorris,Betz,Appellate
+USCOURTS-ca13-10-01406,4,Appellee,Boston Women's Health Book Collective,,Boston Women's Health Book Collective,Appellate
+USCOURTS-ca13-10-01406,5,Appellant,Roger Boyer,Roger,Boyer,Appellate
+USCOURTS-ca13-10-01406,6,Appellee,Breast Cancer Action,,Breast Cancer Action,Appellate
+USCOURTS-ca13-10-01406,7,Appellant,Jack Brittain,Jack,Brittain,Appellate
+USCOURTS-ca13-10-01406,8,Appellee,Lisbeth Ceriani,Lisbeth,Ceriani,Appellate
+USCOURTS-ca13-10-01406,9,Appellee,Wendy Chung,Wendy,Chung,Appellate
+USCOURTS-ca13-10-01406,10,Appellee,College of American Pathologists,,College of American Pathologists,Appellate
+USCOURTS-ca13-10-01406,11,Appellant,Arnold B. Combe,Arnold,Combe,Appellate
+USCOURTS-ca13-10-01406,12,Appellee,Patrice Fortune,Patrice,Fortune,Appellate
+USCOURTS-ca13-10-01406,13,Appellee,Arupa Ganguly,Arupa,Ganguly,Appellate
+USCOURTS-ca13-10-01406,14,Appellant,Raymond Gesteland,Raymond,Gesteland,Appellate
+USCOURTS-ca13-10-01406,15,Appellee,Genae Girard,Genae,Girard,Appellate
+USCOURTS-ca13-10-01406,16,Appellant,James U. Jensen,James,Jensen,Appellate
+USCOURTS-ca13-10-01406,17,Appellee,Haig Kazazian,Haig,Kazazian,Appellate
+USCOURTS-ca13-10-01406,18,Appellee,David Ledbetter,David,Ledbetter,Appellate
+USCOURTS-ca13-10-01406,19,Appellee,Runi Limary,Runi,Limary,Appellate
+USCOURTS-ca13-10-01406,20,Appellee,"Ellen Matloff , M.S.",Ellen,"Matloff , M.S.",Appellate
+USCOURTS-ca13-10-01406,21,Appellant,John Kendall Morris,John,Morris,Appellate
+USCOURTS-ca13-10-01406,22,Appellant,"Myriad Genetics, Inc.",,"Myriad Genetics, Inc.",Appellate
+USCOURTS-ca13-10-01406,23,Appellee,Harry Ostrer,Harry,Ostrer,Appellate
+USCOURTS-ca13-10-01406,24,Appellant,Thomas Parks,Thomas,Parks,Appellate
+USCOURTS-ca13-10-01406,25,Appellant,David W. Pershing,David,Pershing,Appellate
+USCOURTS-ca13-10-01406,26,Appellee,Kathleen Raker,Kathleen,Raker,Appellate
+USCOURTS-ca13-10-01406,27,Appellee,"Elsa Reich, M.S.",Elsa,"Reich, M.S.",Appellate
+USCOURTS-ca13-10-01406,28,Appellee,Vicky Thomason,Vicky,Thomason,Appellate
+USCOURTS-ca13-10-01406,29,Not party,United States Patent and Trademark Office,,United States Patent and Trademark Office,Appellate
+USCOURTS-ca13-10-01406,30,Appellee,Sanford E. Warren Jr.,Sanford,Warren,Appellate
+USCOURTS-ca13-10-01406,31,Appellant,Michael K. Young,Michael,Young,Appellate
+USCOURTS-ca13-10-01426,0,Appellant,Aristocrat Technologies Australia Pty Limited,,Aristocrat Technologies Australia Pty Limited,Appellate
+USCOURTS-ca13-10-01426,1,Appellant,"Aristocrat Technologies, Inc.",,"Aristocrat Technologies, Inc.",Appellate
+USCOURTS-ca13-10-01426,2,Appellee,IGT,,IGT,Appellate
+USCOURTS-ca13-10-01426,3,Appellee,International Game Technology,,International Game Technology,Appellate
+USCOURTS-ca13-10-01544,0,Not party,"Hulu, LLC",,"Hulu, LLC",Appellate
+USCOURTS-ca13-10-01544,1,Appellant,"Ultramercial, Inc.",,"Ultramercial, Inc.",Appellate
+USCOURTS-ca13-10-01544,2,Appellant,"Ultramercial, LLC",,"Ultramercial, LLC",Appellate
+USCOURTS-ca13-10-01544,3,Appellee,"WildTangent, Inc.",,"WildTangent, Inc.",Appellate
+USCOURTS-ca13-10-01548,0,Appellant,"HemCon, Inc.",,"HemCon, Inc.",Appellate
+USCOURTS-ca13-10-01548,1,Appellee,"Marine Polymer Technologies, Inc.",,"Marine Polymer Technologies, Inc.",Appellate
+USCOURTS-ca13-10-03096,0,Petitioner,Richard Erickson,Richard,Erickson,Appellate
+USCOURTS-ca13-10-03096,1,Respondent,United States Postal Service,,United States Postal Service,Appellate
+USCOURTS-ca13-10-05029,0,Cross-Appellant,Arkansas Game & Fish Commission,,Arkansas Game & Fish Commission,Appellate
+USCOURTS-ca13-10-05029,1,Appellant,United States,,United States,Appellate
+USCOURTS-ca13-10-05089,0,Appellant,Amy Carson,Amy,Carson,Appellate
+USCOURTS-ca13-10-05089,1,Appellant,Stacy Carson,Stacy,Carson,Appellate
+USCOURTS-ca13-10-05089,2,Appellee,Secretary of Health and Human Services,,Secretary of Health and Human Services,Appellate
+USCOURTS-ca13-11-01009,0,Appellant,Newegg Inc.,,Newegg Inc.,Appellate
+USCOURTS-ca13-11-01009,1,Appellee,Soverain Software LLC,,Soverain Software LLC,Appellate
+USCOURTS-ca13-11-01165,0,Appellee,Bed Bath & Beyond Procurement Co. Inc.,,Bed Bath & Beyond Procurement Co. Inc.,Appellate
+USCOURTS-ca13-11-01165,1,Appellee,"Bed Bath & Beyond, Inc.",,"Bed Bath & Beyond, Inc.",Appellate
+USCOURTS-ca13-11-01165,2,Not party,Christine Gitli,Christine,Gitli,Appellate
+USCOURTS-ca13-11-01165,3,Appellant,Roger J. Hall,Roger,Hall,Appellate
+USCOURTS-ca13-11-01165,4,Appellee,Farley S. Nachemin,Farley,Nachemin,Appellate
+USCOURTS-ca13-11-01165,5,Not party,Stephen Peters,Stephen,Peters,Appellate
+USCOURTS-ca13-11-01165,6,Not party,RJ Hall & Associates,,RJ Hall & Associates,Appellate
+USCOURTS-ca13-11-01165,7,Cross-Appellant,"West Point Home, Inc.",,"West Point Home, Inc.",Appellate
+USCOURTS-ca13-11-01165,8,Not party,Jennifer Zadoff,Jennifer,Zadoff,Appellate
+USCOURTS-ca13-11-01215,0,Appellant,"CoreValve, Inc.",,"CoreValve, Inc.",Appellate
+USCOURTS-ca13-11-01215,1,Cross-Appellant,Edwards Lifesciences AG,,Edwards Lifesciences AG,Appellate
+USCOURTS-ca13-11-01215,2,Cross-Appellant,Edwards Lifesciences LLC,,Edwards Lifesciences LLC,Appellate
+USCOURTS-ca13-11-01215,3,Appellant,"Medtronic Corevalve, LLC",,"Medtronic Corevalve, LLC",Appellate
+USCOURTS-ca13-11-01218,0,Appellant,Fairchild Semiconductor Corporation,,Fairchild Semiconductor Corporation,Appellate
+USCOURTS-ca13-11-01218,1,Appellant,"Fairchild Semiconductor International, Inc.",,"Fairchild Semiconductor International, Inc.",Appellate
+USCOURTS-ca13-11-01218,2,Cross-Appellant,"Power Integrations, Inc.",,"Power Integrations, Inc.",Appellate
+USCOURTS-ca13-11-01219,0,Appellant,"Allcare Health Management Systems, Inc.",,"Allcare Health Management Systems, Inc.",Appellate
+USCOURTS-ca13-11-01219,1,Appellee,"Highmark, Inc.",,"Highmark, Inc.",Appellate
+USCOURTS-ca13-11-01223,0,Appellee,"Caraco Pharmaceutical Laboratories, Ltd.",,"Caraco Pharmaceutical Laboratories, Ltd.",Appellate
+USCOURTS-ca13-11-01223,1,Appellant,Novo Nordisk A/S,,Novo Nordisk A/S,Appellate
+USCOURTS-ca13-11-01223,2,Appellant,Novo Nordisk Inc.,,Novo Nordisk Inc.,Appellate
+USCOURTS-ca13-11-01223,3,Appellee,"Sun Pharmaceutical Industries, Ltd.",,"Sun Pharmaceutical Industries, Ltd.",Appellate
+USCOURTS-ca13-11-01235,0,Appellee,Bed Bath & Beyond Procurement Co. Inc.,,Bed Bath & Beyond Procurement Co. Inc.,Appellate
+USCOURTS-ca13-11-01235,1,Appellee,"Bed Bath & Beyond, Inc.",,"Bed Bath & Beyond, Inc.",Appellate
+USCOURTS-ca13-11-01235,2,Not party,Christine Gitli,Christine,Gitli,Appellate
+USCOURTS-ca13-11-01235,3,Appellant,Roger J. Hall,Roger,Hall,Appellate
+USCOURTS-ca13-11-01235,4,Appellee,Farley S. Nachemin,Farley,Nachemin,Appellate
+USCOURTS-ca13-11-01235,5,Not party,Stephen Peters,Stephen,Peters,Appellate
+USCOURTS-ca13-11-01235,6,Not party,RJ Hall & Associates,,RJ Hall & Associates,Appellate
+USCOURTS-ca13-11-01235,7,Cross-Appellant,"West Point Home, Inc.",,"West Point Home, Inc.",Appellate
+USCOURTS-ca13-11-01235,8,Not party,Jennifer Zadoff,Jennifer,Zadoff,Appellate
+USCOURTS-ca13-11-01238,0,Appellant,Fairchild Semiconductor Corporation,,Fairchild Semiconductor Corporation,Appellate
+USCOURTS-ca13-11-01238,1,Appellant,"Fairchild Semiconductor International, Inc.",,"Fairchild Semiconductor International, Inc.",Appellate
+USCOURTS-ca13-11-01238,2,Cross-Appellant,"Power Integrations, Inc.",,"Power Integrations, Inc.",Appellate
+USCOURTS-ca13-11-01291,0,Cross-Appellant,Buyers Products Company,,Buyers Products Company,Appellate
+USCOURTS-ca13-11-01291,1,Appellant,"Douglas Dynamics, LLC",,"Douglas Dynamics, LLC",Appellate
+USCOURTS-ca13-11-01301,0,Appellant,Alice Corporation Pty. Ltd.,,Alice Corporation Pty. Ltd.,Appellate
+USCOURTS-ca13-11-01301,1,Appellee,CLS Bank International,,CLS Bank International,Appellate
+USCOURTS-ca13-11-01301,2,Appellee,CLS Services. Ltd.,,CLS Services. Ltd.,Appellate
+USCOURTS-ca13-11-01313,0,Not party,Boston Scientific Corporation,,Boston Scientific Corporation,Appellate
+USCOURTS-ca13-11-01313,1,Not party,Guidant Corporation,,Guidant Corporation,Appellate
+USCOURTS-ca13-11-01313,2,Cross-Appellant,"Medtronic, Inc.",,"Medtronic, Inc.",Appellate
+USCOURTS-ca13-11-01313,3,Appellant,"Mirowski Family Ventures, LLC",,"Mirowski Family Ventures, LLC",Appellate
+USCOURTS-ca13-11-01335,0,Appellant,"AMR Technology, Inc.",,"AMR Technology, Inc.",Appellate
+USCOURTS-ca13-11-01335,1,Appellee,Amino Chemicals Ltd.,,Amino Chemicals Ltd.,Appellate
+USCOURTS-ca13-11-01335,2,Appellant,Aventis Pharmaceuticals Inc.,,Aventis Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-11-01335,3,Appellee,"Dipharma Francis, SR.L.",,"Dipharma Francis, SR.L.",Appellate
+USCOURTS-ca13-11-01335,4,Appellee,Dipharma SpA,,Dipharma SpA,Appellate
+USCOURTS-ca13-11-01335,5,Not party,Mylan Pharmaceuticals Inc.,,Mylan Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-11-01335,6,Not party,"Teva Pharmaceuticals USA, Inc.",,"Teva Pharmaceuticals USA, Inc.",Appellate
+USCOURTS-ca13-11-01362,0,Cross-Appellant,Barden Corporation,,Barden Corporation,Appellate
+USCOURTS-ca13-11-01362,1,Cross-Appellant,Barden Corporation (U.K.) Ltd.,,Barden Corporation (U.K.) Ltd.,Appellate
+USCOURTS-ca13-11-01362,2,Cross-Appellant,"FAG Italia, S.p.A.",,"FAG Italia, S.p.A.",Appellate
+USCOURTS-ca13-11-01362,3,Appellee,JTEKT Corporation,,JTEKT Corporation,Appellate
+USCOURTS-ca13-11-01362,4,Appellee,Koyo Corporation of U.S.A.,,Koyo Corporation of U.S.A.,Appellate
+USCOURTS-ca13-11-01362,5,Appellee,NSK Corporation,,NSK Corporation,Appellate
+USCOURTS-ca13-11-01362,6,Appellee,NSK Europe Ltd.,,NSK Europe Ltd.,Appellate
+USCOURTS-ca13-11-01362,7,Appellee,NSK Ltd.,,NSK Ltd.,Appellate
+USCOURTS-ca13-11-01362,8,Cross-Appellant,SKF Aeroengine Bearings UK,,SKF Aeroengine Bearings UK,Appellate
+USCOURTS-ca13-11-01362,9,Cross-Appellant,SKF USA Inc.,,SKF USA Inc.,Appellate
+USCOURTS-ca13-11-01362,10,Cross-Appellant,"Schaeffler Group USA, Inc.",,"Schaeffler Group USA, Inc.",Appellate
+USCOURTS-ca13-11-01362,11,Cross-Appellant,Schaeffler KG,,Schaeffler KG,Appellate
+USCOURTS-ca13-11-01362,12,Appellant,Timken Company,,Timken Company,Appellate
+USCOURTS-ca13-11-01362,13,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-11-01362,14,Appellant,United States International Trade Commission,,United States International Trade Commission,Appellate
+USCOURTS-ca13-11-01363,0,Cross-Appellant,Pylon Manufacturing Corp.,,Pylon Manufacturing Corp.,Appellate
+USCOURTS-ca13-11-01363,1,Appellant,"Robert Bosch, LLC",,"Robert Bosch, LLC",Appellate
+USCOURTS-ca13-11-01369,0,Appellee,SAP AG,,SAP AG,Appellate
+USCOURTS-ca13-11-01369,1,Appellee,SAP America LLC,,SAP America LLC,Appellate
+USCOURTS-ca13-11-01369,2,Appellant,elcommerce.com. Inc.,,elcommerce.com. Inc.,Appellate
+USCOURTS-ca13-11-01434,0,Appellee,Habasit Belting Incorporated,,Habasit Belting Incorporated,Appellate
+USCOURTS-ca13-11-01434,1,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-11-01434,2,Appellant,"Rexnord Industries, LLC",,"Rexnord Industries, LLC",Appellate
+USCOURTS-ca13-11-01486,0,Appellant,"Accenture Global Services, GmbH",,"Accenture Global Services, GmbH",Appellate
+USCOURTS-ca13-11-01486,1,Appellant,Accenture LLP,,Accenture LLP,Appellate
+USCOURTS-ca13-11-01486,2,Appellee,"Guidewire Software, Inc.",,"Guidewire Software, Inc.",Appellate
+USCOURTS-ca13-11-01527,0,Appellant,Harish Shadadpuri,Harish,Shadadpuri,Appellate
+USCOURTS-ca13-11-01527,1,Not party,"Trek Leather, Inc.",,"Trek Leather, Inc.",Appellate
+USCOURTS-ca13-11-01527,2,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-11-01584,0,Appellant,Alphapharm Pty. Ltd.,,Alphapharm Pty. Ltd.,Appellate
+USCOURTS-ca13-11-01584,1,Appellant,"Dr. Reddy's Laboratories, Inc.",,"Dr. Reddy's Laboratories, Inc.",Appellate
+USCOURTS-ca13-11-01584,2,Appellant,"Par Pharmaceutical, Inc.",,"Par Pharmaceutical, Inc.",Appellate
+USCOURTS-ca13-11-01584,3,Appellee,Pozen Inc.,,Pozen Inc.,Appellate
+USCOURTS-ca13-11-01619,0,Appellant,"Alcon Laboratories, Inc.",,"Alcon Laboratories, Inc.",Appellate
+USCOURTS-ca13-11-01619,1,Appellant,"Alcon Research, Ltd.",,"Alcon Research, Ltd.",Appellate
+USCOURTS-ca13-11-01619,2,Appellant,"Alcon, Inc.",,"Alcon, Inc.",Appellate
+USCOURTS-ca13-11-01619,3,Appellee,"Allergan, Inc.",,"Allergan, Inc.",Appellate
+USCOURTS-ca13-11-01619,4,Appellant,Apotex Corp.,,Apotex Corp.,Appellate
+USCOURTS-ca13-11-01619,5,Appellant,Apotex Inc.,,Apotex Inc.,Appellate
+USCOURTS-ca13-11-01619,6,Appellant,"Falcon Pharmaceuticals, Ltd.",,"Falcon Pharmaceuticals, Ltd.",Appellate
+USCOURTS-ca13-11-01619,7,Appellant,"Sandoz, Inc.",,"Sandoz, Inc.",Appellate
+USCOURTS-ca13-11-01619,8,Appellant,"Watson Laboratories, Inc.",,"Watson Laboratories, Inc.",Appellate
+USCOURTS-ca13-11-03158,0,Petitioner,Roksoliana Dachniwskyj,Roksoliana,Dachniwskyj,Appellate
+USCOURTS-ca13-11-03158,1,Intervenor,Theresa Dachniwskyj,Theresa,Dachniwskyj,Appellate
+USCOURTS-ca13-11-03158,2,Respondent,Office of Personnel Management,,Office of Personnel Management,Appellate
+USCOURTS-ca13-11-03159,0,Respondent,Department of Justice,,Department of Justice,Appellate
+USCOURTS-ca13-11-03159,1,Petitioner,Timothy J. Tierney,Timothy,Tierney,Appellate
+USCOURTS-ca13-11-03207,0,Petitioner,"John Berry, Director, Office of Personnel Management",John,"Berry, Director, Office of Personnel Management",Appellate
+USCOURTS-ca13-11-03207,1,Respondent,Rhonda K. Conyers,Rhonda,Conyers,Appellate
+USCOURTS-ca13-11-03207,2,Respondent,Merit Systems Protection Board,,Merit Systems Protection Board,Appellate
+USCOURTS-ca13-11-03207,3,Respondent,Devon Haughton Northover,Devon,Northover,Appellate
+USCOURTS-ca13-11-03231,0,Respondent,Department of Homeland Security,,Department of Homeland Security,Appellate
+USCOURTS-ca13-11-03231,1,Petitioner,Robert J. MacLean,Robert,MacLean,Appellate
+USCOURTS-ca13-11-07191,0,Respondent,Sloan D. Gibson,Sloan,Gibson,Appellate
+USCOURTS-ca13-11-07191,1,Respondent,Robert A. McDonald,Robert,McDonald,Appellate
+USCOURTS-ca13-11-07191,2,Petitioner,"National Organization of Veterans Advocates, Inc.",,"National Organization of Veterans Advocates, Inc.",Appellate
+USCOURTS-ca13-11-07191,3,Respondent,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-01014,0,Appellee,Lighting Ballast Control LLC,,Lighting Ballast Control LLC,Appellate
+USCOURTS-ca13-12-01014,1,Not party,Philips Electronics North America Corporation,,Philips Electronics North America Corporation,Appellate
+USCOURTS-ca13-12-01014,2,Appellant,"Universal Lighting Technologies, Inc.",,"Universal Lighting Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01026,0,Appellant,"Cross Match Technologies, Inc.",,"Cross Match Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01026,1,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01026,2,Intervenor,Mentalix Incorporated,,Mentalix Incorporated,Appellate
+USCOURTS-ca13-12-01026,3,Intervenor,"Suprema, Inc.",,"Suprema, Inc.",Appellate
+USCOURTS-ca13-12-01029,0,Appellant,SAP AG,,SAP AG,Appellate
+USCOURTS-ca13-12-01029,1,Appellant,"SAP America, Inc.",,"SAP America, Inc.",Appellate
+USCOURTS-ca13-12-01029,2,Cross-Appellant,"Versata Computer Industry Solutions, Inc.",,"Versata Computer Industry Solutions, Inc.",Appellate
+USCOURTS-ca13-12-01029,3,Cross-Appellant,"Versata Development Group, Inc.",,"Versata Development Group, Inc.",Appellate
+USCOURTS-ca13-12-01029,4,Cross-Appellant,"Versata Software, Inc.",,"Versata Software, Inc.",Appellate
+USCOURTS-ca13-12-01034,0,Appellant,"Kahrs International, Inc.",,"Kahrs International, Inc.",Appellate
+USCOURTS-ca13-12-01034,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01038,0,Appellant,Ateliers De La Haute-Garonne,,Ateliers De La Haute-Garonne,Appellate
+USCOURTS-ca13-12-01038,1,Cross-Appellant,Broetje Automation GMBH,,Broetje Automation GMBH,Appellate
+USCOURTS-ca13-12-01038,2,Cross-Appellant,Broetje Automation USA Inc.,,Broetje Automation USA Inc.,Appellate
+USCOURTS-ca13-12-01038,3,Appellant,F2C2 Systems SAS,,F2C2 Systems SAS,Appellate
+USCOURTS-ca13-12-01042,0,Appellant,"Cisco Systems, Inc.",,"Cisco Systems, Inc.",Appellate
+USCOURTS-ca13-12-01042,1,Appellee,"Commil USA, LLC",,"Commil USA, LLC",Appellate
+USCOURTS-ca13-12-01043,0,Appellant,Cordis Corporation,,Cordis Corporation,Appellate
+USCOURTS-ca13-12-01043,1,Appellant,Johnson & Johnson,,Johnson & Johnson,Appellate
+USCOURTS-ca13-12-01043,2,Appellee,"Bruce N. Saffran, M.D., Ph.D.",Bruce,"Saffran, M.D., Ph.D.",Appellate
+USCOURTS-ca13-12-01055,0,Appellant,Rockies Express Pipeline LLC,,Rockies Express Pipeline LLC,Appellate
+USCOURTS-ca13-12-01055,1,Appellee,"Ken Salazar, Secretary of the Interior",Ken,"Salazar, Secretary of the Interior",Appellate
+USCOURTS-ca13-12-01063,0,Cross-Appellant,"Alexsam, Inc.",,"Alexsam, Inc.",Appellate
+USCOURTS-ca13-12-01063,1,Appellant,IDT Corporation,,IDT Corporation,Appellate
+USCOURTS-ca13-12-01085,0,Appellee,"All-Tag Security Americas, Inc.",,"All-Tag Security Americas, Inc.",Appellate
+USCOURTS-ca13-12-01085,1,Appellee,All-Tag Security S.A.,,All-Tag Security S.A.,Appellate
+USCOURTS-ca13-12-01085,2,Appellant,"Checkpoint Systems, Inc.",,"Checkpoint Systems, Inc.",Appellate
+USCOURTS-ca13-12-01085,3,Appellee,Kobe Properties SARL,,Kobe Properties SARL,Appellate
+USCOURTS-ca13-12-01085,4,Appellee,Sensormatic Electronics Corporation,,Sensormatic Electronics Corporation,Appellate
+USCOURTS-ca13-12-01120,0,Appellant,Biogen Idec Inc.,,Biogen Idec Inc.,Appellate
+USCOURTS-ca13-12-01120,1,Appellant,"Genentech, Inc.",,"Genentech, Inc.",Appellate
+USCOURTS-ca13-12-01120,2,Appellee,Glaxo Group Limited,,Glaxo Group Limited,Appellate
+USCOURTS-ca13-12-01120,3,Appellee,GlaxoSmithKline LLC,,GlaxoSmithKline LLC,Appellate
+USCOURTS-ca13-12-01124,0,Appellant,"Cross Match Technologies, Inc.",,"Cross Match Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01124,1,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01167,0,Appellee,AGA Medical Corporation,,AGA Medical Corporation,Appellate
+USCOURTS-ca13-12-01167,1,Appellant,Regents of the University of Minnesota,,Regents of the University of Minnesota,Appellate
+USCOURTS-ca13-12-01170,0,Intervenor,"Cross Match Technologies, Inc.",,"Cross Match Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01170,1,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01170,2,Appellant,Mentalix Incorporated,,Mentalix Incorporated,Appellate
+USCOURTS-ca13-12-01170,3,Appellant,"Suprema, Inc.",,"Suprema, Inc.",Appellate
+USCOURTS-ca13-12-01185,0,Appellant,Jack L. Frolow,Jack,Frolow,Appellate
+USCOURTS-ca13-12-01185,1,Appellee,Wilson Sporting Goods Company,,Wilson Sporting Goods Company,Appellate
+USCOURTS-ca13-12-01186,0,Appellant,Ford Motor Company,,Ford Motor Company,Appellate
+USCOURTS-ca13-12-01186,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01196,0,Appellee,American Furniture Manufacturers Committee for Legal Trade,,American Furniture Manufacturers Committee for Legal Trade,Appellate
+USCOURTS-ca13-12-01196,1,Appellant,"Ashley Furniture Industries, Inc.",,"Ashley Furniture Industries, Inc.",Appellate
+USCOURTS-ca13-12-01196,2,Appellee,"Kincaid Furniture Co., Inc.",,"Kincaid Furniture Co., Inc.",Appellate
+USCOURTS-ca13-12-01196,3,Appellee,"L. & J.G. Stickley, Inc.",,"L. & J.G. Stickley, Inc.",Appellate
+USCOURTS-ca13-12-01196,4,Appellee,"Sandberg Furniture Manufacturing Company, Inc.",,"Sandberg Furniture Manufacturing Company, Inc.",Appellate
+USCOURTS-ca13-12-01196,5,Appellee,"Stanley Furniture Company, Inc.",,"Stanley Furniture Company, Inc.",Appellate
+USCOURTS-ca13-12-01196,6,Appellee,"T. Copeland and Sons, Inc.",,"T. Copeland and Sons, Inc.",Appellate
+USCOURTS-ca13-12-01196,7,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01196,8,Appellee,United States International Trade Commission,,United States International Trade Commission,Appellate
+USCOURTS-ca13-12-01196,9,Appellee,"Vaughan-Bassett Furniture Company, Inc.",,"Vaughan-Bassett Furniture Company, Inc.",Appellate
+USCOURTS-ca13-12-01200,0,Appellant,"Ethan Allen Global, Inc.",,"Ethan Allen Global, Inc.",Appellate
+USCOURTS-ca13-12-01200,1,Appellant,"Ethan Allen Operations, Inc.",,"Ethan Allen Operations, Inc.",Appellate
+USCOURTS-ca13-12-01200,2,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01200,3,Appellee,"Kincaid Furniture Co., Inc.",,"Kincaid Furniture Co., Inc.",Appellate
+USCOURTS-ca13-12-01200,4,Appellee,"L. & J.G. Stickley, Inc.",,"L. & J.G. Stickley, Inc.",Appellate
+USCOURTS-ca13-12-01200,5,Appellee,"Sandberg Furniture Manufacturing Company, Inc.",,"Sandberg Furniture Manufacturing Company, Inc.",Appellate
+USCOURTS-ca13-12-01200,6,Appellee,"Stanley Furniture Company, Inc.",,"Stanley Furniture Company, Inc.",Appellate
+USCOURTS-ca13-12-01200,7,Appellee,"T. Copeland and Sons, Inc.",,"T. Copeland and Sons, Inc.",Appellate
+USCOURTS-ca13-12-01200,8,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01200,9,Appellee,United States Customs and Border Protection,,United States Customs and Border Protection,Appellate
+USCOURTS-ca13-12-01200,10,Appellee,"Vaughan-Bassett Furniture Company, Inc.",,"Vaughan-Bassett Furniture Company, Inc.",Appellate
+USCOURTS-ca13-12-01214,0,Cross-Appellant,Chandler Dawson and Lyle Bowman,,Chandler Dawson and Lyle Bowman,Appellate
+USCOURTS-ca13-12-01214,1,Appellant,Chandler Dawson,Chandler,Dawson,Appellate
+USCOURTS-ca13-12-01221,0,Appellee,Asustek Computer International America,,Asustek Computer International America,Appellate
+USCOURTS-ca13-12-01221,1,Appellee,"Asustek Computer, Inc.",,"Asustek Computer, Inc.",Appellate
+USCOURTS-ca13-12-01221,2,Appellee,"Monolithic Power Systems, Inc.",,"Monolithic Power Systems, Inc.",Appellate
+USCOURTS-ca13-12-01221,3,Appellant,O2 Micro International Limited,,O2 Micro International Limited,Appellate
+USCOURTS-ca13-12-01223,0,Appellee,"Abbott Cardiovascular Systems, Inc.",,"Abbott Cardiovascular Systems, Inc.",Appellate
+USCOURTS-ca13-12-01223,1,Appellee,Abbott Laboratories,,Abbott Laboratories,Appellate
+USCOURTS-ca13-12-01223,2,Appellee,"Abbott Laboratories, Inc.",,"Abbott Laboratories, Inc.",Appellate
+USCOURTS-ca13-12-01223,3,Appellee,Boston Scientific Corporation,,Boston Scientific Corporation,Appellate
+USCOURTS-ca13-12-01223,4,Appellee,"Boston Scientific Scimed, Inc.",,"Boston Scientific Scimed, Inc.",Appellate
+USCOURTS-ca13-12-01223,5,Appellant,Cordis Corporation,,Cordis Corporation,Appellate
+USCOURTS-ca13-12-01223,6,Appellee,"Medtronic USA, Inc.",,"Medtronic USA, Inc.",Appellate
+USCOURTS-ca13-12-01223,7,Appellee,"Medtronic Vascular, Inc.",,"Medtronic Vascular, Inc.",Appellate
+USCOURTS-ca13-12-01223,8,Appellee,"Medtronic, Inc.",,"Medtronic, Inc.",Appellate
+USCOURTS-ca13-12-01223,9,Appellant,Wyeth,,Wyeth,Appellate
+USCOURTS-ca13-12-01241,0,Appellant,3M Company,,3M Company,Appellate
+USCOURTS-ca13-12-01241,1,Appellant,3M Innovative Properties Company,,3M Innovative Properties Company,Appellate
+USCOURTS-ca13-12-01241,2,Appellee,Tredegar Corporation,,Tredegar Corporation,Appellate
+USCOURTS-ca13-12-01241,3,Appellee,Tredegar Film Products Corporation,,Tredegar Film Products Corporation,Appellate
+USCOURTS-ca13-12-01244,0,Appellee,Abbott Laboratories,,Abbott Laboratories,Appellate
+USCOURTS-ca13-12-01244,1,Appellant,Cordis Corporation,,Cordis Corporation,Appellate
+USCOURTS-ca13-12-01245,0,Appellee,Yujiro Nagata,Yujiro,Nagata,Appellate
+USCOURTS-ca13-12-01245,1,Appellant,"Semiconductor Energy Laboratory Co., Ltd.",,"Semiconductor Energy Laboratory Co., Ltd.",Appellate
+USCOURTS-ca13-12-01247,0,Appellee,Gemological Institute of America,,Gemological Institute of America,Appellate
+USCOURTS-ca13-12-01247,1,Appellant,"Lazare Kaplan International, Inc.",,"Lazare Kaplan International, Inc.",Appellate
+USCOURTS-ca13-12-01247,2,Appellee,"Photoscribe Technologies, Inc.",,"Photoscribe Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01248,0,Appellant,"Dongbu Steel Co., Ltd.",,"Dongbu Steel Co., Ltd.",Appellate
+USCOURTS-ca13-12-01248,1,Appellant,"LG Hausys America, Inc.",,"LG Hausys America, Inc.",Appellate
+USCOURTS-ca13-12-01248,2,Appellant,"LG Hausys, Ltd.",,"LG Hausys, Ltd.",Appellate
+USCOURTS-ca13-12-01248,3,Appellee,Nucor Corporation,,Nucor Corporation,Appellate
+USCOURTS-ca13-12-01248,4,Appellant,Union Steel,,Union Steel,Appellate
+USCOURTS-ca13-12-01248,5,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01248,6,Appellee,United States Steel Corporation,,United States Steel Corporation,Appellate
+USCOURTS-ca13-12-01249,0,Appellant,General Dynamics Corporation,,General Dynamics Corporation,Appellate
+USCOURTS-ca13-12-01249,1,Appellee,"Leon E. Panetta, Secretary of Defense",Leon,"Panetta, Secretary of Defense",Appellate
+USCOURTS-ca13-12-01250,0,Not party,"Aqua Farms Crawfish, Inc.",,"Aqua Farms Crawfish, Inc.",Appellate
+USCOURTS-ca13-12-01250,1,Not party,Charles Bernard,Charles,Bernard,Appellate
+USCOURTS-ca13-12-01250,2,Not party,"Catfish Wholesale, Inc.",,"Catfish Wholesale, Inc.",Appellate
+USCOURTS-ca13-12-01250,3,Not party,French's Enterprises Seafood Peeling Plant,,French's Enterprises Seafood Peeling Plant,Appellate
+USCOURTS-ca13-12-01250,4,Not party,Jim Fruge,Jim,Fruge,Appellate
+USCOURTS-ca13-12-01250,5,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01250,6,Not party,"J. Bernard Seafood Processing, Inc.",,"J. Bernard Seafood Processing, Inc.",Appellate
+USCOURTS-ca13-12-01250,7,Appellant,JTEKT North America Corporation,,JTEKT North America Corporation,Appellate
+USCOURTS-ca13-12-01250,8,Appellant,Koyo Corporation of U.S.A.,,Koyo Corporation of U.S.A.,Appellate
+USCOURTS-ca13-12-01250,9,Not party,Andre Leger,Andre,Leger,Appellate
+USCOURTS-ca13-12-01250,10,Appellee,MPB Corporation,,MPB Corporation,Appellate
+USCOURTS-ca13-12-01250,11,Not party,"Pat Huval Restaurant & Oyster Bar, Inc.",,"Pat Huval Restaurant & Oyster Bar, Inc.",Appellate
+USCOURTS-ca13-12-01250,12,Appellant,SKF USA Inc.,,SKF USA Inc.,Appellate
+USCOURTS-ca13-12-01250,13,Appellee,Timken Company,,Timken Company,Appellate
+USCOURTS-ca13-12-01250,14,Appellee,Timken U.S. Corporation,,Timken U.S. Corporation,Appellate
+USCOURTS-ca13-12-01250,15,Appellee,United States Customs and Border Protection,,United States Customs and Border Protection,Appellate
+USCOURTS-ca13-12-01252,0,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01252,1,Appellant,"Motiva, LLC",,"Motiva, LLC",Appellate
+USCOURTS-ca13-12-01252,2,Intervenor,"Nintendo Co., Ltd.",,"Nintendo Co., Ltd.",Appellate
+USCOURTS-ca13-12-01252,3,Intervenor,Nintendo of America Inc.,,Nintendo of America Inc.,Appellate
+USCOURTS-ca13-12-01261,0,Appellant,Jason C. Campbell,Jason,Campbell,Appellate
+USCOURTS-ca13-12-01261,1,Appellant,Philip E. Hague,Philip,Hague,Appellate
+USCOURTS-ca13-12-01261,2,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01261,3,Appellant,Sheila M. Kelly,Sheila,Kelly,Appellate
+USCOURTS-ca13-12-01261,4,Appellant,Robert M. Lynch IV,Robert,Lynch,Appellate
+USCOURTS-ca13-12-01261,5,Appellant,Timothy S. Owens,Timothy,Owens,Appellate
+USCOURTS-ca13-12-01269,0,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01269,1,Appellee,MPB Corporation,,MPB Corporation,Appellate
+USCOURTS-ca13-12-01269,2,Appellant,"Schaeffler Group USA, Inc.",,"Schaeffler Group USA, Inc.",Appellate
+USCOURTS-ca13-12-01269,3,Appellee,Timken Company,,Timken Company,Appellate
+USCOURTS-ca13-12-01269,4,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01269,5,Appellee,United States Customs and Border Protection,,United States Customs and Border Protection,Appellate
+USCOURTS-ca13-12-01285,0,Appellant,"Baron Services, Inc.",,"Baron Services, Inc.",Appellate
+USCOURTS-ca13-12-01285,1,Appellee,Media Weather Innovations LLC,,Media Weather Innovations LLC,Appellate
+USCOURTS-ca13-12-01289,0,Appellant,"Biosig Instruments, Inc.",,"Biosig Instruments, Inc.",Appellate
+USCOURTS-ca13-12-01289,1,Appellee,"Nautilus, Inc.",,"Nautilus, Inc.",Appellate
+USCOURTS-ca13-12-01297,0,Appellant,Sigram Schindler Beteiligungsgesellschaft MBH,,Sigram Schindler Beteiligungsgesellschaft MBH,Appellate
+USCOURTS-ca13-12-01297,1,Appellant,Teles AG Informationstechnologien,,Teles AG Informationstechnologien,Appellate
+USCOURTS-ca13-12-01298,0,Appellant,Abundant Acres,,Abundant Acres,Appellate
+USCOURTS-ca13-12-01298,1,Appellant,"Adaptive Seeds, LLC",,"Adaptive Seeds, LLC",Appellate
+USCOURTS-ca13-12-01298,2,Appellant,Alba Ranch,,Alba Ranch,Appellate
+USCOURTS-ca13-12-01298,3,Appellant,American Buffalo Company,,American Buffalo Company,Appellate
+USCOURTS-ca13-12-01298,4,Appellant,"Baker Creek Heirloom Seed Co., LLC",,"Baker Creek Heirloom Seed Co., LLC",Appellate
+USCOURTS-ca13-12-01298,5,Appellant,Murray Bast,Murray,Bast,Appellate
+USCOURTS-ca13-12-01298,6,Appellant,Beyond Pesticides,,Beyond Pesticides,Appellate
+USCOURTS-ca13-12-01298,7,Appellant,CT NOFA,,CT NOFA,Appellate
+USCOURTS-ca13-12-01298,8,Appellant,California Cloverleaf Farms,,California Cloverleaf Farms,Appellate
+USCOURTS-ca13-12-01298,9,Appellant,Canadian Organic Growers,,Canadian Organic Growers,Appellate
+USCOURTS-ca13-12-01298,10,Appellant,Center for Food Safety,,Center for Food Safety,Appellate
+USCOURTS-ca13-12-01298,11,Appellant,Chispas Farms LLC,,Chispas Farms LLC,Appellate
+USCOURTS-ca13-12-01298,12,Appellant,"Common Good Farm, LLC",,"Common Good Farm, LLC",Appellate
+USCOURTS-ca13-12-01298,13,Appellant,"Comstock, Ferre & Co., LLC",,"Comstock, Ferre & Co., LLC",Appellate
+USCOURTS-ca13-12-01298,14,Appellant,Cornucopia Institute,,Cornucopia Institute,Appellate
+USCOURTS-ca13-12-01298,15,Appellant,Countryside Organics,,Countryside Organics,Appellate
+USCOURTS-ca13-12-01298,16,Appellant,Cuatro Puertas,,Cuatro Puertas,Appellate
+USCOURTS-ca13-12-01298,17,Appellant,"Demeter Association, Inc.",,"Demeter Association, Inc.",Appellate
+USCOURTS-ca13-12-01298,18,Appellant,Bruce Drinkman,Bruce,Drinkman,Appellate
+USCOURTS-ca13-12-01298,19,Appellant,FEDCO Seeds Inc.,,FEDCO Seeds Inc.,Appellate
+USCOURTS-ca13-12-01298,20,Not party,Family Farm Defenders Inc.,,Family Farm Defenders Inc.,Appellate
+USCOURTS-ca13-12-01298,21,Appellant,Family Farmer Seed Cooperative,,Family Farmer Seed Cooperative,Appellate
+USCOURTS-ca13-12-01298,22,Appellant,Farm-to-Consumer Legal Defense Fund,,Farm-to-Consumer Legal Defense Fund,Appellate
+USCOURTS-ca13-12-01298,23,Appellant,Florida Certified Organic Growers and Consumers Inc.,,Florida Certified Organic Growers and Consumers Inc.,Appellate
+USCOURTS-ca13-12-01298,24,Appellant,Food Democracy Now!,,Food Democracy Now!,Appellate
+USCOURTS-ca13-12-01298,25,Appellant,"Frey Vineyards, Ltd.",,"Frey Vineyards, Ltd.",Appellate
+USCOURTS-ca13-12-01298,26,Appellant,"Full Moon Farm, Inc.",,"Full Moon Farm, Inc.",Appellate
+USCOURTS-ca13-12-01298,27,Appellant,Genesis Farm,,Genesis Farm,Appellate
+USCOURTS-ca13-12-01298,28,Appellant,Global Organic Alliance,,Global Organic Alliance,Appellate
+USCOURTS-ca13-12-01298,29,Appellant,Gratitude Gardens,,Gratitude Gardens,Appellate
+USCOURTS-ca13-12-01298,30,Not party,Interlake Forage Seeds Ltd.,,Interlake Forage Seeds Ltd.,Appellate
+USCOURTS-ca13-12-01298,31,Not party,Jardin del Alma,,Jardin del Alma,Appellate
+USCOURTS-ca13-12-01298,32,Not party,Kirschenmann Family Farms Inc.,,Kirschenmann Family Farms Inc.,Appellate
+USCOURTS-ca13-12-01298,33,Appellant,Koskan Farms,,Koskan Farms,Appellate
+USCOURTS-ca13-12-01298,34,Appellant,Levke and Peter Eggers Farm,,Levke and Peter Eggers Farm,Appellate
+USCOURTS-ca13-12-01298,35,Appellant,Maine Organic Farmers and Gardeners Association,,Maine Organic Farmers and Gardeners Association,Appellate
+USCOURTS-ca13-12-01298,36,Not party,Manitoba Organic Alliance,,Manitoba Organic Alliance,Appellate
+USCOURTS-ca13-12-01298,37,Appellant,Mendocino Organic Network,,Mendocino Organic Network,Appellate
+USCOURTS-ca13-12-01298,38,Appellant,Michael Fields Agricultural Institute,,Michael Fields Agricultural Institute,Appellate
+USCOURTS-ca13-12-01298,39,Appellant,Midheaven Farms,,Midheaven Farms,Appellate
+USCOURTS-ca13-12-01298,40,Appellant,Midwest Organic Dairy Producers Alliance,,Midwest Organic Dairy Producers Alliance,Appellate
+USCOURTS-ca13-12-01298,41,Appellee,Monsanto Company,,Monsanto Company,Appellate
+USCOURTS-ca13-12-01298,42,Appellee,Monsanto Technology LLC,,Monsanto Technology LLC,Appellate
+USCOURTS-ca13-12-01298,43,Appellant,Mumm's Sprouting Seeds,,Mumm's Sprouting Seeds,Appellate
+USCOURTS-ca13-12-01298,44,Appellant,Nature's Way Farm Ltd.,,Nature's Way Farm Ltd.,Appellate
+USCOURTS-ca13-12-01298,45,Appellant,Navdanya International,,Navdanya International,Appellate
+USCOURTS-ca13-12-01298,46,Appellant,Chuck Noble,Chuck,Noble,Appellate
+USCOURTS-ca13-12-01298,47,Appellant,North Outback Farm,,North Outback Farm,Appellate
+USCOURTS-ca13-12-01298,48,Appellant,Northeast Organic Dairy Producers Alliance,,Northeast Organic Dairy Producers Alliance,Appellate
+USCOURTS-ca13-12-01298,49,Appellant,Northeast Organic Farming Association of New Hampshire,,Northeast Organic Farming Association of New Hampshire,Appellate
+USCOURTS-ca13-12-01298,50,Appellant,Northeast Organic Farming Association of New York,,Northeast Organic Farming Association of New York,Appellate
+USCOURTS-ca13-12-01298,51,Appellant,Northeast Organic Farming Association of Rhode Island,,Northeast Organic Farming Association of Rhode Island,Appellate
+USCOURTS-ca13-12-01298,52,Appellant,Northeast Organic Farming Association of Vermont,,Northeast Organic Farming Association of Vermont,Appellate
+USCOURTS-ca13-12-01298,53,Appellant,"Northeast Organic Farming Association/Massachusetts Chapter, Inc.",,"Northeast Organic Farming Association/Massachusetts Chapter, Inc.",Appellate
+USCOURTS-ca13-12-01298,54,Not party,Northern Plains Sustainable Agriculture Society,,Northern Plains Sustainable Agriculture Society,Appellate
+USCOURTS-ca13-12-01298,55,Not party,OCIA Research and Education Inc.,,OCIA Research and Education Inc.,Appellate
+USCOURTS-ca13-12-01298,56,Appellant,Ohio Ecological Food & Farm Association,,Ohio Ecological Food & Farm Association,Appellate
+USCOURTS-ca13-12-01298,57,Appellant,"Organic Crop Improvement Association International, Inc.",,"Organic Crop Improvement Association International, Inc.",Appellate
+USCOURTS-ca13-12-01298,58,Appellant,Organic Seed Growers and Trade Association,,Organic Seed Growers and Trade Association,Appellate
+USCOURTS-ca13-12-01298,59,Appellant,Donald Wright Patterson Jr.,Donald,Patterson,Appellate
+USCOURTS-ca13-12-01298,60,Appellant,Peace River Organic Producers Association,,Peace River Organic Producers Association,Appellate
+USCOURTS-ca13-12-01298,61,Appellant,LaRhea Pepper,LaRhea,Pepper,Appellate
+USCOURTS-ca13-12-01298,62,Appellant,"Philadelphia Community Farm, Inc",,"Philadelphia Community Farm, Inc",Appellate
+USCOURTS-ca13-12-01298,63,Appellant,Quinella Ranch,,Quinella Ranch,Appellate
+USCOURTS-ca13-12-01298,64,Appellant,Radiance Dairy,,Radiance Dairy,Appellate
+USCOURTS-ca13-12-01298,65,Appellant,"Richard Everett Farm, LLC",,"Richard Everett Farm, LLC",Appellate
+USCOURTS-ca13-12-01298,66,Appellant,Paul Romero,Paul,Romero,Appellate
+USCOURTS-ca13-12-01298,67,Appellant,Ron Gargasz Organic Farms,,Ron Gargasz Organic Farms,Appellate
+USCOURTS-ca13-12-01298,68,Appellant,Rural Vermont,,Rural Vermont,Appellate
+USCOURTS-ca13-12-01298,69,Appellant,Seed We Need,,Seed We Need,Appellate
+USCOURTS-ca13-12-01298,70,Appellant,"Seedkeepers, LLC",,"Seedkeepers, LLC",Appellate
+USCOURTS-ca13-12-01298,71,Appellant,Siskiyou Seeds,,Siskiyou Seeds,Appellate
+USCOURTS-ca13-12-01298,72,Appellant,Southeast Iowa Organic Association,,Southeast Iowa Organic Association,Appellate
+USCOURTS-ca13-12-01298,73,Appellant,Southern Exposure Seed Exchange,,Southern Exposure Seed Exchange,Appellate
+USCOURTS-ca13-12-01298,74,Appellant,Sow True Seed,,Sow True Seed,Appellate
+USCOURTS-ca13-12-01298,75,Appellant,Bryce Stephens,Bryce,Stephens,Appellate
+USCOURTS-ca13-12-01298,76,Appellant,Sustainable Living Systems,,Sustainable Living Systems,Appellate
+USCOURTS-ca13-12-01298,77,Appellant,T & D Willey Farms,,T & D Willey Farms,Appellate
+USCOURTS-ca13-12-01298,78,Appellant,"Taylor Farms, Inc.",,"Taylor Farms, Inc.",Appellate
+USCOURTS-ca13-12-01298,79,Not party,Union Paysanne,,Union Paysanne,Appellate
+USCOURTS-ca13-12-01298,80,Appellant,Western Organic Dairy Prodcucers Alliance,,Western Organic Dairy Prodcucers Alliance,Appellate
+USCOURTS-ca13-12-01298,81,Appellant,Weston A. Price Foundation,,Weston A. Price Foundation,Appellate
+USCOURTS-ca13-12-01298,82,Appellant,Brian Wickert,Brian,Wickert,Appellate
+USCOURTS-ca13-12-01298,83,Appellant,Wild Garden Seed,,Wild Garden Seed,Appellate
+USCOURTS-ca13-12-01298,84,Appellant,Wild Plum Farm,,Wild Plum Farm,Appellate
+USCOURTS-ca13-12-01299,0,Appellee,John M. McHugh,John,McHugh,Appellate
+USCOURTS-ca13-12-01299,1,Appellant,Sharp Electronics Corporation,,Sharp Electronics Corporation,Appellate
+USCOURTS-ca13-12-01308,0,Appellant,Arkema France,,Arkema France,Appellate
+USCOURTS-ca13-12-01308,1,Appellant,Arkema Inc.,,Arkema Inc.,Appellate
+USCOURTS-ca13-12-01308,2,Appellee,Honeywell International Inc.,,Honeywell International Inc.,Appellate
+USCOURTS-ca13-12-01309,0,Appellee,Broadcom Corporation,,Broadcom Corporation,Appellate
+USCOURTS-ca13-12-01309,1,Appellant,Emulex Corporation,,Emulex Corporation,Appellate
+USCOURTS-ca13-12-01312,0,Appellee,Berwick Offray LLC,,Berwick Offray LLC,Appellate
+USCOURTS-ca13-12-01312,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01312,2,Appellant,"Yangzhou Bestpak Gifts & Crafts Co., Ltd.",,"Yangzhou Bestpak Gifts & Crafts Co., Ltd.",Appellate
+USCOURTS-ca13-12-01318,0,Appellant,"Aspex Eyewear, Inc.",,"Aspex Eyewear, Inc.",Appellate
+USCOURTS-ca13-12-01318,1,Appellant,"Contour Optik, Inc.",,"Contour Optik, Inc.",Appellate
+USCOURTS-ca13-12-01318,2,Appellee,Zenni Optical Inc.,,Zenni Optical Inc.,Appellate
+USCOURTS-ca13-12-01318,3,Appellee,"Zenni Optical, LLC",,"Zenni Optical, LLC",Appellate
+USCOURTS-ca13-12-01319,0,Cross-Appellant,"Endeca Technologies, Inc.",,"Endeca Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01319,1,Appellant,"SpeedTrack, Inc.",,"SpeedTrack, Inc.",Appellate
+USCOURTS-ca13-12-01319,2,Cross-Appellant,"Walmart.com USA, LLC",,"Walmart.com USA, LLC",Appellate
+USCOURTS-ca13-12-01334,0,Cross-Appellant,Baxter Healthcare Corporation,,Baxter Healthcare Corporation,Appellate
+USCOURTS-ca13-12-01334,1,Cross-Appellant,"Baxter International, Inc.",,"Baxter International, Inc.",Appellate
+USCOURTS-ca13-12-01334,2,Appellant,"Fresenius Medical Care Holdings, Inc.",,"Fresenius Medical Care Holdings, Inc.",Appellate
+USCOURTS-ca13-12-01334,3,Appellant,"Fresenius USA, Inc.",,"Fresenius USA, Inc.",Appellate
+USCOURTS-ca13-12-01338,0,Appellant,Apple Inc.,,Apple Inc.,Appellate
+USCOURTS-ca13-12-01338,1,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01338,2,Intervenor,"Motorola Mobility, Inc.",,"Motorola Mobility, Inc.",Appellate
+USCOURTS-ca13-12-01340,0,Appellant,"Alcon Research, Ltd.",,"Alcon Research, Ltd.",Appellate
+USCOURTS-ca13-12-01340,1,Cross-Appellant,"Barr Laboratories, Inc.",,"Barr Laboratories, Inc.",Appellate
+USCOURTS-ca13-12-01342,0,Not party,Advanced Access,,Advanced Access,Appellate
+USCOURTS-ca13-12-01342,1,Not party,"Alain Pinel Realtors, Inc.",,"Alain Pinel Realtors, Inc.",Appellate
+USCOURTS-ca13-12-01342,2,Not party,"Avalonbay Communities, Inc.",,"Avalonbay Communities, Inc.",Appellate
+USCOURTS-ca13-12-01342,3,Not party,"BRE Properties, Inc.",,"BRE Properties, Inc.",Appellate
+USCOURTS-ca13-12-01342,4,Not party,"Birdview.com, Inc.",,"Birdview.com, Inc.",Appellate
+USCOURTS-ca13-12-01342,5,Not party,"CIS Data Systems, Inc.",,"CIS Data Systems, Inc.",Appellate
+USCOURTS-ca13-12-01342,6,Not party,"Delaware Valley Real Estate Information Network, Inc.",,"Delaware Valley Real Estate Information Network, Inc.",Appellate
+USCOURTS-ca13-12-01342,7,Not party,"Delta Media Group, Inc.",,"Delta Media Group, Inc.",Appellate
+USCOURTS-ca13-12-01342,8,Not party,"Diverse Solutions, LLC",,"Diverse Solutions, LLC",Appellate
+USCOURTS-ca13-12-01342,9,Not party,Equias Technology Development LLC,,Equias Technology Development LLC,Appellate
+USCOURTS-ca13-12-01342,10,Not party,Essex Property Trust Inc.,,Essex Property Trust Inc.,Appellate
+USCOURTS-ca13-12-01342,11,Not party,"Fidelity National Real Estate Solutions, LLC",,"Fidelity National Real Estate Solutions, LLC",Appellate
+USCOURTS-ca13-12-01342,12,Not party,First American Corporation,,First American Corporation,Appellate
+USCOURTS-ca13-12-01342,13,Not party,Frank Howard Allen Realtors,,Frank Howard Allen Realtors,Appellate
+USCOURTS-ca13-12-01342,14,Not party,"Georgia MLS, Inc.",,"Georgia MLS, Inc.",Appellate
+USCOURTS-ca13-12-01342,15,Not party,Paymon Ghafouri,Paymon,Ghafouri,Appellate
+USCOURTS-ca13-12-01342,16,Not party,"Keller Williams Realty, Inc.",,"Keller Williams Realty, Inc.",Appellate
+USCOURTS-ca13-12-01342,17,Not party,Brad Korb,Brad,Korb,Appellate
+USCOURTS-ca13-12-01342,18,Not party,"Metrolist Services, Inc.",,"Metrolist Services, Inc.",Appellate
+USCOURTS-ca13-12-01342,19,Not party,Christy Morrison,Christy,Morrison,Appellate
+USCOURTS-ca13-12-01342,20,Appellee,"Move, Inc.",,"Move, Inc.",Appellate
+USCOURTS-ca13-12-01342,21,Appellee,National Association of Home Builders,,National Association of Home Builders,Appellate
+USCOURTS-ca13-12-01342,22,Not party,National Association of New Home Builders,,National Association of New Home Builders,Appellate
+USCOURTS-ca13-12-01342,23,Appellee,National Association of Realtors,,National Association of Realtors,Appellate
+USCOURTS-ca13-12-01342,24,Not party,"Norcal Gold, Inc.",,"Norcal Gold, Inc.",Appellate
+USCOURTS-ca13-12-01342,25,Not party,"Orange County Multiple Listing Service, Inc.",,"Orange County Multiple Listing Service, Inc.",Appellate
+USCOURTS-ca13-12-01342,26,Not party,"Pulte Homes, Inc.",,"Pulte Homes, Inc.",Appellate
+USCOURTS-ca13-12-01342,27,Not party,"RE/MAX International, Inc.",,"RE/MAX International, Inc.",Appellate
+USCOURTS-ca13-12-01342,28,Not party,Rapattoni Corporation,,Rapattoni Corporation,Appellate
+USCOURTS-ca13-12-01342,29,Appellant,Real Estate Alliance Ltd.,,Real Estate Alliance Ltd.,Appellate
+USCOURTS-ca13-12-01342,30,Not party,"Riverstone Residential Group, LLC",,"Riverstone Residential Group, LLC",Appellate
+USCOURTS-ca13-12-01342,31,Not party,"Ryland Group, Inc.",,"Ryland Group, Inc.",Appellate
+USCOURTS-ca13-12-01342,32,Not party,Shea Homes,,Shea Homes,Appellate
+USCOURTS-ca13-12-01342,33,Not party,"Taylor Morrison, Inc.",,"Taylor Morrison, Inc.",Appellate
+USCOURTS-ca13-12-01342,34,Not party,"Trend Software, Inc.",,"Trend Software, Inc.",Appellate
+USCOURTS-ca13-12-01342,35,Not party,Wanisoft Corporation,,Wanisoft Corporation,Appellate
+USCOURTS-ca13-12-01342,36,Not party,"eNeighborhoods, LLC",,"eNeighborhoods, LLC",Appellate
+USCOURTS-ca13-12-01342,37,Not party,"iHomefinder, Inc.",,"iHomefinder, Inc.",Appellate
+USCOURTS-ca13-12-01343,0,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01343,1,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01343,2,Appellant,"Smith & Nephew, Inc.",,"Smith & Nephew, Inc.",Appellate
+USCOURTS-ca13-12-01343,3,Appellee,Synthes (U.S.A.),,Synthes (U.S.A.),Appellate
+USCOURTS-ca13-12-01345,0,Appellee,Pfizer Inc.,,Pfizer Inc.,Appellate
+USCOURTS-ca13-12-01345,1,Appellant,Sanofi-Aventis,,Sanofi-Aventis,Appellate
+USCOURTS-ca13-12-01346,0,Appellee,Archer Daniels Midland Company,,Archer Daniels Midland Company,Appellate
+USCOURTS-ca13-12-01346,1,Appellee,"Cargill, Incorporated",,"Cargill, Incorporated",Appellate
+USCOURTS-ca13-12-01346,2,Appellant,Global Commodity Group LLC,,Global Commodity Group LLC,Appellate
+USCOURTS-ca13-12-01346,3,Appellee,Tate & Lyle Americas LLC,,Tate & Lyle Americas LLC,Appellate
+USCOURTS-ca13-12-01346,4,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01347,0,Not party,"Aqua Farms Crawfish, Inc.",,"Aqua Farms Crawfish, Inc.",Appellate
+USCOURTS-ca13-12-01347,1,Not party,Charles Bernard,Charles,Bernard,Appellate
+USCOURTS-ca13-12-01347,2,Not party,"Catfish Wholesale, Inc.",,"Catfish Wholesale, Inc.",Appellate
+USCOURTS-ca13-12-01347,3,Not party,French's Enterprises Seafood Peeling Plant,,French's Enterprises Seafood Peeling Plant,Appellate
+USCOURTS-ca13-12-01347,4,Not party,Jim Fruge,Jim,Fruge,Appellate
+USCOURTS-ca13-12-01347,5,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01347,6,Not party,"J. Bernard Seafood Processing, Inc.",,"J. Bernard Seafood Processing, Inc.",Appellate
+USCOURTS-ca13-12-01347,7,Appellant,Koyo Corporation of U.S.A.,,Koyo Corporation of U.S.A.,Appellate
+USCOURTS-ca13-12-01347,8,Not party,Andre Leger,Andre,Leger,Appellate
+USCOURTS-ca13-12-01347,9,Appellee,MPB Corporation,,MPB Corporation,Appellate
+USCOURTS-ca13-12-01347,10,Not party,"Pat Huval Restaurant & Oyster Bar, Inc.",,"Pat Huval Restaurant & Oyster Bar, Inc.",Appellate
+USCOURTS-ca13-12-01347,11,Not party,SKF USA Inc.,,SKF USA Inc.,Appellate
+USCOURTS-ca13-12-01347,12,Appellee,Timken Company,,Timken Company,Appellate
+USCOURTS-ca13-12-01347,13,Appellee,United States Customs and Border Protection,,United States Customs and Border Protection,Appellate
+USCOURTS-ca13-12-01355,0,Appellee,"Aliph, Inc.",,"Aliph, Inc.",Appellate
+USCOURTS-ca13-12-01355,1,Appellee,"Aliphcom, Inc.",,"Aliphcom, Inc.",Appellate
+USCOURTS-ca13-12-01355,2,Appellant,"Plantronics, Inc.",,"Plantronics, Inc.",Appellate
+USCOURTS-ca13-12-01356,0,Appellant,City of Houston,,City of Houston,Appellate
+USCOURTS-ca13-12-01356,1,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01370,0,Appellant,"La Crosse Technology, Ltd.",,"La Crosse Technology, Ltd.",Appellate
+USCOURTS-ca13-12-01370,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01391,0,Appellant,"Forever 21, Inc.",,"Forever 21, Inc.",Appellate
+USCOURTS-ca13-12-01391,1,Appellant,Rack Room Shoes,,Rack Room Shoes,Appellate
+USCOURTS-ca13-12-01391,2,Appellant,SKIZ Imports LLC,,SKIZ Imports LLC,Appellate
+USCOURTS-ca13-12-01391,3,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01393,0,Appellant,Almond Bros. Lumber Co.,,Almond Bros. Lumber Co.,Appellate
+USCOURTS-ca13-12-01393,1,Appellant,Bighorn Lumber Company,,Bighorn Lumber Company,Appellate
+USCOURTS-ca13-12-01393,2,Appellant,"Blue Mountain Lumber Products, LLC",,"Blue Mountain Lumber Products, LLC",Appellate
+USCOURTS-ca13-12-01393,3,Appellant,"CF Industries, Inc.",,"CF Industries, Inc.",Appellate
+USCOURTS-ca13-12-01393,4,Appellant,"Cody Lumber, Inc.",,"Cody Lumber, Inc.",Appellate
+USCOURTS-ca13-12-01393,5,Appellant,Collins Pine Company,,Collins Pine Company,Appellate
+USCOURTS-ca13-12-01393,6,Appellant,D.R. Johnson Lumber Co.,,D.R. Johnson Lumber Co.,Appellate
+USCOURTS-ca13-12-01393,7,Appellant,Empire Lumber Co.,,Empire Lumber Co.,Appellate
+USCOURTS-ca13-12-01393,8,Appellant,F.H. Stoltze Land & Lumber Company,,F.H. Stoltze Land & Lumber Company,Appellate
+USCOURTS-ca13-12-01393,9,Appellee,"Michael Froman, United States Trade Representative",Michael,"Froman, United States Trade Representative",Appellate
+USCOURTS-ca13-12-01393,10,Appellant,Grayson Lumber Corp.,,Grayson Lumber Corp.,Appellate
+USCOURTS-ca13-12-01393,11,Appellant,"Hampton Resources, Inc.",,"Hampton Resources, Inc.",Appellate
+USCOURTS-ca13-12-01393,12,Appellant,Harwood Products Inc.,,Harwood Products Inc.,Appellate
+USCOURTS-ca13-12-01393,13,Appellant,"Hedstrom Lumber Company, Inc.",,"Hedstrom Lumber Company, Inc.",Appellate
+USCOURTS-ca13-12-01393,14,Not party,Herbert Lumber Co.,,Herbert Lumber Co.,Appellate
+USCOURTS-ca13-12-01393,15,Appellant,Idaho Veneer Company,,Idaho Veneer Company,Appellate
+USCOURTS-ca13-12-01393,16,Appellant,"Intermountain Resources, LLC",,"Intermountain Resources, LLC",Appellate
+USCOURTS-ca13-12-01393,17,Appellee,"Ron Kirk, United States Trade Representative",Ron,"Kirk, United States Trade Representative",Appellate
+USCOURTS-ca13-12-01393,18,Appellant,"Mountain Valley Lumber Co., Inc.",,"Mountain Valley Lumber Co., Inc.",Appellate
+USCOURTS-ca13-12-01393,19,Appellant,"Neiman Sawmills, Inc.",,"Neiman Sawmills, Inc.",Appellate
+USCOURTS-ca13-12-01393,20,Appellant,"Northern Lights Timber & Lumber, Inc.",,"Northern Lights Timber & Lumber, Inc.",Appellate
+USCOURTS-ca13-12-01393,21,Appellant,Ochoco Lumber Company,,Ochoco Lumber Company,Appellate
+USCOURTS-ca13-12-01393,22,Appellant,Pinecrest Lumber Co.,,Pinecrest Lumber Co.,Appellate
+USCOURTS-ca13-12-01393,23,Appellant,"Precision Pine & Timber, Inc.",,"Precision Pine & Timber, Inc.",Appellate
+USCOURTS-ca13-12-01393,24,Appellant,"RSG Forest Products, Inc.",,"RSG Forest Products, Inc.",Appellate
+USCOURTS-ca13-12-01393,25,Appellant,"Rosboro, LLC",,"Rosboro, LLC",Appellate
+USCOURTS-ca13-12-01393,26,Appellant,"Rushmore Forest Products, Inc.",,"Rushmore Forest Products, Inc.",Appellate
+USCOURTS-ca13-12-01393,27,Appellant,"Sanders Wood Products, Inc.",,"Sanders Wood Products, Inc.",Appellate
+USCOURTS-ca13-12-01393,28,Appellant,"Spanish Trail Lumber Co., LLC",,"Spanish Trail Lumber Co., LLC",Appellate
+USCOURTS-ca13-12-01393,29,Appellant,"Sundance Lumber Company, Inc.",,"Sundance Lumber Company, Inc.",Appellate
+USCOURTS-ca13-12-01393,30,Appellant,"Thrift Brothers Lumber Co., Inc.",,"Thrift Brothers Lumber Co., Inc.",Appellate
+USCOURTS-ca13-12-01393,31,Appellant,Trinity River Lumber Company,,Trinity River Lumber Company,Appellate
+USCOURTS-ca13-12-01393,32,Appellant,Triple T Studs Co.,,Triple T Studs Co.,Appellate
+USCOURTS-ca13-12-01393,33,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01393,34,Appellant,"Viking Lumber Company, Inc.",,"Viking Lumber Company, Inc.",Appellate
+USCOURTS-ca13-12-01393,35,Appellant,Warm Springs Forest Products Industries,,Warm Springs Forest Products Industries,Appellate
+USCOURTS-ca13-12-01393,36,Appellant,Western Cascade Industries LLC,,Western Cascade Industries LLC,Appellate
+USCOURTS-ca13-12-01393,37,Appellant,"Wrenn Brothers, Inc.",,"Wrenn Brothers, Inc.",Appellate
+USCOURTS-ca13-12-01393,38,Appellant,"Wyoming Sawmills, Inc.",,"Wyoming Sawmills, Inc.",Appellate
+USCOURTS-ca13-12-01393,39,Appellant,"Zip-O-Log Mills, Inc.",,"Zip-O-Log Mills, Inc.",Appellate
+USCOURTS-ca13-12-01397,0,Appellee,"Bayer Healthcare Pharmaceuticals, Inc.",,"Bayer Healthcare Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01397,1,Appellee,Bayer Schering Pharma AG,,Bayer Schering Pharma AG,Appellate
+USCOURTS-ca13-12-01397,2,Appellant,"Lupin Pharmaceuticals, Inc.",,"Lupin Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01397,3,Appellant,"Lupin, Ltd.",,"Lupin, Ltd.",Appellate
+USCOURTS-ca13-12-01397,4,Appellant,"Sandoz, Inc.",,"Sandoz, Inc.",Appellate
+USCOURTS-ca13-12-01397,5,Appellant,"Watson Laboratories, Inc.",,"Watson Laboratories, Inc.",Appellate
+USCOURTS-ca13-12-01397,6,Appellant,"Watson Pharmaceuticals, Inc.",,"Watson Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01398,0,Appellee,"Bayer Healthcare Pharmaceuticals, Inc.",,"Bayer Healthcare Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01398,1,Appellee,Bayer Schering Pharma AG,,Bayer Schering Pharma AG,Appellate
+USCOURTS-ca13-12-01398,2,Not party,"Sandoz, Inc.",,"Sandoz, Inc.",Appellate
+USCOURTS-ca13-12-01398,3,Appellant,"Watson Laboratories, Inc.",,"Watson Laboratories, Inc.",Appellate
+USCOURTS-ca13-12-01398,4,Appellant,"Watson Pharmaceuticals, Inc.",,"Watson Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01400,0,Appellee,"Bayer Healthcare Pharmaceuticals, Inc.",,"Bayer Healthcare Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01400,1,Appellee,Bayer Schering Pharma AG,,Bayer Schering Pharma AG,Appellate
+USCOURTS-ca13-12-01400,2,Appellant,"Sandoz, Inc.",,"Sandoz, Inc.",Appellate
+USCOURTS-ca13-12-01400,3,Not party,"Watson Laboratories, Inc.",,"Watson Laboratories, Inc.",Appellate
+USCOURTS-ca13-12-01400,4,Not party,"Watson Pharmaceuticals, Inc.",,"Watson Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01402,0,Cross-Appellant,"Endeca Technologies, Inc.",,"Endeca Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01402,1,Appellant,"SpeedTrack, Inc.",,"SpeedTrack, Inc.",Appellate
+USCOURTS-ca13-12-01402,2,Cross-Appellant,"Wal-Mart Stores, Inc.",,"Wal-Mart Stores, Inc.",Appellate
+USCOURTS-ca13-12-01402,3,Cross-Appellant,"Walmart.com USA, LLC",,"Walmart.com USA, LLC",Appellate
+USCOURTS-ca13-12-01411,0,Appellant,Deckers Outdoor Corporation,,Deckers Outdoor Corporation,Appellate
+USCOURTS-ca13-12-01411,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01415,0,Appellee,"Adobe Systems, Inc.",,"Adobe Systems, Inc.",Appellate
+USCOURTS-ca13-12-01415,1,Appellee,"Cisco Systems, Inc.",,"Cisco Systems, Inc.",Appellate
+USCOURTS-ca13-12-01415,2,Not party,International Business Machines Corporation,,International Business Machines Corporation,Appellate
+USCOURTS-ca13-12-01415,3,Appellee,Oracle Corporation,,Oracle Corporation,Appellate
+USCOURTS-ca13-12-01415,4,Appellee,"PayPal, Inc.",,"PayPal, Inc.",Appellate
+USCOURTS-ca13-12-01415,5,Appellee,SAP AG,,SAP AG,Appellate
+USCOURTS-ca13-12-01415,6,Appellee,"SAP America, Inc.",,"SAP America, Inc.",Appellate
+USCOURTS-ca13-12-01415,7,Appellee,"SAS Institute, Inc.",,"SAS Institute, Inc.",Appellate
+USCOURTS-ca13-12-01415,8,Appellee,Software AG,,Software AG,Appellate
+USCOURTS-ca13-12-01415,9,Appellee,"Software AG, Inc.",,"Software AG, Inc.",Appellate
+USCOURTS-ca13-12-01415,10,Appellee,"Sun Microsystems, Inc.",,"Sun Microsystems, Inc.",Appellate
+USCOURTS-ca13-12-01415,11,Appellee,"Sybase, Inc.",,"Sybase, Inc.",Appellate
+USCOURTS-ca13-12-01415,12,Appellant,"TecSec, Inc.",,"TecSec, Inc.",Appellate
+USCOURTS-ca13-12-01415,13,Not party,"eBay, Inc.",,"eBay, Inc.",Appellate
+USCOURTS-ca13-12-01418,0,Appellant,Government of the District of Columbia,,Government of the District of Columbia,Appellate
+USCOURTS-ca13-12-01418,1,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01420,0,Appellant,Bimeda Research & Development Limited,,Bimeda Research & Development Limited,Appellate
+USCOURTS-ca13-12-01420,1,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01420,2,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01422,0,Appellant,"AE Tech Co., Ltd.",,"AE Tech Co., Ltd.",Appellate
+USCOURTS-ca13-12-01422,1,Appellee,AEVOE Corp.,,AEVOE Corp.,Appellate
+USCOURTS-ca13-12-01422,2,Appellant,"Greatshield, Inc.",,"Greatshield, Inc.",Appellate
+USCOURTS-ca13-12-01422,3,Appellant,S&F Corporation,,S&F Corporation,Appellate
+USCOURTS-ca13-12-01424,0,Appellee,"Bayer Healthcare Pharmaceuticals, Inc.",,"Bayer Healthcare Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01424,1,Appellee,Bayer Schering Pharma AG,,Bayer Schering Pharma AG,Appellate
+USCOURTS-ca13-12-01424,2,Appellant,"Lupin Pharmaceuticals, Inc.",,"Lupin Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01424,3,Appellant,"Lupin, Ltd.",,"Lupin, Ltd.",Appellate
+USCOURTS-ca13-12-01425,0,Appellant,"K-Tech Telecommunications, Inc.",,"K-Tech Telecommunications, Inc.",Appellate
+USCOURTS-ca13-12-01425,1,Appellee,"Time Warner Cable, Inc.",,"Time Warner Cable, Inc.",Appellate
+USCOURTS-ca13-12-01428,0,Appellant,Dey Inc.,,Dey Inc.,Appellate
+USCOURTS-ca13-12-01428,1,Appellant,"Dey, L.P.",,"Dey, L.P.",Appellate
+USCOURTS-ca13-12-01428,2,Appellant,Mylan Inc.,,Mylan Inc.,Appellate
+USCOURTS-ca13-12-01428,3,Appellee,"Sunovion Pharmaceuticals, Inc.",,"Sunovion Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01433,0,Appellee,Danisco A/S,,Danisco A/S,Appellate
+USCOURTS-ca13-12-01433,1,Appellee,Danisco US Inc.,,Danisco US Inc.,Appellate
+USCOURTS-ca13-12-01433,2,Appellee,Danisco USA Inc.,,Danisco USA Inc.,Appellate
+USCOURTS-ca13-12-01433,3,Appellee,Dupont Nutrition Biosciences APS (Formerly Danisco A/S),,Dupont Nutrition Biosciences APS (Formerly Danisco A/S),Appellate
+USCOURTS-ca13-12-01433,4,Appellee,"Genencor International Wisconsin, Inc.",,"Genencor International Wisconsin, Inc.",Appellate
+USCOURTS-ca13-12-01433,5,Appellant,Novozymes A/S,,Novozymes A/S,Appellate
+USCOURTS-ca13-12-01433,6,Appellant,"Novozymes North America, Inc.",,"Novozymes North America, Inc.",Appellate
+USCOURTS-ca13-12-01445,0,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01445,1,Appellant,Microsoft Corporation,,Microsoft Corporation,Appellate
+USCOURTS-ca13-12-01445,2,Intervenor,"Motorola Mobility, LLC",,"Motorola Mobility, LLC",Appellate
+USCOURTS-ca13-12-01446,0,Appellee,DirecTV,,DirecTV,Appellate
+USCOURTS-ca13-12-01446,1,Appellant,"K-Tech Telecommunications, Inc.",,"K-Tech Telecommunications, Inc.",Appellate
+USCOURTS-ca13-12-01452,0,Appellant,"Access Closure, Inc.",,"Access Closure, Inc.",Appellate
+USCOURTS-ca13-12-01452,1,Appellee,"St. Jude Medical Puerto Rico, LLC",,"St. Jude Medical Puerto Rico, LLC",Appellate
+USCOURTS-ca13-12-01452,2,Appellee,"St. Jude Medical, Inc.",,"St. Jude Medical, Inc.",Appellate
+USCOURTS-ca13-12-01454,0,Not party,Biogen Idec Inc.,,Biogen Idec Inc.,Appellate
+USCOURTS-ca13-12-01454,1,Appellant,"Genentech, Inc.",,"Genentech, Inc.",Appellate
+USCOURTS-ca13-12-01454,2,Appellee,Sanofi-Aventis Deutschland GmbH,,Sanofi-Aventis Deutschland GmbH,Appellate
+USCOURTS-ca13-12-01455,0,Appellant,"Buyer's Direct, Inc.",,"Buyer's Direct, Inc.",Appellate
+USCOURTS-ca13-12-01455,1,Appellee,High Point Design LLC,,High Point Design LLC,Appellate
+USCOURTS-ca13-12-01455,2,Appellee,Meijer Inc.,,Meijer Inc.,Appellate
+USCOURTS-ca13-12-01455,3,Appellee,Sears Holdings Corporation,,Sears Holdings Corporation,Appellate
+USCOURTS-ca13-12-01455,4,Appellee,"Wal-Mart Stores, Inc.",,"Wal-Mart Stores, Inc.",Appellate
+USCOURTS-ca13-12-01462,0,Cross-Appellant,Great American Insurance Company of New York,,Great American Insurance Company of New York,Appellate
+USCOURTS-ca13-12-01462,1,Appellant,United States,,United States,Appellate
+USCOURTS-ca13-12-01462,2,Appellee,Washington International Insurance Company,,Washington International Insurance Company,Appellate
+USCOURTS-ca13-12-01463,0,Appellant,"Cheese Systems, Inc.",,"Cheese Systems, Inc.",Appellate
+USCOURTS-ca13-12-01463,1,Appellant,"Custom Fabricating and Repair, Inc.",,"Custom Fabricating and Repair, Inc.",Appellate
+USCOURTS-ca13-12-01463,2,Appellee,Tetra Laval Holdings & Finance S.A.,,Tetra Laval Holdings & Finance S.A.,Appellate
+USCOURTS-ca13-12-01463,3,Appellee,"Tetra Pak Cheese and Powder Systems, Inc.",,"Tetra Pak Cheese and Powder Systems, Inc.",Appellate
+USCOURTS-ca13-12-01473,0,Cross-Appellant,Great American Insurance Company of New York,,Great American Insurance Company of New York,Appellate
+USCOURTS-ca13-12-01473,1,Appellant,United States,,United States,Appellate
+USCOURTS-ca13-12-01473,2,Not party,Washington International Insurance Company,,Washington International Insurance Company,Appellate
+USCOURTS-ca13-12-01485,0,Appellee,Margaret A. Focarino,Margaret,Focarino,Appellate
+USCOURTS-ca13-12-01485,1,Appellant,Institut Pasteur & Universite Pierre et Marie Curie,,Institut Pasteur & Universite Pierre et Marie Curie,Appellate
+USCOURTS-ca13-12-01485,2,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01485,3,Appellee,"Precision BioSciences, Inc.",,"Precision BioSciences, Inc.",Appellate
+USCOURTS-ca13-12-01485,4,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01486,0,Appellee,Margaret A. Focarino,Margaret,Focarino,Appellate
+USCOURTS-ca13-12-01486,1,Appellant,Institut Pasteur & Universite Pierre et Marie Curie,,Institut Pasteur & Universite Pierre et Marie Curie,Appellate
+USCOURTS-ca13-12-01486,2,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01486,3,Appellee,"Precision BioSciences, Inc.",,"Precision BioSciences, Inc.",Appellate
+USCOURTS-ca13-12-01486,4,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01487,0,Appellee,Margaret A. Focarino,Margaret,Focarino,Appellate
+USCOURTS-ca13-12-01487,1,Appellant,Institut Pasteur & Universite Pierre et Marie Curie,,Institut Pasteur & Universite Pierre et Marie Curie,Appellate
+USCOURTS-ca13-12-01487,2,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01487,3,Appellee,"Precision BioSciences, Inc.",,"Precision BioSciences, Inc.",Appellate
+USCOURTS-ca13-12-01487,4,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01489,0,Appellee,Abbott GmbH & Co. KG,,Abbott GmbH & Co. KG,Appellate
+USCOURTS-ca13-12-01489,1,Appellee,Abbott Laboratories,,Abbott Laboratories,Appellate
+USCOURTS-ca13-12-01489,2,Appellee,Aventis Pharma S.A.,,Aventis Pharma S.A.,Appellate
+USCOURTS-ca13-12-01489,3,Appellant,"Glenmark Pharmaceuticals Inc., USA",,"Glenmark Pharmaceuticals Inc., USA",Appellate
+USCOURTS-ca13-12-01489,4,Appellant,Glenmark Pharmaceuticals Ltd.,,Glenmark Pharmaceuticals Ltd.,Appellate
+USCOURTS-ca13-12-01489,5,Appellee,Sanofi-Aventis Deutschland GmbH,,Sanofi-Aventis Deutschland GmbH,Appellate
+USCOURTS-ca13-12-01492,0,Appellant,"Network Signatures, Inc.",,"Network Signatures, Inc.",Appellate
+USCOURTS-ca13-12-01492,1,Appellee,State Farm Mutual Automobile Insurance Company,,State Farm Mutual Automobile Insurance Company,Appellate
+USCOURTS-ca13-12-01495,0,Appellee,Abercrombie & Fitch Trading Co.,,Abercrombie & Fitch Trading Co.,Appellate
+USCOURTS-ca13-12-01495,1,Appellant,Levi Strauss & Company,,Levi Strauss & Company,Appellate
+USCOURTS-ca13-12-01504,0,Appellee,Abbott Laboratories,,Abbott Laboratories,Appellate
+USCOURTS-ca13-12-01504,1,Not party,Bayer HealthCare LLC,,Bayer HealthCare LLC,Appellate
+USCOURTS-ca13-12-01504,2,Appellant,"Becton, Dickinson and Company",,"Becton, Dickinson and Company",Appellate
+USCOURTS-ca13-12-01504,3,Appellant,Nova Biomedical Corporation,,Nova Biomedical Corporation,Appellate
+USCOURTS-ca13-12-01504,4,Appellee,"TheraSense, Inc.",,"TheraSense, Inc.",Appellate
+USCOURTS-ca13-12-01507,0,Appellee,Apple Inc.,,Apple Inc.,Appellate
+USCOURTS-ca13-12-01507,1,Appellant,"Samsung Electronics America, Inc.",,"Samsung Electronics America, Inc.",Appellate
+USCOURTS-ca13-12-01507,2,Appellant,"Samsung Electronics Co., Ltd.",,"Samsung Electronics Co., Ltd.",Appellate
+USCOURTS-ca13-12-01507,3,Appellant,"Samsung Telecommunications America, LLC",,"Samsung Telecommunications America, LLC",Appellate
+USCOURTS-ca13-12-01510,0,Appellee,"Johnson & Johnson Vision Care, Inc.",,"Johnson & Johnson Vision Care, Inc.",Appellate
+USCOURTS-ca13-12-01510,1,Appellant,"Rembrandt Vision Technologies, L.P.",,"Rembrandt Vision Technologies, L.P.",Appellate
+USCOURTS-ca13-12-01518,0,Appellee,"MeadWestvaco Calmar, Inc.",,"MeadWestvaco Calmar, Inc.",Appellate
+USCOURTS-ca13-12-01518,1,Appellee,MeadWestvaco Corporation,,MeadWestvaco Corporation,Appellate
+USCOURTS-ca13-12-01518,2,Appellant,"Rexam Beauty and Closures, Inc.",,"Rexam Beauty and Closures, Inc.",Appellate
+USCOURTS-ca13-12-01518,3,Appellant,Rexam Dispensing Systems S.A.S.,,Rexam Dispensing Systems S.A.S.,Appellate
+USCOURTS-ca13-12-01518,4,Not party,Valois S.A.S.,,Valois S.A.S.,Appellate
+USCOURTS-ca13-12-01518,5,Appellant,"Valois of America, Inc.",,"Valois of America, Inc.",Appellate
+USCOURTS-ca13-12-01520,0,Appellee,Galderma R&D,,Galderma R&D,Appellate
+USCOURTS-ca13-12-01520,1,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01520,2,Appellant,"Leo Pharmaceutical Products, LTD.",,"Leo Pharmaceutical Products, LTD.",Appellate
+USCOURTS-ca13-12-01520,3,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01531,0,Appellee,"Aria Diagnostics, Inc.",,"Aria Diagnostics, Inc.",Appellate
+USCOURTS-ca13-12-01531,1,Appellant,"Sequenom, Inc.",,"Sequenom, Inc.",Appellate
+USCOURTS-ca13-12-01535,0,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01535,1,Intervenor,Microsoft Corporation,,Microsoft Corporation,Appellate
+USCOURTS-ca13-12-01535,2,Appellant,"Motorola Mobility, LLC",,"Motorola Mobility, LLC",Appellate
+USCOURTS-ca13-12-01540,0,Appellant,"Alnylam Pharmaceuticals, Inc.",,"Alnylam Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-12-01540,1,Appellant,Robert L. Caret,Robert,Caret,Appellate
+USCOURTS-ca13-12-01540,2,Appellant,David J. Gray,David,Gray,Appellate
+USCOURTS-ca13-12-01540,3,Appellant,James R. Julian Jr.,James,Julian,Appellate
+USCOURTS-ca13-12-01540,4,Appellant,Massachusetts Institute of Technology,,Massachusetts Institute of Technology,Appellate
+USCOURTS-ca13-12-01540,5,Appellant,Max-Planck-Gesellschaft zur Foerderung Der Wissenschaften e.V.,,Max-Planck-Gesellschaft zur Foerderung Der Wissenschaften e.V.,Appellate
+USCOURTS-ca13-12-01540,6,Appellant,Max-Planck-Innovation GmbH,,Max-Planck-Innovation GmbH,Appellate
+USCOURTS-ca13-12-01540,7,Appellant,James P. McNamara,James,McNamara,Appellate
+USCOURTS-ca13-12-01540,8,Not party,University of Massachusetts,,University of Massachusetts,Appellate
+USCOURTS-ca13-12-01540,9,Appellee,University of Utah,,University of Utah,Appellate
+USCOURTS-ca13-12-01540,10,Appellant,Whitehead Institute for Biomedical Research,,Whitehead Institute for Biomedical Research,Appellate
+USCOURTS-ca13-12-01548,0,Appellant,Apple Inc.,,Apple Inc.,Appellate
+USCOURTS-ca13-12-01548,1,Cross-Appellant,"Motorola Mobility, Inc.",,"Motorola Mobility, Inc.",Appellate
+USCOURTS-ca13-12-01548,2,Cross-Appellant,"Motorola, Inc.",,"Motorola, Inc.",Appellate
+USCOURTS-ca13-12-01548,3,Appellant,"NeXT Software, Inc.",,"NeXT Software, Inc.",Appellate
+USCOURTS-ca13-12-01560,0,Appellee,Histogen Aesthetics LLC,,Histogen Aesthetics LLC,Appellate
+USCOURTS-ca13-12-01560,1,Appellee,Histogen Inc.,,Histogen Inc.,Appellate
+USCOURTS-ca13-12-01560,2,Appellee,Gail K. Naughton,Gail,Naughton,Appellate
+USCOURTS-ca13-12-01560,3,Appellant,"SkinMedica, Inc.",,"SkinMedica, Inc.",Appellate
+USCOURTS-ca13-12-01567,0,Appellant,Momenta Pharmaceuticals Inc.,,Momenta Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-12-01567,1,Appellant,Mylan Inc.,,Mylan Inc.,Appellate
+USCOURTS-ca13-12-01567,2,Appellant,Mylan Pharmaceuticals Inc.,,Mylan Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-12-01567,3,Appellant,Natco Pharma Limited,,Natco Pharma Limited,Appellate
+USCOURTS-ca13-12-01567,4,Not party,Novartis AG,,Novartis AG,Appellate
+USCOURTS-ca13-12-01567,5,Not party,Sandoz International GmbH,,Sandoz International GmbH,Appellate
+USCOURTS-ca13-12-01567,6,Appellant,"Sandoz, Inc.",,"Sandoz, Inc.",Appellate
+USCOURTS-ca13-12-01567,7,Appellee,"Teva Neuroscience, Inc.",,"Teva Neuroscience, Inc.",Appellate
+USCOURTS-ca13-12-01567,8,Appellee,"Teva Pharmaceutical Industries, Ltd.",,"Teva Pharmaceutical Industries, Ltd.",Appellate
+USCOURTS-ca13-12-01567,9,Appellee,"Teva Pharmaceuticals USA, Inc.",,"Teva Pharmaceuticals USA, Inc.",Appellate
+USCOURTS-ca13-12-01567,10,Appellee,"Yeda Research and Development Co., Ltd.",,"Yeda Research and Development Co., Ltd.",Appellate
+USCOURTS-ca13-12-01568,0,Not party,Momenta Pharmaceuticals Inc.,,Momenta Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-12-01568,1,Appellant,Mylan Inc.,,Mylan Inc.,Appellate
+USCOURTS-ca13-12-01568,2,Appellant,Mylan Pharmaceuticals Inc.,,Mylan Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-12-01568,3,Appellant,Natco Pharma Limited,,Natco Pharma Limited,Appellate
+USCOURTS-ca13-12-01568,4,Not party,Novartis AG,,Novartis AG,Appellate
+USCOURTS-ca13-12-01568,5,Not party,Sandoz International GmbH,,Sandoz International GmbH,Appellate
+USCOURTS-ca13-12-01568,6,Not party,"Sandoz, Inc.",,"Sandoz, Inc.",Appellate
+USCOURTS-ca13-12-01568,7,Appellee,"Teva Neuroscience, Inc.",,"Teva Neuroscience, Inc.",Appellate
+USCOURTS-ca13-12-01568,8,Appellee,"Teva Pharmaceutical Industries, Ltd.",,"Teva Pharmaceutical Industries, Ltd.",Appellate
+USCOURTS-ca13-12-01568,9,Appellee,"Teva Pharmaceuticals USA, Inc.",,"Teva Pharmaceuticals USA, Inc.",Appellate
+USCOURTS-ca13-12-01568,10,Appellee,"Yeda Research and Development Co., Ltd.",,"Yeda Research and Development Co., Ltd.",Appellate
+USCOURTS-ca13-12-01569,0,Appellant,Momenta Pharmaceuticals Inc.,,Momenta Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-12-01569,1,Not party,Mylan Inc.,,Mylan Inc.,Appellate
+USCOURTS-ca13-12-01569,2,Not party,Mylan Pharmaceuticals Inc.,,Mylan Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-12-01569,3,Not party,Natco Pharma Limited,,Natco Pharma Limited,Appellate
+USCOURTS-ca13-12-01569,4,Not party,Novartis AG,,Novartis AG,Appellate
+USCOURTS-ca13-12-01569,5,Not party,Sandoz International GmbH,,Sandoz International GmbH,Appellate
+USCOURTS-ca13-12-01569,6,Appellant,"Sandoz, Inc.",,"Sandoz, Inc.",Appellate
+USCOURTS-ca13-12-01569,7,Appellee,"Teva Neuroscience, Inc.",,"Teva Neuroscience, Inc.",Appellate
+USCOURTS-ca13-12-01569,8,Appellee,"Teva Pharmaceutical Industries, Ltd.",,"Teva Pharmaceutical Industries, Ltd.",Appellate
+USCOURTS-ca13-12-01569,9,Appellee,"Teva Pharmaceuticals USA, Inc.",,"Teva Pharmaceuticals USA, Inc.",Appellate
+USCOURTS-ca13-12-01569,10,Appellee,"Yeda Research and Development Co., Ltd.",,"Yeda Research and Development Co., Ltd.",Appellate
+USCOURTS-ca13-12-01570,0,Not party,Momenta Pharmaceuticals Inc.,,Momenta Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-12-01570,1,Appellant,Mylan Inc.,,Mylan Inc.,Appellate
+USCOURTS-ca13-12-01570,2,Appellant,Mylan Pharmaceuticals Inc.,,Mylan Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-12-01570,3,Appellant,Natco Pharma Limited,,Natco Pharma Limited,Appellate
+USCOURTS-ca13-12-01570,4,Not party,Novartis AG,,Novartis AG,Appellate
+USCOURTS-ca13-12-01570,5,Not party,Sandoz International GmbH,,Sandoz International GmbH,Appellate
+USCOURTS-ca13-12-01570,6,Not party,"Sandoz, Inc.",,"Sandoz, Inc.",Appellate
+USCOURTS-ca13-12-01570,7,Appellee,"Teva Neuroscience, Inc.",,"Teva Neuroscience, Inc.",Appellate
+USCOURTS-ca13-12-01570,8,Appellee,"Teva Pharmaceutical Industries, Ltd.",,"Teva Pharmaceutical Industries, Ltd.",Appellate
+USCOURTS-ca13-12-01570,9,Appellee,"Teva Pharmaceuticals USA, Inc.",,"Teva Pharmaceuticals USA, Inc.",Appellate
+USCOURTS-ca13-12-01570,10,Appellee,"Yeda Research and Development Co., Ltd.",,"Yeda Research and Development Co., Ltd.",Appellate
+USCOURTS-ca13-12-01578,0,Appellant,"Charles Machine Works, Inc.",,"Charles Machine Works, Inc.",Appellate
+USCOURTS-ca13-12-01578,1,Appellee,Vermeer Manufacturing Company,,Vermeer Manufacturing Company,Appellate
+USCOURTS-ca13-12-01581,0,Appellant,"Hamilton Beach Brands, Inc.",,"Hamilton Beach Brands, Inc.",Appellate
+USCOURTS-ca13-12-01581,1,Appellee,"Sunbeam Products, Inc.",,"Sunbeam Products, Inc.",Appellate
+USCOURTS-ca13-12-01583,0,Appellee,"BGC Capital Markets, LP",,"BGC Capital Markets, LP",Appellate
+USCOURTS-ca13-12-01583,1,Appellee,"CQG, Inc.",,"CQG, Inc.",Appellate
+USCOURTS-ca13-12-01583,2,Appellee,"CQGT, LLC",,"CQGT, LLC",Appellate
+USCOURTS-ca13-12-01583,3,Appellee,EccoWare Ltd.,,EccoWare Ltd.,Appellate
+USCOURTS-ca13-12-01583,4,Appellee,FuturePath Trading LLC,,FuturePath Trading LLC,Appellate
+USCOURTS-ca13-12-01583,5,Appellee,"GL Trade Americas, Inc.",,"GL Trade Americas, Inc.",Appellate
+USCOURTS-ca13-12-01583,6,Appellee,"IBG, LLC",,"IBG, LLC",Appellate
+USCOURTS-ca13-12-01583,7,Appellee,"Interactive Brokers, LLC",,"Interactive Brokers, LLC",Appellate
+USCOURTS-ca13-12-01583,8,Appellee,"Open E Cry, LLC",,"Open E Cry, LLC",Appellate
+USCOURTS-ca13-12-01583,9,Appellee,"OptionsXpress Holdings, Inc.",,"OptionsXpress Holdings, Inc.",Appellate
+USCOURTS-ca13-12-01583,10,Not party,"Rosenthal Collins Group, LLC",,"Rosenthal Collins Group, LLC",Appellate
+USCOURTS-ca13-12-01583,11,Appellee,"Stellar Trading Systems, Inc.",,"Stellar Trading Systems, Inc.",Appellate
+USCOURTS-ca13-12-01583,12,Appellee,"Stellar Trading Systems, Ltd.",,"Stellar Trading Systems, Ltd.",Appellate
+USCOURTS-ca13-12-01583,13,Appellee,"SunGard Data Systems, Inc.",,"SunGard Data Systems, Inc.",Appellate
+USCOURTS-ca13-12-01583,14,Appellee,Sungard Investment Ventures LLC,,Sungard Investment Ventures LLC,Appellate
+USCOURTS-ca13-12-01583,15,Appellee,TD Ameritrade Holding Corp.,,TD Ameritrade Holding Corp.,Appellate
+USCOURTS-ca13-12-01583,16,Appellee,"TD Ameritrade, Inc.",,"TD Ameritrade, Inc.",Appellate
+USCOURTS-ca13-12-01583,17,Appellee,"TradeStation Group, Inc.",,"TradeStation Group, Inc.",Appellate
+USCOURTS-ca13-12-01583,18,Appellee,"TradeStation Securities, Inc.",,"TradeStation Securities, Inc.",Appellate
+USCOURTS-ca13-12-01583,19,Appellant,"Trading Technologies International, Inc.",,"Trading Technologies International, Inc.",Appellate
+USCOURTS-ca13-12-01583,20,Appellee,"eSpeed Markets, LP",,"eSpeed Markets, LP",Appellate
+USCOURTS-ca13-12-01583,21,Appellee,"thinkorswim Group, Inc.",,"thinkorswim Group, Inc.",Appellate
+USCOURTS-ca13-12-01593,0,Appellee,Integrated Technology Corporation,,Integrated Technology Corporation,Appellate
+USCOURTS-ca13-12-01593,1,Appellant,Mariner Acquisition Company LLC,,Mariner Acquisition Company LLC,Appellate
+USCOURTS-ca13-12-01593,2,Appellee,Nevada Integrated Technology Corporation,,Nevada Integrated Technology Corporation,Appellate
+USCOURTS-ca13-12-01593,3,Appellant,"Rudolph Technologies, Inc.",,"Rudolph Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01600,0,Appellant,Apple Inc.,,Apple Inc.,Appellate
+USCOURTS-ca13-12-01600,1,Cross-Appellant,"Samsung Electronics America, Inc.",,"Samsung Electronics America, Inc.",Appellate
+USCOURTS-ca13-12-01600,2,Cross-Appellant,"Samsung Electronics Co., Ltd.",,"Samsung Electronics Co., Ltd.",Appellate
+USCOURTS-ca13-12-01600,3,Cross-Appellant,"Samsung Telecommunications America, LLC",,"Samsung Telecommunications America, LLC",Appellate
+USCOURTS-ca13-12-01609,0,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01609,1,Appellant,Steve Morsa,Steve,Morsa,Appellate
+USCOURTS-ca13-12-01610,0,Appellant,Doron Adler,Doron,Adler,Appellate
+USCOURTS-ca13-12-01610,1,Appellant,Arkady Glukhovsky,Arkady,Glukhovsky,Appellate
+USCOURTS-ca13-12-01610,2,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01610,3,Appellant,Daphna Levy,Daphna,Levy,Appellate
+USCOURTS-ca13-12-01610,4,Appellant,Ofra Zinaty,Ofra,Zinaty,Appellate
+USCOURTS-ca13-12-01611,0,Appellee,"FG Products, Inc.",,"FG Products, Inc.",Appellate
+USCOURTS-ca13-12-01611,1,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01611,2,Appellant,Randall Mfg.,,Randall Mfg.,Appellate
+USCOURTS-ca13-12-01611,3,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01618,0,Appellee,Integrated Technology Corporation,,Integrated Technology Corporation,Appellate
+USCOURTS-ca13-12-01618,1,Appellant,Mariner Acquisition Company LLC,,Mariner Acquisition Company LLC,Appellate
+USCOURTS-ca13-12-01618,2,Appellee,Nevada Integrated Technology Corporation,,Nevada Integrated Technology Corporation,Appellate
+USCOURTS-ca13-12-01618,3,Appellant,"Rudolph Technologies, Inc.",,"Rudolph Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01624,0,Appellee,H.J. Heinz Company,,H.J. Heinz Company,Appellate
+USCOURTS-ca13-12-01624,1,Appellee,"H.J. Heinz Company, L.P.",,"H.J. Heinz Company, L.P.",Appellate
+USCOURTS-ca13-12-01624,2,Appellee,Heinz GP LLC,,Heinz GP LLC,Appellate
+USCOURTS-ca13-12-01624,3,Appellant,David Wawrzynski,David,Wawrzynski,Appellate
+USCOURTS-ca13-12-01628,0,Appellant,"IPR Licensing, Inc.",,"IPR Licensing, Inc.",Appellate
+USCOURTS-ca13-12-01628,1,Appellant,"InterDigital Communications, LLC",,"InterDigital Communications, LLC",Appellate
+USCOURTS-ca13-12-01628,2,Appellant,InterDigital Technology Corporation,,InterDigital Technology Corporation,Appellate
+USCOURTS-ca13-12-01628,3,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-12-01628,4,Intervenor,"LG Electronics MobileComm U.S.A., Inc.",,"LG Electronics MobileComm U.S.A., Inc.",Appellate
+USCOURTS-ca13-12-01628,5,Intervenor,"LG Electronics USA, Inc.",,"LG Electronics USA, Inc.",Appellate
+USCOURTS-ca13-12-01628,6,Intervenor,"LG Electronics, Inc.",,"LG Electronics, Inc.",Appellate
+USCOURTS-ca13-12-01630,0,Appellee,Margaret A. Focarino,Margaret,Focarino,Appellate
+USCOURTS-ca13-12-01630,1,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01630,2,Appellee,Michelle K. Lee,Michelle,Lee,Appellate
+USCOURTS-ca13-12-01630,3,Appellant,"Q. I. Press Controls, B.V.",,"Q. I. Press Controls, B.V.",Appellate
+USCOURTS-ca13-12-01630,4,Cross-Appellant,"Quad/Tech, Inc.",,"Quad/Tech, Inc.",Appellate
+USCOURTS-ca13-12-01630,5,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01634,0,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-12-01634,1,Appellant,Rambus Inc.,,Rambus Inc.,Appellate
+USCOURTS-ca13-12-01634,2,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-12-01642,0,Cross-Appellant,"ALPS South, LLC",,"ALPS South, LLC",Appellate
+USCOURTS-ca13-12-01642,1,Appellant,Ohio Willow Wood Company,,Ohio Willow Wood Company,Appellate
+USCOURTS-ca13-12-01645,0,Appellant,EnOcean GmbH,,EnOcean GmbH,Appellate
+USCOURTS-ca13-12-01645,1,Appellee,Face International Corporation,,Face International Corporation,Appellate
+USCOURTS-ca13-12-01649,0,Appellant,"Avon Products, Inc.",,"Avon Products, Inc.",Appellate
+USCOURTS-ca13-12-01649,1,Appellee,Soverain Software LLC,,Soverain Software LLC,Appellate
+USCOURTS-ca13-12-01649,2,Appellant,"Victoria's Secret Direct Brand Management, LLC",,"Victoria's Secret Direct Brand Management, LLC",Appellate
+USCOURTS-ca13-12-01658,0,Appellee,"HTC America, Inc.",,"HTC America, Inc.",Appellate
+USCOURTS-ca13-12-01658,1,Appellee,HTC Corporation,,HTC Corporation,Appellate
+USCOURTS-ca13-12-01658,2,Appellant,"Intellect Wireless, Inc.",,"Intellect Wireless, Inc.",Appellate
+USCOURTS-ca13-12-01660,0,Appellee,Honeywell International Inc.,,Honeywell International Inc.,Appellate
+USCOURTS-ca13-12-01660,1,Appellant,Solvay S.A.,,Solvay S.A.,Appellate
+USCOURTS-ca13-12-01678,0,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01678,1,Appellant,"United States Marine, Inc.",,"United States Marine, Inc.",Appellate
+USCOURTS-ca13-12-01678,2,Not party,"VT Halter Marine, Inc.",,"VT Halter Marine, Inc.",Appellate
+USCOURTS-ca13-12-01679,0,Appellant,"Mformation Technologies, Inc.",,"Mformation Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01679,1,Appellee,Research in Motion Corp.,,Research in Motion Corp.,Appellate
+USCOURTS-ca13-12-01679,2,Appellee,Research in Motion Limited,,Research in Motion Limited,Appellate
+USCOURTS-ca13-12-01679,3,Appellant,"mFormation Software Technologies, Inc.",,"mFormation Software Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01682,0,Appellee,Mid Continent Nail Corporation,,Mid Continent Nail Corporation,Appellate
+USCOURTS-ca13-12-01682,1,Appellant,Target Corporation,,Target Corporation,Appellate
+USCOURTS-ca13-12-01682,2,Appellant,United States,,United States,Appellate
+USCOURTS-ca13-12-01683,0,Appellee,Mid Continent Nail Corporation,,Mid Continent Nail Corporation,Appellate
+USCOURTS-ca13-12-01683,1,Appellant,Target Corporation,,Target Corporation,Appellate
+USCOURTS-ca13-12-01683,2,Not party,United States,,United States,Appellate
+USCOURTS-ca13-12-01686,0,Appellant,Keith E. Forrester,Keith,Forrester,Appellate
+USCOURTS-ca13-12-01686,1,Appellant,"Forrester Environmental Services, Inc.",,"Forrester Environmental Services, Inc.",Appellate
+USCOURTS-ca13-12-01686,2,Appellee,"Wheelabrator Technologies, Inc.",,"Wheelabrator Technologies, Inc.",Appellate
+USCOURTS-ca13-12-01688,0,Appellant,"AMS Associates, Inc.",,"AMS Associates, Inc.",Appellate
+USCOURTS-ca13-12-01688,1,Appellee,"Coating Excellence International, LLC",,"Coating Excellence International, LLC",Appellate
+USCOURTS-ca13-12-01688,2,Appellee,Laminated Woven Sacks Committee,,Laminated Woven Sacks Committee,Appellate
+USCOURTS-ca13-12-01688,3,Appellee,Polytex Fibers Corporation,,Polytex Fibers Corporation,Appellate
+USCOURTS-ca13-12-01688,4,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-01694,0,Appellee,AT&T Mobility LLC,,AT&T Mobility LLC,Appellate
+USCOURTS-ca13-12-01694,1,Appellee,"Roamware, Inc.",,"Roamware, Inc.",Appellate
+USCOURTS-ca13-12-01694,2,Appellant,Starhome GmbH,,Starhome GmbH,Appellate
+USCOURTS-ca13-12-01694,3,Appellee,"T-Mobile USA, Inc.",,"T-Mobile USA, Inc.",Appellate
+USCOURTS-ca13-12-01696,0,Appellee,"Amazon.com, Inc.",,"Amazon.com, Inc.",Appellate
+USCOURTS-ca13-12-01696,1,Appellant,"Oip Technologies, Inc.",,"Oip Technologies, Inc.",Appellate
+USCOURTS-ca13-12-03037,0,Petitioner,Darrell T. Crawford,Darrell,Crawford,Appellate
+USCOURTS-ca13-12-03037,1,Respondent,Department of the Army,,Department of the Army,Appellate
+USCOURTS-ca13-12-03061,0,Intervenor,Diana M. King,Diana,King,Appellate
+USCOURTS-ca13-12-03061,1,Petitioner,Kathryn King,Kathryn,King,Appellate
+USCOURTS-ca13-12-03061,2,Respondent,Office of Personnel Management,,Office of Personnel Management,Appellate
+USCOURTS-ca13-12-03094,0,Petitioner,Sheri Lynn Denney,Sheri,Denney,Appellate
+USCOURTS-ca13-12-03094,1,Respondent,Office of Personnel Management,,Office of Personnel Management,Appellate
+USCOURTS-ca13-12-03110,0,Respondent,Department of Veterans Affairs,,Department of Veterans Affairs,Appellate
+USCOURTS-ca13-12-03110,1,Petitioner,Stephen W. Gingery,Stephen,Gingery,Appellate
+USCOURTS-ca13-12-03119,0,Petitioner,Marie C. Conforto,Marie,Conforto,Appellate
+USCOURTS-ca13-12-03119,1,Respondent,Department of the Navy,,Department of the Navy,Appellate
+USCOURTS-ca13-12-03119,2,Respondent,Merit Systems Protection Board,,Merit Systems Protection Board,Appellate
+USCOURTS-ca13-12-03157,0,Respondent,Department of Homeland Security,,Department of Homeland Security,Appellate
+USCOURTS-ca13-12-03157,1,Petitioner,Joseph T. Gargiulo,Joseph,Gargiulo,Appellate
+USCOURTS-ca13-12-03157,2,Intervenor,Merit Systems Protection Board,,Merit Systems Protection Board,Appellate
+USCOURTS-ca13-12-05035,0,Cross-Appellant,Kristine Abrahamson,Kristine,Abrahamson,Appellate
+USCOURTS-ca13-12-05035,1,Cross-Appellant,Scott Adolphson,Scott,Adolphson,Appellate
+USCOURTS-ca13-12-05035,2,Not party,Sally Ella Alkire,Sally,Alkire,Appellate
+USCOURTS-ca13-12-05035,3,Not party,Pierre George Arnold Jr.,Pierre,Arnold,Appellate
+USCOURTS-ca13-12-05035,4,Not party,Lenor Ann Scheffler Blaeser,Lenor,Blaeser,Appellate
+USCOURTS-ca13-12-05035,5,Cross-Appellant,Dawn Burley,Dawn,Burley,Appellate
+USCOURTS-ca13-12-05035,6,Cross-Appellant,Barbara Feezor Buttes,Barbara,Buttes,Appellate
+USCOURTS-ca13-12-05035,7,Not party,Jesse Cermak,Jesse,Cermak,Appellate
+USCOURTS-ca13-12-05035,8,Not party,Raymond Cermak Sr.,Raymond,Cermak,Appellate
+USCOURTS-ca13-12-05035,9,Cross-Appellant,Raymond Cournoyer Sr.,Raymond,Cournoyer,Appellate
+USCOURTS-ca13-12-05035,10,Not party,Coursolle Descendants,,Coursolle Descendants,Appellate
+USCOURTS-ca13-12-05035,11,Cross-Appellant,Julia DuMarce,Julia,DuMarce,Appellate
+USCOURTS-ca13-12-05035,12,Not party,Winona C. Thomas Enyard,Winona,Enyard,Appellate
+USCOURTS-ca13-12-05035,13,Cross-Appellant,Winifred St. Pierre Feezor,Winifred,Feezor,Appellate
+USCOURTS-ca13-12-05035,14,Not party,Frances Elaine Felix,Frances,Felix,Appellate
+USCOURTS-ca13-12-05035,15,Not party,Rebecca Elizabeth Felix,Rebecca,Felix,Appellate
+USCOURTS-ca13-12-05035,16,Not party,Lydia Ferris,Lydia,Ferris,Appellate
+USCOURTS-ca13-12-05035,17,Cross-Appellant,Leslie Lee French,Leslie,French,Appellate
+USCOURTS-ca13-12-05035,18,Not party,Francine Garreau,Francine,Garreau,Appellate
+USCOURTS-ca13-12-05035,19,Cross-Appellant,Sandra Columbus Geshick,Sandra,Geshick,Appellate
+USCOURTS-ca13-12-05035,20,Not party,Gertrude Godoy,Gertrude,Godoy,Appellate
+USCOURTS-ca13-12-05035,21,Not party,Denise Henderson,Denise,Henderson,Appellate
+USCOURTS-ca13-12-05035,22,Not party,Dawn Henry,Dawn,Henry,Appellate
+USCOURTS-ca13-12-05035,23,Not party,John Does 1-30,,John Does 1-30,Appellate
+USCOURTS-ca13-12-05035,24,Cross-Appellant,John Does 1-433,,John Does 1-433,Appellate
+USCOURTS-ca13-12-05035,25,Cross-Appellant,Benita M. Johnson,Benita,Johnson,Appellate
+USCOURTS-ca13-12-05035,26,Cross-Appellant,Sandra Kimbell,Sandra,Kimbell,Appellate
+USCOURTS-ca13-12-05035,27,Not party,Kitto,,Kitto,Appellate
+USCOURTS-ca13-12-05035,28,Not party,Delores Klingberg,Delores,Klingberg,Appellate
+USCOURTS-ca13-12-05035,29,Not party,Mary Beth Lafferty,Mary Beth,Lafferty,Appellate
+USCOURTS-ca13-12-05035,30,Cross-Appellant,Ernie Peters Longwalker,Ernie,Longwalker,Appellate
+USCOURTS-ca13-12-05035,31,Cross-Appellant,Cheryl K. Lorusso,Cheryl,Lorusso,Appellate
+USCOURTS-ca13-12-05035,32,Cross-Appellant,Jennifer K. Lorusso,Jennifer,Lorusso,Appellate
+USCOURTS-ca13-12-05035,33,Cross-Appellant,Kevin Lorusso,Kevin,Lorusso,Appellate
+USCOURTS-ca13-12-05035,34,Not party,Bonnie Rae Lowe,Bonnie,Lowe,Appellate
+USCOURTS-ca13-12-05035,35,Not party,Lower Sioux Indian Community,,Lower Sioux Indian Community,Appellate
+USCOURTS-ca13-12-05035,36,Cross-Appellant,Ruby Minkel,Ruby,Minkel,Appellate
+USCOURTS-ca13-12-05035,37,Not party,Philip W. Morgan,Philip,Morgan,Appellate
+USCOURTS-ca13-12-05035,38,Cross-Appellant,Danny Lee Mozak,Danny,Mozak,Appellate
+USCOURTS-ca13-12-05035,39,Cross-Appellant,Morris J. Pendleton,Morris,Pendleton,Appellate
+USCOURTS-ca13-12-05035,40,Cross-Appellant,Jerry Robinette,Jerry,Robinette,Appellate
+USCOURTS-ca13-12-05035,41,Not party,Rocque and Taylor Descendants,,Rocque and Taylor Descendants,Appellate
+USCOURTS-ca13-12-05035,42,Not party,Vera A. Rooney,Vera,Rooney,Appellate
+USCOURTS-ca13-12-05035,43,Not party,Deborah L. Saul,Deborah,Saul,Appellate
+USCOURTS-ca13-12-05035,44,Cross-Appellant,Beverly M. Scott,Beverly,Scott,Appellate
+USCOURTS-ca13-12-05035,45,Cross-Appellant,Cassandra Shevchuk,Cassandra,Shevchuk,Appellate
+USCOURTS-ca13-12-05035,46,Cross-Appellant,Jason Shevchuk,Jason,Shevchuk,Appellate
+USCOURTS-ca13-12-05035,47,Not party,Michael Stephens,Michael,Stephens,Appellate
+USCOURTS-ca13-12-05035,48,Cross-Appellant,Aaron Swenson,Aaron,Swenson,Appellate
+USCOURTS-ca13-12-05035,49,Cross-Appellant,Lavonne A. Swenson,Lavonne,Swenson,Appellate
+USCOURTS-ca13-12-05035,50,Cross-Appellant,Willis Swenson,Willis,Swenson,Appellate
+USCOURTS-ca13-12-05035,51,Not party,Robert Lee Taylor,Robert,Taylor,Appellate
+USCOURTS-ca13-12-05035,52,Not party,Daniel M. Trudell,Daniel,Trudell,Appellate
+USCOURTS-ca13-12-05035,53,Appellant,United States,,United States,Appellate
+USCOURTS-ca13-12-05035,54,Cross-Appellant,Victoria Robertson Vadnais,Victoria,Vadnais,Appellate
+USCOURTS-ca13-12-05035,55,Not party,Laura Vassar,Laura,Vassar,Appellate
+USCOURTS-ca13-12-05035,56,Cross-Appellant,Charlene Wanna,Charlene,Wanna,Appellate
+USCOURTS-ca13-12-05035,57,Cross-Appellant,Aries Bluestone Weaver,Aries,Weaver,Appellate
+USCOURTS-ca13-12-05035,58,Cross-Appellant,Autumn Weaver,Autumn,Weaver,Appellate
+USCOURTS-ca13-12-05035,59,Cross-Appellant,Elijah Bluestone Weaver,Elijah,Weaver,Appellate
+USCOURTS-ca13-12-05035,60,Not party,Anita D. Whipple,Anita,Whipple,Appellate
+USCOURTS-ca13-12-05035,61,Cross-Appellant,Eva Grace Wilson,Eva,Wilson,Appellate
+USCOURTS-ca13-12-05035,62,Cross-Appellant,James Paul Wilson,James,Wilson,Appellate
+USCOURTS-ca13-12-05035,63,Cross-Appellant,Lillian Wilson,Lillian,Wilson,Appellate
+USCOURTS-ca13-12-05035,64,Cross-Appellant,Monique Wilson,Monique,Wilson,Appellate
+USCOURTS-ca13-12-05035,65,Cross-Appellant,Sheldon Peters Wolfchild,Sheldon,Wolfchild,Appellate
+USCOURTS-ca13-12-05035,66,Cross-Appellant,Harley D. Zephier Sr.,Harley,Zephier,Appellate
+USCOURTS-ca13-12-05035,67,Not party,Ke Zephier,Ke,Zephier,Appellate
+USCOURTS-ca13-12-05046,0,Cross-Appellant,"Haddon Housing Associates, Limited Partnership",,"Haddon Housing Associates, Limited Partnership",Appellate
+USCOURTS-ca13-12-05046,1,Cross-Appellant,Housing Authority of the Township of Haddon,,Housing Authority of the Township of Haddon,Appellate
+USCOURTS-ca13-12-05046,2,Appellant,United States,,United States,Appellate
+USCOURTS-ca13-12-05050,0,Appellant,Marvin M. Brandt,,Marvin M. Brandt,Appellate
+USCOURTS-ca13-12-05050,1,Appellant,Marvin M. Brandt Revocable Trust,,Marvin M. Brandt Revocable Trust,Appellate
+USCOURTS-ca13-12-05050,2,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05051,0,Appellant,Gordon W. Bush,Gordon,Bush,Appellate
+USCOURTS-ca13-12-05051,1,Appellant,Reola Bush,Reola,Bush,Appellate
+USCOURTS-ca13-12-05051,2,Appellant,Barbara V. Catuzzi,Barbara,Catuzzi,Appellate
+USCOURTS-ca13-12-05051,3,Appellant,Lawrence R. Catuzzi,Lawrence,Catuzzi,Appellate
+USCOURTS-ca13-12-05051,4,Appellant,Gordon R. Cooke,Gordon,Cooke,Appellate
+USCOURTS-ca13-12-05051,5,Appellant,Jennifer L. Cooke,Jennifer,Cooke,Appellate
+USCOURTS-ca13-12-05051,6,Appellant,Gopala K. Derebail,Gopala,Derebail,Appellate
+USCOURTS-ca13-12-05051,7,Appellant,Memalatha Derebail,Memalatha,Derebail,Appellate
+USCOURTS-ca13-12-05051,8,Appellant,Albert V. Gude,Albert,Gude,Appellate
+USCOURTS-ca13-12-05051,9,Appellant,Donna C. Gude,Donna,Gude,Appellate
+USCOURTS-ca13-12-05051,10,Appellant,Lawrence S. Lewin,Lawrence,Lewin,Appellate
+USCOURTS-ca13-12-05051,11,Appellant,Catherine D. McQuillan,Catherine,McQuillan,Appellate
+USCOURTS-ca13-12-05051,12,Appellant,Robert V. McQuillan Jr.,Robert,McQuillan,Appellate
+USCOURTS-ca13-12-05051,13,Appellant,Jeanette T. Nakahara,Jeanette,Nakahara,Appellate
+USCOURTS-ca13-12-05051,14,Appellant,Kikuo Nakahara,Kikuo,Nakahara,Appellate
+USCOURTS-ca13-12-05051,15,Appellant,Leslie A. Spitzack,Leslie,Spitzack,Appellate
+USCOURTS-ca13-12-05051,16,Appellant,Mary C. Spitzack,Mary,Spitzack,Appellate
+USCOURTS-ca13-12-05051,17,Appellant,Barry S. Strauch,Barry,Strauch,Appellate
+USCOURTS-ca13-12-05051,18,Appellant,Evelyn M. Strauch,Evelyn,Strauch,Appellate
+USCOURTS-ca13-12-05051,19,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05059,0,Appellee,"Entergy Nuclear Fitzpatrick, LLC",,"Entergy Nuclear Fitzpatrick, LLC",Appellate
+USCOURTS-ca13-12-05059,1,Appellee,"Entergy Nuclear Indian Point 3, LLC",,"Entergy Nuclear Indian Point 3, LLC",Appellate
+USCOURTS-ca13-12-05059,2,Appellee,"Entergy Nuclear Operations, Inc.",,"Entergy Nuclear Operations, Inc.",Appellate
+USCOURTS-ca13-12-05059,3,Appellant,United States,,United States,Appellate
+USCOURTS-ca13-12-05064,0,Appellant,Manny Figueroa,Manny,Figueroa,Appellate
+USCOURTS-ca13-12-05064,1,Appellant,Stephanie Vino Figueroa,Stephanie,Figueroa,Appellate
+USCOURTS-ca13-12-05064,2,Appellee,Secretary of Health and Human Services,,Secretary of Health and Human Services,Appellate
+USCOURTS-ca13-12-05067,0,Appellant,John H. Banks,John,Banks,Appellate
+USCOURTS-ca13-12-05067,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05073,0,Appellant,Jerry McGuire,Jerry,McGuire,Appellate
+USCOURTS-ca13-12-05073,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05077,0,Appellee,International Business Machines Corporation,,International Business Machines Corporation,Appellate
+USCOURTS-ca13-12-05077,1,Appellant,"USHIP Intellectual Properties, LLC",,"USHIP Intellectual Properties, LLC",Appellate
+USCOURTS-ca13-12-05077,2,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05086,0,Appellant,Valentin Castro III,Valentin,Castro,Appellate
+USCOURTS-ca13-12-05086,1,Appellant,Deborah Ann Castro Revocable Trust,,Deborah Ann Castro Revocable Trust,Appellate
+USCOURTS-ca13-12-05086,2,Appellant,Joseph Lawrence Heinzl,Joseph,Heinzl,Appellate
+USCOURTS-ca13-12-05086,3,Appellant,Jack Ladd,Jack,Ladd,Appellate
+USCOURTS-ca13-12-05086,4,Appellant,Jobeth Ladd,Jobeth,Ladd,Appellate
+USCOURTS-ca13-12-05086,5,Appellant,John Ladd,John,Ladd,Appellate
+USCOURTS-ca13-12-05086,6,Appellant,Marie Ladd,Marie,Ladd,Appellate
+USCOURTS-ca13-12-05086,7,Appellant,Gail A. Lanham,Gail,Lanham,Appellate
+USCOURTS-ca13-12-05086,8,Appellant,James A. Lindsey,James,Lindsey,Appellate
+USCOURTS-ca13-12-05086,9,Appellant,Michael A. Lindsey,Michael,Lindsey,Appellate
+USCOURTS-ca13-12-05086,10,Appellant,William Lindsey,William,Lindsey,Appellate
+USCOURTS-ca13-12-05086,11,Appellant,Charlie Miller,Charlie,Miller,Appellate
+USCOURTS-ca13-12-05086,12,Appellant,Pauline Miller,Pauline,Miller,Appellate
+USCOURTS-ca13-12-05086,13,Appellant,Raymond Miller,Raymond,Miller,Appellate
+USCOURTS-ca13-12-05086,14,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05086,15,Appellant,Tammy Windsor-Brown,Tammy,Windsor-Brown,Appellate
+USCOURTS-ca13-12-05087,0,Not party,Valentin Castro III,Valentin,Castro,Appellate
+USCOURTS-ca13-12-05087,1,Not party,Deborah Ann Castro Revocable Trust,,Deborah Ann Castro Revocable Trust,Appellate
+USCOURTS-ca13-12-05087,2,Not party,Joseph Lawrence Heinzl,Joseph,Heinzl,Appellate
+USCOURTS-ca13-12-05087,3,Not party,Jack Ladd,Jack,Ladd,Appellate
+USCOURTS-ca13-12-05087,4,Not party,Jobeth Ladd,Jobeth,Ladd,Appellate
+USCOURTS-ca13-12-05087,5,Not party,John Ladd,John,Ladd,Appellate
+USCOURTS-ca13-12-05087,6,Not party,Marie Ladd,Marie,Ladd,Appellate
+USCOURTS-ca13-12-05087,7,Appellant,Gail A. Lanham,Gail,Lanham,Appellate
+USCOURTS-ca13-12-05087,8,Appellant,James A. Lindsey,James,Lindsey,Appellate
+USCOURTS-ca13-12-05087,9,Appellant,Michael A. Lindsey,Michael,Lindsey,Appellate
+USCOURTS-ca13-12-05087,10,Appellant,William Lindsey,William,Lindsey,Appellate
+USCOURTS-ca13-12-05087,11,Not party,Charlie Miller,Charlie,Miller,Appellate
+USCOURTS-ca13-12-05087,12,Not party,Pauline Miller,Pauline,Miller,Appellate
+USCOURTS-ca13-12-05087,13,Not party,Raymond Miller,Raymond,Miller,Appellate
+USCOURTS-ca13-12-05087,14,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05087,15,Not party,Tammy Windsor-Brown,Tammy,Windsor-Brown,Appellate
+USCOURTS-ca13-12-05102,0,Appellant,Mario Boeri,Mario,Boeri,Appellate
+USCOURTS-ca13-12-05102,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05105,0,Appellant,David Lee Smith,David,Smith,Appellate
+USCOURTS-ca13-12-05105,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05106,0,Appellant,"Kellogg Brown & Root Services, Inc.",,"Kellogg Brown & Root Services, Inc.",Appellate
+USCOURTS-ca13-12-05106,1,Cross-Appellant,United States,,United States,Appellate
+USCOURTS-ca13-12-05113,0,Appellant,Mark Roberts,Mark,Roberts,Appellate
+USCOURTS-ca13-12-05113,1,Cross-Appellant,United States,,United States,Appellate
+USCOURTS-ca13-12-05125,0,Appellant,"Glenn Defense Marine (Asia), Pte Ltd.",,"Glenn Defense Marine (Asia), Pte Ltd.",Appellate
+USCOURTS-ca13-12-05125,1,Appellee,MLS-Multinational Logistic Services Ltd,,MLS-Multinational Logistic Services Ltd,Appellate
+USCOURTS-ca13-12-05125,2,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05127,0,Appellant,Kimberly Burshiem,Kimberly,Burshiem,Appellate
+USCOURTS-ca13-12-05127,1,Appellant,Gus Deribeaux,Gus,Deribeaux,Appellate
+USCOURTS-ca13-12-05127,2,Appellant,Madison Deribeaux,Madison,Deribeaux,Appellate
+USCOURTS-ca13-12-05127,3,Appellee,Secretary of Health and Human Services,,Secretary of Health and Human Services,Appellate
+USCOURTS-ca13-12-05139,0,Appellant,Kathleen G. Rose,Kathleen,Rose,Appellate
+USCOURTS-ca13-12-05139,1,Appellant,TrinCo Investment Company,,TrinCo Investment Company,Appellate
+USCOURTS-ca13-12-05139,2,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05140,0,Appellant,James Antonellis,James,Antonellis,Appellate
+USCOURTS-ca13-12-05140,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-05142,0,Appellant,"Cencast Services, L.P.",,"Cencast Services, L.P.",Appellate
+USCOURTS-ca13-12-05142,1,Appellant,"Cenex Services, L.P.",,"Cenex Services, L.P.",Appellate
+USCOURTS-ca13-12-05142,2,Appellant,Disc Acquisition Corp.,,Disc Acquisition Corp.,Appellate
+USCOURTS-ca13-12-05142,3,Appellant,"Disc Management Services Group, Inc.",,"Disc Management Services Group, Inc.",Appellate
+USCOURTS-ca13-12-05142,4,Appellant,"Disc Talent Group, Inc.",,"Disc Talent Group, Inc.",Appellate
+USCOURTS-ca13-12-05142,5,Appellant,"EP Management Services, L.P.",,"EP Management Services, L.P.",Appellate
+USCOURTS-ca13-12-05142,6,Appellant,"EP Production Services, L.P.",,"EP Production Services, L.P.",Appellate
+USCOURTS-ca13-12-05142,7,Appellant,"EP Talent Services, L.P.",,"EP Talent Services, L.P.",Appellate
+USCOURTS-ca13-12-05142,8,Appellant,"Pixpay Services, L.P.",,"Pixpay Services, L.P.",Appellate
+USCOURTS-ca13-12-05142,9,Appellant,"Screenpay, Inc.",,"Screenpay, Inc.",Appellate
+USCOURTS-ca13-12-05142,10,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-12-07003,0,Appellant,Arnold C. Kyhn,Arnold,Kyhn,Appellate
+USCOURTS-ca13-12-07003,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07046,0,Appellant,AZ,,AZ,Appellate
+USCOURTS-ca13-12-07046,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07048,0,Appellant,AY,,AY,Appellate
+USCOURTS-ca13-12-07048,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07067,0,Appellant,Regina M. Pirkl,Regina,Pirkl,Appellate
+USCOURTS-ca13-12-07067,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07075,0,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07075,1,Appellant,John L. Viegas,John,Viegas,Appellate
+USCOURTS-ca13-12-07087,0,Appellant,Terrance D. Massie,Terrance,Massie,Appellate
+USCOURTS-ca13-12-07087,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07089,0,Appellant,Arnold J. Parks,Arnold,Parks,Appellate
+USCOURTS-ca13-12-07089,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07096,0,Appellant,Michele D. Burden,Michele,Burden,Appellate
+USCOURTS-ca13-12-07096,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07111,0,Appellant,Norman A. Harris,Norman,Harris,Appellate
+USCOURTS-ca13-12-07111,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07114,0,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07114,1,Appellant,Genaro Vazquez-Claudio,Genaro,Vazquez-Claudio,Appellate
+USCOURTS-ca13-12-07115,0,Appellant,Tony C. Hall,Tony,Hall,Appellate
+USCOURTS-ca13-12-07115,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07120,0,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07120,1,Appellant,Stephen F. Yonek,Stephen,Yonek,Appellate
+USCOURTS-ca13-12-07122,0,Appellant,Helen C. Coleman,Helen,Coleman,Appellate
+USCOURTS-ca13-12-07122,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07125,0,Appellant,John F. Cameron,John,Cameron,Appellate
+USCOURTS-ca13-12-07125,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07138,0,Appellant,Robert D. Prinkey,Robert,Prinkey,Appellate
+USCOURTS-ca13-12-07138,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07142,0,Appellant,Flora L. Kernea,Flora,Kernea,Appellate
+USCOURTS-ca13-12-07142,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07156,0,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-12-07156,1,Appellant,Jimmy R. Sprinkle,Jimmy,Sprinkle,Appellate
+USCOURTS-ca13-12-07164,0,Appellant,Edward W. Geib,Edward,Geib,Appellate
+USCOURTS-ca13-12-07164,1,Appellee,"Eric K. Shinseki, Secretary of Veterans Affairs",Eric,"Shinseki, Secretary of Veterans Affairs",Appellate
+USCOURTS-ca13-13-01001,0,Not party,American Italian Pasta Company,,American Italian Pasta Company,Appellate
+USCOURTS-ca13-13-01001,1,Appellee,Atar S.r.l.,,Atar S.r.l.,Appellate
+USCOURTS-ca13-13-01001,2,Not party,Dakota Growers Pasta Company,,Dakota Growers Pasta Company,Appellate
+USCOURTS-ca13-13-01001,3,Not party,New World Pasta Company,,New World Pasta Company,Appellate
+USCOURTS-ca13-13-01001,4,Appellant,United States,,United States,Appellate
+USCOURTS-ca13-13-01002,0,Appellant,Bayer CropScience AG,,Bayer CropScience AG,Appellate
+USCOURTS-ca13-13-01002,1,Appellee,Dow AgroSciences LLC,,Dow AgroSciences LLC,Appellate
+USCOURTS-ca13-13-01007,0,Appellee,Daimler AG,,Daimler AG,Appellate
+USCOURTS-ca13-13-01007,1,Appellant,"Ibormeith IP, LLC",,"Ibormeith IP, LLC",Appellate
+USCOURTS-ca13-13-01007,2,Appellee,"Mercedes-Benz USA, LLC",,"Mercedes-Benz USA, LLC",Appellate
+USCOURTS-ca13-13-01011,0,Appellant,"Applied Biosystems, LLC",,"Applied Biosystems, LLC",Appellate
+USCOURTS-ca13-13-01011,1,Appellant,"Invitrogen IP Holdings, Inc.",,"Invitrogen IP Holdings, Inc.",Appellate
+USCOURTS-ca13-13-01011,2,Appellant,Life Technologies Corporation,,Life Technologies Corporation,Appellate
+USCOURTS-ca13-13-01011,3,Not party,Max-Planck-Gesellschaft zur Foerderung Der Wissenschaften e.V.,,Max-Planck-Gesellschaft zur Foerderung Der Wissenschaften e.V.,Appellate
+USCOURTS-ca13-13-01011,4,Cross-Appellant,Promega Corporation,,Promega Corporation,Appellate
+USCOURTS-ca13-13-01021,0,Cross-Appellant,Google Inc.,,Google Inc.,Appellate
+USCOURTS-ca13-13-01021,1,Appellant,"Oracle America, Inc.",,"Oracle America, Inc.",Appellate
+USCOURTS-ca13-13-01022,0,Cross-Appellant,Google Inc.,,Google Inc.,Appellate
+USCOURTS-ca13-13-01022,1,Appellant,"Oracle America, Inc.",,"Oracle America, Inc.",Appellate
+USCOURTS-ca13-13-01024,0,Cross-Appellant,"ALPS South, LLC",,"ALPS South, LLC",Appellate
+USCOURTS-ca13-13-01024,1,Appellant,Ohio Willow Wood Company,,Ohio Willow Wood Company,Appellate
+USCOURTS-ca13-13-01027,0,Appellant,"Allergan, Inc.",,"Allergan, Inc.",Appellate
+USCOURTS-ca13-13-01027,1,Appellee,Apotex Corp.,,Apotex Corp.,Appellate
+USCOURTS-ca13-13-01027,2,Appellee,Apotex Inc.,,Apotex Inc.,Appellate
+USCOURTS-ca13-13-01027,3,Appellant,"Kyorin Pharmaceutical Co., Ltd.",,"Kyorin Pharmaceutical Co., Ltd.",Appellate
+USCOURTS-ca13-13-01027,4,Appellant,"Senju Pharmaceutical Co., Ltd.",,"Senju Pharmaceutical Co., Ltd.",Appellate
+USCOURTS-ca13-13-01028,0,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-13-01028,1,Appellant,"Wilton Industries, Inc.",,"Wilton Industries, Inc.",Appellate
+USCOURTS-ca13-13-01029,0,Appellant,"Applied Biosystems, LLC",,"Applied Biosystems, LLC",Appellate
+USCOURTS-ca13-13-01029,1,Appellant,"Invitrogen IP Holdings, Inc.",,"Invitrogen IP Holdings, Inc.",Appellate
+USCOURTS-ca13-13-01029,2,Appellant,Life Technologies Corporation,,Life Technologies Corporation,Appellate
+USCOURTS-ca13-13-01029,3,Not party,Max-Planck-Gesellschaft zur Foerderung Der Wissenschaften e.V.,,Max-Planck-Gesellschaft zur Foerderung Der Wissenschaften e.V.,Appellate
+USCOURTS-ca13-13-01029,4,Cross-Appellant,Promega Corporation,,Promega Corporation,Appellate
+USCOURTS-ca13-13-01034,0,Appellee,"Galderma Laboratories, L.P.",,"Galderma Laboratories, L.P.",Appellate
+USCOURTS-ca13-13-01034,1,Appellee,"Galderma Research and Development, S.N.C.",,"Galderma Research and Development, S.N.C.",Appellate
+USCOURTS-ca13-13-01034,2,Appellee,Galderma S.A.,,Galderma S.A.,Appellate
+USCOURTS-ca13-13-01034,3,Appellant,"Tolmar, Inc.",,"Tolmar, Inc.",Appellate
+USCOURTS-ca13-13-01036,0,Appellant,"CBT Flint Partners, LLC",,"CBT Flint Partners, LLC",Appellate
+USCOURTS-ca13-13-01036,1,Appellee,"Cisco Ironport Systems, LLC",,"Cisco Ironport Systems, LLC",Appellate
+USCOURTS-ca13-13-01036,2,Appellee,"Return Path, Inc.",,"Return Path, Inc.",Appellate
+USCOURTS-ca13-13-01044,0,Appellant,Itochu Building Products,,Itochu Building Products,Appellate
+USCOURTS-ca13-13-01044,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-13-01047,0,Appellant,"DePuy Synthes Products, LLC",,"DePuy Synthes Products, LLC",Appellate
+USCOURTS-ca13-13-01047,1,Cross-Appellant,"Spinal Kinetics, Inc.",,"Spinal Kinetics, Inc.",Appellate
+USCOURTS-ca13-13-01047,2,Appellant,"Synthes USA Sales, LLC",,"Synthes USA Sales, LLC",Appellate
+USCOURTS-ca13-13-01047,3,Appellant,"Synthes USA, LLC",,"Synthes USA, LLC",Appellate
+USCOURTS-ca13-13-01047,4,Appellant,"Synthes, Inc.",,"Synthes, Inc.",Appellate
+USCOURTS-ca13-13-01056,0,Appellant,"Anticancer, Inc.",,"Anticancer, Inc.",Appellate
+USCOURTS-ca13-13-01056,1,Appellee,"Crown Bioscience, Inc.",,"Crown Bioscience, Inc.",Appellate
+USCOURTS-ca13-13-01056,2,Not party,Does 1-10,,Does 1-10,Appellate
+USCOURTS-ca13-13-01056,3,Appellee,Pfizer Inc.,,Pfizer Inc.,Appellate
+USCOURTS-ca13-13-01057,0,Appellee,"Google, Inc.",,"Google, Inc.",Appellate
+USCOURTS-ca13-13-01057,1,Appellant,"Vederi, LLC",,"Vederi, LLC",Appellate
+USCOURTS-ca13-13-01061,0,Appellant,"American Calcar, Inc.",,"American Calcar, Inc.",Appellate
+USCOURTS-ca13-13-01061,1,Appellee,"American Honda Motor Co., Inc.",,"American Honda Motor Co., Inc.",Appellate
+USCOURTS-ca13-13-01061,2,Appellee,"Honda of America Manufacturing, Inc.",,"Honda of America Manufacturing, Inc.",Appellate
+USCOURTS-ca13-13-01066,0,Appellee,"SeaChange International, Inc.",,"SeaChange International, Inc.",Appellate
+USCOURTS-ca13-13-01066,1,Appellant,nCUBE Corporation,,nCUBE Corporation,Appellate
+USCOURTS-ca13-13-01072,0,Appellant,"Keurig, Incorporated",,"Keurig, Incorporated",Appellate
+USCOURTS-ca13-13-01072,1,Appellee,"Sturm Foods, Inc.",,"Sturm Foods, Inc.",Appellate
+USCOURTS-ca13-13-01073,0,Appellee,Robert P. Cogan,Robert,Cogan,Appellate
+USCOURTS-ca13-13-01073,1,Not party,Does 1-20,,Does 1-20,Appellate
+USCOURTS-ca13-13-01073,2,Appellee,Nath Law Group,,Nath Law Group,Appellate
+USCOURTS-ca13-13-01073,3,Appellant,"Neurorepair, Inc.",,"Neurorepair, Inc.",Appellate
+USCOURTS-ca13-13-01080,0,Appellant,Lutz Biedermann,Lutz,Biedermann,Appellate
+USCOURTS-ca13-13-01080,1,Appellant,Jurgen Harms,Jurgen,Harms,Appellate
+USCOURTS-ca13-13-01080,2,Appellee,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-13-01080,3,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-13-01090,0,Appellee,Acacia Research Corporation,,Acacia Research Corporation,Appellate
+USCOURTS-ca13-13-01090,1,Appellee,"Access Co., Ltd.",,"Access Co., Ltd.",Appellate
+USCOURTS-ca13-13-01090,2,Appellant,"Futurewei Technologies, Inc.",,"Futurewei Technologies, Inc.",Appellate
+USCOURTS-ca13-13-01090,3,Appellant,"Huawei Device USA, Inc.",,"Huawei Device USA, Inc.",Appellate
+USCOURTS-ca13-13-01090,4,Appellee,"Smartphone Technologies, LLC",,"Smartphone Technologies, LLC",Appellate
+USCOURTS-ca13-13-01105,0,Appellant,Del Monte Corporation,,Del Monte Corporation,Appellate
+USCOURTS-ca13-13-01105,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-13-01114,0,Appellant,"Enhanced Security Research, LLC",,"Enhanced Security Research, LLC",Appellate
+USCOURTS-ca13-13-01114,1,Appellee,Margaret A. Focarino,Margaret,Focarino,Appellate
+USCOURTS-ca13-13-01114,2,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-13-01117,0,Appellee,"Edwards Lifesciences (U.S.), Inc.",,"Edwards Lifesciences (U.S.), Inc.",Appellate
+USCOURTS-ca13-13-01117,1,Appellee,Edwards Lifesciences Corporation,,Edwards Lifesciences Corporation,Appellate
+USCOURTS-ca13-13-01117,2,Appellee,Edwards Lifesciences LLC,,Edwards Lifesciences LLC,Appellate
+USCOURTS-ca13-13-01117,3,Appellant,Medtronic CV Luxembourg S.A.R.L.,,Medtronic CV Luxembourg S.A.R.L.,Appellate
+USCOURTS-ca13-13-01117,4,Appellant,"Medtronic Corevalve, LLC",,"Medtronic Corevalve, LLC",Appellate
+USCOURTS-ca13-13-01117,5,Appellant,"Medtronic Vascular Galway, Ltd.",,"Medtronic Vascular Galway, Ltd.",Appellate
+USCOURTS-ca13-13-01121,0,Appellant,"Augme Technologies, Inc.",,"Augme Technologies, Inc.",Appellate
+USCOURTS-ca13-13-01121,1,Appellant,"World Talk Radio, LLC",,"World Talk Radio, LLC",Appellate
+USCOURTS-ca13-13-01121,2,Appellee,Yahoo! Inc.,,Yahoo! Inc.,Appellate
+USCOURTS-ca13-13-01128,0,Appellee,"Actavis, Inc.",,"Actavis, Inc.",Appellate
+USCOURTS-ca13-13-01128,1,Appellee,Apotex Corp.,,Apotex Corp.,Appellate
+USCOURTS-ca13-13-01128,2,Appellee,Apotex Inc.,,Apotex Inc.,Appellate
+USCOURTS-ca13-13-01128,3,Appellee,Cobalt Laboratories Inc.,,Cobalt Laboratories Inc.,Appellate
+USCOURTS-ca13-13-01128,4,Appellee,Cobalt Pharmaceuticals Inc.,,Cobalt Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-13-01128,5,Appellee,"Dr. Reddy's Laboratories, Inc.",,"Dr. Reddy's Laboratories, Inc.",Appellate
+USCOURTS-ca13-13-01128,6,Appellee,"Dr. Reddy's Laboratories, Ltd.",,"Dr. Reddy's Laboratories, Ltd.",Appellate
+USCOURTS-ca13-13-01128,7,Appellant,"Genentech, Inc.",,"Genentech, Inc.",Appellate
+USCOURTS-ca13-13-01128,8,Appellee,Genpharm ULC (formerly known as Genpharm Inc.),,Genpharm ULC (formerly known as Genpharm Inc.),Appellate
+USCOURTS-ca13-13-01128,9,Appellee,"Genpharm, L.P.",,"Genpharm, L.P.",Appellate
+USCOURTS-ca13-13-01128,10,Appellant,Hoffmann-La Roche Inc.,,Hoffmann-La Roche Inc.,Appellate
+USCOURTS-ca13-13-01128,11,Appellee,Mylan Inc.,,Mylan Inc.,Appellate
+USCOURTS-ca13-13-01128,12,Appellee,Mylan Pharmaceuticals Inc.,,Mylan Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-13-01128,13,Appellee,Orchid Chemicals & Pharmaceuticals Ltd.,,Orchid Chemicals & Pharmaceuticals Ltd.,Appellate
+USCOURTS-ca13-13-01128,14,Appellee,Orchid Healthcare,,Orchid Healthcare,Appellate
+USCOURTS-ca13-13-01128,15,Appellee,Orchid Pharmaceuticals Inc.,,Orchid Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-13-01128,16,Appellee,Orgenus Pharma Inc.,,Orgenus Pharma Inc.,Appellate
+USCOURTS-ca13-13-01128,17,Appellee,"Watson Laboratories, Inc.",,"Watson Laboratories, Inc.",Appellate
+USCOURTS-ca13-13-01128,18,Appellee,"Watson Pharma, Inc.",,"Watson Pharma, Inc.",Appellate
+USCOURTS-ca13-13-01129,0,Appellant,Apple Inc.,,Apple Inc.,Appellate
+USCOURTS-ca13-13-01129,1,Appellee,"Samsung Electronics America, Inc.",,"Samsung Electronics America, Inc.",Appellate
+USCOURTS-ca13-13-01129,2,Appellee,"Samsung Electronics Co., Ltd.",,"Samsung Electronics Co., Ltd.",Appellate
+USCOURTS-ca13-13-01129,3,Appellee,"Samsung Telecommunications America, LLC",,"Samsung Telecommunications America, LLC",Appellate
+USCOURTS-ca13-13-01130,0,Appellee,"Adobe Systems, Inc.",,"Adobe Systems, Inc.",Appellate
+USCOURTS-ca13-13-01130,1,Appellee,"Cisco Systems, Inc.",,"Cisco Systems, Inc.",Appellate
+USCOURTS-ca13-13-01130,2,Appellee,"Cisco Webex, LLC",,"Cisco Webex, LLC",Appellate
+USCOURTS-ca13-13-01130,3,Appellee,"Citrix Online, LLC",,"Citrix Online, LLC",Appellate
+USCOURTS-ca13-13-01130,4,Appellee,"Citrix Systems, Inc.",,"Citrix Systems, Inc.",Appellate
+USCOURTS-ca13-13-01130,5,Appellee,International Business Machines Corporation,,International Business Machines Corporation,Appellate
+USCOURTS-ca13-13-01130,6,Appellee,Microsoft Corporation,,Microsoft Corporation,Appellate
+USCOURTS-ca13-13-01130,7,Appellee,"Webex Communications, Inc.",,"Webex Communications, Inc.",Appellate
+USCOURTS-ca13-13-01130,8,Appellant,Richard A. Williamson,Richard,Williamson,Appellate
+USCOURTS-ca13-13-01140,0,Appellant,"Tempo Lighting, Inc.",,"Tempo Lighting, Inc.",Appellate
+USCOURTS-ca13-13-01140,1,Appellee,"Tivoli, LLC",,"Tivoli, LLC",Appellate
+USCOURTS-ca13-13-01156,0,Appellee,American Furniture Manufacturers Committee for Legal Trade,,American Furniture Manufacturers Committee for Legal Trade,Appellate
+USCOURTS-ca13-13-01156,1,Appellant,"Marvin Furniture (Shanghai) Co., Ltd.",,"Marvin Furniture (Shanghai) Co., Ltd.",Appellate
+USCOURTS-ca13-13-01156,2,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-13-01156,3,Appellee,"Vaughan-Bassett Furniture Company, Inc.",,"Vaughan-Bassett Furniture Company, Inc.",Appellate
+USCOURTS-ca13-13-01157,0,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-13-01157,1,Intervenor,Richtek Technology Corp.,,Richtek Technology Corp.,Appellate
+USCOURTS-ca13-13-01157,2,Intervenor,"Richtek USA, Inc.",,"Richtek USA, Inc.",Appellate
+USCOURTS-ca13-13-01157,3,Appellant,uPI Semiconductor Corporation,,uPI Semiconductor Corporation,Appellate
+USCOURTS-ca13-13-01158,0,Appellant,"A&W (Shanghai) Woods Co., Ltd.",,"A&W (Shanghai) Woods Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,1,Appellant,"Baroque Timber Industries (Zhongshan) Co., Ltd.",,"Baroque Timber Industries (Zhongshan) Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,2,Not party,"Bureau of Fair Trade for Imports & Exports, Ministry of Commerce, People's Republic of China",,"Bureau of Fair Trade for Imports & Exports, Ministry of Commerce, People's Republic of China",Appellate
+USCOURTS-ca13-13-01158,3,Appellant,"Changzhou Hawd Flooring Co., Ltd.",,"Changzhou Hawd Flooring Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,4,Not party,Coalition for American Hardwood Parity,,Coalition for American Hardwood Parity,Appellate
+USCOURTS-ca13-13-01158,5,Appellant,"Dalian Huilong Wooden Products Co., Ltd.",,"Dalian Huilong Wooden Products Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,6,Appellant,"Dalian Kemian Wood Industry Co., Ltd.",,"Dalian Kemian Wood Industry Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,7,Appellant,"Dalian Penghong Floor Products Co., Ltd.",,"Dalian Penghong Floor Products Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,8,Appellant,"Dongtai Fuan Universal Dynamics, LLC",,"Dongtai Fuan Universal Dynamics, LLC",Appellate
+USCOURTS-ca13-13-01158,9,Appellant,"Dunhua City Dexin Wood Industry Co., Ltd.",,"Dunhua City Dexin Wood Industry Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,10,Appellant,"Dunhua City Jisen Wood Industry Co., Ltd.",,"Dunhua City Jisen Wood Industry Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,11,Appellant,Fine Furniture (Shanghai) Limited,,Fine Furniture (Shanghai) Limited,Appellate
+USCOURTS-ca13-13-01158,12,Appellant,Fine Furniture Plantation (Shishou) Ltd.,,Fine Furniture Plantation (Shishou) Ltd.,Appellate
+USCOURTS-ca13-13-01158,13,Appellant,"Fu Lik Timber (HK) Company, Ltd.",,"Fu Lik Timber (HK) Company, Ltd.",Appellate
+USCOURTS-ca13-13-01158,14,Appellant,"Fusong Qianqiu Wooden Product Co., Ltd.",,"Fusong Qianqiu Wooden Product Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,15,Appellant,Great Wood (Tonghua) Ltd.,,Great Wood (Tonghua) Ltd.,Appellate
+USCOURTS-ca13-13-01158,16,Appellant,"Guangzhou Pan Yu Kang Da Board Co., Ltd.",,"Guangzhou Pan Yu Kang Da Board Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,17,Appellant,"Guangzhou Panyu Southernstar Co., Ltd.",,"Guangzhou Panyu Southernstar Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,18,Appellant,"Hunchun Forest Wolf Industry Co., Ltd.",,"Hunchun Forest Wolf Industry Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,19,Appellant,"Jiafeng Wood (Suzhou) Co., Ltd.",,"Jiafeng Wood (Suzhou) Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,20,Appellant,"Jiangsu Senmao Bamboo and Wood Industry Co., Ltd.",,"Jiangsu Senmao Bamboo and Wood Industry Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,21,Appellant,Karly Wood Product Limited,,Karly Wood Product Limited,Appellate
+USCOURTS-ca13-13-01158,22,Appellant,"Kunshan Yingyi-Nature Wood Industry Co., Ltd.",,"Kunshan Yingyi-Nature Wood Industry Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,23,Appellant,"Nakahiro Jyou Sei Furniture (Dalian) Co., Ltd.",,"Nakahiro Jyou Sei Furniture (Dalian) Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,24,Appellant,"Nanjing Minglin Wooden Industry Co., Ltd.",,"Nanjing Minglin Wooden Industry Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,25,Appellant,"Power Dekor Group Co., Ltd.",,"Power Dekor Group Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,26,Appellant,Puli Trading Ltd.,,Puli Trading Ltd.,Appellate
+USCOURTS-ca13-13-01158,27,Appellant,Riverside Plywood Corporation,,Riverside Plywood Corporation,Appellate
+USCOURTS-ca13-13-01158,28,Appellant,Samling Elegant Living Trading (Labuan) Limited,,Samling Elegant Living Trading (Labuan) Limited,Appellate
+USCOURTS-ca13-13-01158,29,Appellant,"Samling Global USA, Inc.",,"Samling Global USA, Inc.",Appellate
+USCOURTS-ca13-13-01158,30,Appellant,"Samling Riverside Co., Ltd.",,"Samling Riverside Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,31,Appellant,"Shanghai Eswell Timber Co., Ltd.",,"Shanghai Eswell Timber Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,32,Appellant,"Shanghai Lairunde Wood Co., Ltd.",,"Shanghai Lairunde Wood Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,33,Appellant,"Shanghai Lizhong Wood Products Co., Ltd.",,"Shanghai Lizhong Wood Products Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,34,Appellant,"Shanghai New Sihe Wood Co., Ltd.",,"Shanghai New Sihe Wood Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,35,Appellant,Shanghai Shenlin Corporation,,Shanghai Shenlin Corporation,Appellate
+USCOURTS-ca13-13-01158,36,Appellant,"Shenyang Haobainian Wooden Co., Ltd.",,"Shenyang Haobainian Wooden Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,37,Appellant,"Shenzhenshi Huanwei Woods Co., Ltd.",,"Shenzhenshi Huanwei Woods Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,38,Appellant,"Suzhou Times Flooring Co., Ltd.",,"Suzhou Times Flooring Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,39,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-13-01158,40,Appellant,"Vicwood Industry (Suzhou) Co., Ltd.",,"Vicwood Industry (Suzhou) Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,41,Appellant,"Xuzhou Shenghe Wood Co., Ltd.",,"Xuzhou Shenghe Wood Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,42,Appellant,"Yixing Lion-King Timber Industry Co., Ltd.",,"Yixing Lion-King Timber Industry Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,43,Appellant,"Zhejiang Fudeli Timber Industry Co., Ltd.",,"Zhejiang Fudeli Timber Industry Co., Ltd.",Appellate
+USCOURTS-ca13-13-01158,44,Appellant,"Zhejiang Shiyou Timber Co., Ltd.",,"Zhejiang Shiyou Timber Co., Ltd.",Appellate
+USCOURTS-ca13-13-01159,0,Appellee,International Trade Commission,,International Trade Commission,Appellate
+USCOURTS-ca13-13-01159,1,Appellant,Richtek Technology Corp.,,Richtek Technology Corp.,Appellate
+USCOURTS-ca13-13-01159,2,Appellant,"Richtek USA, Inc.",,"Richtek USA, Inc.",Appellate
+USCOURTS-ca13-13-01159,3,Intervenor,uPI Semiconductor Corporation,,uPI Semiconductor Corporation,Appellate
+USCOURTS-ca13-13-01160,0,Not party,Dana-Farber Cancer Institute,,Dana-Farber Cancer Institute,Appellate
+USCOURTS-ca13-13-01160,1,Cross-Appellant,Margaret A. Focarino,Margaret,Focarino,Appellate
+USCOURTS-ca13-13-01160,2,Cross-Appellant,"David J. Kappos, Director, U.S. Patent and Trademark Office",David,"Kappos, Director, U.S. Patent and Trademark Office",Appellate
+USCOURTS-ca13-13-01160,3,Cross-Appellant,Michelle K. Lee,Michelle,Lee,Appellate
+USCOURTS-ca13-13-01160,4,Appellant,Novartis AG,,Novartis AG,Appellate
+USCOURTS-ca13-13-01160,5,Appellant,Novartis Corporation,,Novartis Corporation,Appellate
+USCOURTS-ca13-13-01160,6,Appellant,"Novartis Vaccines and Diagnostics, Inc.",,"Novartis Vaccines and Diagnostics, Inc.",Appellate
+USCOURTS-ca13-13-01160,7,Cross-Appellant,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-13-01161,0,Appellee,"Dr. Reddy's Laboratories, Inc.",,"Dr. Reddy's Laboratories, Inc.",Appellate
+USCOURTS-ca13-13-01161,1,Appellee,"Dr. Reddy's Laboratories, Ltd.",,"Dr. Reddy's Laboratories, Ltd.",Appellate
+USCOURTS-ca13-13-01161,2,Appellant,"Genentech, Inc.",,"Genentech, Inc.",Appellate
+USCOURTS-ca13-13-01161,3,Appellant,Hoffmann-La Roche Inc.,,Hoffmann-La Roche Inc.,Appellate
+USCOURTS-ca13-13-01162,0,Appellee,"Actavis, Inc.",,"Actavis, Inc.",Appellate
+USCOURTS-ca13-13-01162,1,Appellee,Cobalt Laboratories Inc.,,Cobalt Laboratories Inc.,Appellate
+USCOURTS-ca13-13-01162,2,Appellee,Cobalt Pharmaceuticals Inc.,,Cobalt Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-13-01162,3,Appellant,"Genentech, Inc.",,"Genentech, Inc.",Appellate
+USCOURTS-ca13-13-01162,4,Appellant,Hoffmann-La Roche Inc.,,Hoffmann-La Roche Inc.,Appellate
+USCOURTS-ca13-13-01162,5,Appellee,"Watson Laboratories, Inc.",,"Watson Laboratories, Inc.",Appellate
+USCOURTS-ca13-13-01162,6,Appellee,"Watson Pharma, Inc.",,"Watson Pharma, Inc.",Appellate
+USCOURTS-ca13-13-01162,7,Appellee,"Watson Pharmaceuticals, Inc.",,"Watson Pharmaceuticals, Inc.",Appellate
+USCOURTS-ca13-13-01163,0,Appellant,"Genentech, Inc.",,"Genentech, Inc.",Appellate
+USCOURTS-ca13-13-01163,1,Appellant,Hoffmann-La Roche Inc.,,Hoffmann-La Roche Inc.,Appellate
+USCOURTS-ca13-13-01163,2,Appellee,Orchid Chemicals & Pharmaceuticals Ltd.,,Orchid Chemicals & Pharmaceuticals Ltd.,Appellate
+USCOURTS-ca13-13-01163,3,Appellee,Orchid Healthcare,,Orchid Healthcare,Appellate
+USCOURTS-ca13-13-01163,4,Appellee,Orchid Pharmaceuticals Inc.,,Orchid Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-13-01163,5,Appellee,Orgenus Pharma Inc.,,Orgenus Pharma Inc.,Appellate
+USCOURTS-ca13-13-01164,0,Appellant,"Genentech, Inc.",,"Genentech, Inc.",Appellate
+USCOURTS-ca13-13-01164,1,Appellee,Genpharm ULC,,Genpharm ULC,Appellate
+USCOURTS-ca13-13-01164,2,Appellee,"Genpharm, L.P.",,"Genpharm, L.P.",Appellate
+USCOURTS-ca13-13-01164,3,Appellant,Hoffmann-La Roche Inc.,,Hoffmann-La Roche Inc.,Appellate
+USCOURTS-ca13-13-01164,4,Appellee,Mylan Inc.,,Mylan Inc.,Appellate
+USCOURTS-ca13-13-01164,5,Appellee,Mylan Pharmaceuticals Inc.,,Mylan Pharmaceuticals Inc.,Appellate
+USCOURTS-ca13-13-01165,0,Not party,"Amazon.com, Inc.",,"Amazon.com, Inc.",Appellate
+USCOURTS-ca13-13-01165,1,Appellant,"Nazomi Communications, Inc.",,"Nazomi Communications, Inc.",Appellate
+USCOURTS-ca13-13-01165,2,Not party,Nokia Corporation,,Nokia Corporation,Appellate
+USCOURTS-ca13-13-01165,3,Not party,"Nokia, Inc.",,"Nokia, Inc.",Appellate
+USCOURTS-ca13-13-01165,4,Appellee,"Sling Media, Inc.",,"Sling Media, Inc.",Appellate
+USCOURTS-ca13-13-01165,5,Not party,"VIZIO, Inc.",,"VIZIO, Inc.",Appellate
+USCOURTS-ca13-13-01165,6,Appellee,Western Digital Corporation,,Western Digital Corporation,Appellate
+USCOURTS-ca13-13-01165,7,Appellee,"Western Digital Technologies, Inc.",,"Western Digital Technologies, Inc.",Appellate
+USCOURTS-ca13-13-01166,0,Appellant,"Innovasystems, Inc.",,"Innovasystems, Inc.",Appellate
+USCOURTS-ca13-13-01166,1,Cross-Appellant,Proveris Scientific Corporation,,Proveris Scientific Corporation,Appellate
+USCOURTS-ca13-13-01167,0,Appellee,Margaret A. Focarino,Margaret,Focarino,Appellate
+USCOURTS-ca13-13-01167,1,Appellant,Raymond Giannelli,Raymond,Giannelli,Appellate
+USCOURTS-ca13-13-01167,2,Appellee,Teresa Stanek Rea,Teresa,Rea,Appellate
+USCOURTS-ca13-13-01168,0,Appellant,C.H. Robinson Company,,C.H. Robinson Company,Appellate
+USCOURTS-ca13-13-01168,1,Appellee,United States,,United States,Appellate
+USCOURTS-ca13-13-01170,0,Appellee,"GE Wind Energy, LLC",,"GE Wind Energy, LLC",Appellate
+USCOURTS-ca13-13-01170,1,Appellee,General Electric Company,,General Electric Company,Appellate
+USCOURTS-ca13-13-01170,2,Not party,"Mitsubishi Heavy Industries, Ltd.",,"Mitsubishi Heavy Industries, Ltd.",Appellate
+USCOURTS-ca13-13-01170,3,Not party,"Mitsubishi Power Systems Americas, Inc.",,"Mitsubishi Power Systems Americas, Inc.",Appellate
+USCOURTS-ca13-13-01170,4,Appellant,Thomas Wilkins,Thomas,Wilkins,Appellate
