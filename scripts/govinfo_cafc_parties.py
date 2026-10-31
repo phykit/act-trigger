@@ -48,12 +48,16 @@ def main() -> None:
     idx = pd.read_csv(IDX, dtype=str).fillna("")
     pids = sorted(idx.loc[idx["precedential"] == "precedential", "package_id"].unique())
     rows = pd.read_csv(OUT, dtype=str).fillna("").to_dict("records") if OUT.exists() else []
+    bad = {r["package_id"] for r in rows if r.get("role") == "(unstructured)"}
+    rows = [r for r in rows if r["package_id"] not in bad]       # refetch dockets parsed before the single-party fix
     done = {r["package_id"] for r in rows}
     todo = [p for p in pids if p not in done]
     log(f"{len(pids)} dockets with a precedential entry; {len(done)} done; {len(todo)} to fetch")
     for k, pid in enumerate(todo):
         s = summary(pid) or {}
         parties = s.get("parties") or []
+        if isinstance(parties, dict):          # a single party is returned as an object, not a list
+            parties = [parties]
         origin = str(s.get("originatingCourt") or s.get("courtType") or "")
         if not parties:
             rows.append(dict(package_id=pid, order="", role="", full_name="(no parties)", first_name="", last_name="", origin=origin))

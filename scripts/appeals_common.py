@@ -445,8 +445,9 @@ def _courtlistener_cafc() -> pd.DataFrame:
     return df
 
 
-SIDE_A = {"appellant", "cross-appellant", "petitioner", "cross-petitioner"}
-SIDE_B = {"appellee", "cross-appellee", "respondent", "cross-respondent"}
+SIDE_A = {"appellant", "petitioner", "applicant"}
+# Earth v2 amendment 1: a cross-appellant and an intervenor oppose the appellant or petitioner
+SIDE_B = {"appellee", "cross-appellee", "respondent", "cross-appellant", "cross-applicant", "cross-petitioner", "intervenor"}
 
 
 def _govinfo_cafc() -> pd.DataFrame:
@@ -489,7 +490,8 @@ def _govinfo_cafc() -> pd.DataFrame:
         pk = list(dict.fromkeys(grp["package_id"]))
         pp = par[par["package_id"].isin(pk)].copy()
         pp["pk_order"] = pp["package_id"].map({k: i for i, k in enumerate(pk)})
-        pp = pp.sort_values(["pk_order", "order"]).drop_duplicates(["sideab", "full_name"])
+        # a name listed on both sides across consolidated dockets keeps its side in the first docket (amendment 1)
+        pp = pp.sort_values(["pk_order", "order"]).drop_duplicates(["full_name"])
         plist = [dict(side=r.sideab, name=r.full_name, role=r.role) for r in pp.itertuples()]
         first = {s: next((x["name"] for x in plist if x["side"] == s), "") for s in ("petitioner", "respondent")}
         rows.append(dict(date=lead["date_issued"], docket=", ".join(p.split("ca13-")[-1] for p in pk), case_name=lead["title"],
