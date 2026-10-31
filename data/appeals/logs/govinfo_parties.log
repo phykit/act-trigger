@@ -1,15 +1,2 @@
-3611 dockets with a precedential entry; 250 done; 3361 to fetch
-250 of 3361
-500 of 3361
-750 of 3361
-1000 of 3361
-1250 of 3361
-1500 of 3361
-1750 of 3361
-2000 of 3361
-2250 of 3361
-2500 of 3361
-2750 of 3361
-3000 of 3361
-3250 of 3361
-done: 3611 dockets, 18524 party rows; roles: {'Appellant': 7459, 'Appellee': 6855, 'Not party': 2249, 'Cross-Appellant': 838, 'Intervenor': 403, 'Petitioner': 263, 'Respondent': 238, '(unstructured)': 206, 'Cross-Applicant': 5, 'Amicus Curiae': 4, 'Applicant': 3, 'Movant': 1}
+3611 dockets with a precedential entry; 3551 done; 60 to fetch
+done: 3611 dockets, 18378 party rows; roles: {'Appellant': 7514, 'Appellee': 6855, 'Not party': 2249, 'Cross-Appellant': 838, 'Intervenor': 403, 'Petitioner': 268, 'Respondent': 238, 'Cross-Applicant': 5, 'Amicus Curiae': 4, 'Applicant': 3, 'Movant': 1}
