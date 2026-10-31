@@ -1,0 +1,545 @@
+ruling,side,name,basis,cik,ticker,title
+0,petitioner,"IBP, INC.",parent pit,0000100493,TSN,"TYSON FOODS, INC."
+26,petitioner,TEXACO INC.,parent pit,0000093410,CVX,CHEVRON CORP
+89,petitioner,PHILIP MORRIS USA,parent pit,0000764180,MO,"ALTRIA GROUP, INC."
+146,petitioner,"CSX TRANSPORTATION, INC.",parent pit,0000277948,CSX,CSX CORP
+183,petitioner,"CBOCS WEST, INC.",parent pit,0001067294,CBRL,"CRACKER BARREL OLD COUNTRY STORE, INC"
+211,petitioner,MORGAN STANLEY CAPITAL GROUP INC.,parent pit,0000895421,MS,MORGAN STANLEY
+248,petitioner,PHILIP MORRIS USA INC.,parent pit,0000764180,MO,"ALTRIA GROUP, INC."
+277,petitioner,"POLAR TANKERS, INC.",parent pit,0001163165,COP,CONOCOPHILLIPS
+285,petitioner,"COEUR ALASKA, INC.",parent pit,0000215466,CDE,"Coeur Mining, Inc."
+294,petitioner,UNION PACIFIC RAILROAD COMPANY,parent pit,0000100885,UNP,UNION PACIFIC CORP
+355,petitioner,"RENT-A-CENTER, WEST, INC.",parent pit,0000933036,UPBD,"UPBOUND GROUP, INC."
+457,respondent,"ARROW FINANCIAL SERVICES, LLC",parent pit,0001032033,SLM,SLM Corp
+670,respondent,"COUNTRYWIDE HOME LOANS, INC.",parent pit,0000070858,BAC,BANK OF AMERICA CORP /DE/
+687,petitioner,"KELLOGG BROWN & ROOT SERVICES, INC.",parent pit,0001357615,KBR,"KBR, INC."
+698,respondent,"ABERCROMBIE & FITCH STORES, INC.",parent pit,0001018840,ANF,ABERCROMBIE & FITCH CO /DE/
+708,petitioner,"T MOBILE SOUTH, LLC",parent pit,0001283699,TMUS,"T-Mobile US, Inc."
+759,respondent,"CONAGRA FOODS, INC.",parent pit,0000023217,CAG,CONAGRA BRANDS INC.
+801,respondent,HELMERICH & PAYNE INTERNATIONAL DRILLING CO.,parent pit,0000046765,HP,"Helmerich & Payne, Inc."
+818,petitioner,MIDLAND FUNDING LLC,parent pit,0001084961,ECPG,ENCORE CAPITAL GROUP INC
+942,petitioner,MERCK SHARP & DOHME CORP.,parent pit,0000310158,MRK,"Merck & Co., Inc."
+952,respondent,TEVA PHARMACEUTICALS USA INC.,parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+956,petitioner,HOME DEPOT U.S.A. INC.,parent pit,0000354950,HD,"HOME DEPOT, INC."
+989,respondent,NANTKWEST INC.,parent pit,0001326110,IBRX,"ImmunityBio, Inc."
+1030,respondent,BOOKING.COM B.V.,parent pit,0001075531,BKNG,Booking Holdings Inc.
+1050,petitioner,GOOGLE LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+1050,respondent,ORACLE AMERICA INC.,parent pit,0001341439,ORCL,ORACLE CORP
+1069,petitioner,FACEBOOK INC.,parent pit,0001326801,META,"Meta Platforms, Inc."
+1148,respondent,UNION PACIFIC RAILROAD COMPANY,parent pit,0000100885,UNP,UNION PACIFIC CORP
+1183,respondent,EXECUTIVE HEALTH RESOURCES,parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+1196,respondent,GOOGLE LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+1204,petitioner,"COINBASE, INC.",parent pit,0001679788,COIN,"Coinbase Global, Inc."
+1215,respondent,SUPERVALU INC.,parent pit,0001020859,UNFI,UNITED NATURAL FOODS INC
+1254,petitioner,WARNER CHAPPELL MUSIC,parent pit,0001319161,WMG,Warner Music Group Corp.
+1293,respondent,AMALGAMATED BANK,parent pit,0001823608,AMAL,Amalgamated Financial Corp.
+1307,respondent,HALLIBURTON ENERGY SERVICES,parent pit,0000045012,HAL,HALLIBURTON CO
+1335,petitioner,DIAMOND ALTERNATIVE ENERGY LLC,parent pit,0001035002,VLO,VALERO ENERGY CORP/TX
+1339,petitioner,LABORATORY CORPORATION OF AMERICA HOLDINGS,parent pit,0000920148,LH,LABCORP HOLDINGS INC.
+1349,petitioner,Biogen Idec Inc.,parent pit,0000875045,BIIB,BIOGEN INC.
+1351,respondent,"Wal-Mart Stores, Inc.",parent pit,0000104169,WMT,Walmart Inc.
+1375,respondent,"Wheelabrator Technologies, Inc.",parent pit,0000823768,WM,WASTE MANAGEMENT INC
+1384,petitioner,"InterDigital Communications, LLC",parent pit,0001405495,IDCC,"InterDigital, Inc."
+1384,petitioner,"IPR Licensing, Inc.",parent pit,0001405495,IDCC,"InterDigital, Inc."
+1393,respondent,Abercrombie & Fitch Trading Co.,parent pit,0001018840,ANF,ABERCROMBIE & FITCH CO /DE/
+1399,respondent,"Abbott Cardiovascular Systems, Inc.",parent pit,0000001800,ABT,ABBOTT LABORATORIES
+1399,respondent,"Boston Scientific Scimed, Inc.",parent pit,0000885725,BSX,BOSTON SCIENTIFIC CORP
+1412,respondent,Danisco A/S,parent pit,0000030554,CTA-PB,"EIDP, Inc."
+1423,petitioner,3M Innovative Properties Company,parent pit,0000066740,MMM,3M CO
+1423,respondent,Tredegar Film Products Corporation,parent pit,0000850429,TG,TREDEGAR CORP
+1426,respondent,"Johnson & Johnson Vision Care, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+1434,respondent,"Stanley Furniture Company, Inc.",parent pit,0000797465,STLY,"HG Holdings, Inc."
+1435,respondent,"Stanley Furniture Company, Inc.",parent pit,0000797465,STLY,"HG Holdings, Inc."
+1443,respondent,"IBG, LLC",parent pit,0001381197,IBKR,"Interactive Brokers Group, Inc."
+1446,petitioner,"Accenture Global Services, GmbH",parent pit,0001467373,ACN,Accenture plc
+1447,petitioner,"Kellogg Brown & Root Services, Inc.",parent pit,0001357615,KBR,"KBR, INC."
+1451,respondent,"Wal-Mart Stores, Inc.",parent pit,0000104169,WMT,Walmart Inc.
+1458,petitioner,"Valois of America, Inc.",parent pit,0000896622,ATR,"APTARGROUP, INC."
+1479,petitioner,"Synthes USA, LLC",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+1479,petitioner,"Synthes, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+1482,respondent,"LifeScan, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+1497,respondent,"Cisco Ironport Systems, LLC",parent pit,0000858877,CSCO,"CISCO SYSTEMS, INC."
+1499,petitioner,Wyodak Resources Development Corp.,parent pit,0001130464,BKH,BLACK HILLS CORP /SD/
+1502,respondent,Great American Insurance Company of New York,parent pit,0001042046,AFG,AMERICAN FINANCIAL GROUP INC
+1508,respondent,"Western Digital Technologies, Inc.",parent pit,0000106040,WDC,WESTERN DIGITAL CORP
+1519,petitioner,"Kellogg Brown & Root Services, Inc.",parent pit,0001357615,KBR,"KBR, INC."
+1536,respondent,AT&T Mobility LLC,parent pit,0000732717,T,AT&T INC.
+1562,respondent,"Chicago Board Options Exchange, Incorporated",parent pit,0001374310,CBOE,"Cboe Global Markets, Inc."
+1572,respondent,Abbott GmbH & Co. KG,parent pit,0000001800,ABT,ABBOTT LABORATORIES
+1580,petitioner,"Texaco, Inc.",parent pit,0000093410,CVX,CHEVRON CORP
+1580,petitioner,Union Oil Company of California,parent pit,0000093410,CVX,CHEVRON CORP
+1586,respondent,"GE Wind Energy, LLC",parent pit,0000040545,GE,GENERAL ELECTRIC CO
+1588,petitioner,"Oracle America, Inc.",parent pit,0001341439,ORCL,ORACLE CORP
+1590,petitioner,"Pioneer Hi-Bred International, Inc.",parent pit,0000030554,CTA-PB,"EIDP, Inc."
+1596,petitioner,"Mueller Comercial de Mexico, S. de R.L. de C.V.",parent pit,0000089439,MLI,MUELLER INDUSTRIES INC
+1609,respondent,"Quad/Tech, Inc.",parent pit,0001481792,QUAD,"Quad/Graphics, Inc."
+1624,respondent,"Alaska Airlines, Inc.",parent pit,0000766421,ALK,"ALASKA AIR GROUP, INC."
+1624,respondent,"Horizon Air Industries, Inc.",parent pit,0000766421,ALK,"ALASKA AIR GROUP, INC."
+1624,respondent,"TicketsNow.com, Inc.",parent pit,0001335258,LYV,"Live Nation Entertainment, Inc."
+1626,respondent,"Janssen Biotech, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+1626,petitioner,"Abbott Bioresearch Center, Inc.",parent pit,0000001800,ABT,ABBOTT LABORATORIES
+1626,petitioner,Abbott Biotechnology Ltd.,parent pit,0000001800,ABT,ABBOTT LABORATORIES
+1626,petitioner,Abbott GmbH & Co. KG,parent pit,0000001800,ABT,ABBOTT LABORATORIES
+1626,respondent,Centocor Biologics LLC,parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+1629,respondent,Componentes Intel De Costa Rica S.A.,parent pit,0000050863,INTC,INTEL CORP
+1629,respondent,"Intel Americas, Inc.",parent pit,0000050863,INTC,INTEL CORP
+1629,respondent,Intel Products (Chengdu) Ltd.,parent pit,0000050863,INTC,INTEL CORP
+1640,petitioner,"StonCor Group, Inc.",parent pit,0000110621,RPM,RPM INTERNATIONAL INC/DE/
+1647,petitioner,C.H. Robinson Company,parent pit,0001043277,CHRW,"C. H. ROBINSON WORLDWIDE, INC."
+1690,respondent,"Cisco Webex, LLC",parent pit,0000858877,CSCO,"CISCO SYSTEMS, INC."
+1700,petitioner,Hartford Fire Insurance Company,parent pit,0000874766,HIG,"HARTFORD INSURANCE GROUP, INC."
+1702,petitioner,Alkermes Pharma Ireland Limited,parent pit,0001520262,ALKS,Alkermes plc.
+1703,petitioner,"Ethicon Endo-Surgery, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+1718,petitioner,"Zimmer, Inc.",parent pit,0001136869,ZBH,"ZIMMER BIOMET HOLDINGS, INC."
+1739,respondent,"Garmin International, Inc.",parent pit,0001121788,GRMN,GARMIN LTD
+1739,respondent,"Garmin USA, Inc.",parent pit,0001121788,GRMN,GARMIN LTD
+1743,petitioner,"Victoria's Secret Direct Brand Management, LLC",parent pit,0000701985,BBWI,"Bath & Body Works, Inc."
+1745,respondent,CenturyTel Broadband Services LLC,parent pit,0000018926,LUMN,"Lumen Technologies, Inc."
+1748,respondent,"Garmin International, Inc.",parent pit,0001121788,GRMN,GARMIN LTD
+1748,respondent,"Garmin USA, Inc.",parent pit,0001121788,GRMN,GARMIN LTD
+1768,petitioner,Southwestern Bell Telephone Company,parent pit,0000732717,T,AT&T INC.
+1770,petitioner,"Zimmer, Inc.",parent pit,0001136869,ZBH,"ZIMMER BIOMET HOLDINGS, INC."
+1772,respondent,Ingersoll Cutting Tool Company,parent pit,0001067983,BRK-B,BERKSHIRE HATHAWAY INC
+1775,petitioner,"Chase Bank USA, National Association",parent pit,0000019617,JPM,JPMORGAN CHASE & CO
+1775,petitioner,"Chase Paymentech Solutions, LLC",parent pit,0000019617,JPM,JPMORGAN CHASE & CO
+1775,petitioner,"JPMorgan Chase Bank, National Association",parent pit,0000019617,JPM,JPMORGAN CHASE & CO
+1775,petitioner,Paymentech LLC,parent pit,0000019617,JPM,JPMORGAN CHASE & CO
+1779,respondent,KBI Inc,parent pit,0000310158,MRK,"Merck & Co., Inc."
+1779,respondent,KBI-E Inc.,parent pit,0000310158,MRK,"Merck & Co., Inc."
+1797,respondent,AT&T Mobility LLC,parent pit,0000732717,T,AT&T INC.
+1800,petitioner,"Biogen Idec MA, Inc.",parent pit,0000875045,BIIB,BIOGEN INC.
+1803,respondent,"Severstal Dearborn, Inc.",parent pit,0000108516,WOR,"WORTHINGTON ENTERPRISES, INC."
+1808,petitioner,"Salem Financial, Inc.",parent pit,0000092230,TFC,TRUIST FINANCIAL CORP
+1809,respondent,"Frito-Lay North America, Inc.",parent pit,0000077476,PEP,PEPSICO INC
+1823,respondent,"Verinata Health, Inc.",parent pit,0001110803,ILMN,"ILLUMINA, INC."
+1825,respondent,"Cisco Webex, LLC",parent pit,0000858877,CSCO,"CISCO SYSTEMS, INC."
+1828,petitioner,American Home Assurance Company,parent pit,0000005272,AIG,"AMERICAN INTERNATIONAL GROUP, INC."
+1836,respondent,"Tree.com, Inc.",parent pit,0001434621,TREE,"LendingTree, Inc."
+1837,petitioner,Pfizer Asia Pacific Pte. Ltd.,parent pit,0000078003,PFE,PFIZER INC
+1839,respondent,"Gaymar Industries, Inc.",parent pit,0000310764,SYK,STRYKER CORP
+1848,respondent,"Capital One Bank (USA), National Association",parent pit,0000927628,COF,CAPITAL ONE FINANCIAL CORP
+1850,respondent,"Garmin International, Inc.",parent pit,0001121788,GRMN,GARMIN LTD
+1850,respondent,"Garmin USA, Inc.",parent pit,0001121788,GRMN,GARMIN LTD
+1865,petitioner,"Ethicon Endo-Surgery, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+1865,petitioner,"Ethicon Endo-Surgery, LLC",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+1909,respondent,Northrop Grumman Systems Corporation,parent pit,0001133421,NOC,NORTHROP GRUMMAN CORP /DE/
+1913,respondent,"National Oilwell Varco, L.P.",parent pit,0001021860,NOV,NOV Inc.
+1915,petitioner,"Fidelity And Guaranty Insurance Underwriters, Inc.",parent pit,0000086312,TRV,"TRAVELERS COMPANIES, INC."
+1928,respondent,"Verinata Health, Inc.",parent pit,0001110803,ILMN,"ILLUMINA, INC."
+1956,petitioner,"Ethicon Endo-Surgery, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+1963,petitioner,Wyeth Holdings Corporation,parent pit,0000078003,PFE,PFIZER INC
+1975,petitioner,3M Innovative Properties Company,parent pit,0000066740,MMM,3M CO
+1988,petitioner,"PPC Broadband, Inc.",parent pit,0000913142,BDC,BELDEN INC.
+2010,respondent,Alkermes Pharma Ireland Limited,parent pit,0001520262,ALKS,Alkermes plc.
+2011,petitioner,"Cree, Inc.",parent pit,0000895419,WOLF,"WOLFSPEED, INC."
+2014,petitioner,"Shaw Industries Group, Inc.",parent pit,0001067983,BRK-B,BERKSHIRE HATHAWAY INC
+2015,respondent,"Shaw Industries Group, Inc.",parent pit,0001067983,BRK-B,BERKSHIRE HATHAWAY INC
+2018,respondent,"Fossil Stores I, Inc.",parent pit,0000883569,FOSL,"Fossil Group, Inc."
+2031,respondent,"Johnson & Johnson Vision Care, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+2041,respondent,"Norit Americas, Inc.",parent pit,0000016040,CBT,CABOT CORP
+2043,respondent,Illumina Cambridge Ltd.,parent pit,0001110803,ILMN,"ILLUMINA, INC."
+2046,petitioner,Howmedica Osteonics Corp.,parent pit,0000310764,SYK,STRYKER CORP
+2046,respondent,"Zimmer, Inc.",parent pit,0001136869,ZBH,"ZIMMER BIOMET HOLDINGS, INC."
+2051,petitioner,TLI Communications LLC,parent pit,0001507605,MARA,"MARA Holdings, Inc."
+2051,respondent,Vimeo LLC,parent pit,0000891103,MTCH,"Match Group, Inc."
+2051,respondent,"Facebook, Inc.",parent pit,0001326801,META,"Meta Platforms, Inc."
+2051,respondent,"Instagram, LLC",parent pit,0001326801,META,"Meta Platforms, Inc."
+2057,respondent,"Hewlett-Packard Development Company, L.P.",parent pit,0000047217,HPQ,HP INC
+2061,respondent,"Facebook, Inc.",parent pit,0001326801,META,"Meta Platforms, Inc."
+2070,petitioner,Exelis Services A/S,parent pit,0001601548,VVX,"V2X, Inc."
+2072,respondent,AT&T Mobility LLC,parent pit,0000732717,T,AT&T INC.
+2074,respondent,"CellzDirect, Inc.",parent pit,0000097745,TMO,THERMO FISHER SCIENTIFIC INC.
+2113,petitioner,"Zimmer Surgical, Inc.",parent pit,0001136869,ZBH,"ZIMMER BIOMET HOLDINGS, INC."
+2113,petitioner,"Zimmer, Inc.",parent pit,0001136869,ZBH,"ZIMMER BIOMET HOLDINGS, INC."
+2114,respondent,Schlumberger Holdings Corporation,parent pit,0000087347,SLB,SLB LIMITED/NV
+2119,respondent,Abbott GmbH & Co. KG,parent pit,0000001800,ABT,ABBOTT LABORATORIES
+2127,respondent,"Amazon Digital Services, Inc.",parent pit,0001018724,AMZN,AMAZON COM INC
+2158,respondent,Hilton International Co.,parent pit,0001585689,HLT,Hilton Worldwide Holdings Inc.
+2158,respondent,"Hotels.com, L.P.",parent pit,0001324424,EXPE,"Expedia Group, Inc."
+2158,respondent,"Hotwire, Inc.",parent pit,0001324424,EXPE,"Expedia Group, Inc."
+2158,respondent,Wanderspot LLC,parent pit,0000891103,MTCH,"Match Group, Inc."
+2158,respondent,"Pizza Hut, Inc.",parent pit,0001041061,YUM,YUM BRANDS INC
+2176,respondent,Boston Scientific Scimed,parent pit,0000885725,BSX,BOSTON SCIENTIFIC CORP
+2176,petitioner,"Ethicon, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+2201,respondent,"Raymond James & Associates, Inc.",parent pit,0000720005,RJF,RAYMOND JAMES FINANCIAL INC
+2201,respondent,Synchrony Bank,parent pit,0001601712,SYF,Synchrony Financial
+2201,respondent,Trustmark National Bank,parent pit,0000036146,TRMK,TRUSTMARK CORP
+2201,respondent,U.S. Bancorp,parent pit,0000036104,USB,US BANCORP DE
+2202,respondent,"UA Connected Fitness, Inc.",parent pit,0001336917,UAA,"Under Armour, Inc."
+2208,respondent,"Capital One Bank (USA), National Association",parent pit,0000927628,COF,CAPITAL ONE FINANCIAL CORP
+2209,respondent,"Old Republic General Insurance Group, Inc.",parent pit,0000074260,ORI,OLD REPUBLIC INTERNATIONAL CORP
+2209,respondent,Old Republic Insurance Company,parent pit,0000074260,ORI,OLD REPUBLIC INTERNATIONAL CORP
+2209,respondent,Old Republic National Title Insurance Company,parent pit,0000074260,ORI,OLD REPUBLIC INTERNATIONAL CORP
+2209,respondent,"Old Republic Title Insurance Group, Inc.",parent pit,0000074260,ORI,OLD REPUBLIC INTERNATIONAL CORP
+2216,petitioner,"EVE-USA, Inc.",parent pit,0000883241,SNPS,SYNOPSYS INC
+2216,petitioner,Synopsys Emulation and Verification S.A.S.,parent pit,0000883241,SNPS,SYNOPSYS INC
+2220,respondent,"McAfee, Inc.",parent pit,0000050863,INTC,INTEL CORP
+2225,respondent,"Schrader-Bridgeport International, Inc.",parent pit,0001477294,ST,Sensata Technologies Holding plc
+2261,respondent,American Home Assurance Company,parent pit,0000005272,AIG,"AMERICAN INTERNATIONAL GROUP, INC."
+2275,respondent,"Ford Global Technologies, LLC",parent pit,0000037996,F,FORD MOTOR CO
+2285,respondent,"NantKwest, Inc.",parent pit,0001326110,IBRX,"ImmunityBio, Inc."
+2286,respondent,"Sequenom, Inc.",parent pit,0000920148,LH,LABCORP HOLDINGS INC.
+2286,petitioner,"Verinata Health, Inc.",parent pit,0001110803,ILMN,"ILLUMINA, INC."
+2317,petitioner,"Fossil Stores I, Inc.",parent pit,0000883569,FOSL,"Fossil Group, Inc."
+2333,petitioner,Intercontinental Great Brands LLC,parent pit,0001103982,MDLZ,"Mondelez International, Inc."
+2337,respondent,Cerro Wire LLC,parent pit,0001067983,BRK-B,BERKSHIRE HATHAWAY INC
+2346,petitioner,"Smith International, Inc.",parent pit,0000087347,SLB,SLB LIMITED/NV
+2350,respondent,"Amgen USA, Inc.",parent pit,0000318154,AMGN,AMGEN INC
+2356,petitioner,Merck Sharp & Dohme Corp.,parent pit,0000310158,MRK,"Merck & Co., Inc."
+2364,petitioner,"Applied Biosystems, LLC",parent pit,0000097745,TMO,THERMO FISHER SCIENTIFIC INC.
+2364,petitioner,"Invitrogen IP Holdings, Inc.",parent pit,0000097745,TMO,THERMO FISHER SCIENTIFIC INC.
+2370,petitioner,"CRFD Research, Inc.",parent pit,0001507605,MARA,"MARA Holdings, Inc."
+2379,respondent,Master Lock Company LLC,parent pit,0001519751,FBIN,"Fortune Brands Innovations, Inc."
+2379,respondent,"Eagle Creek, Inc.",parent pit,0000103379,VFC,V F CORP
+2379,respondent,"VF Outdoor, Inc.",parent pit,0000103379,VFC,V F CORP
+2398,petitioner,"Janssen Biotech, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+2403,respondent,"Nitronex, LLC",parent pit,0001493594,MTSI,"MACOM Technology Solutions Holdings, Inc."
+2406,petitioner,"AbbVie Biotechnology, Ltd.",parent pit,0001551152,ABBV,AbbVie Inc.
+2412,petitioner,"Polaris Industries, Inc.",parent pit,0000931015,PII,Polaris Inc.
+2414,petitioner,Merck Sharp & Dohme Corp.,parent pit,0000310158,MRK,"Merck & Co., Inc."
+2418,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+2419,respondent,"AJG Coal, Inc.",parent pit,0000354190,AJG,Arthur J. Gallagher & Co.
+2419,respondent,"Gallagher Clean Energy, LLC.",parent pit,0000354190,AJG,Arthur J. Gallagher & Co.
+2420,petitioner,Knowles Electronics LLC,parent pit,0001587523,KN,Knowles Corp
+2420,respondent,Cirrus Logic International (UK) Ltd.,parent pit,0000772406,CRUS,"CIRRUS LOGIC, INC."
+2426,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+2430,petitioner,Dell Inc.,parent pit,0001571996,DELL,Dell Technologies Inc.
+2434,petitioner,"DSS Technology Management, Inc.",parent pit,0000771999,DSS,"DSS, INC."
+2436,petitioner,"Oracle America, Inc.",parent pit,0001341439,ORCL,ORACLE CORP
+2436,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+2441,petitioner,Knowles Electronics LLC,parent pit,0001587523,KN,Knowles Corp
+2445,petitioner,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2449,petitioner,John Bean Technologies Corporation,parent pit,0001433660,JBTM,JBT MAREL Corp
+2452,respondent,"j2 Cloud Services, LLC",parent pit,0001084048,ZD,"ZIFF DAVIS, INC."
+2452,respondent,"Advanced Messaging Technologies, Inc.",parent pit,0001084048,ZD,"ZIFF DAVIS, INC."
+2454,petitioner,Merck Sharp & Dohme Corp.,parent pit,0000310158,MRK,"Merck & Co., Inc."
+2471,petitioner,"Anacor Pharmaceuticals, Inc.",parent pit,0000078003,PFE,PFIZER INC
+2476,petitioner,"Trans Ova Genetics, L.C.",parent pit,0001356090,PGEN,"PRECIGEN, INC."
+2499,petitioner,"Royal Crown Company, Inc.",parent pit,0001418135,KDP,Keurig Dr Pepper Inc.
+2499,petitioner,"Dr Pepper/Seven Up, Inc.",parent pit,0001418135,KDP,Keurig Dr Pepper Inc.
+2502,petitioner,"Fairchild Semiconductor International, Inc.",parent pit,0001097864,ON,ON SEMICONDUCTOR CORP
+2514,respondent,"Texaco, Inc.",parent pit,0000093410,CVX,CHEVRON CORP
+2514,respondent,Union Oil Company of California,parent pit,0000093410,CVX,CHEVRON CORP
+2515,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+2517,respondent,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2520,respondent,"NantKwest, Inc.",parent pit,0001326110,IBRX,"ImmunityBio, Inc."
+2522,respondent,CCO Holdings LLC,parent pit,0001091667,CHTR,"CHARTER COMMUNICATIONS, INC. /MO/"
+2522,respondent,"CSC Holdings, Inc.",parent pit,0001324424,EXPE,"Expedia Group, Inc."
+2522,respondent,Charter Communications Operating LLC,parent pit,0001091667,CHTR,"CHARTER COMMUNICATIONS, INC. /MO/"
+2531,petitioner,Diebold Self-Service Systems,parent pit,0000028823,DBD,"DIEBOLD NIXDORF, Inc"
+2544,respondent,"T-Mobile USA, Inc.",parent pit,0001283699,TMUS,"T-Mobile US, Inc."
+2552,respondent,Alkermes Pharma Ireland Limited,parent pit,0001520262,ALKS,Alkermes plc.
+2552,respondent,Teva Pharmaceuticals USA Inc,parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2552,respondent,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2554,respondent,"Qualcomm Atheros, Inc.",parent pit,0000804328,QCOM,QUALCOMM INC/DE
+2555,petitioner,Nobel Biocare Services AG,parent pit,0000313616,DHR,DANAHER CORP /DE/
+2558,petitioner,"Fairchild Semiconductor International, Inc.",parent pit,0001097864,ON,ON SEMICONDUCTOR CORP
+2559,respondent,"Frito-Lay North America, Inc.",parent pit,0000077476,PEP,PEPSICO INC
+2568,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+2570,petitioner,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2574,petitioner,"Converse, Inc.",parent pit,0000320187,NKE,"NIKE, Inc."
+2574,respondent,"Wal-Mart Stores, Inc.",parent pit,0000104169,WMT,Walmart Inc.
+2581,respondent,"Rockstar Games, Inc.",parent pit,0000946581,TTWO,TAKE TWO INTERACTIVE SOFTWARE INC
+2610,respondent,"HP Enterprise Services, LLC",parent pit,0001645590,HPE,Hewlett Packard Enterprise Co
+2610,respondent,"Teradata Operations, Inc.",parent pit,0000816761,TDC,TERADATA CORP /DE/
+2622,petitioner,"Athena Diagnostics, Inc.",parent pit,0001022079,DGX,QUEST DIAGNOSTICS INC
+2629,petitioner,"Home Depot U.S.A., Inc.",parent pit,0000354950,HD,"HOME DEPOT, INC."
+2635,respondent,"GE Medical Systems Information Technologies, Inc.",parent pit,0000040545,GE,GENERAL ELECTRIC CO
+2635,respondent,"GE Medical Systems, Inc.",parent pit,0000040545,GE,GENERAL ELECTRIC CO
+2643,petitioner,Amneal Pharmaceuticals of New York LLC,parent pit,0001723128,AMRX,"Amneal Pharmaceuticals, Inc."
+2650,respondent,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2650,respondent,Amneal Pharmaceuticals of New York LLC,parent pit,0001723128,AMRX,"Amneal Pharmaceuticals, Inc."
+2652,petitioner,"Sealant Systems International, Inc.",parent pit,0000049826,ITW,ILLINOIS TOOL WORKS INC
+2652,petitioner,ITW Global Tire Repair,parent pit,0000049826,ITW,ILLINOIS TOOL WORKS INC
+2658,petitioner,ATI Technologies ULC,parent pit,0000002488,AMD,ADVANCED MICRO DEVICES INC
+2661,respondent,IBG LLC,parent pit,0001381197,IBKR,"Interactive Brokers Group, Inc."
+2668,respondent,IBG LLC,parent pit,0001381197,IBKR,"Interactive Brokers Group, Inc."
+2669,petitioner,"Amarin Pharma, Inc.",parent pit,0000897448,AMRN,AMARIN CORP PLC\UK
+2673,petitioner,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2683,respondent,"Amneal Pharmaceuticals of New York, LLC",parent pit,0001723128,AMRX,"Amneal Pharmaceuticals, Inc."
+2683,petitioner,"Janssen Biotech, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+2683,petitioner,"Janssen Oncology, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+2683,petitioner,"Janssen Research & Development, LLC",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+2683,respondent,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2686,petitioner,"Quest Integrity USA, LLC",parent pit,0000318833,TISI,TEAM INC
+2692,respondent,"Semiconductor Components Industries, LLC",parent pit,0001097864,ON,ON SEMICONDUCTOR CORP
+2695,respondent,Diebold Self-Service Systems,parent pit,0000028823,DBD,"DIEBOLD NIXDORF, Inc"
+2696,respondent,"Forum US, Inc.",parent pit,0001401257,FET,"FORUM ENERGY TECHNOLOGIES, INC."
+2697,respondent,"Abbott Molecular, Inc.",parent pit,0000001800,ABT,ABBOTT LABORATORIES
+2699,respondent,Merck Sharp & Dohme Corp.,parent pit,0000310158,MRK,"Merck & Co., Inc."
+2704,respondent,"Garmin International, Inc.",parent pit,0001121788,GRMN,GARMIN LTD
+2704,respondent,"Garmin USA, Inc.",parent pit,0001121788,GRMN,GARMIN LTD
+2704,respondent,"Misfit, Inc.",parent pit,0000883569,FOSL,"Fossil Group, Inc."
+2705,petitioner,"Hughes Network Systems, LLC",parent pit,0001415404,ECHO,EchoStar CORP
+2710,respondent,"GTA-NHT, Inc.",parent pit,0000066740,MMM,3M CO
+2715,respondent,"Ford Global Technologies, LLC",parent pit,0000037996,F,FORD MOTOR CO
+2717,petitioner,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2730,petitioner,"Elavon, Inc.",parent pit,0000036104,USB,US BANCORP DE
+2730,petitioner,U.S. Bancorp,parent pit,0000036104,USB,US BANCORP DE
+2735,respondent,"Electronic Technology Co., Ltd.",parent pit,0000898293,JBL,JABIL INC
+2737,petitioner,"Hospira, Inc.",parent pit,0000078003,PFE,PFIZER INC
+2739,respondent,"AT&T Mobility, LLC",parent pit,0000732717,T,AT&T INC.
+2744,respondent,"IAC Search & Media, Inc.",parent pit,0000891103,MTCH,"Match Group, Inc."
+2753,petitioner,"Capital One Bank (USA), National Association",parent pit,0000927628,COF,CAPITAL ONE FINANCIAL CORP
+2767,petitioner,"American Axle & Manufacturing, Inc.",parent pit,0001062231,DCH,Dauch Corp
+2769,respondent,"Facebook, Inc.",parent pit,0001326801,META,"Meta Platforms, Inc."
+2775,respondent,Sirius XM Radio Inc.,parent pit,0000908937,SIRI,SIRIUS XM HOLDINGS INC.
+2778,petitioner,Idenix Pharmaceuticals LLC,parent pit,0000310158,MRK,"Merck & Co., Inc."
+2789,petitioner,"Columbia Sportswear North America, Inc.",parent pit,0001050797,COLM,COLUMBIA SPORTSWEAR CO
+2795,respondent,Time Warner Cable Enterprises LLC,parent pit,0001091667,CHTR,"CHARTER COMMUNICATIONS, INC. /MO/"
+2796,petitioner,"IPR Licensing, Inc.",parent pit,0001405495,IDCC,"InterDigital, Inc."
+2797,respondent,"LifeScan, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+2805,petitioner,"Hospira, Inc.",parent pit,0000078003,PFE,PFIZER INC
+2815,respondent,Amneal Pharmaceuticals of New York LLC,parent pit,0001723128,AMRX,"Amneal Pharmaceuticals, Inc."
+2816,petitioner,"Hospira, Inc.",parent pit,0000078003,PFE,PFIZER INC
+2817,respondent,"Hospira, Inc.",parent pit,0000078003,PFE,PFIZER INC
+2825,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+2829,respondent,"Ciena Communications, Inc.",parent pit,0000936395,CIEN,CIENA CORP
+2835,respondent,"Itron Networked Solutions, Inc.",parent pit,0000780571,ITRI,"ITRON, INC."
+2839,petitioner,Arctic Cat Inc.,parent pit,0000217346,TXT,TEXTRON INC
+2842,respondent,"Aemetis Advanced Fuels Keyes, Inc.",parent pit,0000738214,AMTX,"AEMETIS, INC"
+2842,respondent,Pacific Ethanol Magic Valley LLC,parent pit,0000778164,ALTO,"Alto Ingredients, Inc."
+2842,respondent,Pacific Ethanol Stockton,parent pit,0000778164,ALTO,"Alto Ingredients, Inc."
+2855,petitioner,"Sequenom, Inc.",parent pit,0000920148,LH,LABCORP HOLDINGS INC.
+2856,petitioner,"Facebook, Inc.",parent pit,0001326801,META,"Meta Platforms, Inc."
+2861,respondent,"Optum Public Sector Solutions, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+2865,respondent,"Salix Pharmaceuticals, Inc.",parent pit,0000885590,BHC,Bausch Health Companies Inc.
+2865,respondent,Wyeth LLC,parent pit,0000078003,PFE,PFIZER INC
+2871,respondent,Boston Scientific Neuromodulation Corporation,parent pit,0000885725,BSX,BOSTON SCIENTIFIC CORP
+2884,petitioner,Sirius XM Radio Inc.,parent pit,0000908937,SIRI,SIRIUS XM HOLDINGS INC.
+2885,petitioner,Biogen International GmbH,parent pit,0000875045,BIIB,BIOGEN INC.
+2900,respondent,Dolgencorp LLC,parent pit,0000029534,DG,DOLLAR GENERAL CORP
+2920,respondent,"Amazon Web Services, Inc.",parent pit,0001018724,AMZN,AMAZON COM INC
+2920,respondent,"Dictionary.com, LLC",parent pit,0000891103,MTCH,"Match Group, Inc."
+2920,respondent,Oath Inc.,parent pit,0000732712,VZ,VERIZON COMMUNICATIONS INC
+2932,respondent,Immunex Rhode Island Corporation,parent pit,0000318154,AMGN,AMGEN INC
+2935,petitioner,"NetScout Systems Texas, LLC",parent pit,0001078075,NTCT,NETSCOUT SYSTEMS INC
+2945,respondent,"Hulu, LLC",parent pit,0001744489,DIS,Walt Disney Co
+2945,respondent,"Amazon Fulfillment Services, Inc.",parent pit,0001018724,AMZN,AMAZON COM INC
+2949,petitioner,"American Axle & Manufacturing, Inc.",parent pit,0001062231,DCH,Dauch Corp
+2950,respondent,"Dell, Inc.",parent pit,0001571996,DELL,Dell Technologies Inc.
+2951,petitioner,"Beckman Coulter, Inc.",parent pit,0000313616,DHR,DANAHER CORP /DE/
+2952,respondent,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2954,petitioner,"Sequenom, Inc.",parent pit,0000920148,LH,LABCORP HOLDINGS INC.
+2959,petitioner,"Parsons Evergreene, LLC",parent pit,0000275880,PSN,PARSONS CORP
+2981,petitioner,"Kellogg Brown & Root Services, Inc.",parent pit,0001357615,KBR,"KBR, INC."
+2983,petitioner,"Oracle America, Inc.",parent pit,0001341439,ORCL,ORACLE CORP
+2983,respondent,"Amazon Web Services, Inc.",parent pit,0001018724,AMZN,AMAZON COM INC
+2986,petitioner,"Facebook, Inc.",parent pit,0001326801,META,"Meta Platforms, Inc."
+2992,respondent,Biogen MA Inc.,parent pit,0000875045,BIIB,BIOGEN INC.
+2994,respondent,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+2997,petitioner,"Warsaw Orthopedic, Inc.",parent pit,0001613103,MDT,Medtronic plc
+2997,petitioner,"Medtronic Sofamor Danek, Inc.",parent pit,0001613103,MDT,Medtronic plc
+2999,petitioner,"St. Jude Medical, LLC",parent pit,0000001800,ABT,ABBOTT LABORATORIES
+3001,respondent,"Oracle America, Inc.",parent pit,0001341439,ORCL,ORACLE CORP
+3002,respondent,"SFM, LLC",parent pit,0001575515,SFM,"Sprouts Farmers Market, Inc."
+3003,petitioner,Chevron U.S.A. Inc.,parent pit,0000093410,CVX,CHEVRON CORP
+3004,petitioner,"Dow Pharmaceutical Sciences, Inc.",parent pit,0000885590,BHC,Bausch Health Companies Inc.
+3004,petitioner,Valeant Pharmaceuticals North America LLC,parent pit,0000885590,BHC,Bausch Health Companies Inc.
+3007,petitioner,C R Bard Inc.,parent pit,0000010795,BDX,BECTON DICKINSON & CO
+3007,petitioner,"Bard Peripheral Vascular, Inc.",parent pit,0000010795,BDX,BECTON DICKINSON & CO
+3043,petitioner,"Amgen USA, Inc.",parent pit,0000318154,AMGN,AMGEN INC
+3047,petitioner,John Bean Technologies Corporation,parent pit,0001433660,JBTM,JBT MAREL Corp
+3058,respondent,Facebook Inc.,parent pit,0001326801,META,"Meta Platforms, Inc."
+3058,respondent,"WhatsApp, Inc.",parent pit,0001326801,META,"Meta Platforms, Inc."
+3060,petitioner,"Edgewell Personal Care Brands, LLC",parent pit,0001096752,EPC,EDGEWELL PERSONAL CARE Co
+3065,respondent,"DePuy Synthes Products, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+3065,respondent,"DePuy Synthes Sales, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+3075,respondent,"Janssen Ortho, LLC",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+3090,respondent,"SG Gaming, Inc.",parent pit,0000750004,LNWO,"Light & Wonder, Inc."
+3090,respondent,"Bally Gaming, Inc.",parent pit,0000750004,LNWO,"Light & Wonder, Inc."
+3096,petitioner,"Edgewell Personal Care Brands, LLC",parent pit,0001096752,EPC,EDGEWELL PERSONAL CARE Co
+3101,respondent,"BestBuy.com, LLC",parent pit,0000764478,BBY,BEST BUY CO INC
+3101,respondent,"Dell, Inc.",parent pit,0001571996,DELL,Dell Technologies Inc.
+3101,respondent,"Macys.com, LLC",parent pit,0000794367,M,"Macy's, Inc."
+3123,petitioner,"Chemours Company FC, LLC",parent pit,0001627223,CC,Chemours Co
+3129,respondent,"Victoria's Secret Direct Brand Management, LLC",parent pit,0000701985,BBWI,"Bath & Body Works, Inc."
+3129,respondent,"Victoria's Secret Stores Brand Management, Inc.",parent pit,0000701985,BBWI,"Bath & Body Works, Inc."
+3130,respondent,"Texaco, Inc.",parent pit,0000093410,CVX,CHEVRON CORP
+3130,respondent,Union Oil Company of California,parent pit,0000093410,CVX,CHEVRON CORP
+3131,respondent,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+3136,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3136,respondent,"Facebook, Inc.",parent pit,0001326801,META,"Meta Platforms, Inc."
+3138,petitioner,Teva Pharmaceuticals International GmbH,parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+3139,respondent,Teva Pharmaceuticals International GmbH,parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+3144,petitioner,CommScope Connectivity LLC,parent pit,0001517228,VISN,"Vistance Networks, Inc."
+3144,petitioner,CommScope Technologies LLC,parent pit,0001517228,VISN,"Vistance Networks, Inc."
+3145,respondent,"Fluor Intercontinental, Inc.",parent pit,0001124198,FLR,FLUOR CORP
+3145,respondent,"Kellogg Brown & Root Services, Inc.",parent pit,0001357615,KBR,"KBR, INC."
+3149,petitioner,"Kite Pharma, Inc.",parent pit,0000882095,GILD,"GILEAD SCIENCES, INC."
+3150,respondent,Visa U.S.A. Inc.,parent pit,0001403161,V,VISA INC.
+3151,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3155,respondent,"Hospira, Inc.",parent pit,0000078003,PFE,PFIZER INC
+3163,respondent,"Rockstar Games, Inc.",parent pit,0000946581,TTWO,TAKE TWO INTERACTIVE SOFTWARE INC
+3165,respondent,Duo Security LLC,parent pit,0000858877,CSCO,"CISCO SYSTEMS, INC."
+3165,respondent,"Duo Security, Inc.",parent pit,0000858877,CSCO,"CISCO SYSTEMS, INC."
+3170,respondent,"T-Mobile USA, Inc.",parent pit,0001283699,TMUS,"T-Mobile US, Inc."
+3184,petitioner,Biogen International GmbH,parent pit,0000875045,BIIB,BIOGEN INC.
+3184,petitioner,"Biogen MA, Inc.",parent pit,0000875045,BIIB,BIOGEN INC.
+3185,petitioner,"ModernaTX, Inc.",parent pit,0001682852,MRNA,"Moderna, Inc."
+3187,petitioner,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+3218,petitioner,Adapt Pharma Operations Limited,parent pit,0001367644,EBS,Emergent BioSolutions Inc.
+3218,petitioner,"Adapt Pharma, Inc.",parent pit,0001367644,EBS,Emergent BioSolutions Inc.
+3218,respondent,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+3220,respondent,Ethicon LLC,parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+3223,petitioner,Berkley Regional Insurance Company,parent pit,0000011544,WRB,BERKLEY W R CORP
+3223,petitioner,Carolina Casualty Insurance Company,parent pit,0000011544,WRB,BERKLEY W R CORP
+3223,petitioner,Continental Western Insurance Company,parent pit,0000011544,WRB,BERKLEY W R CORP
+3223,petitioner,Preferred Employers Insurance Company,parent pit,0000011544,WRB,BERKLEY W R CORP
+3238,respondent,"Amneal Pharmaceuticals of New York, LLC",parent pit,0001723128,AMRX,"Amneal Pharmaceuticals, Inc."
+3242,respondent,DynaEnergetics Europe GmbH,parent pit,0000034067,BOOM,DMC Global Inc.
+3251,respondent,"St. Jude Medical S.C., Inc.",parent pit,0000001800,ABT,ABBOTT LABORATORIES
+3261,petitioner,"Auris Health, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+3261,respondent,"Intuitive Surgical Operations, Inc.",parent pit,0001035267,ISRG,INTUITIVE SURGICAL INC
+3263,respondent,"Hulu, LLC",parent pit,0001744489,DIS,Walt Disney Co
+3267,petitioner,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3276,petitioner,American Home Assurance Company,parent pit,0000005272,AIG,"AMERICAN INTERNATIONAL GROUP, INC."
+3276,petitioner,Travelers Excess and Surplus Lines Company,parent pit,0000086312,TRV,"TRAVELERS COMPANIES, INC."
+3278,petitioner,"Dayton Parts, LLC",parent pit,0000868780,DORM,"Dorman Products, Inc."
+3303,petitioner,Avago Technologies U.S. Inc.,parent pit,0001730168,AVGO,Broadcom Inc.
+3306,respondent,"Ingenio, Inc.",parent pit,0001156039,ELV,"Elevance Health, Inc."
+3324,respondent,"Weber, Inc.",parent pit,0000766704,WELL,WELLTOWER INC.
+3327,respondent,Merck Sharp & Dohme Corp.,parent pit,0000310158,MRK,"Merck & Co., Inc."
+3329,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3334,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3351,petitioner,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3362,petitioner,Dionex Softron GmbH,parent pit,0000097745,TMO,THERMO FISHER SCIENTIFIC INC.
+3364,petitioner,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3371,petitioner,All Savers Insurance Company,parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,Harken Health Insurance Company,parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"Oxford Health Plans (NJ), Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"Rocky Mountain Health Maintenance Organization, Incorporated",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"Rocky Mountain HealthCare Options, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,UnitedHealthcare Benefits Plan of California,parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare Community Plan, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,UnitedHealthcare Life Insurance Company,parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Alabama, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Colorado, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Florida, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Georgia, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Kentucky, Ltd.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Louisiana, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Mississippi, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of New England, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of New York, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of North Carolina, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Ohio, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Oklahoma, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Pennsylvania, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Utah, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of Washington, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of the Mid-Atlantic, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of the Midlands, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3371,petitioner,"UnitedHealthcare of the Midwest, Inc.",parent pit,0000731766,UNH,UNITEDHEALTH GROUP INC
+3374,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3376,petitioner,"SSI Technologies, LLC",parent pit,0000820313,APH,AMPHENOL CORP /DE/
+3377,petitioner,"ChromaDex, Inc.",parent pit,0001386570,NAGE,"Niagen Bioscience, Inc."
+3393,petitioner,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3394,respondent,"Amazon Web Services, Inc.",parent pit,0001018724,AMZN,AMAZON COM INC
+3395,respondent,Nucor Tubular Products Inc.,parent pit,0000073309,NUE,NUCOR CORP
+3399,petitioner,Philip Morris Products S.A.,parent pit,0001413329,PM,Philip Morris International Inc.
+3399,petitioner,"Philip Morris USA, Inc.",parent pit,0000764180,MO,"ALTRIA GROUP, INC."
+3404,respondent,AT&T Mobility LLC,parent pit,0000732717,T,AT&T INC.
+3404,respondent,Sprint United Management Company,parent pit,0001283699,TMUS,"T-Mobile US, Inc."
+3404,respondent,"T-Mobile USA, Inc.",parent pit,0001283699,TMUS,"T-Mobile US, Inc."
+3407,respondent,"ModernaTX, Inc.",parent pit,0001682852,MRNA,"Moderna, Inc."
+3408,respondent,Mylan Technologies Inc.,parent pit,0001792044,VTRS,Viatris Inc
+3410,respondent,"Dell, Inc.",parent pit,0001571996,DELL,Dell Technologies Inc.
+3410,respondent,"Red Hat, Inc.",parent pit,0000051143,IBM,INTERNATIONAL BUSINESS MACHINES CORP
+3412,respondent,Philip Morris Products S.A.,parent pit,0001413329,PM,Philip Morris International Inc.
+3412,respondent,"Philip Morris USA, Inc.",parent pit,0000764180,MO,"ALTRIA GROUP, INC."
+3417,respondent,Corning Optical Communications LLC,parent pit,0000024741,GLW,CORNING INC /NY
+3426,respondent,Mylan Pharmaceuticals Inc.,parent pit,0001792044,VTRS,Viatris Inc
+3428,respondent,"General Dynamics Mission Systems, Inc.",parent pit,0000040533,GD,GENERAL DYNAMICS CORP
+3433,petitioner,"FMC Technologies, Inc.",parent pit,0001681459,FTI,TechnipFMC plc
+3434,petitioner,"Medtronic Vascular, Inc.",parent pit,0001613103,MDT,Medtronic plc
+3437,petitioner,"Medtronic Vascular, Inc.",parent pit,0001613103,MDT,Medtronic plc
+3442,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3457,petitioner,"Liquidia Technologies, Inc.",parent pit,0001819576,LQDA,Liquidia Corp
+3465,respondent,"Alere, Inc.",parent pit,0000001800,ABT,ABBOTT LABORATORIES
+3470,respondent,"Sierra Wireless, Inc.",parent pit,0000088941,SMTC,SEMTECH CORP
+3470,respondent,"Dell, Inc.",parent pit,0001571996,DELL,Dell Technologies Inc.
+3472,petitioner,"Hulu, LLC",parent pit,0001744489,DIS,Walt Disney Co
+3474,petitioner,"Columbia Sportswear North America, Inc.",parent pit,0001050797,COLM,COLUMBIA SPORTSWEAR CO
+3480,respondent,"Sierra Wireless, Inc.",parent pit,0000088941,SMTC,SEMTECH CORP
+3486,petitioner,"Hulu, LLC",parent pit,0001744489,DIS,Walt Disney Co
+3487,respondent,TA Instruments-Waters LLC,parent pit,0001000697,WAT,WATERS CORP /DE/
+3488,respondent,"Amazon Web Services, Inc.",parent pit,0001018724,AMZN,AMAZON COM INC
+3489,petitioner,Mylan Pharmaceuticals Inc.,parent pit,0001792044,VTRS,Viatris Inc
+3489,respondent,"Actelion Pharmaceuticals, Ltd.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+3493,petitioner,"Medtronic Vascular, Inc.",parent pit,0001613103,MDT,Medtronic plc
+3493,respondent,Teleflex Life Sciences Limited,parent pit,0000096943,TFX,TELEFLEX INC
+3508,respondent,Abbott Diabetes Care Sales Corporation,parent pit,0000001800,ABT,ABBOTT LABORATORIES
+3508,respondent,"Abbott Diabetes Care, Inc.",parent pit,0000001800,ABT,ABBOTT LABORATORIES
+3515,petitioner,"REV, LLC",parent pit,0001653558,PRTH,"Priority Technology Holdings, Inc."
+3517,petitioner,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3518,petitioner,"Weber, Inc.",parent pit,0000766704,WELL,WELLTOWER INC.
+3519,respondent,Philip Morris Products S.A.,parent pit,0001413329,PM,Philip Morris International Inc.
+3526,respondent,"Comcast Cable Communications, LLC",parent pit,0001166691,CMCSA,COMCAST CORP
+3528,respondent,Amazon.com Services LLC,parent pit,0001018724,AMZN,AMAZON COM INC
+3532,respondent,Merck Sharp & Dohme Corp.,parent pit,0000310158,MRK,"Merck & Co., Inc."
+3540,respondent,"TD Ameritrade, Inc.",parent pit,0000316709,SCHW,SCHWAB CHARLES CORP
+3543,petitioner,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+3543,respondent,"Janssen Pharmaceuticals, Inc.",parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+3546,respondent,"Nuance Communications, Inc.",parent pit,0000789019,MSFT,MICROSOFT CORP
+3548,petitioner,"Salix Pharmaceuticals, Inc.",parent pit,0000885590,BHC,Bausch Health Companies Inc.
+3548,petitioner,"Salix Pharmaceuticals, Ltd.",parent pit,0000885590,BHC,Bausch Health Companies Inc.
+3557,petitioner,"NetScout Systems Texas, LLC",parent pit,0001078075,NTCT,NETSCOUT SYSTEMS INC
+3561,respondent,"Black & Decker (U.S.), Inc.",parent pit,0000093556,SWK,"STANLEY BLACK & DECKER, INC."
+3568,petitioner,Sirius XM Radio Inc.,parent pit,0000908937,SIRI,SIRIUS XM HOLDINGS INC.
+3571,respondent,GM Global Technology Operations LLC,parent pit,0001467858,GM,General Motors Co
+3571,petitioner,"Keystone Automotive Industries, Inc.",parent pit,0001065696,LKQ,LKQ CORP
+3572,respondent,"ADVA Optical Networking North America, Inc.",parent pit,0000926282,ADTN,"ADTRAN Holdings, Inc."
+3572,respondent,ADVA Optical Networking SE,parent pit,0000926282,ADTN,"ADTRAN Holdings, Inc."
+3576,petitioner,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3584,respondent,Betfair Interactive US LLC,parent pit,0001635327,FLUT,Flutter Entertainment plc
+3586,petitioner,"Amarin Pharma, Inc.",parent pit,0000897448,AMRN,AMARIN CORP PLC\UK
+3586,petitioner,Amarin Pharmaceuticals Ireland Limited,parent pit,0000897448,AMRN,AMARIN CORP PLC\UK
+3589,petitioner,"NeoGenomics Laboratories, Inc.",parent pit,0001077183,NEO,NEOGENOMICS INC
+3590,petitioner,"La-Z-Boy Casegoods, Inc.",parent pit,0000057131,LZB,LA-Z-BOY INC
+3604,petitioner,"Lake Charlotte, LLC",parent pit,0001307748,IVT,InvenTrust Properties Corp.
+3607,petitioner,Celanese Sales U.S. Ltd.,parent pit,0001306830,CE,Celanese Corp
+3609,petitioner,"Allergan USA, Inc.",parent pit,0001551152,ABBV,AbbVie Inc.
+3609,petitioner,"Eden Biodesign, LLC",parent pit,0001551152,ABBV,AbbVie Inc.
+3616,respondent,"Amazon Web Services, Inc.",parent pit,0001018724,AMZN,AMAZON COM INC
+3616,respondent,Amazon.com Services LLC,parent pit,0001018724,AMZN,AMAZON COM INC
+3622,petitioner,Vascular Solutions LLC,parent pit,0000096943,TFX,TELEFLEX INC
+3622,respondent,"Medtronic Vascular, Inc.",parent pit,0001613103,MDT,Medtronic plc
+3622,petitioner,Arrow International LLC,parent pit,0000096943,TFX,TELEFLEX INC
+3622,petitioner,Teleflex Life Sciences LLC,parent pit,0000096943,TFX,TELEFLEX INC
+3623,respondent,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+3624,petitioner,"Weber, Inc.",parent pit,0000766704,WELL,WELLTOWER INC.
+3628,respondent,"Aetna, Inc.",parent pit,0000064803,CVS,CVS HEALTH Corp
+3634,respondent,"Comcast Cable Communications, LLC",parent pit,0001166691,CMCSA,COMCAST CORP
+3638,petitioner,"Mirror Worlds Technologies, LLC",parent pit,0001065078,NTIP,"NETWORK-1 TECHNOLOGIES, INC."
+3639,petitioner,Cytiva Bioprocess R&D AB,parent pit,0000313616,DHR,DANAHER CORP /DE/
+3643,respondent,Priceline.com LLC,parent pit,0001075531,BKNG,Booking Holdings Inc.
+3643,respondent,Booking.com B.V.,parent pit,0001075531,BKNG,Booking Holdings Inc.
+3647,petitioner,"Crown Packaging Technology, Inc.",parent pit,0001219601,CCK,"CROWN HOLDINGS, INC."
+3647,respondent,"Belvac Production Machinery, Inc.",parent pit,0000029905,DOV,DOVER Corp
+3656,respondent,"Amneal Pharmaceuticals of New York, LLC",parent pit,0001723128,AMRX,"Amneal Pharmaceuticals, Inc."
+3656,petitioner,Norton (Waterford) Ltd.,parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+3656,petitioner,"Teva Pharmaceuticals USA, Inc.",parent pit,0000818686,TEVA,TEVA PHARMACEUTICAL INDUSTRIES LTD
+3660,petitioner,"Sierra Wireless, Inc.",parent pit,0000088941,SMTC,SEMTECH CORP
+3670,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3684,petitioner,FlightSafety International Inc.,parent pit,0001067983,BRK-B,BERKSHIRE HATHAWAY INC
+3686,respondent,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3688,respondent,"CVS Pharmacy, Inc.",parent pit,0000064803,CVS,CVS HEALTH Corp
+3688,respondent,"Ulta Salon, Cosmetics & Fragrance, Inc.",parent pit,0001403568,ULTA,"Ulta Beauty, Inc."
+3691,petitioner,"ImmunoGen, Inc.",parent pit,0001551152,ABBV,AbbVie Inc.
+3696,petitioner,"Sierra Wireless, Inc.",parent pit,0000088941,SMTC,SEMTECH CORP
+3699,respondent,Merck Sharp & Dohme B.V.,parent pit,0000310158,MRK,"Merck & Co., Inc."
+3699,respondent,"Merck Sharp & Dohme, LLC",parent pit,0000310158,MRK,"Merck & Co., Inc."
+3699,petitioner,Mylan Inc.,parent pit,0001792044,VTRS,Viatris Inc
+3699,petitioner,Mylan Pharmaceuticals Inc.,parent pit,0001792044,VTRS,Viatris Inc
+3708,respondent,Abiomed Inc.,parent pit,0000200406,JNJ,JOHNSON & JOHNSON
+3710,respondent,Belanger Inc.,parent pit,0000029905,DOV,DOVER Corp
+3719,petitioner,"Sage Products, LLC",parent pit,0000310764,SYK,STRYKER CORP
+3720,respondent,"Fox Broadcasting Company, LLC",parent pit,0001754301,FOXA,Fox Corp
+3720,respondent,"Fox Sports Productions, LLC",parent pit,0001754301,FOXA,Fox Corp
+3733,respondent,Jazz Pharmaceuticals Ireland Limited,parent pit,0001232524,JAZZ,Jazz Pharmaceuticals plc
+3740,petitioner,Google LLC,parent pit,0001652044,GOOGL,Alphabet Inc.
+3746,respondent,"Moderna US, Inc.",parent pit,0001682852,MRNA,"Moderna, Inc."
+3746,respondent,"ModernaTX, Inc.",parent pit,0001682852,MRNA,"Moderna, Inc."
+3748,petitioner,Dolby Laboratories Licensing Corporation,parent pit,0001308547,DLB,"Dolby Laboratories, Inc."
+3751,respondent,Sirius XM Radio Inc.,parent pit,0000908937,SIRI,SIRIUS XM HOLDINGS INC.

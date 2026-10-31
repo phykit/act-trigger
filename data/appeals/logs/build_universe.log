@@ -1,26 +1,43 @@
 SCDB release 2026_01 loaded: 9409 rows
-CourtListener 429 on window 2012-01-01; waiting 600s
-CourtListener 429 on window 2012-01-01; waiting 600s
-CourtListener 429 on window 2012-01-01; waiting 600s
-CourtListener 429 on window 2012-01-01; waiting 600s
-CourtListener 429 on window 2012-01-01; waiting 600s
-CourtListener 429 on window 2012-01-01; waiting 600s
-CourtListener 429 on window 2012-01-01; waiting 600s
-CourtListener 429 on window 2012-01-01; waiting 600s
-CourtListener 429 on window 2012-01-01; waiting 600s
-CourtListener 429 on window 2012-01-01; waiting 600s
-Traceback (most recent call last):
-  File "/home/runner/work/act-trigger/act-trigger/scripts/build_universe.py", line 24, in <module>
-    main()
-  File "/home/runner/work/act-trigger/act-trigger/scripts/build_universe.py", line 16, in main
-    uni, note = build_universe()
-                ^^^^^^^^^^^^^^^^
-  File "/home/runner/work/act-trigger/act-trigger/scripts/appeals_common.py", line 469, in build_universe
-    cafc, src = cafc_rulings()
-                ^^^^^^^^^^^^^^
-  File "/home/runner/work/act-trigger/act-trigger/scripts/appeals_common.py", line 429, in cafc_rulings
-    df = fn()
-         ^^^^
-  File "/home/runner/work/act-trigger/act-trigger/scripts/appeals_common.py", line 343, in _courtlistener_cafc
-    raise CourtListenerThrottled(f"CourtListener still throttled on window {w_from} to {w_to} after retries; "
-appeals_common.CourtListenerThrottled: CourtListener still throttled on window 2012-01-01 to 2012-03-31 after retries; 0 windows reused, completed windows are cached for the next run
+GovInfo: 3409 precedential opinion entries in the window, 2421 rulings after de-duplication; 0 with no matched-role parties
+Federal Circuit: 2421 precedential opinions from GovInfo USCOURTS ca13
+universe: 3763 rulings; SCOTUS 1342 rulings (SCDB 2026_01); Federal Circuit 2421 precedential opinions (GovInfo USCOURTS ca13)
+party map: 0 rulings processed
+party map: 100 rulings processed
+party map: 200 rulings processed
+party map: 300 rulings processed
+party map: 400 rulings processed
+party map: 500 rulings processed
+party map: 600 rulings processed
+party map: 700 rulings processed
+party map: 800 rulings processed
+party map: 900 rulings processed
+party map: 1000 rulings processed
+party map: 1100 rulings processed
+party map: 1200 rulings processed
+party map: 1300 rulings processed
+party map: 1400 rulings processed
+party map: 1500 rulings processed
+party map: 1600 rulings processed
+party map: 1700 rulings processed
+party map: 1800 rulings processed
+party map: 1900 rulings processed
+party map: 2000 rulings processed
+party map: 2100 rulings processed
+party map: 2200 rulings processed
+party map: 2300 rulings processed
+party map: 2400 rulings processed
+party map: 2500 rulings processed
+party map: 2600 rulings processed
+party map: 2700 rulings processed
+party map: 2800 rulings processed
+party map: 2900 rulings processed
+party map: 3000 rulings processed
+party map: 3100 rulings processed
+party map: 3200 rulings processed
+party map: 3300 rulings processed
+party map: 3400 rulings processed
+party map: 3500 rulings processed
+party map: 3600 rulings processed
+party map: 3700 rulings processed
+party map: 13695 sides; {'unresolved (none)': 6342, 'not a company': 5249, 'listed': 771, 'ex21 parent': 564, 'unresolved (ambiguous)': 383, 'unresolved (parent not listed)': 379, 'unresolved (error)': 7}
