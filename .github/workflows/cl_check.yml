@@ -1,0 +1,19 @@
+# Diagnostic only: one CourtListener request to see whether the token is served. Prints the status and rate headers, never the token.
+name: cl-check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CL: ${{ secrets.COURTLISTENER_TOKEN }}
+    steps:
+      - name: One request
+        run: |
+          code=$(curl -s -o body.txt -D h.txt -w '%{http_code}' -H "Authorization: Token $CL" "https://www.courtlistener.com/api/rest/v4/courts/?id=cafc")
+          echo "HTTP $code"
+          grep -i -E '^(x-ratelimit|retry-after)' h.txt || true
+          head -c 300 body.txt; echo
