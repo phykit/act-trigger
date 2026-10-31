@@ -29,7 +29,7 @@ ADATA = ROOT / "data" / "appeals"
 SEC_UA = os.environ.get("SEC_CONTACT") or "Simon Kittson skittson@gmail.com"  # SEC fair-access format: name and email
 UA_PLAIN = {"User-Agent": "act-trigger research scripts (https://github.com/phykit/act-trigger)"}
 TERMS = list(range(5, 25))                 # OT2005 to OT2024
-CAFC_FROM, CAFC_TO = dt.date(2012, 1, 1), dt.date(2025, 6, 30)
+CAFC_FROM, CAFC_TO = dt.date(2013, 4, 1), dt.date(2025, 6, 30)   # Earth v2 item 2 (v1 started 1 January 2012)
 PRICE_START = dt.date(2004, 1, 1)
 SUFFIXES = {"INC", "INCORPORATED", "CORP", "CORPORATION", "CO", "COMPANY", "LLC", "LTD", "LIMITED", "LP",
             "PLC", "NA", "N A", "HOLDINGS", "HOLDING", "GROUP", "THE", "AG", "SA", "SE", "NV", "BV", "ET AL"}
@@ -170,6 +170,76 @@ def ex21_parent(name: str, tick: pd.DataFrame) -> dict:
     store[key] = out
     cache.write_text(json.dumps(store))
     return out
+
+
+def ex21_parent_pit(name: str, day0: dt.date, tick: pd.DataFrame, years: int = 3) -> dict:
+    """Earth v2 item 6: the listed filer whose Exhibit 21, in a 10-K filed in the `years` up to day 0, names `name`."""
+    cache = adata("ex21_pit_lookups.json")
+    store = json.loads(cache.read_text()) if cache.exists() else {}
+    key = f"{name.strip()}|{day0.isoformat()}"
+    if key in store:
+        return store[key]
+    if SELFTEST:
+        out = ex21_parent(name, tick)
+        store[key] = out
+        cache.write_text(json.dumps(store))
+        return out
+    phrase = re.sub(r"[^A-Za-z0-9 .&'-]", " ", name.strip()).strip()
+    start = (day0 - dt.timedelta(days=365 * years)).isoformat()
+    url = ("https://efts.sec.gov/LATEST/search-index?q=" + requests.utils.quote(f'"{phrase}"')
+           + f"&forms=10-K&dateRange=custom&startdt={start}&enddt={day0.isoformat()}")
+    try:
+        hits = [h["_source"] for h in sec_get(url).json().get("hits", {}).get("hits", [])]
+    except Exception as exc:  # noqa: BLE001
+        out = dict(status="error", cik=None, hits=0, total=0, error=str(exc)[:100])
+        store[key] = out
+        cache.write_text(json.dumps(store))
+        return out
+    counts: dict[str, int] = {}
+    for h in hits:
+        if str(h.get("file_type", "")).upper().startswith("EX-21"):
+            for c in h.get("ciks", []) or []:
+                counts[f"{int(c):010d}"] = counts.get(f"{int(c):010d}", 0) + 1
+    total = sum(counts.values())
+    if total == 0:
+        out = dict(status="none", cik=None, hits=0, total=0)
+    else:
+        cik, n = max(counts.items(), key=lambda kv: kv[1])
+        out = dict(status="resolved", cik=cik, hits=n, total=total) if (n == total or (n >= 3 and n / total >= 0.8)) \
+            else dict(status="ambiguous", cik=None, hits=n, total=total)
+    if out["status"] == "resolved":
+        t = tick[tick["cik"] == out["cik"]]
+        out["ticker"] = t["ticker"].iloc[0] if len(t) else None
+        out["title"] = t["title"].iloc[0] if len(t) else None
+        if out["ticker"] is None:
+            out["status"] = "parent not listed"
+    store[key] = out
+    cache.write_text(json.dumps(store))
+    return out
+
+
+def parent_map_pit(universe: pd.DataFrame, pmap: pd.DataFrame) -> pd.DataFrame:
+    """Earth v2 parent arm: company sides with no exact match, resolved point in time; basis 'parent pit'."""
+    cache = adata("party_map_parent_pit.csv")
+    if cache.exists():
+        df = pd.read_csv(cache, dtype=str)
+        df["ruling"] = df["ruling"].astype(int)
+        return df
+    tick = edgar_tickers()
+    cand = pmap[~pmap["basis"].isin(["listed", "not a company"])]
+    rows = []
+    for k, r in enumerate(cand.itertuples()):
+        d = universe.loc[int(r.ruling), "date"]
+        d = d if isinstance(d, dt.date) else pd.Timestamp(d).date()
+        p = ex21_parent_pit(str(r.name), d, tick)
+        if p.get("status") == "resolved":
+            rows.append(dict(ruling=int(r.ruling), side=r.side, name=r.name, basis="parent pit", cik=p["cik"], ticker=p["ticker"], title=p.get("title")))
+        if k % 250 == 0:
+            log(f"parent map (point in time): {k} of {len(cand)}")
+    df = pd.DataFrame(rows, columns=["ruling", "side", "name", "basis", "cik", "ticker", "title"])
+    df.to_csv(cache, index=False)
+    df["ruling"] = df["ruling"].astype(int)
+    return df
 
 
 def submissions(cik: str) -> dict:
@@ -375,6 +445,62 @@ def _courtlistener_cafc() -> pd.DataFrame:
     return df
 
 
+SIDE_A = {"appellant", "cross-appellant", "petitioner", "cross-petitioner"}
+SIDE_B = {"appellee", "cross-appellee", "respondent", "cross-respondent"}
+
+
+def _govinfo_cafc() -> pd.DataFrame:
+    """Federal Circuit precedential opinions from the GovInfo index and parties file (Earth v2 item 2 and 3)."""
+    idx_p, par_p = ADATA / "govinfo_cafc_index.csv", ADATA / "govinfo_cafc_parties.csv"
+    if not idx_p.exists() or not par_p.exists():
+        raise RuntimeError("GovInfo index or parties file missing; run the govinfo-cafc and govinfo-parties workflows")
+    g = pd.read_csv(idx_p, dtype=str).fillna("")
+    par = pd.read_csv(par_p, dtype=str).fillna("")
+    text = g["docket_text"].str.replace(r"</?[a-zA-Z]+>", "", regex=True).str.strip().str.upper()
+    is_op = text.str.match(r"^(SEALED OPINION|UNSEALED OPINION|OPINION|MODIFIED ENTRY:\s*OPINION|SUPPLEMENTAL OPINION)")
+    g = g[(g["precedential"] == "precedential") & is_op].copy()
+    g = g[(g["date_issued"] >= CAFC_FROM.isoformat()) & (g["date_issued"] <= CAFC_TO.isoformat())]
+    g = g[g["case_number"].str.split("-").str[1].astype(int) >= 1000]           # item 2(e): miscellaneous dockets out
+    g["entry"] = g["docket_text"].str.extract(r"\[(\d{4,})\]", expand=False).fillna("")
+    g["tkey"] = g["title"].str.lower().str.replace(r"[^a-z0-9]", "", regex=True)
+    # item 2(c): one ruling per (date, docket-entry number) and per (date, caption); union of dockets
+    g = g.sort_values(["date_issued", "package_id"]).reset_index(drop=True)
+    parent = list(range(len(g)))
+
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+    for key in (["date_issued", "entry"], ["date_issued", "tkey"]):
+        for _, grp in g[g[key[1]] != ""].groupby(key).groups.items():
+            grp = list(grp)
+            for j in grp[1:]:
+                parent[find(j)] = find(grp[0])
+    g["rid"] = [find(i) for i in range(len(g))]
+    par = par[par["full_name"].ne("") & par["full_name"].ne("(no parties)")].copy()
+    par["order"] = pd.to_numeric(par["order"], errors="coerce")
+    par["r"] = par["role"].str.strip().str.lower()
+    par["sideab"] = np.where(par["r"].isin(SIDE_A), "petitioner", np.where(par["r"].isin(SIDE_B), "respondent", ""))
+    par = par[par["sideab"] != ""]
+    rows = []
+    for rid, grp in g.groupby("rid", sort=False):
+        lead = grp.iloc[0]
+        pk = list(dict.fromkeys(grp["package_id"]))
+        pp = par[par["package_id"].isin(pk)].copy()
+        pp["pk_order"] = pp["package_id"].map({k: i for i, k in enumerate(pk)})
+        pp = pp.sort_values(["pk_order", "order"]).drop_duplicates(["sideab", "full_name"])
+        plist = [dict(side=r.sideab, name=r.full_name, role=r.role) for r in pp.itertuples()]
+        first = {s: next((x["name"] for x in plist if x["side"] == s), "") for s in ("petitioner", "respondent")}
+        rows.append(dict(date=lead["date_issued"], docket=", ".join(p.split("ca13-")[-1] for p in pk), case_name=lead["title"],
+                         status="Precedential", source="GovInfo USCOURTS ca13", parties=json.dumps(plist),
+                         petitioner=first["petitioner"], respondent=first["respondent"]))
+    df = pd.DataFrame(rows)
+    log(f"GovInfo: {len(g)} precedential opinion entries in the window, {len(df)} rulings after de-duplication; "
+        f"{int((df['parties'] == '[]').sum())} with no matched-role parties")
+    return df
+
+
 def _cafc_table() -> pd.DataFrame:
     page = requests.get("https://cafc.uscourts.gov/home/case-information/opinions-orders/", headers=UA_PLAIN, timeout=60).text
     m = re.search(r"wdtNonce[\"']?\s*[:=]\s*[\"']([0-9a-f]+)", page)
@@ -424,7 +550,7 @@ def cafc_rulings() -> tuple[pd.DataFrame, str]:
     if SELFTEST:
         return pd.DataFrame(columns=["date", "docket", "case_name", "status", "source"]), "none (self-test)"
     errors = []
-    for fn in (_courtlistener_cafc, _cafc_table):
+    for fn in (_govinfo_cafc,):          # Earth v2: GovInfo only
         try:
             df = fn()
             df = df.dropna(subset=["date"])
@@ -470,7 +596,10 @@ def build_universe() -> tuple[pd.DataFrame, str]:
         if len(cafc):
             cafc = cafc.assign(court="cafc", date=pd.to_datetime(cafc["date"]).dt.date, argued=pd.NaT, party_winning=np.nan,
                                decision_type=np.nan, precedential=True)
-            cafc[["petitioner", "respondent"]] = cafc["case_name"].apply(lambda s: pd.Series(split_parties(s)))
+            if "parties" not in cafc.columns:
+                cafc[["petitioner", "respondent"]] = cafc["case_name"].apply(lambda s: pd.Series(split_parties(s)))
+                cafc["parties"] = ""
+            sc["parties"] = ""
             df = pd.concat([sc, cafc[sc.columns]], ignore_index=True)
         else:
             df = sc
@@ -491,8 +620,10 @@ def build_party_map(universe: pd.DataFrame) -> pd.DataFrame:
     rows = []
     seen_ex21: dict[str, dict] = {}
     for i, r in universe.iterrows():
-        for side in ("petitioner", "respondent"):
-            name = str(r[side])
+        plist = json.loads(r["parties"]) if isinstance(r.get("parties"), str) and r["parties"].startswith("[") else None
+        pairs = [(x["side"], x["name"]) for x in plist] if plist is not None else [(sd, r[sd]) for sd in ("petitioner", "respondent")]
+        for side, name in pairs:
+            name = str(name)
             if not name or name.lower() in ("nan", ""):
                 continue
             m = match_listed(name, tick)
@@ -626,6 +757,7 @@ def compute_events(universe: pd.DataFrame, pmap: pd.DataFrame, bases: tuple[str,
     Returns (events, ars, prices). Each event carries its control-day dates as a JSON list.
     """
     sel = pmap[pmap["basis"].isin(bases)].copy()
+    sel = sel.drop_duplicates(["ruling", "ticker"])          # one event per (ruling, ticker)
     tickers = sorted(set(sel["ticker"].dropna().astype(str)))
     px = bulk_prices(tickers + ["SPY"], label)
     if "SPY" not in px.columns:
@@ -664,7 +796,9 @@ def compute_events(universe: pd.DataFrame, pmap: pd.DataFrame, bases: tuple[str,
         calm = np.isfinite(sret) and abs(sret) <= CALM_SPY
         reacting = abs(w["z0"]) >= REACT_Z and not earn_adj and calm
         other = pmap[(pmap["ruling"].astype(int) == int(r["ruling"])) & (pmap["side"] != r["side"])]
-        opp = str(other["basis"].iloc[0]) if len(other) else "not a company"
+        ob = set(other["basis"].astype(str))
+        opp = ("listed" if "listed" in ob else "ex21 parent" if "ex21 parent" in ob
+               else str(other["basis"].iloc[0]) if len(other) else "not a company")
         # control days
         pos = w["pos"]
         idx = ar.index

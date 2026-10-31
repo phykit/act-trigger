@@ -35,8 +35,19 @@ def fmt(x: float, pct: bool = True) -> str:
     return f"{100 * x:+.2f}%" if pct else f"{x:.3f}"
 
 
+CAP = int(os.environ.get("CL_MAX_REQUESTS", "0") or 0)   # per-run CourtListener request cap; 0 = no cap
+REQ = [0]
+
+
+class RequestCapReached(RuntimeError):
+    pass
+
+
 def _get(url: str, hdr: dict) -> requests.Response | None:
     for attempt in range(6):
+        if CAP and REQ[0] >= CAP:
+            raise RequestCapReached(f"CourtListener request cap of {CAP} reached")
+        REQ[0] += 1
         r = requests.get(url, headers=hdr, timeout=90)
         if r.status_code == 200:
             return r
@@ -57,7 +68,13 @@ def opinion_metrics(court: str, docket: str, date: dt.date) -> dict:
     if tok:
         hdr["Authorization"] = "Token " + tok
     base = f"https://www.courtlistener.com/api/rest/v4/search/?type=o&court={court}"
-    q = f"{base}&q=docketNumber%3A%22{requests.utils.quote(str(docket))}%22"
+    if court == "cafc":
+        # GovInfo docket "14-01060, 14-01091": search the lead docket in both of CourtListener's forms
+        yy, nn = str(docket).split(",")[0].strip().split("-")[:2]
+        short, long_ = f"{yy}-{int(nn)}", f"20{yy}-{int(nn)}"
+        q = f'{base}&q=' + requests.utils.quote(f'docketNumber:("{short}" OR "{long_}")')
+    else:
+        q = f"{base}&q=docketNumber%3A%22{requests.utils.quote(str(docket))}%22"
     if court == "cafc":
         q += f"&filed_after={(date - dt.timedelta(days=3)).isoformat()}&filed_before={(date + dt.timedelta(days=3)).isoformat()}"
     r = _get(q, hdr)
@@ -115,7 +132,13 @@ def main() -> None:
         key = (u["court"], str(u["docket"]), d0.isoformat())
         m = have.get(key)
         if m is None:
-            m = dict(court=u["court"], docket=str(u["docket"]), date=d0.isoformat(), **opinion_metrics(u["court"], str(u["docket"]), d0))
+            try:
+                m = dict(court=u["court"], docket=str(u["docket"]), date=d0.isoformat(), **opinion_metrics(u["court"], str(u["docket"]), d0))
+            except RequestCapReached as exc:
+                left = len([r for r in ev["ruling"].unique() if int(r) >= int(rid)])
+                log(f"{exc}; {left} rulings still to fetch; metrics cached so far are committed and the next run resumes. "
+                    "No result is written for an incomplete population.")
+                return
             cache.append(m)
             pd.DataFrame(cache).to_csv(cache_f, index=False)
         if u["court"] == "scotus":

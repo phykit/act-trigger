@@ -4,6 +4,10 @@ name: metal
 
 on:
   workflow_dispatch:
+    inputs:
+      max_requests:
+        description: "CourtListener requests allowed this run (0 = no cap); keep below the daily allowance"
+        default: "100"
 
 concurrency:
   group: metal
@@ -18,6 +22,7 @@ jobs:
     timeout-minutes: 300
     env:
       COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
+      CL_MAX_REQUESTS: ${{ inputs.max_requests || '100' }}
       SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
     steps:
       - uses: actions/checkout@v4

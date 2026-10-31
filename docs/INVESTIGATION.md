@@ -8,7 +8,7 @@ Opened 30 October 2026. One row per thread; each thread has its own frozen speci
 |---|---|---|---|---|
 | Apple (v1 to v3) | Does the litigant's abnormal variance rise on opinion days before its own ruling? | Higher on non-decision opinion days (positive) | SCDB, yfinance | Closed. v3 (77 cases): R = 1.000, p = 0.41, INCONCLUSIVE; a null at daily frequency |
 | Orange (v1, v2) | After a decision-day move, does the litigant drift on? | Continuation (positive) | As Apple | Closed. UNSCORABLE (2 and 8 reacting cases); direction positive in both |
-| Earth | Post-ruling drift in the litigant against the same company's other large moves | Positive | SCDB, CourtListener (Federal Circuit), EDGAR, yfinance | Run 6 (Federal Circuit truncated to 2012 to Sept 2013): 11 events, +3.19%, p = 0.004, UNSCORABLE (floor 40). Run 7 (full Federal Circuit) in progress |
+| Earth | Post-ruling drift in the litigant against the same company's other large moves | Positive | SCDB, GovInfo (Federal Circuit, v2), EDGAR, yfinance | v1 runs 6 and 8 retired (truncated Federal Circuit lists). Earth v2 registered 31 October 2026 (`prereg/earth_v2_prereg.md`): GovInfo source, Federal Circuit 1 April 2013 to 30 June 2025, mandamus excluded, every named party, point-in-time Exhibit 21 parent arm (secondary). Review: `data/appeals/govinfo_review/README.md` |
 | Moon | Propagation of a Supreme Court ruling to the listed parent of a subsidiary party | Positive signed drift | SCDB, EDGAR Exhibit 21 | SUPPORT on 37 events (+2.57%, p = 0.026); fragile to one outlier and four misrouted direct parties |
 | Fire | Spillover to the litigant's SIC peers, signed by the litigant's reaction | Positive | As Earth, EDGAR SIC | UNSCORABLE (9 events); awaits run 7 |
 | **Water** | Does a lawyer's blind reading of materiality predict which events move and drift? | High-stakes events drift more (positive) | Judgments, 10-K and 10-Q disclosures; no prices | Specified 30 October 2026; v3 in force (`prereg/water_v3_prereg.md`, with amendments 1 and 2 of 30 October 2026 taking the Supreme Court opinion from the Court's own site or GovInfo before CourtListener): AI coders only. Coder 3, the API coder (`scripts/ai_coder.py`, workflow `water-coder`, model `claude-sonnet-5-5`), is primary; Legora (coder 1) and two Claude agent runs (2, 2b; kappa 1.00 between them) are reported alongside. Kit in `data/water/legora/` |
@@ -60,9 +60,9 @@ Verdict in one line: the paper's core thesis, that complexity slows incorporatio
 | Source | Used by | Access |
 |---|---|---|
 | Supreme Court Database (SCDB) | Apple, Earth, Moon, Strife, Light | Free download |
-| CourtListener API | Earth, Fire, Metal, Love, Thunder, Air; Water only as a fallback | Free token (set as the Actions secret `COURTLISTENER_TOKEN`) |
+| CourtListener API | Metal, Love, Thunder, Air; Water only as a fallback (Earth v1 only) | Free token (set as the Actions secret `COURTLISTENER_TOKEN`) |
 | supremecourt.gov opinions pages (slip opinions, preliminary prints, bound volumes) | Water (opinion text, OT2017 onwards) | Free, no key; reachable from the GitHub runner, not from this workspace |
-| GovInfo API (United States Reports; United States Courts Opinions, Federal Circuit as court code ca13) | Water (opinion text to volume 586); Federal Circuit completeness audit (planned) | Free api.data.gov key, Actions secret `GOVINFO_API_KEY` |
+| GovInfo API (United States Reports; United States Courts Opinions, Federal Circuit as court code ca13) | Water (opinion text to volume 586); Earth v2 and its dependants (Federal Circuit universe and parties) | Free api.data.gov key, Actions secret `GOVINFO_API_KEY` |
 | EDGAR (company list, submissions, full-text search, XBRL company facts) | All US threads; Wood | Free; user agent with a contact email |
 | yfinance (daily; one-minute bars for the last seven days) | All | Free |
 | Find Case Law (The National Archives) | Aether | Free, no key |
