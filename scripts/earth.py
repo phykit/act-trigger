@@ -24,9 +24,9 @@ def fmt(x: float) -> str:
     return "n/a" if x is None or not np.isfinite(x) else f"{100 * x:+.2f}%"
 
 
-def amend_hash() -> str:
+def amend_hash(k: int = 1) -> str:
     import hashlib  # noqa: PLC0415
-    return hashlib.sha256((Path(__file__).resolve().parents[1] / "prereg" / "earth_v2_amendment_1.md").read_bytes()).hexdigest()
+    return hashlib.sha256((Path(__file__).resolve().parents[1] / "prereg" / f"earth_v2_amendment_{k}.md").read_bytes()).hexdigest()
 
 
 def arm_stats(ev: pd.DataFrame) -> dict:
@@ -82,7 +82,7 @@ def main() -> None:
         run_max = max(run_max, min(1.0, (len(holm) - k) * pv))
         holm_adj[nm] = run_max
     L = [f"# Result: Project Earth v2 (post-ruling drift in the litigant against a like-for-like control)\n",
-         f"Run {today} against earth_v2_prereg.md, SHA-256 {h}, with amendment 1, SHA-256 {amend_hash()} (both hashed before the run). "
+         f"Run {today} against earth_v2_prereg.md, SHA-256 {h}, with amendments 1 (SHA-256 {amend_hash(1)}) and 2 (SHA-256 {amend_hash(2)}), all hashed before the run. "
          "Non-evidentiary: daily closes, one parameter set, no costs.\n"]
     if SELFTEST:
         L.append("**SELF-TEST RUN ON SYNTHETIC DATA. Not a result.**\n")

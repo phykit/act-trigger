@@ -1,8 +1,12 @@
 name: appeals
-# Run 9: Federal Circuit windows cached and resumable; a throttled CourtListener stops the build instead of truncating it
+# Earth v2 (prereg/earth_v2_prereg.md and amendments 1 and 2): Federal Circuit from GovInfo; Moon only on request
 
 on:
   workflow_dispatch:
+    inputs:
+      moon:
+        description: "Also rerun Moon (its result of 30 October 2026 stands; default no)"
+        default: "false"
   push:
     branches: [main]
     paths:
@@ -67,6 +71,7 @@ jobs:
           set -o pipefail
           python scripts/earth.py 2>&1 | tee data/appeals/logs/earth.log
       - name: Project Moon
+        if: ${{ inputs.moon == 'true' }}
         continue-on-error: true
         run: |
           set -o pipefail

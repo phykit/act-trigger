@@ -493,6 +493,12 @@ def _govinfo_cafc() -> pd.DataFrame:
         # a name listed on both sides across consolidated dockets keeps its side in the first docket (amendment 1)
         pp = pp.sort_values(["pk_order", "order"]).drop_duplicates(["full_name"])
         plist = [dict(side=r.sideab, name=r.full_name, role=r.role) for r in pp.itertuples()]
+        # amendment 2: each side's lead is the party whose first word matches that side of GovInfo's title; it is listed first
+        words = {(normalise(t).split() or [""])[0] for t in split_parties(str(lead["title"]))} - {""}
+        for sd in ("respondent", "petitioner"):
+            cand = [k for k, x in enumerate(plist) if x["side"] == sd and (normalise(x["name"]).split() or [""])[0] in words]
+            if cand:
+                plist.insert(0, plist.pop(cand[0]))
         first = {s: next((x["name"] for x in plist if x["side"] == s), "") for s in ("petitioner", "respondent")}
         rows.append(dict(date=lead["date_issued"], docket=", ".join(p.split("ca13-")[-1] for p in pk), case_name=lead["title"],
                          status="Precedential", source="GovInfo USCOURTS ca13", parties=json.dumps(plist),
