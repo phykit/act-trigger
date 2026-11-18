@@ -1,1 +1,2 @@
 event_id,court,decision_date,docket,case_name,outcome,ticker,role,side,category,detected_utc,minute_captured_utc,daily_captured_utc,note
+FC-25-1458-VFC,cafc,2026-11-17,25-1458,"Cocona, Inc. v. Vf Outdoor, LLC",,VFC,parent,second-named,mechanical,2026-11-18T03:48:58Z,2026-11-18T03:48:59Z,,
